@@ -7,22 +7,22 @@ import { Box, Typography } from '@mui/material';
 
 const testimonials = [
   {
-    name: "Bryan Adams",
-    role: "photographer/singer",
+    name: 'Bryan Adams',
+    role: 'photographer/singer',
     text: "Picdrop manages to take the simple idea of sharing images to a new level, I can't believe someone didn't think of this sooner.",
-    image: "/assets/users/11.PNG", // Replace with actual image path
+    image: '/assets/users/11.PNG', // Replace with actual image path
   },
   {
-    name: "Claudia Gödke",
-    role: "food photographer",
-    text: "My clients love the intuitive way to select their favorites and participate remotely on my photo shoots. It’s a game changer!",
-    image: "/assets/users/22.PNG",
+    name: 'Claudia Gödke',
+    role: 'food photographer',
+    text: 'My clients love the intuitive way to select their favorites and participate remotely on my photo shoots. It’s a game changer!',
+    image: '/assets/users/22.PNG',
   },
   {
-    name: "David Daub",
-    role: "ad photographer",
-    text: "Intuitive, super fast uploads and downloads and my clients love the easy handling. Did anyone say game-changer, yet?",
-    image: "/assets/users/33.PNG",
+    name: 'David Daub',
+    role: 'ad photographer',
+    text: 'Intuitive, super fast uploads and downloads and my clients love the easy handling. Did anyone say game-changer, yet?',
+    image: '/assets/users/33.PNG',
   },
 ];
 
@@ -55,8 +55,20 @@ const AutoCarousel = () => {
   };
 
   return (
-    <Box sx={{ padding: '40px', backgroundColor: '#fff', textAlign: 'center' }}>
-      <Typography variant="h4" sx={{ fontWeight: 'bold', marginBottom: '30px' }}>
+    <Box
+      sx={{
+        paddingTop: { xs: '20px', md: '200px' },
+        paddingBottom: { xs: '20px', md: '200px' },
+        paddingLeft: { xs: '20px', md: '300px' },
+        paddingRight: { xs: '20px', md: '300px' },
+        backgroundColor: '#fff',
+        textAlign: 'center',
+      }}
+    >
+      <Typography
+        variant="h4"
+        sx={{ fontWeight: 'bold', marginBottom: '30px' }}
+      >
         Loved by over 150K photographers around the world:
       </Typography>
       <Slider {...settings}>
@@ -84,12 +96,10 @@ const AutoCarousel = () => {
             {/* Image Container */}
             <Box
               sx={{
-                width: '100px',
-                height: '100px',
+                width: '100%',
+                height: '100%',
                 marginBottom: '15px',
-                borderRadius: '50%',
                 overflow: 'hidden',
-                boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
@@ -103,8 +113,10 @@ const AutoCarousel = () => {
                 src={testimonial.image}
                 alt={testimonial.name}
                 style={{
-                  width: '100%',
-                  height: '100%',
+                  width: '100px',
+                  boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
+                  height: '100px',
+                  borderRadius: '50%',
                   objectFit: 'cover',
                 }}
               />
