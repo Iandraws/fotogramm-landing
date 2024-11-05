@@ -43,6 +43,7 @@ const Navbar = () => {
               src="/assets/fotogram logo blue.webp" // Ensure the logo path is correct
               alt="Fotogram logo"
               style={{
+                minWidth: "100px",
                 width: "100%", // Adjust the width of the logo
                 height: "100%", // Adjust the height
                 marginRight: "15px", // Add some margin to space it from the text

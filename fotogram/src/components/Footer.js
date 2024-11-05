@@ -3,6 +3,8 @@ import React from 'react';
 import { Box, Typography } from '@mui/material';
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <Box
       sx={{
@@ -11,7 +13,7 @@ const Footer = () => {
         backgroundColor: '#f0f0f0',
       }}
     >
-      <Typography variant="body2">&copy; 2024 fotogram</Typography>
+      <Typography variant="body2">&copy; {currentYear} fotogram</Typography>
     </Box>
   );
 };
