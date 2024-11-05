@@ -1,17 +1,27 @@
 // src/components/PricingTable.js
 import React from 'react';
-import { Box, Typography, Button, List, ListItem, ListItemText, Divider } from '@mui/material';
+import {
+  Box,
+  Typography,
+  Button,
+  List,
+  ListItem,
+  ListItemText,
+  Divider,
+} from '@mui/material';
 
 const plans = [
   {
     title: 'BASIC',
     price: '€499',
-    description: 'Perfect for photographers looking to expand at the start of their journey.',
+    description:
+      'Perfect for photographers looking to expand at the start of their journey.',
     features: [
+      'Unlimited Events',
       'Unlimited Clients',
       'CRM (Client Management)',
       'Unlimited Gallery',
-      'Clients Select Images for Album/Print',
+      'Image Tagging',
       'Download Selected Images',
       'Client Requests',
       'Digital Business Card',
@@ -26,7 +36,7 @@ const plans = [
       'Digital Contract',
       'Own Domain',
       'Branded App for iOS and Android',
-      'Download All Images in One Click',
+      'Download All Images',
       'Videos and Reels',
       'Shop',
     ],
@@ -35,13 +45,14 @@ const plans = [
   {
     title: 'ADVANCED',
     price: '€549',
-    description: 'For photographers upgrading their quality and organizing larger projects.',
+    description:
+      'For photographers upgrading their quality and organizing larger projects.',
     features: [
       'Unlimited Events',
       'Unlimited Clients',
       'CRM (Client Management)',
       'Unlimited Gallery',
-      'Clients Select Images for Album/Print',
+      'Image Tagging',
       'Download Selected Images',
       'Client Requests',
       'Digital Business Card',
@@ -56,7 +67,7 @@ const plans = [
     ],
     unavailableFeatures: [
       'Branded App for iOS and Android',
-      'Download All Images in One Click',
+      'Download All Images',
       'Videos and Reels',
       'Shop',
     ],
@@ -66,13 +77,14 @@ const plans = [
   {
     title: 'PREMIUM',
     price: '€849',
-    description: 'For professional photographers and businesses who want to stand out.',
+    description:
+      'For professional photographers and businesses who want to stand out.',
     features: [
       'Up to 3 Events',
       'Up to 3 Clients',
       'CRM (Client Management)',
       'Unlimited Gallery',
-      'Clients Select Images for Album/Print',
+      'Image Tagging',
       'Download Selected Images',
       'Client Requests',
       'Digital Business Card',
@@ -85,7 +97,7 @@ const plans = [
       'Digital Contract',
       'Own Domain',
       'Branded App for iOS and Android',
-      'Download All Images in One Click',
+      'Download All Images',
       'Videos and Reels',
       'Shop',
     ],
@@ -104,32 +116,67 @@ const plans = [
 
 const PricingTable = () => {
   return (
-    <Box sx={{ padding: '40px', backgroundColor: '#fff' }}>
-      <Typography variant="h4" sx={{ textAlign: 'center', fontWeight: 'bold', marginBottom: '20px' }}>
+    <Box
+      sx={{
+        paddingTop: { xs: '40px', md: '40px' },
+        paddingBottom: { xs: '40px', md: '40px' },
+        paddingLeft: { xs: '40px', md: '200px' },
+        paddingRight: { xs: '40px', md: '200px' },
+        backgroundColor: '#fff',
+      }}
+    >
+      <Typography
+        variant="h4"
+        sx={{ textAlign: 'center', fontWeight: 'bold', marginBottom: '20px' }}
+      >
         Pricing Plans
       </Typography>
 
-      <Box sx={{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap', gap: '20px' }}>
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          flexWrap: 'wrap',
+          gap: '32px',
+        }}
+      >
         {plans.map((plan, index) => (
           <Box
             key={index}
             sx={{
               width: { xs: '100%', md: '22%' },
-              padding: '20px',
+              maxWidth: { xs: '100%', md: '300px' },
+
+              padding: '24px',
               textAlign: 'center',
               backgroundColor: '#f9f9f9',
               borderRadius: '10px',
-              boxShadow: plan.popular ? '0 4px 20px rgba(0, 0, 0, 0.2)' : '0 2px 10px rgba(0, 0, 0, 0.1)',
+              boxShadow: plan.popular
+                ? '0 4px 20px rgba(0, 0, 0, 0.2)'
+                : '0 2px 10px rgba(0, 0, 0, 0.1)',
               border: plan.popular ? '2px solid #6aaad4' : 'none',
             }}
           >
-            <Typography variant="h5" sx={{ fontWeight: 'bold', marginBottom: '10px' }}>
+            <Typography
+              variant="h5"
+              sx={{ fontWeight: 'bold', marginBottom: '10px' }}
+            >
               {plan.title}
             </Typography>
-            <Typography variant="h6" sx={{ fontWeight: 'bold', marginBottom: '10px', color: '#6aaad4' }}>
+            <Typography
+              variant="h6"
+              sx={{
+                fontWeight: 'bold',
+                marginBottom: '10px',
+                color: '#6aaad4',
+              }}
+            >
               {plan.price}
             </Typography>
-            <Typography variant="body2" sx={{ marginBottom: '20px' }}>
+            <Typography
+              variant="body2"
+              sx={{ marginBottom: '20px' }}
+            >
               {plan.description}
             </Typography>
 
@@ -141,11 +188,13 @@ const PricingTable = () => {
                   <ListItemText primary={`✅ ${feature}`} />
                 </ListItem>
               ))}
-              {plan.unavailableFeatures.map((unavailableFeature, unavailableFeatureIndex) => (
-                <ListItem key={unavailableFeatureIndex}>
-                  <ListItemText primary={`❌ ${unavailableFeature}`} />
-                </ListItem>
-              ))}
+              {plan.unavailableFeatures.map(
+                (unavailableFeature, unavailableFeatureIndex) => (
+                  <ListItem key={unavailableFeatureIndex}>
+                    <ListItemText primary={`❌ ${unavailableFeature}`} />
+                  </ListItem>
+                )
+              )}
             </List>
 
             <Button

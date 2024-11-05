@@ -46,10 +46,13 @@ const Navbar = () => {
         }}
       >
         {/* Logo Section */}
-        <MuiLink component={NavLink} to="/">
+        <MuiLink
+          component={NavLink}
+          to="/"
+        >
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <img
-              src="/assets/fotogram logo blue.webp" // Ensure the logo path is correct
+              src="/assets/logo.png" // Ensure the logo path is correct
               alt="Fotogram logo"
               style={{
                 minWidth: '100px',
@@ -81,7 +84,7 @@ const Navbar = () => {
               '&:hover': { color: '#6aaad4' }, // Hover color for links
               display: 'flex',
               alignItems: 'center',
-              '&.active': { color: '#71B3E5' }, // Change active link color to #71B3E5
+              '&.active': { color: '#71B3E5' }, // Active link color #71B3E5
             }}
           >
             Why Fotogram <ArrowDropDownIcon fontSize="small" />
@@ -162,6 +165,7 @@ const Navbar = () => {
         {/* Mobile Menu Button */}
         <IconButton
           edge="end"
+          style={{ display: 'flex' }}
           aria-label="menu"
           onClick={handleDrawerToggle}
           sx={{ display: { xs: 'block', md: 'none' } }} // Only visible on mobile
@@ -200,7 +204,10 @@ const Navbar = () => {
                 },
               }}
             >
-              <ListItemText primary="Why Fotogram" sx={{ color: '#fff' }} />
+              <ListItemText
+                primary="Why Fotogram"
+                sx={{ color: '#fff' }}
+              />
             </ListItem>
             <ListItem
               button
@@ -217,7 +224,10 @@ const Navbar = () => {
                 },
               }}
             >
-              <ListItemText primary="Pricing" sx={{ color: '#fff' }} />
+              <ListItemText
+                primary="Pricing"
+                sx={{ color: '#fff' }}
+              />
             </ListItem>
             <ListItem
               button
@@ -234,7 +244,10 @@ const Navbar = () => {
                 },
               }}
             >
-              <ListItemText primary="Help" sx={{ color: '#fff' }} />
+              <ListItemText
+                primary="Help"
+                sx={{ color: '#fff' }}
+              />
             </ListItem>
             <ListItem
               button
@@ -244,14 +257,16 @@ const Navbar = () => {
               sx={{
                 '&:hover': {
                   backgroundColor: '#417199', // Darken background on hover
-                  color: '#000', // Make text black on hover
-                  borderRadius: '18px', // Make the hover background more prominent
+                  color: '#000', // Make text black on hover                  borderRadius: '18px', // Make the hover background more prominent
                   padding: '15px', // Increase padding to make it more square-like
                   transition: 'background-color 0.3s ease', // Smooth transition effect
                 },
               }}
             >
-              <ListItemText primary="Learn" sx={{ color: '#fff' }} />
+              <ListItemText
+                primary="Learn"
+                sx={{ color: '#fff' }}
+              />
             </ListItem>
           </List>
         </Box>
