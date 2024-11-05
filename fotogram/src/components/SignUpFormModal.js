@@ -1,25 +1,37 @@
-import React, { useState } from 'react';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import ErrorIcon from '@mui/icons-material/Error';
+import {
+  Box,
+  Button,
+  Checkbox,
+  FormControlLabel,
+  FormGroup,
+  Link,
+  Radio,
+  RadioGroup,
+  TextField,
+  Typography,
+} from '@mui/material';
 import axios from 'axios';
-import { Box, Typography, TextField, Button, Radio, FormControlLabel, RadioGroup, Checkbox, FormGroup, Link } from '@mui/material';
-import CheckCircleIcon from '@mui/icons-material/CheckCircle'; // Import the green checkmark icon
+import React, { useState } from 'react';
 
 const SignUpFormPage = () => {
-  // State to manage form data
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [role, setRole] = useState('self-employed');
-  const [customDomain, setCustomDomain] = useState('');
+  const [customSubdomain, setCustomSubdomain] = useState('');
   const [agreedToTerms, setAgreedToTerms] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false); // State to handle success
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [isError, setIsError] = useState(false);
 
   const formStyle = {
-    backgroundColor: '#fff', // White background for the form
+    backgroundColor: '#fff',
     padding: '40px',
     borderRadius: '10px',
-    boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)', // Light shadow for a subtle effect
+    boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
     minWidth: '320px',
-    maxWidth: '600px', // Similar width as in the example
+    maxWidth: '600px',
     margin: '50px auto',
   };
 
@@ -29,41 +41,55 @@ const SignUpFormPage = () => {
 
     // Construct the POST request body
     const requestBody = {
-      company: customDomain, // Using custom domain 
+      company: customSubdomain, // Using custom domain
       email: email,
-      displayName: `${firstName} ${lastName}`, // Full name for display name
+      displayName: `${firstName} ${lastName}`,
       users: true,
       media: true,
     };
 
     try {
-      const response = await axios.post('https://demo.parklolo.com/api/register-company', requestBody);
+      setIsSuccess(false);
+      setIsError(false);
+      const response = await axios.post(
+        'https://demo.parklolo.com/api/register-company',
+        requestBody
+      );
       if (response.status === 200) {
-        // Show success message and reset form
+        setIsError(false);
         setIsSuccess(true);
         setFirstName('');
         setLastName('');
         setEmail('');
-        setCustomDomain('');
+        setCustomSubdomain('');
         setAgreedToTerms(false);
       } else {
-        alert('Error during registration');
+        setIsError(true);
       }
     } catch (error) {
-      console.error('Error during registration:', error);
-      alert('An error occurred during registration.');
+      setIsError(true);
     }
   };
 
   return (
-    <Box sx={formStyle} component="form" onSubmit={handleSubmit}>
+    <Box
+      sx={formStyle}
+      component="form"
+      onSubmit={handleSubmit}
+    >
       {/* Main heading */}
-      <Typography variant="h4" sx={{ textAlign: 'center', mb: 2, fontWeight: 'bold' }}>
+      <Typography
+        variant="h4"
+        sx={{ textAlign: 'center', mb: 2, fontWeight: 'bold' }}
+      >
         Just get started!
       </Typography>
 
       {/* Subtext */}
-      <Typography variant="body1" sx={{ textAlign: 'center', mb: 3, color: '#555' }}>
+      <Typography
+        variant="body1"
+        sx={{ textAlign: 'center', mb: 3, color: '#555' }}
+      >
         Our one-step sign-up only takes a few seconds and is completely free.
       </Typography>
 
@@ -134,8 +160,8 @@ const SignUpFormPage = () => {
           fullWidth
           placeholder="Your custom address"
           variant="outlined"
-          value={customDomain}
-          onChange={(e) => setCustomDomain(e.target.value)}
+          value={customSubdomain}
+          onChange={(e) => setCustomSubdomain(e.target.value)}
           margin="none"
           sx={{ backgroundColor: '#f5f5f5', ml: 1 }}
         />
@@ -145,10 +171,29 @@ const SignUpFormPage = () => {
       {/* Terms and Conditions Checkbox */}
       <FormGroup sx={{ mb: 2 }}>
         <FormControlLabel
-          control={<Checkbox checked={agreedToTerms} onChange={(e) => setAgreedToTerms(e.target.checked)} />}
+          control={
+            <Checkbox
+              checked={agreedToTerms}
+              onChange={(e) => setAgreedToTerms(e.target.checked)}
+            />
+          }
           label={
             <Typography sx={{ color: '#555' }}>
-              I agree to the <Link href="#" underline="hover">terms and conditions</Link> and <Link href="#" underline="hover">privacy policy</Link> of Fotogram.
+              I agree to the{' '}
+              <Link
+                href="#"
+                underline="hover"
+              >
+                terms and conditions
+              </Link>{' '}
+              and{' '}
+              <Link
+                href="#"
+                underline="hover"
+              >
+                privacy policy
+              </Link>{' '}
+              of Fotogram.
             </Typography>
           }
         />
@@ -178,7 +223,14 @@ const SignUpFormPage = () => {
 
       {/* Success Message with Green Checkmark */}
       {isSuccess && (
-        <Box sx={{ display: 'flex', alignItems: 'center', mt: 3, justifyContent: 'center' }}>
+        <Box
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            mt: 3,
+            justifyContent: 'center',
+          }}
+        >
           <CheckCircleIcon sx={{ color: 'green', fontSize: '2rem', mr: 1 }} />
           <Typography sx={{ color: 'green', fontWeight: 'bold' }}>
             You have successfully created your account.
@@ -186,7 +238,22 @@ const SignUpFormPage = () => {
         </Box>
       )}
 
-   
+      {isError && (
+        <Box
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            mt: 3,
+            justifyContent: 'center',
+          }}
+        >
+          <ErrorIcon sx={{ color: 'red', fontSize: '2rem', mr: 1 }} />
+          <Typography sx={{ color: 'red', fontWeight: 'bold' }}>
+            An error occurred while creating your account. Please contact us at
+            support@fotogram.app.
+          </Typography>
+        </Box>
+      )}
     </Box>
   );
 };
