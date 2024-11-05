@@ -81,7 +81,7 @@ const Navbar = () => {
               '&:hover': { color: '#6aaad4' }, // Hover color for links
               display: 'flex',
               alignItems: 'center',
-              '&.active': { color: 'red' }, // Turn red when active (clicked)
+              '&.active': { color: '#71B3E5' }, // Change active link color to #71B3E5
             }}
           >
             Why Fotogram <ArrowDropDownIcon fontSize="small" />
@@ -97,7 +97,7 @@ const Navbar = () => {
               fontWeight: '500',
               color: '#333',
               '&:hover': { color: '#6aaad4' },
-              '&.active': { color: 'red' }, // Active link turns red
+              '&.active': { color: '#71B3E5' }, // Active link color #71B3E5
             }}
           >
             Pricing
@@ -113,7 +113,7 @@ const Navbar = () => {
               fontWeight: '500',
               color: '#333',
               '&:hover': { color: '#6aaad4' },
-              '&.active': { color: 'red' }, // Active link turns red
+              '&.active': { color: '#71B3E5' }, // Active link color #71B3E5
             }}
           >
             Help
@@ -131,7 +131,7 @@ const Navbar = () => {
               '&:hover': { color: '#6aaad4' },
               display: 'flex',
               alignItems: 'center',
-              '&.active': { color: 'red' }, // Active link turns red
+              '&.active': { color: '#71B3E5' }, // Active link color #71B3E5
             }}
           >
             Learn <ArrowDropDownIcon fontSize="small" />
@@ -180,7 +180,7 @@ const Navbar = () => {
         <Box
           sx={{
             width: 250,
-            backgroundColor: '#6aaad4', // Set background color to #6aaad4
+            backgroundColor: '#4a8bb3', // Set background color to darker shade
             height: '100%', // Ensure the drawer covers the full height
           }}
         >
@@ -192,7 +192,8 @@ const Navbar = () => {
               onClick={handleDrawerToggle}
               sx={{
                 '&:hover': {
-                  backgroundColor: '#4a8bb3', // A more visible vibrant hover color
+                  backgroundColor: '#417199', // Darken background on hover
+                  color: '#000', // Make text black on hover
                   borderRadius: '12px', // Make the hover background more prominent
                   padding: '15px', // Increase padding to make it more square-like
                   transition: 'background-color 0.3s ease', // Smooth transition effect
@@ -208,7 +209,8 @@ const Navbar = () => {
               onClick={handleDrawerToggle}
               sx={{
                 '&:hover': {
-                  backgroundColor: '#4a8bb3', // A more visible vibrant hover color
+                  backgroundColor: '#417199', // Darken background on hover
+                  color: '#000', // Make text black on hover
                   borderRadius: '12px', // Make the hover background more prominent
                   padding: '15px', // Increase padding to make it more square-like
                   transition: 'background-color 0.3s ease', // Smooth transition effect
@@ -224,7 +226,8 @@ const Navbar = () => {
               onClick={handleDrawerToggle}
               sx={{
                 '&:hover': {
-                  backgroundColor: '#4a8bb3', // A more visible vibrant hover color
+                  backgroundColor: '#417199', // Darken background on hover
+                  color: '#000', // Make text black on hover
                   borderRadius: '12px', // Make the hover background more prominent
                   padding: '15px', // Increase padding to make it more square-like
                   transition: 'background-color 0.3s ease', // Smooth transition effect
@@ -240,7 +243,8 @@ const Navbar = () => {
               onClick={handleDrawerToggle}
               sx={{
                 '&:hover': {
-                  backgroundColor: '#4a8bb3', // A more visible vibrant hover color
+                  backgroundColor: '#417199', // Darken background on hover
+                  color: '#000', // Make text black on hover
                   borderRadius: '18px', // Make the hover background more prominent
                   padding: '15px', // Increase padding to make it more square-like
                   transition: 'background-color 0.3s ease', // Smooth transition effect
