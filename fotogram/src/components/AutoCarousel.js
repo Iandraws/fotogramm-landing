@@ -30,16 +30,33 @@ const AutoCarousel = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
-    slidesToShow: 3, // You can adjust how many cards to show
+    speed: 700, // Smoother animation speed
+    slidesToShow: 3, // Number of cards to show at a time
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 4000, // Slower autoplay for better readability
+    pauseOnHover: true, // Pause the carousel when hovering over the slide
+    responsive: [
+      {
+        breakpoint: 1024, // For tablet/laptop screens
+        settings: {
+          slidesToShow: 2, // Show fewer cards on smaller screens
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 600, // For mobile screens
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
-    <Box sx={{ padding: '40px', backgroundColor: '#fff' }}>
-      <Typography variant="h4" sx={{ fontWeight: 'bold', marginBottom: '20px' }}>
+    <Box sx={{ padding: '40px', backgroundColor: '#fff', textAlign: 'center' }}>
+      <Typography variant="h4" sx={{ fontWeight: 'bold', marginBottom: '30px' }}>
         Loved by over 150K photographers around the world:
       </Typography>
       <Slider {...settings}>
@@ -49,14 +66,19 @@ const AutoCarousel = () => {
             sx={{
               padding: '20px',
               textAlign: 'center',
-              boxShadow: '0px 4px 8px rgba(0,0,0,0.1)',
-              borderRadius: '10px',
-              backgroundColor: '#f9f9f9',
+              boxShadow: '0px 4px 12px rgba(0,0,0,0.15)', // Softer, stronger shadow
+              borderRadius: '15px', // Slightly larger radius for smoother edges
+              backgroundColor: '#fefefe', // Soft background color
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
               alignItems: 'center',
-              minHeight: '300px', // Set a fixed height for proper alignment
+              transition: 'transform 0.3s ease, box-shadow 0.3s ease', // Smooth transform and shadow transition
+              minHeight: '350px', // Slightly taller cards
+              '&:hover': {
+                transform: 'scale(1.05)', // Subtle zoom effect on hover
+                boxShadow: '0px 6px 20px rgba(0,0,0,0.2)', // Larger shadow on hover
+              },
             }}
           >
             {/* Image Container */}
@@ -66,33 +88,58 @@ const AutoCarousel = () => {
                 height: '100px',
                 marginBottom: '15px',
                 borderRadius: '50%',
-                overflow: 'hidden', // Ensures the image stays inside the circular container
-                boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)', // Optional for a slight shadow effect
+                overflow: 'hidden',
+                boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
+                transition: 'transform 0.3s ease', // Smooth image scale transition
+                '&:hover': {
+                  transform: 'scale(1.1)', // Slightly larger image on hover
+                },
               }}
             >
               <img
                 src={testimonial.image}
                 alt={testimonial.name}
                 style={{
-                    marginRight:'20px',
                   width: '100%',
                   height: '100%',
-                  objectFit: 'cover', // Ensures the image fills the container without distortion
+                  objectFit: 'cover',
                 }}
               />
             </Box>
 
             {/* Testimonial Content */}
-            <Typography variant="body1" sx={{ fontStyle: 'italic', marginTop: '10px', marginBottom: '10px' }}>
+            <Typography
+              variant="body1"
+              sx={{
+                fontStyle: 'italic',
+                marginTop: '10px',
+                marginBottom: '10px',
+                fontSize: '1rem', // Adjusted for better readability
+                lineHeight: 1.6,
+              }}
+            >
               "{testimonial.text}"
             </Typography>
-            <Typography variant="h6" sx={{ fontWeight: 'bold', marginTop: '10px' }}>
+            <Typography
+              variant="h6"
+              sx={{
+                fontWeight: 'bold',
+                marginTop: '10px',
+                fontSize: '1.1rem', // Slightly larger for emphasis
+              }}
+            >
               {testimonial.name}
             </Typography>
-            <Typography variant="body2" sx={{ color: '#777' }}>
+            <Typography
+              variant="body2"
+              sx={{
+                color: '#777',
+                fontSize: '0.9rem',
+              }}
+            >
               {testimonial.role}
             </Typography>
           </Box>

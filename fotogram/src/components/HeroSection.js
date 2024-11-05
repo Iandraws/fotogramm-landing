@@ -3,8 +3,15 @@ import React from 'react';
 import { Box, Typography, Button, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
 import CheckIcon from '@mui/icons-material/Check'; // For checkmarks in the list
 import AutoCarousel from './AutoCarousel';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate to handle routing
+import PowerfulFeaturesSection from './PowerfulFeaturesSection';
 
 const HeroSection = () => {
+  const navigate = useNavigate(); // Initialize the navigate function
+
+  const handleSignUp = () => {
+    navigate('/signup'); // Navigate to the /signup route when the button is clicked
+  };
   return (
     <>
       {/* Main Hero Section */}
@@ -75,8 +82,9 @@ const HeroSection = () => {
                 backgroundColor: '#5b99c3', // Slightly darker on hover
               },
             }}
+            onClick={handleSignUp}
           >
-            Sign up - it's free
+            try it- it's free
           </Button>
         </Box>
 
@@ -95,8 +103,8 @@ const HeroSection = () => {
             alt="Hero placeholder"
             style={{
               width: '100%',
-              maxWidth: '500px', // Adjusted the image size for smaller screens
-              borderRadius: '10px',
+              maxWidth: '700px', // Adjusted the image size for smaller screens
+              borderRadius: '20px',
             }}
           />
         </Box>
@@ -165,8 +173,9 @@ const HeroSection = () => {
                 backgroundColor: '#6aaad4',
               },
             }}
+            onClick={handleSignUp}
           >
-            Sign up - it's free
+           try it it's free
           </Button>
         </Box>
 
@@ -193,180 +202,9 @@ const HeroSection = () => {
         </Box>
       </Box>
 
-      {/* Powerful Features Section */}
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: { xs: 'column-reverse', md: 'row' }, 
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          padding: { xs: '50px 20px', md: '200px 40px' }, // Adjusted for better mobile spacing
-          backgroundColor: '#fff',
-        }}
-      >
-        {/* Left side: Text */}
-        <Box
-          sx={{
-            flex: 1,
-            paddingRight: { xs: '20px', md: '40px' }, 
-            textAlign: { xs: 'center', md: 'left' },
-          }}
-        >
-          <Typography
-            variant="h4"
-            sx={{ fontWeight: 'bold', fontSize: { xs: '2rem', md: '2.5rem' }, mb: 3 }}
-          >
-            Powerful features – easy to use
-          </Typography>
-
-          <Typography variant="h6" sx={{ fontWeight: 'bold', mb: 2 }}>
-            Pain free collaboration mode
-          </Typography>
-
-          <Typography variant="body1" sx={{ fontSize: { xs: '1rem', md: '1.25rem' } }}>
-            Your clients can easily select their favorite shots by using our intuitive color markings, likes & voting, file comments, and other collaboration features. By only activating the features you need, it always keeps simple.
-          </Typography>
-        </Box>
-
-        {/* Right side: Image */}
-        <Box
-          sx={{
-            flex: 1,
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            padding: { xs: '20px', md: '40px' },
-            backgroundColor: '#fff',
-          }}
-        >
-          <img
-            src="/assets/4.PNG" 
-            alt="Powerful features"
-            style={{
-                width: '100%',
-                maxWidth: '500px',
-                borderRadius: '10px',
-              }}
-          />
-        </Box>
-      </Box>
-
-      
+     <PowerfulFeaturesSection />
 
 
-      {/* Beautiful Presentation Mode Section */}
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: { xs: 'column', md: 'row' }, // Stack on small screens, row on larger screens
-          justifyContent: 'space-between',
-          
-          alignItems: 'center',
-          padding: '40px',
-          backgroundColor: '#fff', // White background
-        }}
-      >
-        {/* Left side: Image */}
-        <Box
-          sx={{
-            flex: 1,
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            marginTop: { xs: '20px', md: '0' }, // Margin for mobile screens
-          }}
-        >
-          <img
-            src="/assets/5.PNG" // Replace this with your actual image path
-            alt="Beautiful presentation mode"
-            style={{
-              width: '100%',
-              maxWidth: '500px',
-              borderRadius: '10px',
-            }}
-          />
-        </Box>
-
-        {/* Right side: Text */}
-        <Box
-          sx={{
-            flex: 1,
-            paddingLeft: { xs: '20px', md: '40px' }, // Padding on the left
-            textAlign: { xs: 'center', md: 'left' }, // Center text on mobile, left on desktop
-          }}
-        >
-          <Typography
-            variant="h4"
-            sx={{ fontWeight: 'bold', fontSize: { xs: '2rem', md: '2.5rem' }, mb: 3 }}
-          >
-            Beautiful presentation mode
-          </Typography>
-
-          <Typography
-            variant="body1"
-            sx={{ fontSize: { xs: '1rem', md: '1.25rem' } }}
-          >
-            Finally present your work the way it deserves! Customize photo galleries to your needs and your clients can easily switch to the powerful edit mode when needed.
-          </Typography>
-        </Box>
-        
-        
-      </Box>
-      {/* Massive Time Saver Section */}
-<Box
-  sx={{
-    display: 'flex',
-    flexDirection: { xs: 'column', md: 'row' }, // Stack on small screens, row on larger screens
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: '40px',
-    backgroundColor: '#fff', // White background
-  }}
->
-  {/* Left side: Text */}
-  <Box
-    sx={{
-      flex: 1,
-      paddingRight: { xs: '20px', md: '40px' }, // Padding on the right
-      textAlign: { xs: 'center', md: 'left' }, // Center text on mobile, left on desktop
-    }}
-  >
-    <Typography
-      variant="h4"
-      sx={{ fontWeight: 'bold', fontSize: { xs: '2rem', md: '2.5rem' }, mb: 3 }}
-    >
-      Massive time saver
-    </Typography>
-
-    <Typography
-      variant="body1"
-      sx={{ fontSize: { xs: '1rem', md: '1.25rem' }, mb: 2 }}
-    >
-      Find your client's favorites <strong>in seconds!</strong> Just filter them in Lightroom, C1, or on your hard drive. <strong>No more searching</strong> for individual filenames, no more annoying emails and endless calls over image selections.
-    </Typography>
-  </Box>
-
-  {/* Right side: Image */}
-  <Box
-    sx={{
-      flex: 1,
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      marginTop: { xs: '20px', md: '0' }, // Margin for mobile screens
-    }}
-  >
-    <img
-      src="/assets/6.PNG" // Replace this with your actual image path
-      alt="Massive time saver"
-      style={{
-        width: '100%',
-        maxWidth: '500px',
-        borderRadius: '10px',
-      }}
-    />
-  </Box>
-</Box>
 {/* Built by Creatives Section */}
 <Box
   sx={{
@@ -445,8 +283,9 @@ const HeroSection = () => {
           backgroundColor: '#6aaad4',
         },
       }}
+      onClick={handleSignUp}
     >
-      Sign up - it's free
+     try it- it's free
     </Button>
   </Box>
 </Box>
