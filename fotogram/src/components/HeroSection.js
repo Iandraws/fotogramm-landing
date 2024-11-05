@@ -24,8 +24,8 @@ const HeroSection = () => {
   const padding = {
     paddingTop: { xs: '20px', md: '40px' },
     paddingBottom: { xs: '20px', md: '40px' },
-    paddingLeft: { xs: '20px', md: '300px' },
-    paddingRight: { xs: '20px', md: '300px' },
+    paddingLeft: { xs: '20px', md: '156px' },
+    paddingRight: { xs: '20px', md: '156px' },
   };
 
   return (

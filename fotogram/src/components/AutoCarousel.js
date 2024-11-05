@@ -79,7 +79,7 @@ const AutoCarousel = () => {
               padding: '20px',
               textAlign: 'center',
               boxShadow: '0px 4px 12px rgba(0,0,0,0.15)', // Softer, stronger shadow
-              borderRadius: '15px', // Slightly larger radius for smoother edges
+              borderRadius: '16px', // Slightly larger radius for smoother edges
               backgroundColor: '#fefefe', // Soft background color
               display: 'flex',
               flexDirection: 'column',

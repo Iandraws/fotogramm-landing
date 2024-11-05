@@ -56,9 +56,8 @@ const Navbar = () => {
               alt="Fotogram logo"
               style={{
                 minWidth: '100px',
-                width: '100%', // Adjust the width of the logo
+                width: '100px', // Adjust the width of the logo
                 height: '100%', // Adjust the height
-                marginRight: '15px', // Add some margin to space it from the text
               }}
             />
           </Box>
@@ -199,7 +198,7 @@ const Navbar = () => {
                   backgroundColor: '#417199', // Darken background on hover
                   color: '#000', // Make text black on hover
                   borderRadius: '12px', // Make the hover background more prominent
-                  padding: '15px', // Increase padding to make it more square-like
+                  padding: '16px', // Increase padding to make it more square-like
                   transition: 'background-color 0.3s ease', // Smooth transition effect
                 },
               }}
@@ -219,7 +218,7 @@ const Navbar = () => {
                   backgroundColor: '#417199', // Darken background on hover
                   color: '#000', // Make text black on hover
                   borderRadius: '12px', // Make the hover background more prominent
-                  padding: '15px', // Increase padding to make it more square-like
+                  padding: '16px', // Increase padding to make it more square-like
                   transition: 'background-color 0.3s ease', // Smooth transition effect
                 },
               }}
@@ -239,7 +238,7 @@ const Navbar = () => {
                   backgroundColor: '#417199', // Darken background on hover
                   color: '#000', // Make text black on hover
                   borderRadius: '12px', // Make the hover background more prominent
-                  padding: '15px', // Increase padding to make it more square-like
+                  padding: '16px', // Increase padding to make it more square-like
                   transition: 'background-color 0.3s ease', // Smooth transition effect
                 },
               }}
@@ -258,7 +257,7 @@ const Navbar = () => {
                 '&:hover': {
                   backgroundColor: '#417199', // Darken background on hover
                   color: '#000', // Make text black on hover                  borderRadius: '18px', // Make the hover background more prominent
-                  padding: '15px', // Increase padding to make it more square-like
+                  padding: '16px', // Increase padding to make it more square-like
                   transition: 'background-color 0.3s ease', // Smooth transition effect
                 },
               }}
