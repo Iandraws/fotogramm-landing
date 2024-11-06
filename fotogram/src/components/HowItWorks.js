@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Typography, Button } from '@mui/material';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate to handle routing
 
 const sections = [
   {
@@ -36,6 +37,12 @@ const sections = [
 ];
 
 const FunktionPage = () => {
+    const navigate = useNavigate(); // Initialize the navigate function
+
+    const handleSignUp = () => {
+      navigate('/signup'); // Navigate to the /signup route when the button is clicked
+    };
+
   return (
     <Box sx={{ padding: '40px', backgroundColor: '#f9f9f9', textAlign: 'center' }}>
       <Typography variant="h3" sx={{ fontWeight: 'bold', textAlign: 'center', marginBottom: '40px' }}>
@@ -107,6 +114,7 @@ const FunktionPage = () => {
                 backgroundColor: '#6aaad4',
               },
             }}
+            onClick={handleSignUp}
           >
             Sign up - it's free
           </Button>
