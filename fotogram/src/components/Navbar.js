@@ -11,31 +11,31 @@ import {
   ListItem,
   ListItemText,
 } from '@mui/material';
-import { NavLink } from 'react-router-dom'; // Import NavLink from react-router-dom
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown'; // For dropdown arrows
-import MenuIcon from '@mui/icons-material/Menu'; // Icon for burger menu
-import { useNavigate } from 'react-router-dom'; // Import useNavigate to handle routing
+import { NavLink } from 'react-router-dom';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
-  const navigate = useNavigate(); // Initialize the navigate function
-  const [mobileOpen, setMobileOpen] = useState(false); // State for managing drawer
+  const navigate = useNavigate();
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleSignUp = () => {
-    navigate('/signup'); // Navigate to the /signup route when the button is clicked
+    navigate('/signup');
   };
 
   const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen); // Toggle the drawer open and close
+    setMobileOpen(!mobileOpen);
   };
 
   return (
     <AppBar
       position="sticky"
       sx={{
-        backgroundColor: '#fff', // White background
+        backgroundColor: '#fff',
         boxShadow: 'none',
-        borderBottom: '1px solid rgba(0, 0, 0, 0.1)', // Subtle border at bottom
-        padding: '0 20px', // Add padding for better spacing
+        borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
+        padding: '0 20px',
       }}
     >
       <Toolbar
@@ -46,105 +46,52 @@ const Navbar = () => {
         }}
       >
         {/* Logo Section */}
-        <MuiLink
-          component={NavLink}
-          to="/"
-        >
-          <Box sx={{ display: 'flex', alignItems: 'center' }}>
-            <img
-              src="/assets/logo.png" // Ensure the logo path is correct
-              alt="Fotogram logo"
-              style={{
-                minWidth: '100px',
-                width: '100px', // Adjust the width of the logo
-                height: '100%', // Adjust the height
-              }}
-            />
-          </Box>
+        <MuiLink component={NavLink} to="/" sx={{ display: 'flex', alignItems: 'center' }}>
+          <img
+            src="/assets/logo.png"
+            alt="Fotogram logo"
+            style={{
+              width: '100px',
+              height: 'auto',
+            }}
+          />
         </MuiLink>
 
         {/* Desktop Navigation Links (hidden on mobile) */}
         <Box
           sx={{
-            display: { xs: 'none', md: 'flex' }, // Hidden on small screens
+            display: { xs: 'none', md: 'flex' },
             gap: '20px',
             alignItems: 'center',
           }}
         >
-          <MuiLink
-            component={NavLink}
-            to="/why-fotogram"
-            color="inherit"
-            underline="none"
-            sx={{
-              fontSize: '1rem',
-              fontWeight: '500',
-              color: '#333',
-              '&:hover': { color: '#6aaad4' }, // Hover color for links
-              display: 'flex',
-              alignItems: 'center',
-              '&.active': { color: '#71B3E5' }, // Active link color #71B3E5
-            }}
-          >
-            Why Fotogram <ArrowDropDownIcon fontSize="small" />
-          </MuiLink>
-
-          <MuiLink
-            component={NavLink}
-            to="/pricing"
-            color="inherit"
-            underline="none"
-            sx={{
-              fontSize: '1rem',
-              fontWeight: '500',
-              color: '#333',
-              '&:hover': { color: '#6aaad4' },
-              '&.active': { color: '#71B3E5' }, // Active link color #71B3E5
-            }}
-          >
-            Pricing
-          </MuiLink>
-
-          <MuiLink
-            component={NavLink}
-            to="/help"
-            color="inherit"
-            underline="none"
-            sx={{
-              fontSize: '1rem',
-              fontWeight: '500',
-              color: '#333',
-              '&:hover': { color: '#6aaad4' },
-              '&.active': { color: '#71B3E5' }, // Active link color #71B3E5
-            }}
-          >
-            Help
-          </MuiLink>
-
-          <MuiLink
-            component={NavLink}
-            to="/learn"
-            color="inherit"
-            underline="none"
-            sx={{
-              fontSize: '1rem',
-              fontWeight: '500',
-              color: '#333',
-              '&:hover': { color: '#6aaad4' },
-              display: 'flex',
-              alignItems: 'center',
-              '&.active': { color: '#71B3E5' }, // Active link color #71B3E5
-            }}
-          >
-            Learn <ArrowDropDownIcon fontSize="small" />
-          </MuiLink>
+          {['Why Fotogram', 'Pricing', 'Help', 'Who We Are'].map((text, index) => (
+            <MuiLink
+              key={index}
+              component={NavLink}
+              to={`/${text.replace(/\s+/g, '-').toLowerCase()}`}
+              color="inherit"
+              underline="none"
+              sx={{
+                fontSize: '1rem',
+                fontWeight: '500',
+                color: '#333',
+                '&:hover': { color: '#6aaad4', transition: 'color 0.3s ease' },
+                display: 'flex',
+                alignItems: 'center',
+                '&.active': { color: '#71B3E5' },
+              }}
+            >
+              {text}
+            </MuiLink>
+          ))}
         </Box>
 
-        {/* Call to Action Button (Always Visible) */}
+        {/* Call to Action Button */}
         <Button
           variant="contained"
           sx={{
-            backgroundColor: '#6aaad4', // Button background color
+            backgroundColor: '#6aaad4',
             color: '#000',
             fontWeight: 'bold',
             borderRadius: '20px',
@@ -153,120 +100,65 @@ const Navbar = () => {
             boxShadow: 'none',
             '&:hover': {
               backgroundColor: '#6aaad4',
-              boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)', // Subtle shadow on hover
+              boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
             },
           }}
           onClick={handleSignUp}
         >
-          try it – it's free
+          Try it – it's free
         </Button>
 
         {/* Mobile Menu Button */}
         <IconButton
           edge="end"
-          style={{ display: 'flex' }}
           aria-label="menu"
           onClick={handleDrawerToggle}
-          sx={{ display: { xs: 'block', md: 'none' } }} // Only visible on mobile
+          sx={{ display: { xs: 'block', md: 'none' } }}
         >
           <MenuIcon />
         </IconButton>
       </Toolbar>
 
       {/* Drawer for Mobile Menu */}
-      <Drawer
-        anchor="right"
-        open={mobileOpen}
-        onClose={handleDrawerToggle}
-        sx={{ display: { xs: 'block', md: 'none' } }} // Only for small screens
-      >
+      <Drawer anchor="top" open={mobileOpen} onClose={handleDrawerToggle}>
         <Box
           sx={{
-            width: 250,
-            backgroundColor: '#4a8bb3', // Set background color to darker shade
-            height: '100%', // Ensure the drawer covers the full height
+            width: '100%',
+            backgroundColor: '#f8f9fa', // Light gray background similar to the screenshot
+            padding: '20px 0',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
           }}
         >
-          <List>
-            <ListItem
-              button
-              component={NavLink}
-              to="/why-fotogram"
-              onClick={handleDrawerToggle}
-              sx={{
-                '&:hover': {
-                  backgroundColor: '#417199', // Darken background on hover
-                  color: '#000', // Make text black on hover
-                  borderRadius: '12px', // Make the hover background more prominent
-                  padding: '16px', // Increase padding to make it more square-like
-                  transition: 'background-color 0.3s ease', // Smooth transition effect
-                },
-              }}
-            >
-              <ListItemText
-                primary="Why Fotogram"
-                sx={{ color: '#fff' }}
-              />
-            </ListItem>
-            <ListItem
-              button
-              component={NavLink}
-              to="/pricing"
-              onClick={handleDrawerToggle}
-              sx={{
-                '&:hover': {
-                  backgroundColor: '#417199', // Darken background on hover
-                  color: '#000', // Make text black on hover
-                  borderRadius: '12px', // Make the hover background more prominent
-                  padding: '16px', // Increase padding to make it more square-like
-                  transition: 'background-color 0.3s ease', // Smooth transition effect
-                },
-              }}
-            >
-              <ListItemText
-                primary="Pricing"
-                sx={{ color: '#fff' }}
-              />
-            </ListItem>
-            <ListItem
-              button
-              component={NavLink}
-              to="/help"
-              onClick={handleDrawerToggle}
-              sx={{
-                '&:hover': {
-                  backgroundColor: '#417199', // Darken background on hover
-                  color: '#000', // Make text black on hover
-                  borderRadius: '12px', // Make the hover background more prominent
-                  padding: '16px', // Increase padding to make it more square-like
-                  transition: 'background-color 0.3s ease', // Smooth transition effect
-                },
-              }}
-            >
-              <ListItemText
-                primary="Help"
-                sx={{ color: '#fff' }}
-              />
-            </ListItem>
-            <ListItem
-              button
-              component={NavLink}
-              to="/learn"
-              onClick={handleDrawerToggle}
-              sx={{
-                '&:hover': {
-                  backgroundColor: '#417199', // Darken background on hover
-                  color: '#000', // Make text black on hover                  borderRadius: '18px', // Make the hover background more prominent
-                  padding: '16px', // Increase padding to make it more square-like
-                  transition: 'background-color 0.3s ease', // Smooth transition effect
-                },
-              }}
-            >
-              <ListItemText
-                primary="Learn"
-                sx={{ color: '#fff' }}
-              />
-            </ListItem>
+          <IconButton
+            onClick={handleDrawerToggle}
+            sx={{ alignSelf: 'flex-end', marginRight: '10px', color: '#333' }}
+          >
+            <CloseIcon />
+          </IconButton>
+          <List sx={{ width: '100%', textAlign: 'center' }}>
+            {['Why Fotogram', 'Pricing', 'Help', 'WhoWeAre'].map((text, index) => (
+              <ListItem
+                button
+                component={NavLink}
+                to={`/${text.replace(/\s+/g, '-').toLowerCase()}`}
+                onClick={handleDrawerToggle}
+                key={index}
+                sx={{
+                  justifyContent: 'center',
+                  color: '#333',
+                  '&:hover': {
+                    backgroundColor: '#e0e0e0', // Darker gray for hover effect
+                    color: '#000', // Text color on hover
+                    borderRadius: '8px',
+                    transition: 'background-color 0.3s ease',
+                  },
+                }}
+              >
+                <ListItemText primary={text} sx={{ textAlign: 'center' }} />
+              </ListItem>
+            ))}
           </List>
         </Box>
       </Drawer>

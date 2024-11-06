@@ -8,6 +8,8 @@ import SignUpFormModal from './components/SignUpFormModal';  // Renamed for clar
 import Footer from './components/Footer';
 import Help from './components/Help';
 import ScrollToTop from './components/ScrollToTop';
+import HowItWorks from './components/HowItWorks';
+import WhoWeAre from './components/WhoWeAre';
 
 function App() {
   return (
@@ -19,6 +21,9 @@ function App() {
         <Route path="/pricing" element={<PricingTable />} /> {/* Pricing Route */}
         <Route path="/signup" element={<SignUpFormModal />} /> {/* Sign-Up Form Route */}
         <Route path="/help" element={<Help />} /> 
+        <Route path="/why-fotogram" element={<HowItWorks />} /> 
+        <Route path="/WhoWeAre" element={<WhoWeAre />} /> 
+        
       </Routes>
       <Footer />
     </Router>
