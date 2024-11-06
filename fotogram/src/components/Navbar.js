@@ -138,11 +138,11 @@ const Navbar = () => {
             <CloseIcon />
           </IconButton>
           <List sx={{ width: '100%', textAlign: 'center' }}>
-            {['why-fotogram', 'pricing', 'Help', 'who-we-are'].map((text, index) => (
+          {['Why Fotogram', 'Pricing', 'Help', 'Who We Are'].map((text, index) => (
               <ListItem
                 button
                 component={NavLink}
-                to={text}
+                to={`/${text.replace(/\s+/g, '-').toLowerCase()}`}
                 onClick={handleDrawerToggle}
                 key={index}
                 sx={{
