@@ -124,8 +124,8 @@ const PricingTable = () => {
       sx={{
         paddingTop: { xs: '40px', md: '40px' },
         paddingBottom: { xs: '40px', md: '40px' },
-        paddingLeft: { xs: '40px', md: '200px' },
-        paddingRight: { xs: '40px', md: '200px' },
+        paddingLeft: { xs: '40px', md: '16px' },
+        paddingRight: { xs: '40px', md: '16px' },
         backgroundColor: '#fff',
       }}
     >
@@ -148,8 +148,9 @@ const PricingTable = () => {
           <Box
             key={index}
             sx={{
-              width: { xs: '100%', md: '22%' },
-              maxWidth: { xs: '100%', md: '300px' },
+              width: { xs: '100%' },
+              maxWidth: { xs: '100%', md: '220px' },
+              minWidth: { md: '220px' },
               padding: '24px',
               textAlign: 'center',
               backgroundColor: '#f9f9f9',
