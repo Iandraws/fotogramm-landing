@@ -9,7 +9,7 @@ const testimonials = [
   {
     name: 'Bryan Adams',
     role: 'photographer/singer',
-    text: "Picdrop manages to take the simple idea of sharing images to a new level, I can't believe someone didn't think of this sooner.",
+    text: "Fotogram manages to take the simple idea of sharing images to a new level, I can't believe someone didn't think of this sooner.",
     image: '/assets/users/11.PNG', // Replace with actual image path
   },
   {

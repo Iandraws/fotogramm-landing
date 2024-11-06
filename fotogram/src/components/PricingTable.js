@@ -80,8 +80,8 @@ const plans = [
     description:
       'For professional photographers and businesses who want to stand out.',
     features: [
-      'Up to 3 Events',
-      'Up to 3 Clients',
+      'Unlimited Events',
+      'Unlimited Clients',
       'CRM (Client Management)',
       'Unlimited Gallery',
       'Image Tagging',
