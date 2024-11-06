@@ -9,13 +9,13 @@ import {
   ListItemText,
   Divider,
 } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 const plans = [
   {
     title: 'BASIC',
     price: '€499',
-    description:
-      'Perfect for photographers looking to expand at the start of their journey.',
+    description: 'Perfect for photographers looking to expand at the start of their journey.',
     features: [
       'Unlimited Events',
       'Unlimited Clients',
@@ -40,13 +40,12 @@ const plans = [
       'Videos and Reels',
       'Shop',
     ],
-    buttonText: 'Subscribe Now',
+    buttonText: 'Start 14 days For Free',
   },
   {
     title: 'ADVANCED',
     price: '€549',
-    description:
-      'For photographers upgrading their quality and organizing larger projects.',
+    description: 'For photographers upgrading their quality and organizing larger projects.',
     features: [
       'Unlimited Events',
       'Unlimited Clients',
@@ -71,14 +70,13 @@ const plans = [
       'Videos and Reels',
       'Shop',
     ],
-    buttonText: 'Subscribe Now',
-    popular: true, // Add a tag for the most popular plan
+    buttonText: 'Start 14 days For Free',
+    popular: true,
   },
   {
     title: 'PREMIUM',
     price: '€849',
-    description:
-      'For professional photographers and businesses who want to stand out.',
+    description: 'For professional photographers and businesses who want to stand out.',
     features: [
       'Unlimited Events',
       'Unlimited Clients',
@@ -102,7 +100,7 @@ const plans = [
       'Shop',
     ],
     unavailableFeatures: [],
-    buttonText: 'Subscribe Now',
+    buttonText: 'Start 14 days For Free',
   },
   {
     title: 'CUSTOM',
@@ -115,6 +113,12 @@ const plans = [
 ];
 
 const PricingTable = () => {
+  const navigate = useNavigate();
+
+  const handleSignUp = (planTitle) => {
+    navigate(`/signup?plan=${planTitle.toLowerCase()}`); // Navigate with plan type as a query parameter
+  };
+
   return (
     <Box
       sx={{
@@ -146,7 +150,6 @@ const PricingTable = () => {
             sx={{
               width: { xs: '100%', md: '22%' },
               maxWidth: { xs: '100%', md: '300px' },
-
               padding: '24px',
               textAlign: 'center',
               backgroundColor: '#f9f9f9',
@@ -199,6 +202,7 @@ const PricingTable = () => {
 
             <Button
               variant="contained"
+              onClick={() => handleSignUp(plan.title)} // Pass the plan title to handleSignUp
               sx={{
                 backgroundColor: '#6aaad4',
                 color: '#fff',
