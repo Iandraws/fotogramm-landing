@@ -13,12 +13,14 @@ import {
   Typography,
 } from '@mui/material';
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const SignUpFormPage = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
+  const [plan, setPlan] = useState('free');
   const [role, setRole] = useState('self-employed');
   const [customSubdomain, setCustomSubdomain] = useState('');
   const [agreedToTerms, setAgreedToTerms] = useState(false);
@@ -34,18 +36,25 @@ const SignUpFormPage = () => {
     maxWidth: '600px',
     margin: '50px auto',
   };
+  const location = useLocation();
+
+  useEffect(() => {
+    const searchParams = new URLSearchParams(location.search);
+    const planValue = searchParams.get('plan');
+    setPlan(planValue || 'free');
+  }, [location.search]);
 
   // Handle form submission
   const handleSubmit = async (event) => {
-    event.preventDefault(); // Prevent default form submission
+    event.preventDefault();
 
-    // Construct the POST request body
     const requestBody = {
-      company: customSubdomain, // Using custom domain
+      company: customSubdomain,
       email: email,
       displayName: `${firstName} ${lastName}`,
       users: true,
       media: true,
+      plan: plan,
     };
 
     try {
