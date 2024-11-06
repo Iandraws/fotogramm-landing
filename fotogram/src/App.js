@@ -22,7 +22,7 @@ function App() {
         <Route path="/signup" element={<SignUpFormModal />} /> {/* Sign-Up Form Route */}
         <Route path="/help" element={<Help />} /> 
         <Route path="/why-fotogram" element={<HowItWorks />} /> 
-        <Route path="/WhoWeAre" element={<WhoWeAre />} /> 
+        <Route path="/who-we-are" element={<WhoWeAre />} /> 
         
       </Routes>
       <Footer />
