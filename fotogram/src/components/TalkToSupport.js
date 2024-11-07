@@ -10,6 +10,7 @@ const TalkToSupport = () => {
 
   return (
     <Button
+      variant="outlined"
       sx={{
         fontWeight: 'bold',
         borderRadius: '24px',
