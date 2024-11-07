@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Typography, Button } from '@mui/material';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate to handle routing
+import { useNavigate } from 'react-router-dom';
 
 const sections = [
   {
@@ -39,14 +39,13 @@ const sections = [
       "You need to agree on a final selection of images within your team members? Let everyone involved like their favorites with one click and magically sort the images by number of likes! We call it 'voting' and it’s child’s play.",
     image: '/assets/funk/votingImage.mp4',
   },
-  // Add more sections as needed...
 ];
 
 const FunktionPage = () => {
-  const navigate = useNavigate(); // Initialize the navigate function
+  const navigate = useNavigate();
 
   const handleSignUp = () => {
-    navigate('/signup'); // Navigate to the /signup route when the button is clicked
+    navigate('/signup');
   };
 
   return (

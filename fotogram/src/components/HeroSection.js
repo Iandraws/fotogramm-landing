@@ -9,16 +9,16 @@ import {
   ListItemIcon,
   ListItemText,
 } from '@mui/material';
-import CheckIcon from '@mui/icons-material/Check'; // For checkmarks in the list
+import CheckIcon from '@mui/icons-material/Check';
 import AutoCarousel from './AutoCarousel';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate to handle routing
+import { useNavigate } from 'react-router-dom';
 import PowerfulFeaturesSection from './PowerfulFeaturesSection';
 
 const HeroSection = () => {
-  const navigate = useNavigate(); // Initialize the navigate function
+  const navigate = useNavigate();
 
   const handleSignUp = () => {
-    navigate('/signup'); // Navigate to the /signup route when the button is clicked
+    navigate('/signup');
   };
 
   return (
@@ -28,13 +28,12 @@ const HeroSection = () => {
         variant="contained"
         sx={{
           display: 'flex',
-          flexDirection: { xs: 'column', md: 'row' }, // Stack on small screens, row on larger screens
+          flexDirection: { xs: 'column', md: 'row' },
           justifyContent: 'space-between',
           alignItems: 'center',
-          minHeight: '90vh', // Full viewport height for the hero section
           backgroundColor: '#fff',
           paddingTop: { xs: '20px', md: '40px' },
-          paddingBottom: { xs: '20px', md: '40px' },
+          paddingBottom: { xs: '20px', md: '120px' },
           paddingLeft: { xs: '20px', md: '40px', lg: '160px', xl: '200px' },
           paddingRight: { xs: '20px', md: '0px', lg: '160px', xl: '200px' },
         }}
@@ -43,15 +42,15 @@ const HeroSection = () => {
         <Box
           sx={{
             flex: 1,
-            paddingLeft: { xs: '10px', md: '40px' }, // Reduced padding for smaller screens
-            textAlign: { xs: 'center', md: 'left' }, // Center text on mobile, left on desktop
+            paddingLeft: { xs: '10px', md: '40px' },
+            textAlign: { xs: 'center', md: 'left' },
           }}
         >
           <Typography
             variant="h2"
             sx={{
               fontWeight: 'bold',
-              fontSize: { xs: '2rem', sm: '2.5rem', md: '3.5rem' }, // Adjusted font size for mobile
+              fontSize: { xs: '2rem', sm: '2.5rem', md: '3.5rem' },
               mb: 3,
             }}
           >
@@ -103,15 +102,15 @@ const HeroSection = () => {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            marginTop: { xs: '20px', md: '0' }, // Margin for mobile screens
+            marginTop: { xs: '20px', md: '0' },
           }}
         >
           <img
-            src="/assets/1.webp" // Replace this with the actual image path
+            src="/assets/1.webp"
             alt="Hero placeholder"
             style={{
               width: '100%',
-              maxWidth: '700px', // Adjusted the image size for smaller screens
+              maxWidth: '700px',
               borderRadius: '24px',
             }}
           />
@@ -219,14 +218,14 @@ const HeroSection = () => {
       <Box
         sx={{
           display: 'flex',
-          flexDirection: { xs: 'column', md: 'row' }, // Stack on small screens, row on larger screens
+          flexDirection: { xs: 'column', md: 'row' },
           justifyContent: 'space-between',
           alignItems: 'center',
           paddingTop: { xs: '20px', md: '120px' },
           paddingBottom: { xs: '20px', md: '120px' },
           paddingLeft: { xs: '20px', md: '48px', lg: '100px', xl: '200px' },
           paddingRight: { xs: '20px', md: '56px', lg: '100px', xl: '200px' },
-          backgroundColor: '#5c524c', // Background color matching the style
+          backgroundColor: '#5c524c',
         }}
       >
         {/* Left side: Image */}
@@ -236,17 +235,17 @@ const HeroSection = () => {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            marginTop: { xs: '20px', md: '0' }, // Margin for mobile screens
+            marginTop: { xs: '20px', md: '0' },
             overflow: 'hidden',
           }}
         >
           <img
-            src="/assets/7.jpeg" // Replace this with your actual image path
+            src="/assets/7.jpeg"
             alt="Built by creatives for creatives"
             style={{
               width: '100%',
-              maxWidth: '600px', // Adjust the image size as needed
-              borderRadius: '10px', // Maintain the rounded corners
+              maxWidth: '600px',
+              borderRadius: '10px',
             }}
           />
         </Box>
@@ -255,9 +254,9 @@ const HeroSection = () => {
         <Box
           sx={{
             flex: 1,
-            paddingLeft: { xs: '20px', md: '40px' }, // Padding on the left
-            textAlign: { xs: 'center', md: 'left' }, // Center text on mobile, left on desktop
-            color: '#fff', // White text for contrast
+            paddingLeft: { xs: '20px', md: '40px' },
+            textAlign: { xs: 'center', md: 'left' },
+            color: '#fff',
           }}
         >
           <Typography

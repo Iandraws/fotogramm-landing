@@ -119,7 +119,7 @@ const PricingTable = () => {
   const navigate = useNavigate();
 
   const handleSignUp = (planTitle) => {
-    navigate(`/signup?plan=${planTitle.toLowerCase()}`); // Navigate with plan type as a query parameter
+    navigate(`/signup?plan=${planTitle.toLowerCase()}`);
   };
 
   return (
@@ -206,7 +206,7 @@ const PricingTable = () => {
 
             <Button
               variant="contained"
-              onClick={() => handleSignUp(plan.title)} // Pass the plan title to handleSignUp
+              onClick={() => handleSignUp(plan.title)}
               sx={{
                 color: '#fff',
                 fontWeight: 'bold',

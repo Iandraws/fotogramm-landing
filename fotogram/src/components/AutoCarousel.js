@@ -78,18 +78,18 @@ const AutoCarousel = () => {
             sx={{
               padding: '24px',
               textAlign: 'center',
-              boxShadow: '0px 4px 12px rgba(0,0,0,0.15)', // Softer, stronger shadow
-              borderRadius: '24px', // Slightly larger radius for smoother edges
-              backgroundColor: '#fefefe', // Soft background color
+              boxShadow: '0px 4px 12px rgba(0,0,0,0.15)',
+              borderRadius: '24px',
+              backgroundColor: '#fefefe',
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
               alignItems: 'center',
-              transition: 'transform 0.3s ease, box-shadow 0.3s ease', // Smooth transform and shadow transition
-              minHeight: '350px', // Slightly taller cards
+              transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+              minHeight: '350px',
               '&:hover': {
-                transform: 'scale(1.05)', // Subtle zoom effect on hover
-                boxShadow: '0px 6px 20px rgba(0,0,0,0.2)', // Larger shadow on hover
+                transform: 'scale(1.05)',
+                boxShadow: '0px 6px 20px rgba(0,0,0,0.2)',
               },
             }}
           >
@@ -103,9 +103,9 @@ const AutoCarousel = () => {
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                transition: 'transform 0.3s ease', // Smooth image scale transition
+                transition: 'transform 0.3s ease',
                 '&:hover': {
-                  transform: 'scale(1.1)', // Slightly larger image on hover
+                  transform: 'scale(1.1)',
                 },
               }}
             >
@@ -129,7 +129,7 @@ const AutoCarousel = () => {
                 fontStyle: 'italic',
                 marginTop: '10px',
                 marginBottom: '10px',
-                fontSize: '1rem', // Adjusted for better readability
+                fontSize: '1rem',
                 lineHeight: 1.6,
               }}
             >
@@ -140,7 +140,7 @@ const AutoCarousel = () => {
               sx={{
                 fontWeight: 'bold',
                 marginTop: '10px',
-                fontSize: '1.1rem', // Slightly larger for emphasis
+                fontSize: '1.1rem',
               }}
             >
               {testimonial.name}

@@ -153,7 +153,6 @@ const SignUpFormPage = () => {
         />
       </RadioGroup>
 
-      {/* Custom Domain Field */}
       <Box
         sx={{
           display: 'flex',
@@ -208,7 +207,6 @@ const SignUpFormPage = () => {
         />
       </FormGroup>
 
-      {/* Submit Button */}
       <Button
         type="submit"
         fullWidth
@@ -220,12 +218,11 @@ const SignUpFormPage = () => {
           borderRadius: '24px',
           fontSize: '1.1rem',
         }}
-        disabled={!agreedToTerms} // Disable button until terms are agreed to
+        disabled={!agreedToTerms}
       >
         Sign up for the free plan now
       </Button>
 
-      {/* Success Message with Green Checkmark */}
       {isSuccess && (
         <Box
           sx={{

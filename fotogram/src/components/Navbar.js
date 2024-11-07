@@ -157,8 +157,8 @@ const Navbar = () => {
                     justifyContent: 'center',
                     color: '#333',
                     '&:hover': {
-                      backgroundColor: '#e0e0e0', // Darker gray for hover effect
-                      color: '#000', // Text color on hover
+                      backgroundColor: '#e0e0e0',
+                      color: '#000',
                       borderRadius: '8px',
                       transition: 'background-color 0.3s ease',
                     },
