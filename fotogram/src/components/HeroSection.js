@@ -1,29 +1,21 @@
 // src/components/HeroSection.js
-import React from 'react';
+import CheckIcon from '@mui/icons-material/Check';
 import {
   Box,
-  Typography,
-  Button,
   List,
   ListItem,
   ListItemIcon,
   ListItemText,
+  Typography,
 } from '@mui/material';
-import CheckIcon from '@mui/icons-material/Check';
+import React from 'react';
 import AutoCarousel from './AutoCarousel';
-import { useNavigate } from 'react-router-dom';
 import PowerfulFeaturesSection from './PowerfulFeaturesSection';
+import TryIt from './tryIt';
 
 const HeroSection = () => {
-  const navigate = useNavigate();
-
-  const handleSignUp = () => {
-    navigate('/signup');
-  };
-
   return (
     <>
-      {/* Main Hero Section */}
       <Box
         variant="contained"
         sx={{
@@ -79,20 +71,7 @@ const HeroSection = () => {
             </ListItem>
           </List>
 
-          {/* Call to Action Button */}
-          <Button
-            variant="contained"
-            sx={{
-              fontWeight: 'bold',
-              padding: '8px 32px',
-              textTransform: 'none',
-              borderRadius: '24px',
-              mt: 2,
-            }}
-            onClick={handleSignUp}
-          >
-            try it it's free
-          </Button>
+          <TryIt />
         </Box>
 
         {/* Right side: Image */}
@@ -175,18 +154,7 @@ const HeroSection = () => {
             <strong>small teams</strong> or companies!
           </Typography>
 
-          <Button
-            variant="contained"
-            sx={{
-              fontWeight: 'bold',
-              padding: '8px 32px',
-              textTransform: 'none',
-              borderRadius: '24px',
-            }}
-            onClick={handleSignUp}
-          >
-            try it it's free
-          </Button>
+          <TryIt />
         </Box>
 
         {/* Left side: Image */}
@@ -279,23 +247,11 @@ const HeroSection = () => {
           >
             fotogram is the brainchild of two Pros: a{' '}
             <strong>photographer</strong> and a <strong>designer</strong>. We{' '}
-            <strong>know</strong> what you need and just build it. It’s that
+            <strong>know</strong> what you need and just build it. It's that
             simple.
           </Typography>
 
-          {/* Call to Action Button */}
-          <Button
-            variant="contained"
-            sx={{
-              fontWeight: 'bold',
-              padding: '8px 32px',
-              textTransform: 'none',
-              borderRadius: '24px',
-            }}
-            onClick={handleSignUp}
-          >
-            try it it's free
-          </Button>
+          <TryIt />
         </Box>
       </Box>
       <AutoCarousel />

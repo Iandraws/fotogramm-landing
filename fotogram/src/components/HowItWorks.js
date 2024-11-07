@@ -1,6 +1,6 @@
+import { Box, Typography } from '@mui/material';
 import React from 'react';
-import { Box, Typography, Button } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
+import TryIt from './tryIt';
 
 const sections = [
   {
@@ -12,19 +12,19 @@ const sections = [
   {
     title: 'Built for simplicity',
     description:
-      'Picdrop is built with 100% your client in mind. There is no installation needed, no logins required and no learning curve.',
+      'Fotogram is built with 100% your client in mind. There is no installation needed, no logins required and no learning curve.',
     image: '/assets/funk/simplicityImage.jpg',
   },
   {
     title: 'Presentation Mode: Show & deliver to clients',
     description:
-      'For simple and beautiful presentation of your files just activate the presentation mode. Don’t forget to customize the look in the gallery’s settings so your work looks great!',
+      "For simple and beautiful presentation of your files just activate the presentation mode. Don't forget to customize the look in the gallery's settings so your work looks great!",
     image: '/assets/funk/presentationModeImage.png',
   },
   {
     title: 'Edit Mode: Collaborate with clients',
     description:
-      'With picdrop the hassle of picking the client’s favorites and creating selections ends. Your clients can use our simple proofing tools such as the color marker or likes to select their favorite images and videos.',
+      "With Fotogram the hassle of picking the client's favorites and creating selections ends. Your clients can use our simple proofing tools such as the color marker or likes to select their favorite images and videos.",
     image: '/assets/funk/editModeImage.jpg',
   },
   {
@@ -36,18 +36,12 @@ const sections = [
   {
     title: 'Likes & Voting',
     description:
-      "You need to agree on a final selection of images within your team members? Let everyone involved like their favorites with one click and magically sort the images by number of likes! We call it 'voting' and it’s child’s play.",
+      "You need to agree on a final selection of images within your team members? Let everyone involved like their favorites with one click and magically sort the images by number of likes! We call it 'voting' and it's child's play.",
     image: '/assets/funk/votingImage.mp4',
   },
 ];
 
 const FunktionPage = () => {
-  const navigate = useNavigate();
-
-  const handleSignUp = () => {
-    navigate('/signup');
-  };
-
   return (
     <Box
       sx={{ padding: '40px', backgroundColor: '#f9f9f9', textAlign: 'center' }}
@@ -142,18 +136,8 @@ const FunktionPage = () => {
             plan forever or upgrade anytime. No automatic subscription. You
             decide.
           </Typography>
-          <Button
-            variant="contained"
-            sx={{
-              fontWeight: 'bold',
-              borderRadius: '24px',
-              padding: '8px 32px',
-              textTransform: 'none',
-            }}
-            onClick={handleSignUp}
-          >
-            Sign up - it's free
-          </Button>
+
+          <TryIt />
         </Box>
       </Box>
     </Box>

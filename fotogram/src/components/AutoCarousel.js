@@ -15,7 +15,7 @@ const testimonials = [
   {
     name: 'Claudia Gödke',
     role: 'food photographer',
-    text: 'My clients love the intuitive way to select their favorites and participate remotely on my photo shoots. It’s a game changer!',
+    text: 'My clients love the intuitive way to select their favorites and participate remotely on my photo shoots. It\'s a game changer!',
     image: '/assets/users/22.PNG',
   },
   {

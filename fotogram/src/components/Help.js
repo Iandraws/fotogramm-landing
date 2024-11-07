@@ -87,7 +87,7 @@ const Help = () => {
           </AccordionSummary>
           <AccordionDetails>
             <Typography style={{ textAlign: 'left' }}>
-              No, your clients don’t need an account to view galleries. They
+              No, your clients don't need an account to view galleries. They
               will receive a shareable link via email or a direct link that you
               can provide.
             </Typography>

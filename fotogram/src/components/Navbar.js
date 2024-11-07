@@ -1,28 +1,22 @@
-import React, { useState } from 'react';
+import CloseIcon from '@mui/icons-material/Close';
+import MenuIcon from '@mui/icons-material/Menu';
 import {
   AppBar,
-  Toolbar,
-  Button,
   Box,
-  Link as MuiLink,
-  IconButton,
   Drawer,
+  IconButton,
   List,
   ListItem,
   ListItemText,
+  Link as MuiLink,
+  Toolbar,
 } from '@mui/material';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import MenuIcon from '@mui/icons-material/Menu';
-import CloseIcon from '@mui/icons-material/Close';
-import { useNavigate } from 'react-router-dom';
+import TryIt from './tryIt';
 
 const Navbar = () => {
-  const navigate = useNavigate();
   const [mobileOpen, setMobileOpen] = useState(false);
-
-  const handleSignUp = () => {
-    navigate('/signup');
-  };
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -96,20 +90,7 @@ const Navbar = () => {
           )}
         </Box>
 
-        {/* Call to Action Button */}
-        <Button
-          variant="contained"
-          sx={{
-            fontWeight: 'bold',
-            borderRadius: '24px',
-            textTransform: 'none',
-            padding: '8px 20px',
-            boxShadow: 'none',
-          }}
-          onClick={handleSignUp}
-        >
-          try it it's free
-        </Button>
+        <TryIt />
 
         {/* Mobile Menu Button */}
         <IconButton
