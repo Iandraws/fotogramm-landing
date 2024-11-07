@@ -15,6 +15,8 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import TryIt from './TryIt';
 
+import translate from '../helpers/translate';
+
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -68,8 +70,8 @@ const Navbar = () => {
         >
           {[
             { label: 'Why Fotogram', path: 'why-fotogram' },
-            { label: 'Pricing', path: 'pricing' },
-            { label: 'Our Story', path: 'our-story' },
+            { label: translate('pricing'), path: 'pricing' },
+            { label: translate('oursstory'), path: 'our-story' },
             { label: 'Support FAQs', path: 'faq' },
             { label: 'Contact Us', path: 'get-in-touch' },
           ].map((route) => (
@@ -136,8 +138,8 @@ const Navbar = () => {
           </IconButton>
           <List sx={{ width: '100%', textAlign: 'center' }}>
             {[
-              { label: 'Why Fotogram', path: 'why-fotogram' },
-              { label: 'Pricing', path: 'pricing' },
+              { label: translate('whyfotogram'), path: 'why-fotogram' },
+              { label: translate('pricing'), path: 'pricing' },
               { label: 'Our Story', path: 'our-story' },
               { label: 'Support FAQs', path: 'faq' },
               { label: 'Contact Us', path: 'get-in-touch' },
