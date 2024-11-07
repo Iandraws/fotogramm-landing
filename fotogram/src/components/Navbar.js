@@ -71,6 +71,7 @@ const Navbar = () => {
             { label: 'Pricing', path: 'pricing' },
             { label: 'Our Story', path: 'our-story' },
             { label: 'Support FAQs', path: 'faq' },
+            { label: 'Contact Us', path: 'get-in-touch' },
           ].map((route) => (
             <MuiLink
               key={route.path}
@@ -139,6 +140,7 @@ const Navbar = () => {
               { label: 'Pricing', path: 'pricing' },
               { label: 'Our Story', path: 'our-story' },
               { label: 'Support FAQs', path: 'faq' },
+              { label: 'Contact Us', path: 'get-in-touch' },
             ].map((route) => (
               <ListItem
                 component={NavLink}
