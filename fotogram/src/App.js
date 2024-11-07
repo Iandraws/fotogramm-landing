@@ -21,10 +21,10 @@ function App() {
         <Route path="/" element={<HeroSection />} />
         <Route path="/pricing" element={<PricingTable />} /> {/* Pricing Route */}
         <Route path="/signup" element={<SignUpFormModal />} /> {/* Sign-Up Form Route */}
-        <Route path="/help" element={<Help />} /> 
+        <Route path="/faq" element={<Help />} /> 
         <Route path="/why-fotogram" element={<HowItWorks />} /> 
-        <Route path="/who-we-are" element={<WhoWeAre />} /> 
-        <Route path="/contact-us" element={<ContactUs />} /> 
+        <Route path="/our-story" element={<WhoWeAre />} /> 
+        <Route path="/get-in-touch" element={<ContactUs />} /> 
         
       </Routes>
       <Footer />

@@ -5,7 +5,7 @@ const TalkToSupport = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate('/contact-us');
+    navigate('/get-in-touch');
   };
 
   return (
@@ -20,7 +20,7 @@ const TalkToSupport = () => {
       }}
       onClick={() => handleClick()}
     >
-      Talk to support
+      Get in Touch
     </Button>
   );
 };

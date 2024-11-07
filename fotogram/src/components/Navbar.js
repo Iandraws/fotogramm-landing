@@ -13,7 +13,6 @@ import {
 } from '@mui/material';
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import TalkToSupport from './TalkToSupport';
 import TryIt from './TryIt';
 
 const Navbar = () => {
@@ -30,7 +29,10 @@ const Navbar = () => {
         backgroundColor: '#fff',
         boxShadow: 'none',
         borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
-        padding: '0 20px',
+        paddingTop: { xs: '0px', md: '0px' },
+        paddingBottom: { xs: '0px', md: '0px' },
+        paddingLeft: { xs: '8px', md: '16px' },
+        paddingRight: { xs: '8px', md: '16px' },
       }}
     >
       <Toolbar
@@ -64,38 +66,38 @@ const Navbar = () => {
             alignItems: 'center',
           }}
         >
-          {['Why Fotogram', 'Pricing', 'Help', 'Who We Are'].map(
-            (text, index) => (
-              <MuiLink
-                key={index}
-                component={NavLink}
-                to={`/${text.replace(/\s+/g, '-').toLowerCase()}`}
-                color="inherit"
-                underline="none"
-                sx={{
-                  fontSize: '1rem',
-                  fontWeight: '500',
-                  color: '#333',
-                  '&:hover': {
-                    color: '#6aaad4',
-                    transition: 'color 0.3s ease',
-                  },
-                  display: 'flex',
-                  alignItems: 'center',
-                  '&.active': { color: '#1976d2' },
-                }}
-              >
-                {text}
-              </MuiLink>
-            )
-          )}
+          {[
+            { label: 'Why Fotogram', path: 'why-fotogram' },
+            { label: 'Pricing', path: 'pricing' },
+            { label: 'Our Story', path: 'our-story' },
+            { label: 'Support FAQs', path: 'faq' },
+          ].map((route) => (
+            <MuiLink
+              key={route.path}
+              component={NavLink}
+              to={route.path}
+              color="inherit"
+              underline="none"
+              sx={{
+                fontSize: '1rem',
+                fontWeight: '500',
+                color: '#333',
+                '&:hover': {
+                  color: '#6aaad4',
+                  transition: 'color 0.3s ease',
+                },
+                display: 'flex',
+                alignItems: 'center',
+                '&.active': { color: '#1976d2' },
+              }}
+            >
+              {route.label}
+            </MuiLink>
+          ))}
         </Box>
 
-        <Box sx={{ display: 'flex', gap: '8px' }}>
+        <Box sx={{ display: 'flex', gap: '16px' }}>
           <TryIt />
-          <Box sx={{ display: { xs: 'none', md: 'block' } }}>
-            <TalkToSupport />
-          </Box>
         </Box>
 
         {/* Mobile Menu Button */}
@@ -103,7 +105,7 @@ const Navbar = () => {
           edge="end"
           aria-label="menu"
           onClick={handleDrawerToggle}
-          sx={{ display: { xs: 'block', md: 'none' } }}
+          sx={{ display: { xs: 'flex', md: 'none' } }}
         >
           <MenuIcon />
         </IconButton>
@@ -132,31 +134,34 @@ const Navbar = () => {
             <CloseIcon />
           </IconButton>
           <List sx={{ width: '100%', textAlign: 'center' }}>
-            {['Why Fotogram', 'Pricing', 'Help', 'Who We Are'].map(
-              (text, index) => (
-                <ListItem
-                  component={NavLink}
-                  to={`/${text.replace(/\s+/g, '-').toLowerCase()}`}
-                  onClick={handleDrawerToggle}
-                  key={index}
-                  sx={{
-                    justifyContent: 'center',
-                    color: '#333',
-                    '&:hover': {
-                      backgroundColor: '#e0e0e0',
-                      color: '#000',
-                      borderRadius: '8px',
-                      transition: 'background-color 0.3s ease',
-                    },
-                  }}
-                >
-                  <ListItemText
-                    primary={text}
-                    sx={{ textAlign: 'center' }}
-                  />
-                </ListItem>
-              )
-            )}
+            {[
+              { label: 'Why Fotogram', path: 'why-fotogram' },
+              { label: 'Pricing', path: 'pricing' },
+              { label: 'Our Story', path: 'our-story' },
+              { label: 'Support FAQs', path: 'faq' },
+            ].map((route) => (
+              <ListItem
+                component={NavLink}
+                to={route.path}
+                onClick={handleDrawerToggle}
+                key={route.path}
+                sx={{
+                  justifyContent: 'center',
+                  color: '#333',
+                  '&:hover': {
+                    backgroundColor: '#e0e0e0',
+                    color: '#000',
+                    borderRadius: '8px',
+                    transition: 'background-color 0.3s ease',
+                  },
+                }}
+              >
+                <ListItemText
+                  primary={route.label}
+                  sx={{ textAlign: 'center' }}
+                />
+              </ListItem>
+            ))}
           </List>
         </Box>
       </Drawer>

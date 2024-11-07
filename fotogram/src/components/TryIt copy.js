@@ -20,7 +20,7 @@ const TryIt = () => {
       }}
       onClick={() => handleSignUp()}
     >
-      Try it it's free
+      Start Your Free Trial
     </Button>
   );
 };
