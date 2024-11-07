@@ -71,8 +71,8 @@ const Navbar = () => {
           {[
             { label: 'Home', path: '' },
             { label: 'Why Fotogram', path: 'why-fotogram' },
-            { label: translate('pricing'), path: 'pricing' },
-            { label: translate('ourstory'), path: 'our-story' },
+            { label: 'Pricing', path: 'pricing' },
+            { label: 'Our Story', path: 'our-story' },
             { label: 'Support FAQs', path: 'faq' },
             { label: 'Contact Us', path: 'get-in-touch' },
           ].map((route) => (
@@ -140,8 +140,8 @@ const Navbar = () => {
           <List sx={{ width: '100%', textAlign: 'center' }}>
             {[
               { label: 'Home', path: '' },
-              { label: translate('whyfotogram'), path: 'why-fotogram' },
-              { label: translate('pricing'), path: 'pricing' },
+              { label: 'Why Fotogram', path: 'why-fotogram' },
+              { label: 'Pricing', path: 'pricing' },
               { label: 'Our Story', path: 'our-story' },
               { label: 'Support FAQs', path: 'faq' },
               { label: 'Contact Us', path: 'get-in-touch' },
