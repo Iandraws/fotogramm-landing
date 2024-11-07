@@ -15,8 +15,8 @@ const PowerfulFeaturesSection = () => {
           backgroundColor: '#fff',
           paddingTop: { xs: '20px', md: '200px' },
           paddingBottom: { xs: '20px', md: '100px' },
-          paddingLeft: { xs: '20px', md: '80px' },
-          paddingRight: { xs: '20px', md: '40px' },
+          paddingLeft: { xs: '20px', md: '80px', lg: '100px', xl: '200px' },
+          paddingRight: { xs: '20px', md: '40px', lg: '100px', xl: '200px' },
         }}
       >
         {/* Left side: Text */}
@@ -87,8 +87,8 @@ const PowerfulFeaturesSection = () => {
           alignItems: 'center',
           paddingTop: { xs: '20px', md: '100px' },
           paddingBottom: { xs: '20px', md: '100px' },
-          paddingLeft: { xs: '20px', md: '48px' },
-          paddingRight: { xs: '20px', md: '56px' },
+          paddingLeft: { xs: '20px', md: '48px', lg: '100px', xl: '200px' },
+          paddingRight: { xs: '20px', md: '56px', lg: '100px', xl: '200px' },
           backgroundColor: '#fff',
         }}
       >
@@ -152,8 +152,8 @@ const PowerfulFeaturesSection = () => {
           alignItems: 'center',
           paddingTop: { xs: '20px', md: '100px' },
           paddingBottom: { xs: '20px', md: '200px' },
-          paddingLeft: { xs: '20px', md: '80px' },
-          paddingRight: { xs: '20px', md: '80px' },
+          paddingLeft: { xs: '20px', md: '80px', lg: '100px', xl: '200px' },
+          paddingRight: { xs: '20px', md: '80px', lg: '100px', xl: '200px' },
           backgroundColor: '#fff',
         }}
       >

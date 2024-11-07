@@ -167,7 +167,7 @@ const SignUpFormPage = () => {
         <Typography sx={{ color: '#555' }}>https://</Typography>
         <TextField
           fullWidth
-          placeholder="Your custom address"
+          placeholder="your custom address"
           variant="outlined"
           value={customSubdomain}
           onChange={(e) => setCustomSubdomain(e.target.value)}
@@ -214,16 +214,11 @@ const SignUpFormPage = () => {
         fullWidth
         variant="contained"
         sx={{
-          backgroundColor: '#6aaad4', // Button color
-          color: '#fff',
           fontWeight: 'bold',
-          padding: '12px',
+          padding: '8px 24px',
           textTransform: 'none',
-          borderRadius: '10px',
+          borderRadius: '24px',
           fontSize: '1.1rem',
-          '&:hover': {
-            backgroundColor: '#6aaad4', // Same color on hover
-          },
         }}
         disabled={!agreedToTerms} // Disable button until terms are agreed to
       >
@@ -242,7 +237,9 @@ const SignUpFormPage = () => {
         >
           <CheckCircleIcon sx={{ color: 'green', fontSize: '2rem', mr: 1 }} />
           <Typography sx={{ color: 'green', fontWeight: 'bold' }}>
-            You have successfully created your account.
+            You have successfully created your account. Check your email for the
+            login link. Check your spam folder if you don't see it in your
+            inbox.
           </Typography>
         </Box>
       )}

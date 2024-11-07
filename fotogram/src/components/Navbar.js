@@ -46,7 +46,11 @@ const Navbar = () => {
         }}
       >
         {/* Logo Section */}
-        <MuiLink component={NavLink} to="/" sx={{ display: 'flex', alignItems: 'center' }}>
+        <MuiLink
+          component={NavLink}
+          to="/"
+          sx={{ display: 'flex', alignItems: 'center' }}
+        >
           <img
             src="/assets/logo.png"
             alt="Fotogram logo"
@@ -65,47 +69,46 @@ const Navbar = () => {
             alignItems: 'center',
           }}
         >
-          {['Why Fotogram', 'Pricing', 'Help', 'Who We Are'].map((text, index) => (
-            <MuiLink
-              key={index}
-              component={NavLink}
-              to={`/${text.replace(/\s+/g, '-').toLowerCase()}`}
-              color="inherit"
-              underline="none"
-              sx={{
-                fontSize: '1rem',
-                fontWeight: '500',
-                color: '#333',
-                '&:hover': { color: '#6aaad4', transition: 'color 0.3s ease' },
-                display: 'flex',
-                alignItems: 'center',
-                '&.active': { color: '#71B3E5' },
-              }}
-            >
-              {text}
-            </MuiLink>
-          ))}
+          {['Why Fotogram', 'Pricing', 'Help', 'Who We Are'].map(
+            (text, index) => (
+              <MuiLink
+                key={index}
+                component={NavLink}
+                to={`/${text.replace(/\s+/g, '-').toLowerCase()}`}
+                color="inherit"
+                underline="none"
+                sx={{
+                  fontSize: '1rem',
+                  fontWeight: '500',
+                  color: '#333',
+                  '&:hover': {
+                    color: '#6aaad4',
+                    transition: 'color 0.3s ease',
+                  },
+                  display: 'flex',
+                  alignItems: 'center',
+                  '&.active': { color: '#1976d2' },
+                }}
+              >
+                {text}
+              </MuiLink>
+            )
+          )}
         </Box>
 
         {/* Call to Action Button */}
         <Button
           variant="contained"
           sx={{
-            backgroundColor: '#6aaad4',
-            color: '#000',
             fontWeight: 'bold',
-            borderRadius: '20px',
+            borderRadius: '24px',
             textTransform: 'none',
             padding: '8px 20px',
             boxShadow: 'none',
-            '&:hover': {
-              backgroundColor: '#6aaad4',
-              boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
-            },
           }}
           onClick={handleSignUp}
         >
-          Try it – it's free
+          try it it's free
         </Button>
 
         {/* Mobile Menu Button */}
@@ -120,12 +123,16 @@ const Navbar = () => {
       </Toolbar>
 
       {/* Drawer for Mobile Menu */}
-      <Drawer anchor="top" open={mobileOpen} onClose={handleDrawerToggle}>
+      <Drawer
+        anchor="top"
+        open={mobileOpen}
+        onClose={handleDrawerToggle}
+      >
         <Box
           sx={{
             width: '100%',
-            backgroundColor: '#f8f9fa', // Light gray background similar to the screenshot
-            padding: '20px 0',
+            backgroundColor: '#f8f9fa',
+            padding: '24px 0',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
@@ -138,27 +145,32 @@ const Navbar = () => {
             <CloseIcon />
           </IconButton>
           <List sx={{ width: '100%', textAlign: 'center' }}>
-          {['Why Fotogram', 'Pricing', 'Help', 'Who We Are'].map((text, index) => (
-              <ListItem
-                button
-                component={NavLink}
-                to={`/${text.replace(/\s+/g, '-').toLowerCase()}`}
-                onClick={handleDrawerToggle}
-                key={index}
-                sx={{
-                  justifyContent: 'center',
-                  color: '#333',
-                  '&:hover': {
-                    backgroundColor: '#e0e0e0', // Darker gray for hover effect
-                    color: '#000', // Text color on hover
-                    borderRadius: '8px',
-                    transition: 'background-color 0.3s ease',
-                  },
-                }}
-              >
-                <ListItemText primary={text} sx={{ textAlign: 'center' }} />
-              </ListItem>
-            ))}
+            {['Why Fotogram', 'Pricing', 'Help', 'Who We Are'].map(
+              (text, index) => (
+                <ListItem
+                  button
+                  component={NavLink}
+                  to={`/${text.replace(/\s+/g, '-').toLowerCase()}`}
+                  onClick={handleDrawerToggle}
+                  key={index}
+                  sx={{
+                    justifyContent: 'center',
+                    color: '#333',
+                    '&:hover': {
+                      backgroundColor: '#e0e0e0', // Darker gray for hover effect
+                      color: '#000', // Text color on hover
+                      borderRadius: '8px',
+                      transition: 'background-color 0.3s ease',
+                    },
+                  }}
+                >
+                  <ListItemText
+                    primary={text}
+                    sx={{ textAlign: 'center' }}
+                  />
+                </ListItem>
+              )
+            )}
           </List>
         </Box>
       </Drawer>

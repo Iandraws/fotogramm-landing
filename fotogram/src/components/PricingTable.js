@@ -15,7 +15,8 @@ const plans = [
   {
     title: 'BASIC',
     price: '€499',
-    description: 'Perfect for photographers looking to expand at the start of their journey.',
+    description:
+      'Perfect for photographers looking to expand at the start of their journey.',
     features: [
       'Unlimited Events',
       'Unlimited Clients',
@@ -40,12 +41,13 @@ const plans = [
       'Videos and Reels',
       'Shop',
     ],
-    buttonText: 'Start 14 days For Free',
+    buttonText: 'Start 30 days For Free',
   },
   {
     title: 'ADVANCED',
     price: '€549',
-    description: 'For photographers upgrading their quality and organizing larger projects.',
+    description:
+      'For photographers upgrading their quality and organizing larger projects.',
     features: [
       'Unlimited Events',
       'Unlimited Clients',
@@ -70,13 +72,14 @@ const plans = [
       'Videos and Reels',
       'Shop',
     ],
-    buttonText: 'Start 14 days For Free',
+    buttonText: 'Start 30 days For Free',
     popular: true,
   },
   {
     title: 'PREMIUM',
     price: '€849',
-    description: 'For professional photographers and businesses who want to stand out.',
+    description:
+      'For professional photographers and businesses who want to stand out.',
     features: [
       'Unlimited Events',
       'Unlimited Clients',
@@ -100,7 +103,7 @@ const plans = [
       'Shop',
     ],
     unavailableFeatures: [],
-    buttonText: 'Start 14 days For Free',
+    buttonText: 'Start 30 days For Free',
   },
   {
     title: 'CUSTOM',
@@ -158,7 +161,7 @@ const PricingTable = () => {
               boxShadow: plan.popular
                 ? '0 4px 20px rgba(0, 0, 0, 0.2)'
                 : '0 2px 10px rgba(0, 0, 0, 0.1)',
-              border: plan.popular ? '2px solid #6aaad4' : 'none',
+              border: plan.popular ? '2px solid ##976d2' : 'none',
             }}
           >
             <Typography
@@ -205,15 +208,11 @@ const PricingTable = () => {
               variant="contained"
               onClick={() => handleSignUp(plan.title)} // Pass the plan title to handleSignUp
               sx={{
-                backgroundColor: '#6aaad4',
                 color: '#fff',
                 fontWeight: 'bold',
-                padding: '10px 30px',
+                padding: '8px 32px',
                 textTransform: 'none',
-                borderRadius: '20px',
-                '&:hover': {
-                  backgroundColor: '#5b99c3',
-                },
+                borderRadius: '24px',
                 marginTop: '20px',
               }}
             >

@@ -35,7 +35,7 @@ const HeroSection = () => {
           backgroundColor: '#fff',
           paddingTop: { xs: '20px', md: '40px' },
           paddingBottom: { xs: '20px', md: '40px' },
-          paddingLeft: { xs: '20px', md: '40px' },
+          paddingLeft: { xs: '20px', md: '40px', lg: '160px', xl: '200px' },
           paddingRight: { xs: '20px', md: '0px', lg: '160px', xl: '200px' },
         }}
       >
@@ -62,19 +62,19 @@ const HeroSection = () => {
           <List>
             <ListItem key="feature-1">
               <ListItemIcon>
-                <CheckIcon sx={{ color: '#6aaad4' }} />
+                <CheckIcon sx={{ color: '#1976d2' }} />
               </ListItemIcon>
               <ListItemText primary="Create preview & download online photo galleries for clients in seconds" />
             </ListItem>
             <ListItem key="feature-2">
               <ListItemIcon>
-                <CheckIcon sx={{ color: '#6aaad4' }} />
+                <CheckIcon sx={{ color: '#1976d2' }} />
               </ListItemIcon>
               <ListItemText primary="Let them select their favorites and annotate super easily" />
             </ListItem>
             <ListItem key="feature-3">
               <ListItemIcon>
-                <CheckIcon sx={{ color: '#6aaad4' }} />
+                <CheckIcon sx={{ color: '#1976d2' }} />
               </ListItemIcon>
               <ListItemText primary="Save tons of time importing selections back to LR, C1 etc." />
             </ListItem>
@@ -84,20 +84,15 @@ const HeroSection = () => {
           <Button
             variant="contained"
             sx={{
-              backgroundColor: '#6aaad4', // Your primary button color
-              color: '#fff',
               fontWeight: 'bold',
-              padding: '10px 30px',
+              padding: '8px 32px',
               textTransform: 'none',
-              borderRadius: '20px',
+              borderRadius: '24px',
               mt: 2,
-              '&:hover': {
-                backgroundColor: '#5b99c3', // Slightly darker on hover
-              },
             }}
             onClick={handleSignUp}
           >
-            try it- it's free
+            try it it's free
           </Button>
         </Box>
 
@@ -117,7 +112,7 @@ const HeroSection = () => {
             style={{
               width: '100%',
               maxWidth: '700px', // Adjusted the image size for smaller screens
-              borderRadius: '20px',
+              borderRadius: '24px',
             }}
           />
         </Box>
@@ -131,10 +126,10 @@ const HeroSection = () => {
           justifyContent: 'space-between',
           alignItems: 'center',
           gap: '24px',
-          paddingTop: { xs: '24px', md: '40px' },
-          paddingBottom: { xs: '24px', md: '40px' },
-          paddingLeft: { xs: '24px', md: '24px' },
-          paddingRight: { xs: '24px', md: '40px', lg: '160px', xl: '200px' },
+          paddingTop: { xs: '24px', md: '120px' },
+          paddingBottom: { xs: '24px', md: '120px' },
+          paddingLeft: { xs: '20px', md: '24px', lg: '100px', xl: '200px' },
+          paddingRight: { xs: '20px', md: '40px', lg: '100px', xl: '200px' },
           backgroundColor: '#5c524c',
         }}
       >
@@ -184,15 +179,10 @@ const HeroSection = () => {
           <Button
             variant="contained"
             sx={{
-              backgroundColor: '#6aaad4',
-              color: '#000',
               fontWeight: 'bold',
-              padding: '10px 30px',
+              padding: '8px 32px',
               textTransform: 'none',
-              borderRadius: '20px',
-              '&:hover': {
-                backgroundColor: '#6aaad4',
-              },
+              borderRadius: '24px',
             }}
             onClick={handleSignUp}
           >
@@ -232,10 +222,10 @@ const HeroSection = () => {
           flexDirection: { xs: 'column', md: 'row' }, // Stack on small screens, row on larger screens
           justifyContent: 'space-between',
           alignItems: 'center',
-          paddingTop: { xs: '20px', md: '40px' },
-          paddingBottom: { xs: '20px', md: '40px' },
-          paddingLeft: { xs: '20px', md: '48px' },
-          paddingRight: { xs: '20px', md: '56px', lg: '160px', xl: '200px' },
+          paddingTop: { xs: '20px', md: '120px' },
+          paddingBottom: { xs: '20px', md: '120px' },
+          paddingLeft: { xs: '20px', md: '48px', lg: '100px', xl: '200px' },
+          paddingRight: { xs: '20px', md: '56px', lg: '100px', xl: '200px' },
           backgroundColor: '#5c524c', // Background color matching the style
         }}
       >
@@ -298,19 +288,14 @@ const HeroSection = () => {
           <Button
             variant="contained"
             sx={{
-              backgroundColor: '#6aaad4', // Button color
-              color: '#000',
               fontWeight: 'bold',
-              padding: '10px 30px',
+              padding: '8px 32px',
               textTransform: 'none',
-              borderRadius: '20px',
-              '&:hover': {
-                backgroundColor: '#6aaad4',
-              },
+              borderRadius: '24px',
             }}
             onClick={handleSignUp}
           >
-            try it- it's free
+            try it it's free
           </Button>
         </Box>
       </Box>

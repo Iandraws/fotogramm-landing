@@ -29,10 +29,10 @@ const Help = () => {
         <br />
         Feel free to contact our support team at{' '}
         <Link
-          href="mailto:hello@fotogram.com"
+          href="mailto:support@fotogram.app"
           sx={{ color: '#ff0000', fontWeight: 'bold' }}
         >
-          hello@fotogram.com
+          support@fotogram.app
         </Link>
         .
         <br />
@@ -154,10 +154,10 @@ const Help = () => {
             <Typography sx={{ mt: 2 }}>
               <strong>Doesn't work either?</strong> Write us an email at{' '}
               <Link
-                href="mailto:hello@fotogram.com"
+                href="mailto:support@fotogram.app"
                 sx={{ fontWeight: 'bold', color: '#ff0000' }}
               >
-                hello@fotogram.com
+                suppot@fotogram.app
               </Link>{' '}
               and we will take care of it.
             </Typography>

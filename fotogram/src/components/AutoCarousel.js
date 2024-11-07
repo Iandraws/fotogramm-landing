@@ -59,8 +59,8 @@ const AutoCarousel = () => {
       sx={{
         paddingTop: { xs: '20px', md: '200px' },
         paddingBottom: { xs: '20px', md: '200px' },
-        paddingLeft: { xs: '20px', md: '80px' },
-        paddingRight: { xs: '20px', md: '80px' },
+        paddingLeft: { xs: '20px', md: '80px', lg: '100px', xl: '200px' },
+        paddingRight: { xs: '20px', md: '80px', lg: '100px', xl: '200px' },
         backgroundColor: '#fff',
         textAlign: 'center',
       }}
@@ -76,10 +76,10 @@ const AutoCarousel = () => {
           <Box
             key={index}
             sx={{
-              padding: '20px',
+              padding: '24px',
               textAlign: 'center',
               boxShadow: '0px 4px 12px rgba(0,0,0,0.15)', // Softer, stronger shadow
-              borderRadius: '16px', // Slightly larger radius for smoother edges
+              borderRadius: '24px', // Slightly larger radius for smoother edges
               backgroundColor: '#fefefe', // Soft background color
               display: 'flex',
               flexDirection: 'column',

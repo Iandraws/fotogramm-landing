@@ -5,17 +5,28 @@ import { Box, Typography, List, ListItem, ListItemText } from '@mui/material';
 const WhoWeAre = () => {
   return (
     <Box sx={{ textAlign: 'center', padding: '40px' }}>
-      <Typography variant="h4" sx={{ fontWeight: 'bold', color: '#4a8bb3', mb: 4 }}>
+      <Typography
+        variant="h4"
+        sx={{ fontWeight: 'bold', mb: 4 }}
+      >
         Who We Are?
       </Typography>
-      <Typography variant="body1" sx={{ maxWidth: '800px', margin: '0 auto', mb: 4 }}>
-        Fotogram for Technological Solutions is a team with diverse experience in various fields,
-        working together to create technological solutions in the photography, production, and media sectors.
-        Through designing tailored applications for every photographer or studio, we specialize in programming,
-        web design, applications, digital marketing, and managing technology products.
+      <Typography
+        variant="body1"
+        sx={{ maxWidth: '800px', margin: '0 auto', mb: 4, textAlign: 'left' }}
+      >
+        Fotogram for Technological Solutions is a team with diverse experience
+        in various fields, working together to create technological solutions in
+        the photography, production, and media sectors. Through designing
+        tailored applications for every photographer or studio, we specialize in
+        programming, web design, applications, digital marketing, and managing
+        technology products.
       </Typography>
 
-      <Typography variant="h5" sx={{ fontWeight: 'bold', mb: 2 }}>
+      <Typography
+        variant="h5"
+        sx={{ fontWeight: 'bold', mb: 2 }}
+      >
         Our Goals:
       </Typography>
       <List sx={{ maxWidth: '800px', margin: '0 auto', textAlign: 'left' }}>
@@ -33,10 +44,15 @@ const WhoWeAre = () => {
         </ListItem>
       </List>
 
-      <Typography variant="body1" sx={{ maxWidth: '800px', margin: '0 auto', mt: 4 }}>
-        We strive diligently to keep up with the latest innovations in the field of technology and believe
-        that having applications tailored specifically for every photographer or studio plays a significant
-        role in achieving success, setting you apart from competitors, and reflecting your unique style.
+      <Typography
+        variant="body1"
+        sx={{ maxWidth: '800px', margin: '0 auto', mt: 4, textAlign: 'left' }}
+      >
+        We strive diligently to keep up with the latest innovations in the field
+        of technology and believe that having applications tailored specifically
+        for every photographer or studio plays a significant role in achieving
+        success, setting you apart from competitors, and reflecting your unique
+        style.
       </Typography>
     </Box>
   );
