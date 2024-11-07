@@ -13,6 +13,7 @@ import {
 } from '@mui/material';
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import TalkToSupport from './TalkToSupport';
 import TryIt from './TryIt';
 
 const Navbar = () => {
@@ -90,7 +91,12 @@ const Navbar = () => {
           )}
         </Box>
 
-        <TryIt />
+        <Box sx={{ display: 'flex', gap: '8px' }}>
+          <TryIt />
+          <Box sx={{ display: { xs: 'none', md: 'block' } }}>
+            <TalkToSupport />
+          </Box>
+        </Box>
 
         {/* Mobile Menu Button */}
         <IconButton
@@ -129,7 +135,6 @@ const Navbar = () => {
             {['Why Fotogram', 'Pricing', 'Help', 'Who We Are'].map(
               (text, index) => (
                 <ListItem
-                  button
                   component={NavLink}
                   to={`/${text.replace(/\s+/g, '-').toLowerCase()}`}
                   onClick={handleDrawerToggle}
