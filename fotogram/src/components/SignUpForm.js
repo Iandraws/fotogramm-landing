@@ -16,7 +16,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
-const SignUpFormPage = () => {
+const SignUpForm = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
@@ -276,4 +276,4 @@ const SignUpFormPage = () => {
   );
 };
 
-export default SignUpFormPage;
+export default SignUpForm;

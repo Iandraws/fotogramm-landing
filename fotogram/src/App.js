@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import PricingTable from './components/PricingTable';  // Pricing page component
-import SignUpFormModal from './components/SignUpFormModal';  // Renamed for clarity
+import SignUpForm from './components/SignUpForm';  // Renamed for clarity
 import Footer from './components/Footer';
 import Help from './components/Help';
 import ScrollToTop from './components/ScrollToTop';
@@ -20,7 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HeroSection />} />
         <Route path="/pricing" element={<PricingTable />} /> {/* Pricing Route */}
-        <Route path="/signup" element={<SignUpFormModal />} /> {/* Sign-Up Form Route */}
+        <Route path="/signup" element={<SignUpForm />} /> {/* Sign-Up Form Route */}
         <Route path="/faq" element={<Help />} /> 
         <Route path="/why-fotogram" element={<HowItWorks />} /> 
         <Route path="/our-story" element={<WhoWeAre />} /> 
