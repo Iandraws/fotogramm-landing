@@ -32,8 +32,7 @@ const SignUpFormPage = () => {
     backgroundColor: '#fff',
     padding: '40px',
     borderRadius: '10px',
-    boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
-    minWidth: '320px',
+    boxShadow: { xs: 'none', md: '0px 4px 12px rgba(0, 0, 0, 0.1)' },
     maxWidth: '600px',
     margin: '50px auto',
   };

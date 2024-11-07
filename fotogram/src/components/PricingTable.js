@@ -38,7 +38,7 @@ const plans = [
       'Digital Album',
       'Digital Contract',
       'Own Domain',
-      'Branded App for iOS and Android',
+      'iOS & Android Branded App',
       'Download All Images',
       'Videos and Reels',
       'Shop',
@@ -69,7 +69,7 @@ const plans = [
       'Own Domain',
     ],
     unavailableFeatures: [
-      'Branded App for iOS and Android',
+      'iOS & Android Branded App',
       'Download All Images',
       'Videos and Reels',
       'Shop',
@@ -99,7 +99,7 @@ const plans = [
       'Digital Album',
       'Digital Contract',
       'Own Domain',
-      'Branded App for iOS and Android',
+      'iOS & Android Branded App',
       'Download All Images',
       'Videos and Reels',
       'Shop',
@@ -157,10 +157,11 @@ const PricingTable = () => {
           <Box
             key={index}
             sx={{
+              height: 'fit-content',
               width: { xs: '100%' },
-              maxWidth: { xs: '100%', md: '220px' },
-              minWidth: { md: '220px' },
-              padding: '24px',
+              maxWidth: { xs: '100%', md: '280px' },
+              minWidth: { md: '280px' },
+              padding: '24px 16px',
               textAlign: 'center',
               backgroundColor: '#f9f9f9',
               borderRadius: '10px',
@@ -197,13 +198,13 @@ const PricingTable = () => {
 
             <List>
               {plan.features.map((feature) => (
-                <ListItem key={feature} style={{display: 'flex', alignItems:'center', gap: '8px'}}>
+                <ListItem key={feature} style={{display: 'flex', alignItems:'center', gap: '16px'}}>
                   <CheckIcon sx={{ color: 'green' }} />
                   {feature}
                 </ListItem>
               ))}
               {plan.unavailableFeatures.map((unavailableFeature) => (
-                <ListItem key={unavailableFeature} style={{display: 'flex', alignItems:'center', gap: '8px'}}>
+                <ListItem key={unavailableFeature} style={{display: 'flex', alignItems:'center', gap: '16px'}}>
                   <CloseIcon sx={{ color: 'red' }} />
                   {unavailableFeature}
                 </ListItem>
