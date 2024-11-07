@@ -122,6 +122,10 @@ const PricingTable = () => {
     navigate(`/signup?plan=${planTitle.toLowerCase()}`);
   };
 
+  const handleContact = () => {
+    navigate('/ContactUs');
+  };
+
   return (
     <Box
       sx={{
@@ -161,7 +165,7 @@ const PricingTable = () => {
               boxShadow: plan.popular
                 ? '0 4px 20px rgba(0, 0, 0, 0.2)'
                 : '0 2px 10px rgba(0, 0, 0, 0.1)',
-              border: plan.popular ? '2px solid ##976d2' : 'none',
+              border: plan.popular ? '2px solid #1976d2' : 'none',
             }}
           >
             <Typography
@@ -206,14 +210,20 @@ const PricingTable = () => {
 
             <Button
               variant="contained"
-              onClick={() => handleSignUp(plan.title)}
+              onClick={() =>
+                plan.title === 'CUSTOM' ? handleContact() : handleSignUp(plan.title)
+              }
               sx={{
+                backgroundColor: '#6aaad4',
                 color: '#fff',
                 fontWeight: 'bold',
                 padding: '8px 32px',
                 textTransform: 'none',
                 borderRadius: '24px',
                 marginTop: '20px',
+                '&:hover': {
+                  backgroundColor: '#5b99c3',
+                },
               }}
             >
               {plan.buttonText}

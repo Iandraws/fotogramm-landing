@@ -10,6 +10,7 @@ import Help from './components/Help';
 import ScrollToTop from './components/ScrollToTop';
 import HowItWorks from './components/HowItWorks';
 import WhoWeAre from './components/WhoWeAre';
+import ContactUs from './components/ContactUs';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/help" element={<Help />} /> 
         <Route path="/why-fotogram" element={<HowItWorks />} /> 
         <Route path="/who-we-are" element={<WhoWeAre />} /> 
+        <Route path="/ContactUs" element={<ContactUs />} /> 
         
       </Routes>
       <Footer />

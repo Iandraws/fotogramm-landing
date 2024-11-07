@@ -20,6 +20,7 @@ const SignUpFormPage = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
+  const [emailError, setEmailError] = useState(false); // New state for email validation
   const [plan, setPlan] = useState('free');
   const [role, setRole] = useState('self-employed');
   const [customSubdomain, setCustomSubdomain] = useState('');
@@ -44,9 +45,19 @@ const SignUpFormPage = () => {
     setPlan(planValue || 'free');
   }, [location.search]);
 
+  // Handle email change and validation
+  const handleEmailChange = (e) => {
+    const emailValue = e.target.value;
+    setEmail(emailValue);
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    setEmailError(!emailPattern.test(emailValue)); // Set error if email is invalid
+  };
+
   // Handle form submission
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    if (emailError) return; // Prevent form submission if email is invalid
 
     const requestBody = {
       company: customSubdomain,
@@ -110,7 +121,7 @@ const SignUpFormPage = () => {
           variant="outlined"
           value={firstName}
           onChange={(e) => setFirstName(e.target.value)}
-          sx={{ backgroundColor: '#f5f5f5' }} // Light background for the input
+          sx={{ backgroundColor: '#f5f5f5' }}
         />
         <TextField
           fullWidth
@@ -122,13 +133,15 @@ const SignUpFormPage = () => {
         />
       </Box>
 
-      {/* Email Address */}
+      {/* Email Address with Validation */}
       <TextField
         fullWidth
         label="Email address"
         variant="outlined"
         value={email}
-        onChange={(e) => setEmail(e.target.value)}
+        onChange={handleEmailChange}
+        error={emailError} // Shows red border if emailError is true
+        helperText={emailError ? 'Please enter a valid email address' : ''} // Shows error message if email is invalid
         margin="normal"
         sx={{ backgroundColor: '#f5f5f5', mb: 2 }}
       />
