@@ -210,7 +210,7 @@ const ContactUs = () => {
                   },
                 }}
               >
-                Submit
+                SEND MESSEGE
               </Button>
             </Grid>
           </Grid>
