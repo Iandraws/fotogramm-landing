@@ -6,9 +6,11 @@ import {
   Button,
   List,
   ListItem,
-  ListItemText,
   Divider,
 } from '@mui/material';
+import CheckIcon from '@mui/icons-material/Check';
+import CloseIcon from '@mui/icons-material/Close';
+
 import { useNavigate } from 'react-router-dom';
 
 const plans = [
@@ -194,24 +196,26 @@ const PricingTable = () => {
             <Divider />
 
             <List>
-              {plan.features.map((feature, featureIndex) => (
-                <ListItem key={featureIndex}>
-                  <ListItemText primary={`✅ ${feature}`} />
+              {plan.features.map((feature) => (
+                <ListItem key={feature} style={{display: 'flex', alignItems:'center', gap: '8px'}}>
+                  <CheckIcon sx={{ color: 'green' }} />
+                  {feature}
                 </ListItem>
               ))}
-              {plan.unavailableFeatures.map(
-                (unavailableFeature, unavailableFeatureIndex) => (
-                  <ListItem key={unavailableFeatureIndex}>
-                    <ListItemText primary={`❌ ${unavailableFeature}`} />
-                  </ListItem>
-                )
-              )}
+              {plan.unavailableFeatures.map((unavailableFeature) => (
+                <ListItem key={unavailableFeature} style={{display: 'flex', alignItems:'center', gap: '8px'}}>
+                  <CloseIcon sx={{ color: 'red' }} />
+                  {unavailableFeature}
+                </ListItem>
+              ))}
             </List>
 
             <Button
               variant="contained"
               onClick={() =>
-                plan.title === 'CUSTOM' ? handleContact() : handleSignUp(plan.title)
+                plan.title === 'CUSTOM'
+                  ? handleContact()
+                  : handleSignUp(plan.title)
               }
               sx={{
                 backgroundColor: '#6aaad4',
