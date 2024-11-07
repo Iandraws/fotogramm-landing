@@ -9,8 +9,12 @@ import {
 } from '@mui/material';
 
 const ContactUs = () => {
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [message, setMessage] = useState('');
   const [emailError, setEmailError] = useState(false);
+  const [successMessage, setSuccessMessage] = useState('');
 
   const handleEmailChange = (e) => {
     const emailValue = e.target.value;
@@ -21,13 +25,41 @@ const ContactUs = () => {
     setEmailError(!emailPattern.test(emailValue)); // Set error if email is invalid
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!emailError) {
-      // Submit form if there are no errors
-      alert('Form submitted successfully');
-    } else {
-      alert('Please correct the errors in the form');
+    if (emailError || !name || !message) {
+      alert('Please fill in all required fields correctly');
+      return;
+    }
+
+    // Reset success message
+    setSuccessMessage('');
+
+    try {
+      const response = await fetch('https://demo.fotogram.app/api/message', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email,
+          message,
+          phone,
+          senderDisplayName: name,
+        }),
+      });
+
+      if (response.ok) {
+        setSuccessMessage('Form submitted successfully');
+        setName('');
+        setEmail('');
+        setPhone('');
+        setMessage('');
+      } else {
+        alert('Failed to submit the form');
+      }
+    } catch (error) {
+      alert('An error occurred while submitting the form');
     }
   };
 
@@ -70,9 +102,20 @@ const ContactUs = () => {
           <Typography variant="h4" sx={{ mb: 2, fontWeight: 'bold', textAlign: 'center' }}>
             Contact Us
           </Typography>
+          {successMessage && (
+            <Typography sx={{ color: 'green', mb: 2, textAlign: 'center' }}>
+              {successMessage}
+            </Typography>
+          )}
           <Grid container spacing={2}>
             <Grid item xs={12}>
-              <TextField fullWidth label="Name" required />
+              <TextField
+                fullWidth
+                label="Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
             </Grid>
             <Grid item xs={12}>
               <TextField
@@ -81,13 +124,17 @@ const ContactUs = () => {
                 value={email}
                 onChange={handleEmailChange}
                 error={emailError} // Shows red border if emailError is true
-                helperText={emailError ? 'Please enter a valid email address' : ''} // Shows error message
+                helperText={emailError ? 'Please enter a valid email address' : ''}
                 required
               />
             </Grid>
-        
-            <Grid item xs={12} >
-              <TextField fullWidth label="Phone (optional)" />
+            <Grid item xs={12}>
+              <TextField
+                fullWidth
+                label="Phone (optional)"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+              />
             </Grid>
             <Grid item xs={12}>
               <TextField
@@ -96,6 +143,9 @@ const ContactUs = () => {
                 multiline
                 rows={4}
                 placeholder="Please type your message here"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                required
               />
             </Grid>
             <Grid item xs={12}>
