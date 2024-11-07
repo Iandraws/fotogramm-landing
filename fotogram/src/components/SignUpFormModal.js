@@ -119,6 +119,7 @@ const SignUpFormPage = () => {
           label="First name"
           variant="outlined"
           value={firstName}
+          required
           onChange={(e) => setFirstName(e.target.value)}
           sx={{ backgroundColor: '#f5f5f5' }}
         />
@@ -127,6 +128,7 @@ const SignUpFormPage = () => {
           label="Last name"
           variant="outlined"
           value={lastName}
+          required
           onChange={(e) => setLastName(e.target.value)}
           sx={{ backgroundColor: '#f5f5f5' }}
         />
@@ -138,6 +140,7 @@ const SignUpFormPage = () => {
         label="Email address"
         variant="outlined"
         value={email}
+        required
         onChange={handleEmailChange}
         error={emailError} // Shows red border if emailError is true
         helperText={emailError ? 'Please enter a valid email address' : ''} // Shows error message if email is invalid
