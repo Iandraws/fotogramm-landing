@@ -13,7 +13,7 @@ import {
 } from '@mui/material';
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import TryIt from './tryIt';
+import TryIt from './TryIt';
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);

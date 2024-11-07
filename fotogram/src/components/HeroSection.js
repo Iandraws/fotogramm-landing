@@ -11,7 +11,8 @@ import {
 import React from 'react';
 import AutoCarousel from './AutoCarousel';
 import PowerfulFeaturesSection from './PowerfulFeaturesSection';
-import TryIt from './tryIt';
+import TryIt from './TryIt';
+import TalkToSupport from './TalkToSupport';
 
 const HeroSection = () => {
   return (
@@ -71,7 +72,11 @@ const HeroSection = () => {
             </ListItem>
           </List>
 
-          <TryIt />
+          <Box style={{ display: 'flex', gap: '16px' }}>
+            <TryIt />
+
+            <TalkToSupport />
+          </Box>
         </Box>
 
         {/* Right side: Image */}

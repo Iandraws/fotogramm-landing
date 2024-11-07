@@ -24,7 +24,7 @@ function App() {
         <Route path="/help" element={<Help />} /> 
         <Route path="/why-fotogram" element={<HowItWorks />} /> 
         <Route path="/who-we-are" element={<WhoWeAre />} /> 
-        <Route path="/ContactUs" element={<ContactUs />} /> 
+        <Route path="/contact-us" element={<ContactUs />} /> 
         
       </Routes>
       <Footer />

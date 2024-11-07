@@ -125,7 +125,7 @@ const PricingTable = () => {
   };
 
   const handleContact = () => {
-    navigate('/ContactUs');
+    navigate('/contact-us');
   };
 
   return (

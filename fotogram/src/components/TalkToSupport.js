@@ -1,16 +1,15 @@
 import { Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
-const TryIt = () => {
+const TalkToSupport = () => {
   const navigate = useNavigate();
 
-  const handleSignUp = () => {
-    navigate('/signup');
+  const handleClick = () => {
+    navigate('/contact-us');
   };
 
   return (
     <Button
-      variant="contained"
       sx={{
         fontWeight: 'bold',
         borderRadius: '24px',
@@ -18,11 +17,11 @@ const TryIt = () => {
         padding: '8px 20px',
         boxShadow: 'none',
       }}
-      onClick={() => handleSignUp()}
+      onClick={() => handleClick()}
     >
-      Try it it's free
+      Talk to support
     </Button>
   );
 };
 
-export default TryIt;
+export default TalkToSupport;
