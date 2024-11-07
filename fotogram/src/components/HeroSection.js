@@ -174,7 +174,7 @@ const HeroSection = () => {
           }}
         >
           <img
-            src="/assets/3.PNG"
+            src="/assets/3.png"
             alt="Placeholder"
             style={{
               width: '100%',

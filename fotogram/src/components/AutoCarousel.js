@@ -10,19 +10,19 @@ const testimonials = [
     name: 'Bryan Adams',
     role: 'photographer/singer',
     text: "Fotogram manages to take the simple idea of sharing images to a new level, I can't believe someone didn't think of this sooner.",
-    image: '/assets/users/11.PNG', // Replace with actual image path
+    image: '/assets/users/11.png', // Replace with actual image path
   },
   {
     name: 'Claudia Gödke',
     role: 'food photographer',
     text: 'My clients love the intuitive way to select their favorites and participate remotely on my photo shoots. It\'s a game changer!',
-    image: '/assets/users/22.PNG',
+    image: '/assets/users/22.png',
   },
   {
     name: 'David Daub',
     role: 'ad photographer',
     text: 'Intuitive, super fast uploads and downloads and my clients love the easy handling. Did anyone say game-changer, yet?',
-    image: '/assets/users/33.PNG',
+    image: '/assets/users/33.png',
   },
 ];
 

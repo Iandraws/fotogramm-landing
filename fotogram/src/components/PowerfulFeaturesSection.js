@@ -67,7 +67,7 @@ const PowerfulFeaturesSection = () => {
           }}
         >
           <img
-            src="/assets/4.PNG"
+            src="/assets/4.png"
             alt="Powerful features"
             style={{
               width: '100%',
@@ -103,7 +103,7 @@ const PowerfulFeaturesSection = () => {
           }}
         >
           <img
-            src="/assets/5.PNG"
+            src="/assets/5.png"
             alt="Beautiful presentation mode"
             style={{
               width: '100%',
@@ -198,7 +198,7 @@ const PowerfulFeaturesSection = () => {
           }}
         >
           <img
-            src="/assets/6.PNG"
+            src="/assets/6.png"
             alt="Massive time saver"
             style={{
               width: '100%',
