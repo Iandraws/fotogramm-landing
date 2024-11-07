@@ -1,12 +1,6 @@
 // src/components/ContactUs.js
+import { Box, Button, Grid, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
-import {
-  Box,
-  TextField,
-  Typography,
-  Button,
-  Grid,
-} from '@mui/material';
 
 const ContactUs = () => {
   const [name, setName] = useState('');
@@ -22,13 +16,12 @@ const ContactUs = () => {
 
     // Basic email validation regex pattern
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    setEmailError(!emailPattern.test(emailValue)); // Set error if email is invalid
+    setEmailError(!emailPattern.test(emailValue));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (emailError || !name || !message) {
-      alert('Please fill in all required fields correctly');
       return;
     }
 
@@ -69,9 +62,6 @@ const ContactUs = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        minHeight: '100vh',
-        backgroundColor: '#f0f0f0',
-        padding: '40px',
       }}
     >
       <Box
@@ -80,12 +70,11 @@ const ContactUs = () => {
           flexDirection: { xs: 'column', md: 'row' },
           justifyContent: 'center',
           alignItems: 'center',
-          gap: '40px',
           maxWidth: '1000px',
           backgroundColor: '#fff',
           borderRadius: '8px',
           boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
-          padding: { xs: '20px', md: '40px' },
+          padding: { xs: '8px', md: '40px' },
         }}
       >
         {/* Contact Form */}
@@ -99,7 +88,10 @@ const ContactUs = () => {
             borderRadius: '8px',
           }}
         >
-          <Typography variant="h4" sx={{ mb: 2, fontWeight: 'bold', textAlign: 'center' }}>
+          <Typography
+            variant="h4"
+            sx={{ mb: 2, fontWeight: 'bold', textAlign: 'center' }}
+          >
             Contact Us
           </Typography>
           {successMessage && (
@@ -107,8 +99,14 @@ const ContactUs = () => {
               {successMessage}
             </Typography>
           )}
-          <Grid container spacing={2}>
-            <Grid item xs={12}>
+          <Grid
+            container
+            spacing={2}
+          >
+            <Grid
+              item
+              xs={12}
+            >
               <TextField
                 fullWidth
                 label="Name"
@@ -117,18 +115,26 @@ const ContactUs = () => {
                 required
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid
+              item
+              xs={12}
+            >
               <TextField
                 fullWidth
                 label="Business Email"
                 value={email}
                 onChange={handleEmailChange}
-                error={emailError} // Shows red border if emailError is true
-                helperText={emailError ? 'Please enter a valid email address' : ''}
+                error={emailError}
+                helperText={
+                  emailError ? 'Please enter a valid email address' : ''
+                }
                 required
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid
+              item
+              xs={12}
+            >
               <TextField
                 fullWidth
                 label="Phone (optional)"
@@ -136,7 +142,10 @@ const ContactUs = () => {
                 onChange={(e) => setPhone(e.target.value)}
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid
+              item
+              xs={12}
+            >
               <TextField
                 fullWidth
                 label="Message"
@@ -148,7 +157,10 @@ const ContactUs = () => {
                 required
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid
+              item
+              xs={12}
+            >
               <Button
                 type="submit"
                 variant="contained"
@@ -180,15 +192,24 @@ const ContactUs = () => {
             padding: { xs: '20px', md: '40px' },
           }}
         >
-          <Typography variant="body1" sx={{ mb: 2, fontWeight: 'bold' }}>
-            📧 support@fotogram.tech
+          <Typography
+            variant="body1"
+            sx={{ mb: 2, fontWeight: 'bold' }}
+          >
+            📧 support@fotogram.app
           </Typography>
-          <Typography variant="body2" sx={{ mb: 2 }}>
+          <Typography
+            variant="body2"
+            sx={{ mb: 2 }}
+          >
             Fotogram Private Limited <br />
             Caddie Commercial Tower, 5th Floor <br />
             Aerocity, New Delhi, India
           </Typography>
-          <Typography variant="body2" sx={{ mb: 2 }}>
+          <Typography
+            variant="body2"
+            sx={{ mb: 2 }}
+          >
             Fotogram Inc <br />
             200 Continental Drive, Suite 401 <br />
             Newark, DE, 19713, USA
