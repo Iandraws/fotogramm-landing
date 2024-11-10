@@ -49,7 +49,7 @@ const ContactUs = () => {
       });
 
       if (response.ok) {
-        setSuccessMessage('Form submitted successfully');
+        setSuccessMessage('Formular erfolgreich abgeschickt'); 
         setName('');
         setEmail('');
         setPhone('');
@@ -98,7 +98,7 @@ const ContactUs = () => {
             variant="h4"
             sx={{ mb: 2, fontWeight: 'bold', textAlign: 'center' }}
           >
-            Contact Us
+            Kontaktieren Sie uns
           </Typography>
           {successMessage && (
             <Box
@@ -125,7 +125,7 @@ const ContactUs = () => {
               }}
             >
               <ErrorIcon sx={{ mr: 1 }} />
-              <Typography>An error occurred. Please try again.</Typography>
+              <Typography>Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.</Typography>
             </Box>
           )}
           <Grid
@@ -151,12 +151,12 @@ const ContactUs = () => {
             >
               <TextField
                 fullWidth
-                label="Business Email"
+                label="Geschäftliche E-Mail"
                 value={email}
                 onChange={handleEmailChange}
                 error={emailError}
                 helperText={
-                  emailError ? 'Please enter a valid email address' : ''
+                  emailError ? 'Bitte geben Sie eine gültige E-Mail-Adresse ein' : ''
                 }
                 required
                 sx={{ backgroundColor: '#f5f5f5' }}
@@ -168,9 +168,10 @@ const ContactUs = () => {
             >
               <TextField
                 fullWidth
-                label="Phone (optional)"
+                label="Telefon"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
+                required
                 sx={{ backgroundColor: '#f5f5f5' }}
               />
             </Grid>
@@ -180,10 +181,10 @@ const ContactUs = () => {
             >
               <TextField
                 fullWidth
-                label="Message"
+                label="Nachricht "
                 multiline
                 rows={4}
-                placeholder="Please type your message here"
+                placeholder="Bitte geben Sie hier Ihre Nachricht ein"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 required
@@ -210,7 +211,7 @@ const ContactUs = () => {
                   },
                 }}
               >
-                SEND MESSEGE
+                Nachricht senden
               </Button>
             </Grid>
           </Grid>
@@ -235,17 +236,22 @@ const ContactUs = () => {
             variant="body2"
             sx={{ mb: 2 }}
           >
-            Fotogram Private Limited <br />
-            Caddie Commercial Tower, 5th Floor <br />
-            Aerocity, New Delhi, India
+            Fotogram Technology <br />
+            VAT registered business No. 203588199 <br />
+            1004 Street Building No. 18 <br />
+            POB: 50255 <br />
+            1616102 Nazareth <br />
+            Israel
           </Typography>
           <Typography
             variant="body2"
             sx={{ mb: 2 }}
           >
-            Fotogram Inc <br />
-            200 Continental Drive, Suite 401 <br />
-            Newark, DE, 19713, USA
+            Fotogram Technology <br />
+            CEO Eilon Mario Netzer <br />
+            Bachstr. 145 <br />
+            22083 Hamburg <br /> 
+            Deutschland
           </Typography>
         </Box>
       </Box>

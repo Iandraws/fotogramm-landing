@@ -9,38 +9,35 @@ const WhoWeAre = () => {
         variant="h4"
         sx={{ fontWeight: 'bold', mb: 4 }}
       >
-        Who We Are?
+        Wer wir sind?
       </Typography>
       <Typography
         variant="body1"
         sx={{ maxWidth: '800px', margin: '0 auto', mb: 4, textAlign: 'left' }}
       >
-        Fotogram for Technological Solutions is a team with diverse experience
-        in various fields, working together to create technological solutions in
-        the photography, production, and media sectors. Through designing
-        tailored applications for every photographer or studio, we specialize in
-        programming, web design, applications, digital marketing, and managing
-        technology products.
+        Fotogram für Softwarelösungen ist ein Team aus Experten mit vielfältiger Erfahrung in den Bereichen Fotografie, 
+        Medienproduktion und Technologie. Gemeinsam entwickeln wir maßgeschneiderte Lösungen, die speziell für die Bedürfnisse von Fotografen und 
+        Studios ausgelegt sind. Unser Team ist spezialisiert auf Programmierung, Web- und App-Design, digitales Marketing und das Management von Softwareprodukten.
       </Typography>
 
       <Typography
         variant="h5"
         sx={{ fontWeight: 'bold', mb: 2 }}
       >
-        Our Goals:
+        Unsere Ziele:
       </Typography>
       <List sx={{ maxWidth: '800px', margin: '0 auto', textAlign: 'left' }}>
         <ListItem>
-          <ListItemText primary="1. Developing and enhancing the field of work in photography and media in the market." />
+          <ListItemText primary="1. Die Weiterentwicklung und Verbesserung der Arbeit in der Fotografie- und Medienbranche." />
         </ListItem>
         <ListItem>
-          <ListItemText primary="2. Facilitating work and increasing productivity for photographers or studio owners by reducing time and costs." />
+          <ListItemText primary="2. Erleichterung der Arbeitsprozesse und Steigerung der Produktivität für Fotografen und Studioinhaber durch Zeit- und Kostenersparnis." />
         </ListItem>
         <ListItem>
-          <ListItemText primary="3. Strengthening commercial relationships for photographers and studio owners by gaining positive impressions from clients." />
+          <ListItemText primary="3. Stärkung der Geschäftsbeziehungen von Fotografen durch positive Kundenerfahrungen und Eindrücke." />
         </ListItem>
         <ListItem>
-          <ListItemText primary="4. Providing photographers with a professional and organized way to manage their workflow and details through a platform specifically designed to meet the needs of each photographer or studio." />
+          <ListItemText primary="4. Bereitstellung einer professionellen und organisierten Plattform zur Verwaltung von Workflows und Kundendetails, individuell angepasst an die Bedürfnisse jedes Fotografen oder Studios." />
         </ListItem>
       </List>
 
@@ -48,11 +45,9 @@ const WhoWeAre = () => {
         variant="body1"
         sx={{ maxWidth: '800px', margin: '0 auto', mt: 4, textAlign: 'left' }}
       >
-        We strive diligently to keep up with the latest innovations in the field
-        of technology and believe that having applications tailored specifically
-        for every photographer or studio plays a significant role in achieving
-        success, setting you apart from competitors, and reflecting your unique
-        style.
+        Wir arbeiten daran, mit den neuesten technologischen Innovationen Schritt zu halten und sind überzeugt, 
+        dass unsere Anwendungen und Funktionen für Fotografen und Studios ein entscheidender Faktor für den Erfolg sind. Sie helfen, 
+        sich von der Konkurrenz abzuheben und den eigenen Stil eindrucksvoll zu präsentieren.
       </Typography>
     </Box>
   );

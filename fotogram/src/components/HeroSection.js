@@ -47,7 +47,7 @@ const HeroSection = () => {
               mb: 3,
             }}
           >
-            The easiest way to share photo & video shoots
+            Premium Plattform für Effizienz, Branding und Kundenerlebnis
           </Typography>
 
           {/* Feature List */}
@@ -56,19 +56,19 @@ const HeroSection = () => {
               <ListItemIcon>
                 <CheckIcon sx={{ color: '#1976d2' }} />
               </ListItemIcon>
-              <ListItemText primary="Create preview & download online photo galleries for clients in seconds" />
+              <ListItemText primary="Automatisieren Sie Workflows und sparen Sie Zeit" />
             </ListItem>
             <ListItem key="feature-2">
               <ListItemIcon>
                 <CheckIcon sx={{ color: '#1976d2' }} />
               </ListItemIcon>
-              <ListItemText primary="Let them select their favorites and annotate super easily" />
+              <ListItemText primary="Bieten Sie Echtzeit Bildübertragung und KI-Gesichtserkennung" />
             </ListItem>
             <ListItem key="feature-3">
               <ListItemIcon>
                 <CheckIcon sx={{ color: '#1976d2' }} />
               </ListItemIcon>
-              <ListItemText primary="Save tons of time importing selections back to LR, C1 etc." />
+              <ListItemText primary="Präsentieren Sie Ihre Marke mit personalisierten Wasserzeichen und Alben" />
             </ListItem>
           </List>
 
@@ -101,7 +101,7 @@ const HeroSection = () => {
         </Box>
       </Box>
 
-      {/* Second Section: Your favorite online photo gallery software */}
+      {/* Second Section: Was Fotogram Ihnen bietet */}
       <Box
         sx={{
           display: 'flex',
@@ -132,7 +132,7 @@ const HeroSection = () => {
               mb: 2,
             }}
           >
-            Your favorite online photo gallery software
+            Was Fotogram Ihnen bietet
           </Typography>
 
           <Typography
@@ -142,10 +142,29 @@ const HeroSection = () => {
               mb: 2,
             }}
           >
-            Over <strong>150,000 creatives</strong> use fotogram to let their
-            clients download, select, vote, comment, proof, and much more. More
-            than <strong>1 billion images and videos</strong> sent!
+            <strong>All-in-One Kundenmanagement:</strong> Verwalten Sie Kunden und Aufträge an einem zentralen Ort für nahtlose Kommunikation.
           </Typography>
+
+          <Typography
+            variant="body1"
+            sx={{
+              fontSize: { xs: '0.9rem', sm: '1rem', md: '1.25rem' },
+              mb: 2,
+            }}
+          >
+            <strong>Schnelle Bildlieferung und Live-Erlebnisse:</strong> Teilen Sie Eventbilder in Echtzeit und lassen Sie Ihre Kunden sofort darauf zugreifen.
+          </Typography>
+
+          <Typography
+            variant="body1"
+            sx={{
+              fontSize: { xs: '0.9rem', sm: '1rem', md: '1.25rem' },
+              mb: 2,
+            }}
+          >
+            <strong>Vereinfachte Vertragsabwicklung:</strong> Erstellen, teilen und unterschreiben Sie Verträge digital – effizient und papierlos.
+          </Typography>
+
 
           <Typography
             variant="body1"
@@ -154,9 +173,7 @@ const HeroSection = () => {
               mb: 4,
             }}
           >
-            fotogram is the perfect image sharing and collaboration software for{' '}
-            <strong>photographers</strong>, <strong>designers</strong>, and{' '}
-            <strong>small teams</strong> or companies!
+            <strong>Digitaler Shop für Zusatzverkäufe:</strong> Bieten Sie Druckservices und Produkte direkt über die Plattform an, mit integriertem Bezahlsystem.
           </Typography>
 
           <TryIt />
@@ -214,7 +231,7 @@ const HeroSection = () => {
         >
           <img
             src="/assets/7.jpeg"
-            alt="Built by creatives for creatives"
+            alt="Entwickelt von Profis für Profis"
             style={{
               width: '100%',
               maxWidth: '600px',
@@ -250,10 +267,11 @@ const HeroSection = () => {
               mb: 2,
             }}
           >
-            fotogram is the brainchild of two Pros: a{' '}
-            <strong>photographer</strong> and a <strong>designer</strong>. We{' '}
-            <strong>know</strong> what you need and just build it. It's that
-            simple.
+            Fotogram wurde von eine erfahrenen Fotografen und kreativen Designer ins Leben gerufen. 
+            Wir verstehen die Herausforderungen der Branche, weil wir selbst Teil davon sind. 
+            Unsere Mission ist es, genau die Tools zu entwickeln, die Fotografen benötigen, 
+            um effizienter zu arbeiten, ihre Marke zu stärken und ihren Kunden ein unvergleichbares Erlebnis zu bieten. 
+            Bei Fotogram setzen wir auf praxisnahe Lösungen, die Ihre Arbeit einfacher und professioneller machen.
           </Typography>
 
           <TryIt />

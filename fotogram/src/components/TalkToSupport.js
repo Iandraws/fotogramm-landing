@@ -20,7 +20,7 @@ const TalkToSupport = () => {
       }}
       onClick={() => handleClick()}
     >
-      Get in Touch
+      Kontaktieren Sie uns
     </Button>
   );
 };

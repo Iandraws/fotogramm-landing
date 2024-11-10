@@ -20,7 +20,7 @@ const TryIt = () => {
       }}
       onClick={() => handleSignUp()}
     >
-      Start Your Free Trial
+      Jetzt 30 Tage kostenlos testen
     </Button>
   );
 };

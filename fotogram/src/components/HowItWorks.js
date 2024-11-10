@@ -4,41 +4,88 @@ import TryIt from './TryIt';
 
 const sections = [
   {
-    title: 'Share gallery link with your clients',
+    title: 'Unsere Vision und Kernfunktionen im Blick',
     description:
-      'To give access to any gallery you simply share a secure link via email, messenger or however you want. Of course you can even double-protect galleries with passwords.',
+      'Fotogram ist mehr als eine Plattform – es ist eine Auszeichnung für Fotografen, die ihr Geschäft effizienter gestalten, ihre Marke stärken und ihren Kunden ein exklusives Erlebnis bieten möchten. Mit modernsten Funktionen und einer luxuriösen Nutzererfahrung ermöglicht Fotogram Fotografen, ihre Arbeit auf höchstem Niveau zu präsentieren und ihr Einkommen nachhaltig zu steigern. Unsere Server in Deutschland gewährleisten dabei höchste Sicherheitsstandards und Datenschutz.',
+    image: '',
+  },
+
+  {
+    title: 'Umfassendes Kundenmanagement (CRM)',
+    description:
+      'Verwalten Sie alle Kundeninformationen und Auftragsdetails an einem zentralen Ort. So verbessern Sie Ihre Marketingstrategien und gestalten die Kundenkommunikation effizienter.',
     image: '/assets/funk/shareGalleryImage.mp4',
   },
+
   {
-    title: 'Built for simplicity',
+    title: 'Kalender- und Erinnerungsfunktionen',
     description:
-      'Fotogram is built with 100% your client in mind. There is no installation needed, no logins required and no learning curve.',
+      'Behalten Sie Ihre geplanten Events und Aufgaben mit einem integrierten, synchronisierten Kalender im Blick. Erinnerungen helfen Ihnen, Ihre Produktivität zu steigern und keine wichtigen Termine zu verpassen.',
+    image: '/assets/funk/shareGalleryImage.mp4',
+  },
+
+  {
+    title: 'Live-Bildübertragung und Streaming',
+    description:
+      'Laden Sie Bilder während Veranstaltungen in Echtzeit hoch und ermöglichen Sie Ihren Kunden, diese sofort anzusehen, herunterzuladen oder zu teilen. Gäste können mit einem QR-Code auf Bilder in hoher Auflösung zugreifen. Zusätzlich bietet Fotogram Live-Video-Streaming für besondere Events.',
+    image: '/assets/funk/shareGalleryImage.mp4',
+  },
+
+  {
+    title: 'KI-gestützte Gesichtserkennung',
+    description:
+      'Unsere innovative Gesichtserkennungstechnologie macht es Kunden leicht, ihre Bilder zu finden. Ein Selfie genügt, und die passenden Bilder werden schnell angezeigt – für ein optimiertes und personalisiertes Kundenerlebnis.',
+    image: '/assets/funk/shareGalleryImage.mp4',
+  },
+
+  {
+    title: 'Individuelles Branding und automatisches Wasserzeichen',
+    description:
+      'Schützen Sie Ihre Bildrechte und stärken Sie Ihre Marke mit automatisch platzierten Wasserzeichen auf allen Bildern – ohne externe Software. So bleibt Ihr Logo stets präsent und Ihre Arbeit professionell gebrandet.',
     image: '/assets/funk/simplicityImage.jpg',
   },
   {
-    title: 'Presentation Mode: Show & deliver to clients',
+    title: 'Flexibles Preis- und Abonnementmodell',
     description:
-      "For simple and beautiful presentation of your files just activate the presentation mode. Don't forget to customize the look in the gallery's settings so your work looks great!",
+      "Wählen Sie aus verschiedenen Preismodellen – von Basic bis Premium – die für Sie passende Lösung. Maßgeschneiderte Optionen unterstützen Fotografen in jeder Entwicklungsphase ihres Geschäfts.",
     image: '/assets/funk/presentationModeImage.png',
   },
   {
-    title: 'Edit Mode: Collaborate with clients',
+    title: ' Digitaler Shop für Zusatzverkäufe',
     description:
-      "With Fotogram the hassle of picking the client's favorites and creating selections ends. Your clients can use our simple proofing tools such as the color marker or likes to select their favorite images and videos.",
+      "Bieten Sie Ihre Druckservices oder Produkte direkt über Fotogram an und profitieren Sie von 24/7-Verkäufen mit einem integrierten Bezahlsystem über Stripe oder Ihr Kreditinstitut.",
     image: '/assets/funk/editModeImage.jpg',
   },
+
   {
-    title: 'Super easy color markers',
+    title: 'Digitale Alben mit über 400 Vorlagen',
     description:
-      'Our intuitive color flags make it super easy for your clients to find and select their favorite shots. They will love it!',
-    image: '/assets/funk/colorMarkersImage.mp4',
-  },
-  {
-    title: 'Likes & Voting',
-    description:
-      "You need to agree on a final selection of images within your team members? Let everyone involved like their favorites with one click and magically sort the images by number of likes! We call it 'voting' and it's child's play.",
+      "Erstellen Sie beeindruckende digitale Alben für Ihre Kunden mit mehr als 400 anpassbaren Vorlagen. Präsentieren Sie Ihre Fotos in professionellen und kreativen Designs, die Ihren Workflow beschleunigen und die Kundenzufriedenheit steigern.",
     image: '/assets/funk/votingImage.mp4',
   },
+
+  {
+    title: 'Digitale Vertragsverwaltung',
+    description:
+      'Erstellen, teilen und unterschreiben Sie Verträge elektronisch – einfach und papierlos. So integrieren Sie den gesamten Vertragsprozess nahtlos in Ihren Workflow.',
+    image: '/assets/funk/colorMarkersImage.mp4',
+  },
+
+  {
+    title: 'Digitale Visitenkarte',
+    description:
+      "Eine digitale Visitenkarte bündelt Ihre sozialen Kanäle und Kontaktdaten, um die Gewinnung neuer Kunden zu erleichtern und bestehende Kontakte zu pflegen.",
+    image: '/assets/funk/votingImage.mp4',
+  },
+
+  {
+    title: 'Dashboard mit Statistiken und Analysen',
+    description:
+      "Erhalten Sie einen umfassenden Überblick über Ihre geschäftlichen Aktivitäten und Kunden. Die Analysefunktionen helfen Ihnen, die Entwicklung Ihres Geschäfts zu verfolgen und zu optimieren.",
+    image: '/assets/funk/votingImage.mp4',
+  },
+
+
 ];
 
 const FunktionPage = () => {
@@ -50,7 +97,7 @@ const FunktionPage = () => {
         variant="h3"
         sx={{ fontWeight: 'bold', textAlign: 'center', marginBottom: '40px' }}
       >
-        Why Fotogram
+        Warum Fotogram?
       </Typography>
 
       {sections.map((section, index) => (
@@ -126,15 +173,15 @@ const FunktionPage = () => {
             variant="h4"
             sx={{ fontWeight: 'bold', marginBottom: '20px' }}
           >
-            Start today!
+            Jetzt kostenlos testen!
           </Typography>
           <Typography
             variant="body1"
             sx={{ marginBottom: '30px', color: '#555' }}
           >
-            First month, no limits, is on us. Afterwards you can keep our free
-            plan forever or upgrade anytime. No automatic subscription. You
-            decide.
+            Überzeugen Sie sich selbst von den Vorteilen, die Fotogram bietet. 
+            Starten Sie jetzt Ihre 30-tägige kostenlose Testphase und erleben Sie, 
+            wie Fotogram Ihr Fotografiegeschäft auf ein neues Niveau hebt.
           </Typography>
 
           <TryIt />

@@ -35,24 +35,23 @@ const PowerfulFeaturesSection = () => {
               mb: 3,
             }}
           >
-            Powerful features – easy to use
+            Echtzeit-Bildübertragung und Live-Event-Sharing
           </Typography>
 
           <Typography
             variant="h6"
             sx={{ fontWeight: 'bold', mb: 2 }}
           >
-            Pain-free collaboration mode
+            Teilen Sie den Moment ohne Verzögerung
           </Typography>
 
           <Typography
             variant="body1"
             sx={{ fontSize: { xs: '1rem', md: '1.25rem' } }}
           >
-            Your clients can easily select their favorite shots by using our
-            intuitive color markings, likes & voting, file comments, and other
-            collaboration features. By only activating the features you need, it
-            always keeps simple.
+            Teilen Sie Eventbilder sofort mit Ihren Kunden. Dank der Echtzeit-Übertragung 
+            können Gäste die Fotos direkt auf ihr Gerät herunterladen, teilen oder für den Druck auswählen.
+            Diese Funktion schafft ein unvergessliches Erlebnis und hebt Ihre Dienstleistungen deutlich hervor.
           </Typography>
         </Box>
 
@@ -129,16 +128,17 @@ const PowerfulFeaturesSection = () => {
               mb: 3,
             }}
           >
-            Beautiful presentation mode
+            KI-gestützte Gesichtserkennung
           </Typography>
 
           <Typography
             variant="body1"
             sx={{ fontSize: { xs: '1rem', md: '1.25rem' } }}
           >
-            Finally present your work the way it deserves! Customize photo
-            galleries to your needs and your clients can easily switch to the
-            powerful edit mode when needed.
+            Machen Sie es Ihren Kunden leicht, ihre persönlichen Bilder zu finden. 
+            Mit unserer innovativen Gesichtserkennungstechnologie reicht ein Selfie, 
+            um passende Bilder schnell und präzise anzeigen zu lassen. 
+            Ein modernes Feature, das Komfort und Individualisierung vereint.
           </Typography>
         </Box>
       </Box>
@@ -173,17 +173,19 @@ const PowerfulFeaturesSection = () => {
               mb: 3,
             }}
           >
-            Massive time saver
+            Personalisierte Wasserzeichen
           </Typography>
 
           <Typography
             variant="body1"
             sx={{ fontSize: { xs: '1rem', md: '1.25rem' }, mb: 2 }}
           >
-            Find your client's favorites <strong>in seconds!</strong> Just
-            filter them in Lightroom, C1, or on your hard drive.{' '}
-            <strong>No more searching</strong> for individual filenames, no more
-            annoying emails and endless calls over image selections.
+           Mit Fotogram bleibt Ihre Marke stets präsent. 
+           Das Logo des Fotografen wird automatisch auf allen hochgeladenen Bildern als Wasserzeichen platziert – 
+           ohne die Notwendigkeit externer Software. Diese Funktion schützt Ihre Bildrechte, 
+           stärkt Ihr Branding und spart Ihnen Zeit bei der Nachbearbeitung. 
+           So präsentieren Sie Ihre Arbeit professionell und einheitlich, während Sie gleichzeitig sicherstellen, 
+           dass Ihr Logo immer mit Ihren Bildern verbunden ist.
           </Typography>
         </Box>
 

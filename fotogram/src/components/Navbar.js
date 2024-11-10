@@ -69,12 +69,12 @@ const Navbar = () => {
           }}
         >
           {[
-            { label: 'Home', path: '' },
-            { label: 'Why Fotogram', path: 'why-fotogram' },
-            { label: 'Pricing', path: 'pricing' },
-            { label: 'Our Story', path: 'our-story' },
-            { label: 'Support FAQs', path: 'faq' },
-            { label: 'Contact Us', path: 'get-in-touch' },
+            { label: 'Startseite', path: '' },
+            { label: 'Warum Fotogram', path: 'why-fotogram' },
+            { label: 'Preise', path: 'pricing' },
+            { label: 'Unsere Geschichte', path: 'our-story' },
+            { label: 'Support & FAQs', path: 'faq' },
+            { label: 'Kontakt', path: 'get-in-touch' },
           ].map((route) => (
             <MuiLink
               key={route.path}
