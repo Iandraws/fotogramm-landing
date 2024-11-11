@@ -13,7 +13,6 @@ import CheckIcon from "@mui/icons-material/Check";
 import CloseIcon from "@mui/icons-material/Close";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { useNavigate } from "react-router-dom";
-import { styled } from "@mui/material/styles";
 
 const plans = [
   {
@@ -133,29 +132,6 @@ const PricingTable = () => {
     navigate("/get-in-touch");
   };
 
-  const CustomSwitch = styled(Switch)(({ theme }) => ({
-    width: 50,
-    height: 24,
-    padding: 0,
-    "& .MuiSwitch-switchBase": {
-      padding: 4,
-      color: "#fff",
-      "&.Mui-checked": {
-        transform: "translateX(26px)",
-        color: "#fff",
-        "& + .MuiSwitch-track": {
-          backgroundColor: "#1976d2",
-          opacity: 1,
-        },
-      },
-    },
-    "& .MuiSwitch-track": {
-      borderRadius: 16,
-      backgroundColor: "#1976d2",
-      opacity: 1,
-    },
-  }));
-
   return (
     <Box
       sx={{
@@ -189,7 +165,7 @@ const PricingTable = () => {
         >
           Monatlich bezahlen und <br /> flexibel bleiben
         </Typography>
-        <CustomSwitch checked={isYearly} onChange={() => setIsYearly(!isYearly)} />
+        <Switch checked={isYearly} onChange={() => setIsYearly(!isYearly)} />
         <Typography
           variant="body1"
           sx={{ color: isYearly ? "#1976d2" : "#757575", fontWeight: "bold" }}
@@ -225,7 +201,8 @@ const PricingTable = () => {
               position: "relative",
             }}
           >
-            {plan.popular && (
+            {/* Display badge only if the plan is not "BENUTZERDEFINIERT" */}
+            {plan.popular && plan.title !== "BENUTZERDEFINIERT" && (
               <Badge
                 overlap="circular"
                 badgeContent={<FavoriteIcon sx={{ color: "#fff", fontSize: "20px" }} />}
@@ -249,7 +226,6 @@ const PricingTable = () => {
               {plan.title}
             </Typography>
             
-            {/* Display price and VAT note only if it's not the "Benutzerdefiniert" plan */}
             {plan.title !== "BENUTZERDEFINIERT" && (
               <>
                 <Typography variant="h6" sx={{ fontWeight: "bold", color: "#1976d2" }}>
@@ -273,19 +249,26 @@ const PricingTable = () => {
             <Divider />
 
             <List>
-              {plan.features.map((feature) => (
-                <ListItem key={feature} style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-                  <CheckIcon sx={{ color: "green" }} />
-                  {feature}
-                </ListItem>
-              ))}
-              {plan.unavailableFeatures.map((unavailableFeature) => (
-                <ListItem key={unavailableFeature} style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-                  <CloseIcon sx={{ color: "red" }} />
-                  {unavailableFeature}
-                </ListItem>
-              ))}
-            </List>
+  {plan.features.map((feature) => (
+    <ListItem
+      key={feature}
+      style={{ display: "flex", alignItems: "center", gap: "16px" }}
+    >
+      {plan.title !== "BENUTZERDEFINIERT" && <CheckIcon sx={{ color: "green" }} />}
+      {feature}
+    </ListItem>
+  ))}
+  {plan.unavailableFeatures.map((unavailableFeature) => (
+    <ListItem
+      key={unavailableFeature}
+      style={{ display: "flex", alignItems: "center", gap: "16px" }}
+    >
+      <CloseIcon sx={{ color: "red" }} />
+      {unavailableFeature}
+    </ListItem>
+  ))}
+</List>
+
 
             <Button
               variant="contained"
