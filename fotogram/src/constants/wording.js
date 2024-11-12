@@ -192,10 +192,7 @@ const wording = {
     en: 'Share event images instantly with your clients. Thanks to real-time transmission, guests can download, share, or select photos for printing directly on their devices. This feature creates an unforgettable experience and enhances your services significantly.',
   },
 
-  aiFaceRecognitionDescription: {
-    de: 'Machen Sie es Ihren Kunden leicht, ihre persönlichen Bilder zu finden. Mit unserer innovativen Gesichtserkennungstechnologie reicht ein Selfie, um passende Bilder schnell und präzise anzeigen zu lassen. Ein modernes Feature, das Komfort und Individualisierung vereint.',
-    en: 'Make it easy for your clients to find their personal images. With our innovative face recognition technology, a selfie is enough to quickly and accurately display matching images. A modern feature that combines comfort and personalization.',
-  },
+
   watermarkFeature: {
     de: 'Personalisierte Wasserzeichen',
     en: 'Personalized Watermarks',
