@@ -50,7 +50,7 @@ const plans = [
     title: "FORTGESCHRITTEN",
     monthlyPrice: 50,
     yearlyPrice: (50 * 12 * 0.84).toFixed(2),
-    description: "Für Fotografen, die ihre Qualität steigern und größere Projekte organisieren möchten.",
+    description: "Für Fotografen, die ihre Qualität steigern und große Projekte organisieren wollen",
     features: [
       "Unbegrenzte Veranstaltungen",
       "Unbegrenzte Kunden",
