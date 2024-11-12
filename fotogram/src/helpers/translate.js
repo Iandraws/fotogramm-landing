@@ -1,10 +1,8 @@
-const lang = localStorage.getItem('lang') || 'de';
+const lang = localStorage.getItem('lang') || 'en';
 
-function translate(wording) {
-  if (!wording) {
-    return wording;
-  }
-  return wording[lang] || wording['en'] || wording;
+function translate(wordingKey) {
+  if (!wordingKey) return '';
+  return wordingKey[lang] || wordingKey['en'] || '';
 }
 
 export default translate;

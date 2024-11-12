@@ -10,18 +10,27 @@ import {
   ListItemText,
   Link as MuiLink,
   Toolbar,
+  Button,
 } from '@mui/material';
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import TryIt from './TryIt';
-
 import translate from '../helpers/translate';
+import wording from './../constants/wording';
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [language, setLanguage] = useState(localStorage.getItem('lang') || 'de');
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
+  };
+
+  const handleLanguageToggle = () => {
+    const newLanguage = language === 'de' ? 'en' : 'de';
+    localStorage.setItem('lang', newLanguage);
+    setLanguage(newLanguage);
+    window.location.reload(); // Refresh to apply translations
   };
 
   return (
@@ -69,12 +78,12 @@ const Navbar = () => {
           }}
         >
           {[
-            { label: 'Startseite', path: '' },
-            { label: 'Warum Fotogram', path: 'why-fotogram' },
-            { label: 'Preise', path: 'pricing' },
-            { label: 'Unsere Geschichte', path: 'our-story' },
-            { label: 'Support & FAQs', path: 'faq' },
-            { label: 'Kontakt', path: 'get-in-touch' },
+            { label: translate({ de: 'Startseite', en: 'Home' }), path: '' },
+            { label: translate({ de: 'Warum Fotogram', en: 'Why Fotogram' }), path: 'why-fotogram' },
+            { label: translate({ de: 'Preise', en: 'Pricing' }), path: 'pricing' },
+            { label: translate({ de: 'Unsere Geschichte', en: 'Our Story' }), path: 'our-story' },
+            { label: translate({ de: 'Support & FAQs', en: 'Support FAQs' }), path: 'faq' },
+            { label: translate({ de: 'Kontakt', en: 'Contact Us' }), path: 'get-in-touch' },
           ].map((route) => (
             <MuiLink
               key={route.path}
@@ -100,8 +109,14 @@ const Navbar = () => {
           ))}
         </Box>
 
-        <Box sx={{ display: 'flex', gap: '16px' }}>
-          <TryIt />
+        {/* Language Toggle Button and Try It Button */}
+        <Box sx={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
+          <IconButton onClick={handleLanguageToggle} sx={{ padding: '0' }}>
+            <span role="img" aria-label={language === 'de' ? 'German Flag' : 'English Flag'} style={{ fontSize: '24px' }}>
+              {language === 'de' ? '🇩🇪' : '🇬🇧'}
+            </span>
+          </IconButton>
+          <TryIt buttonText={translate(wording.tryItButton)} />
         </Box>
 
         {/* Mobile Menu Button */}
@@ -116,11 +131,7 @@ const Navbar = () => {
       </Toolbar>
 
       {/* Drawer for Mobile Menu */}
-      <Drawer
-        anchor="top"
-        open={mobileOpen}
-        onClose={handleDrawerToggle}
-      >
+      <Drawer anchor="top" open={mobileOpen} onClose={handleDrawerToggle}>
         <Box
           sx={{
             width: '100%',
@@ -139,12 +150,12 @@ const Navbar = () => {
           </IconButton>
           <List sx={{ width: '100%', textAlign: 'center' }}>
             {[
-              { label: 'Home', path: '' },
-              { label: 'Why Fotogram', path: 'why-fotogram' },
-              { label: 'Pricing', path: 'pricing' },
-              { label: 'Our Story', path: 'our-story' },
-              { label: 'Support FAQs', path: 'faq' },
-              { label: 'Contact Us', path: 'get-in-touch' },
+              { label: translate({ de: 'Startseite', en: 'Home' }), path: '' },
+              { label: translate({ de: 'Warum Fotogram', en: 'Why Fotogram' }), path: 'why-fotogram' },
+              { label: translate({ de: 'Preise', en: 'Pricing' }), path: 'pricing' },
+              { label: translate({ de: 'Unsere Geschichte', en: 'Our Story' }), path: 'our-story' },
+              { label: translate({ de: 'Support & FAQs', en: 'Support FAQs' }), path: 'faq' },
+              { label: translate({ de: 'Kontakt', en: 'Contact Us' }), path: 'get-in-touch' },
             ].map((route) => (
               <ListItem
                 component={NavLink}
@@ -162,10 +173,7 @@ const Navbar = () => {
                   },
                 }}
               >
-                <ListItemText
-                  primary={route.label}
-                  sx={{ textAlign: 'center' }}
-                />
+                <ListItemText primary={route.label} sx={{ textAlign: 'center' }} />
               </ListItem>
             ))}
           </List>

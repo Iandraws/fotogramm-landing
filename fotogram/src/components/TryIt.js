@@ -1,7 +1,7 @@
 import { Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
-const TryIt = () => {
+const TryIt = ({buttonText}) => {
   const navigate = useNavigate();
 
   const handleSignUp = () => {
@@ -20,7 +20,7 @@ const TryIt = () => {
       }}
       onClick={() => handleSignUp()}
     >
-      Jetzt 30 Tage kostenlos testen
+      {buttonText}
     </Button>
   );
 };

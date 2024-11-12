@@ -1,4 +1,4 @@
-// src/components/HeroSection.js
+import React from 'react';
 import CheckIcon from '@mui/icons-material/Check';
 import {
   Box,
@@ -8,11 +8,12 @@ import {
   ListItemText,
   Typography,
 } from '@mui/material';
-import React from 'react';
 import AutoCarousel from './AutoCarousel';
 import PowerfulFeaturesSection from './PowerfulFeaturesSection';
 import TryIt from './TryIt';
 import TalkToSupport from './TalkToSupport';
+import translate from '../helpers/translate';
+import wording from '../constants/wording';
 
 const HeroSection = () => {
   return (
@@ -47,7 +48,7 @@ const HeroSection = () => {
               mb: 3,
             }}
           >
-            Premium Plattform für Effizienz, Branding und Kundenerlebnis
+            {translate(wording.heroTitle)}
           </Typography>
 
           {/* Feature List */}
@@ -56,26 +57,25 @@ const HeroSection = () => {
               <ListItemIcon>
                 <CheckIcon sx={{ color: '#1976d2' }} />
               </ListItemIcon>
-              <ListItemText primary="Automatisieren Sie Workflows und sparen Sie Zeit" />
+              <ListItemText primary={translate(wording.automateWorkflow)} />
             </ListItem>
             <ListItem key="feature-2">
               <ListItemIcon>
                 <CheckIcon sx={{ color: '#1976d2' }} />
               </ListItemIcon>
-              <ListItemText primary="Bieten Sie Echtzeit Bildübertragung und KI-Gesichtserkennung" />
+              <ListItemText primary={translate(wording.realTimeImageTransmission)} />
             </ListItem>
             <ListItem key="feature-3">
               <ListItemIcon>
                 <CheckIcon sx={{ color: '#1976d2' }} />
               </ListItemIcon>
-              <ListItemText primary="Präsentieren Sie Ihre Marke mit personalisierten Wasserzeichen und Alben" />
+              <ListItemText primary={translate(wording.brandWithWatermark)} />
             </ListItem>
           </List>
 
           <Box style={{ display: 'flex', gap: '16px' }}>
-            <TryIt />
-
-            <TalkToSupport />
+          <TryIt buttonText={translate(wording.tryItButton)} />
+            <TalkToSupport buttonText={translate(wording.talkToSupportButton)} />
           </Box>
         </Box>
 
@@ -101,7 +101,7 @@ const HeroSection = () => {
         </Box>
       </Box>
 
-      {/* Second Section: Was Fotogram Ihnen bietet */}
+      {/* Second Section: What Fotogram Offers */}
       <Box
         sx={{
           display: 'flex',
@@ -132,7 +132,7 @@ const HeroSection = () => {
               mb: 2,
             }}
           >
-            Was Fotogram Ihnen bietet
+            {translate(wording.whatFotogramOffers)}
           </Typography>
 
           <Typography
@@ -142,7 +142,7 @@ const HeroSection = () => {
               mb: 2,
             }}
           >
-            <strong>All-in-One Kundenmanagement:</strong> Verwalten Sie Kunden und Aufträge an einem zentralen Ort für nahtlose Kommunikation.
+            <strong>{translate(wording.allInOneCustomerManagement)}</strong>
           </Typography>
 
           <Typography
@@ -152,7 +152,7 @@ const HeroSection = () => {
               mb: 2,
             }}
           >
-            <strong>Schnelle Bildlieferung und Live-Erlebnisse:</strong> Teilen Sie Eventbilder in Echtzeit und lassen Sie Ihre Kunden sofort darauf zugreifen.
+            <strong>{translate(wording.quickImageDelivery)}</strong>
           </Typography>
 
           <Typography
@@ -162,9 +162,8 @@ const HeroSection = () => {
               mb: 2,
             }}
           >
-            <strong>Vereinfachte Vertragsabwicklung:</strong> Erstellen, teilen und unterschreiben Sie Verträge digital – effizient und papierlos.
+            <strong>{translate(wording.streamlinedContractProcessing)}</strong>
           </Typography>
-
 
           <Typography
             variant="body1"
@@ -173,10 +172,10 @@ const HeroSection = () => {
               mb: 4,
             }}
           >
-            <strong>Digitaler Shop für Zusatzverkäufe:</strong> Bieten Sie Druckservices und Produkte direkt über die Plattform an, mit integriertem Bezahlsystem.
+            <strong>{translate(wording.digitalShop)}</strong>
           </Typography>
 
-          <TryIt />
+          <TryIt buttonText={translate(wording.tryItButton)} />
         </Box>
 
         {/* Left side: Image */}
@@ -257,7 +256,7 @@ const HeroSection = () => {
               mb: 2,
             }}
           >
-            Built by creatives for creatives
+            {translate(wording.builtByCreatives)}
           </Typography>
 
           <Typography
@@ -267,16 +266,13 @@ const HeroSection = () => {
               mb: 2,
             }}
           >
-            Fotogram wurde von eine erfahrenen Fotografen und kreativen Designer ins Leben gerufen. 
-            Wir verstehen die Herausforderungen der Branche, weil wir selbst Teil davon sind. 
-            Unsere Mission ist es, genau die Tools zu entwickeln, die Fotografen benötigen, 
-            um effizienter zu arbeiten, ihre Marke zu stärken und ihren Kunden ein unvergleichbares Erlebnis zu bieten. 
-            Bei Fotogram setzen wir auf praxisnahe Lösungen, die Ihre Arbeit einfacher und professioneller machen.
+            {translate(wording.fotogramMission)}
           </Typography>
 
-          <TryIt />
+          <TryIt buttonText={translate(wording.tryItButton)} />
         </Box>
       </Box>
+
       <AutoCarousel />
     </>
   );

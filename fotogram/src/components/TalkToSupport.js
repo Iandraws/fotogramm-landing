@@ -1,7 +1,7 @@
 import { Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
-const TalkToSupport = () => {
+const TalkToSupport = ({buttonText}) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -20,7 +20,7 @@ const TalkToSupport = () => {
       }}
       onClick={() => handleClick()}
     >
-      Kontaktieren Sie uns
+      {buttonText}
     </Button>
   );
 };

@@ -1,6 +1,7 @@
-// src/components/PowerfulFeaturesSection.js
 import React from 'react';
 import { Box, Typography } from '@mui/material';
+import translate from '../helpers/translate';
+import wording from '../constants/wording';
 
 const PowerfulFeaturesSection = () => {
   return (
@@ -35,23 +36,21 @@ const PowerfulFeaturesSection = () => {
               mb: 3,
             }}
           >
-            Echtzeit-Bildübertragung und Live-Event-Sharing
+            {translate(wording.realTimeImageSharing)}
           </Typography>
 
           <Typography
             variant="h6"
             sx={{ fontWeight: 'bold', mb: 2 }}
           >
-            Teilen Sie den Moment ohne Verzögerung
+            {translate(wording.shareMoment)}
           </Typography>
 
           <Typography
             variant="body1"
             sx={{ fontSize: { xs: '1rem', md: '1.25rem' } }}
           >
-            Teilen Sie Eventbilder sofort mit Ihren Kunden. Dank der Echtzeit-Übertragung 
-            können Gäste die Fotos direkt auf ihr Gerät herunterladen, teilen oder für den Druck auswählen.
-            Diese Funktion schafft ein unvergessliches Erlebnis und hebt Ihre Dienstleistungen deutlich hervor.
+            {translate(wording.realTimeImageDescription)}
           </Typography>
         </Box>
 
@@ -128,17 +127,14 @@ const PowerfulFeaturesSection = () => {
               mb: 3,
             }}
           >
-            KI-gestützte Gesichtserkennung
+            {translate(wording.aiFaceRecognition)}
           </Typography>
 
           <Typography
             variant="body1"
             sx={{ fontSize: { xs: '1rem', md: '1.25rem' } }}
           >
-            Machen Sie es Ihren Kunden leicht, ihre persönlichen Bilder zu finden. 
-            Mit unserer innovativen Gesichtserkennungstechnologie reicht ein Selfie, 
-            um passende Bilder schnell und präzise anzeigen zu lassen. 
-            Ein modernes Feature, das Komfort und Individualisierung vereint.
+            {translate(wording.aiFaceRecognitionDescription)}
           </Typography>
         </Box>
       </Box>
@@ -173,19 +169,14 @@ const PowerfulFeaturesSection = () => {
               mb: 3,
             }}
           >
-            Personalisierte Wasserzeichen
+            {translate(wording.watermarkFeature)}
           </Typography>
 
           <Typography
             variant="body1"
             sx={{ fontSize: { xs: '1rem', md: '1.25rem' }, mb: 2 }}
           >
-           Mit Fotogram bleibt Ihre Marke stets präsent. 
-           Das Logo des Fotografen wird automatisch auf allen hochgeladenen Bildern als Wasserzeichen platziert – 
-           ohne die Notwendigkeit externer Software. Diese Funktion schützt Ihre Bildrechte, 
-           stärkt Ihr Branding und spart Ihnen Zeit bei der Nachbearbeitung. 
-           So präsentieren Sie Ihre Arbeit professionell und einheitlich, während Sie gleichzeitig sicherstellen, 
-           dass Ihr Logo immer mit Ihren Bildern verbunden ist.
+            {translate(wording.watermarkFeatureDescription)}
           </Typography>
         </Box>
 
