@@ -53,8 +53,7 @@ const plans = [
     title: wording.advanced,
     monthlyPrice: 50,
     yearlyPrice: (50 * 12 * 0.84).toFixed(2),
-    description:
-      wording.advancedDesc,
+    description: wording.advancedDesc,
     features: [
       wording.unlimitedEvents,
       wording.unlimitedClients,
@@ -86,8 +85,7 @@ const plans = [
     title: wording.premium,
     monthlyPrice: 200,
     yearlyPrice: (200 * 12 * 0.84).toFixed(2),
-    description:
-      'Für professionelle Fotografen und Unternehmen, die sich abheben möchten.',
+    description: wording.premiumDesc,
     features: [
       wording.unlimitedEvents,
       wording.unlimitedClients,

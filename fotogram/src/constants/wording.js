@@ -1,140 +1,144 @@
 const wording = {
-  plans: {
-    de: 'Preispläne',
-    en: 'Plans',
-  },
-  pricing: {
-    de: 'Preise',
-    en: 'Pricing',
-  },
   advanced: {
     de: 'FORTGESCHRITTEN',
-    en: 'ADVANCED',
-  },
-  premium: {
-    de: 'PREMIUM',
-    en: 'PREMIUM',
-  },
-  ourstory: {
-    de: 'Unsere Geschichte',
-    en: 'Our Story',
-  },
-  basis: {
-    en: 'Basic',
-    de: 'Basis',
-  },
-  basicDesc: {
-    de: 'Perfekt für Fotografen, die ihre Reise beginnen und erweitern möchten.',
-    en: 'Perfect for photographers who are starting their journey and want to expand.',
+    en: 'ADVANCED'
   },
   advancedDesc: {
     de: 'Für Fotografen, die ihre Qualität steigern und große Projekte organisieren wollen',
-    en: 'For photographers who want to increase their quality and organize large projects',
-  },
-  iosAndroidBrandedApp: {
-    en: 'iOS & Android Branded App',
-    de: 'iOS- & Android-Marken-App',
-  },
-  unlimitedEvents: {
-    de: 'Unbegrenzte Veranstaltungen',
-    en: 'Unlimited Events',
-  },
-  unlimitedClients: {
-    en: 'Unlimited Clients',
-    de: 'Unbegrenzte Kunden',
-  },
-  crm: {
-    en: 'CRM (Customer Management)',
-    de: 'CRM (Kundenmanagement)',
-  },
-  unlimitedGallery: {
-    en: 'Unlimited Gallery',
-    de: 'Unbegrenzte Galerie',
-  },
-  imageTagging: {
-    en: 'Image Tagging',
-    de: 'Bild-Tagging',
-  },
-  downloadSelectedImages: {
-    en: 'Download Selected Images',
-    de: 'Ausgewählte Bilder herunterladen',
-  },
-  clientRequests: {
-    en: 'Client Requests',
-    de: 'Kundenanfragen',
-  },
-  digitalBusinessCard: {
-    en: 'Digital Business Card',
-    de: 'Digitale Visitenkarte',
-  },
-  autoLogoOnImages: {
-    en: 'Automatic Logo on Images',
-    de: 'Automatisches Logo auf Bildern',
-  },
-  calendarIntegration: {
-    en: 'Calendar Integration',
-    de: 'Kalender-Integration',
-  },
-  liveEvent: {
-    en: 'Live Event',
-    de: 'Live-Veranstaltung',
+    en: 'For photographers who want to increase their quality and organize large projects'
   },
   aiFaceRecognition: {
-    en: 'AI Face Recognition',
     de: 'KI-Gesichtserkennung',
+    en: 'AI Face Recognition'
   },
-  liveVideoStreaming: {
-    en: 'Live Video Streaming',
-    de: 'Live-Video-Streaming',
+  autoLogoOnImages: {
+    de: 'Automatisches Logo auf Bildern',
+    en: 'Automatic Logo on Images'
   },
-  digitalAlbum: {
-    en: 'Digital Album',
-    de: 'Digitales Album',
+  basicDesc: {
+    de: 'Perfekt für Fotografen, die ihre Reise beginnen und erweitern möchten.',
+    en: 'Perfect for photographers who are starting their journey and want to expand.'
   },
-  digitalContract: {
-    en: 'Digital Contract',
-    de: 'Digitaler Vertrag',
+  basis: {
+    de: 'Basis',
+    en: 'Basic'
   },
-  customDomain: {
-    en: 'Custom Domain',
-    de: 'Eigene Domain',
+  calendarIntegration: {
+    de: 'Kalender-Integration',
+    en: 'Calendar Integration'
   },
-  mobileApp: {
-    en: 'iOS & Android Branded App',
-    de: 'iOS- & Android-Marken-App',
-  },
-  downloadAllImages: {
-    en: 'Download All Images',
-    de: 'Alle Bilder herunterladen',
-  },
-  videosAndReels: {
-    en: 'Videos and Reels',
-    de: 'Videos und Reels',
-  },
-  shop: {
-    en: 'Shop',
-    de: 'Shop',
+  clientRequests: {
+    de: 'Kundenanfragen',
+    en: 'Client Requests'
   },
   contactForCustomPlan: {
-    en: 'Contact us for a tailored plan!',
     de: 'Kontaktieren Sie uns für einen maßgeschneiderten Plan, der zu Ihnen passt!',
-  },
-  customized: {
-    en: 'Customized',
-    de: 'Individuell',
-  },
-  freeTrial: {
-    en: 'Try Free for 30 Days',
-    de: '30 Tage kostenlos testen',
+    en: 'Contact us for a tailored plan!'
   },
   contactUs: {
-    en: 'Contact Us',
     de: 'Kontaktieren Sie uns',
+    en: 'Contact Us'
+  },
+  crm: {
+    de: 'CRM (Kundenmanagement)',
+    en: 'CRM (Customer Management)'
+  },
+  customDomain: {
+    de: 'Eigene Domain',
+    en: 'Custom Domain'
+  },
+  customized: {
+    de: 'Individuell',
+    en: 'Customized'
+  },
+  digitalAlbum: {
+    de: 'Digitales Album',
+    en: 'Digital Album'
+  },
+  digitalBusinessCard: {
+    de: 'Digitale Visitenkarte',
+    en: 'Digital Business Card'
+  },
+  digitalContract: {
+    de: 'Digitaler Vertrag',
+    en: 'Digital Contract'
+  },
+  downloadAllImages: {
+    de: 'Alle Bilder herunterladen',
+    en: 'Download All Images'
+  },
+  downloadSelectedImages: {
+    de: 'Ausgewählte Bilder herunterladen',
+    en: 'Download Selected Images'
+  },
+  freeTrial: {
+    de: '30 Tage kostenlos testen',
+    en: 'Try Free for 30 Days'
+  },
+  imageTagging: {
+    de: 'Bild-Tagging',
+    en: 'Image Tagging'
+  },
+  iosAndroidBrandedApp: {
+    de: 'iOS- & Android-Marken-App',
+    en: 'iOS & Android Branded App'
+  },
+  liveEvent: {
+    de: 'Live-Veranstaltung',
+    en: 'Live Event'
+  },
+  liveVideoStreaming: {
+    de: 'Live-Video-Streaming',
+    en: 'Live Video Streaming'
+  },
+  mobileApp: {
+    de: 'iOS- & Android-Marken-App',
+    en: 'iOS & Android Branded App'
+  },
+  ourstory: {
+    de: 'Unsere Geschichte',
+    en: 'Our Story'
+  },
+  plans: {
+    de: 'Preispläne',
+    en: 'Plans'
+  },
+  premium: {
+    de: 'PREMIUM',
+    en: 'PREMIUM'
+  },
+  premiumDesc: {
+    de: 'Für professionelle Fotografen und Unternehmen, die sich abheben möchten.',
+    en: 'For professional photographers and businesses who want to stand out.'
+  },
+  pricing: {
+    de: 'Preise',
+    en: 'Pricing'
+  },
+  shop: {
+    de: 'Shop',
+    en: 'Shop'
   },
   tailoredPlan: {
     de: 'Ein maßgeschneiderter Plan, der auf Ihre Bedürfnisse zugeschnitten ist.',
-    en: 'A tailored plan that fits your needs.',
+    en: 'A tailored plan that fits your needs.'
   },
+  unlimitedClients: {
+    de: 'Unbegrenzte Kunden',
+    en: 'Unlimited Clients'
+  },
+  unlimitedEvents: {
+    de: 'Unbegrenzte Veranstaltungen',
+    en: 'Unlimited Events'
+  },
+  unlimitedGallery: {
+    de: 'Unbegrenzte Galerie',
+    en: 'Unlimited Gallery'
+  },
+  videosAndReels: {
+    de: 'Videos und Reels',
+    en: 'Videos and Reels'
+  }
 };
 
 export default wording;
