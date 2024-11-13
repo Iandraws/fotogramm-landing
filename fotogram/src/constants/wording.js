@@ -1,7 +1,7 @@
 const wording = {
   advanced: {
-    de: 'FORTGESCHRITTEN',
-    en: 'ADVANCED',
+    de: 'Fortgeschritten',
+    en: 'Advanced',
   },
   advancedDesc: {
     de: 'Für Fotografen, die ihre Qualität steigern und große Projekte organisieren wollen',
@@ -12,8 +12,8 @@ const wording = {
     en: 'AI Face Recognition',
   },
   autoLogoOnImages: {
-    de: 'Automatisches Logo auf Bildern',
-    en: 'Automatic Logo on Images',
+    de: 'Wasserzeichenschutz',
+    en: 'Watermark Protection',
   },
   basicDesc: {
     de: 'Perfekt für Fotografen, die ihre Reise beginnen und erweitern möchten.',
@@ -40,7 +40,7 @@ const wording = {
     en: 'Contact Us',
   },
   crm: {
-    de: 'CRM (Kundenmanagement)',
+    de: 'CRM (Kundenverwaltung)',
     en: 'CRM (Customer Management)',
   },
   customDomain: {
@@ -76,12 +76,12 @@ const wording = {
     en: 'Try Free for 30 Days',
   },
   imageTagging: {
-    de: 'Bild-Tagging',
+    de: 'Bild Markierung',
     en: 'Image Tagging',
   },
   iosAndroidBrandedApp: {
-    de: 'iOS- & Android-Marken-App',
-    en: 'iOS & Android Branded App',
+    de: 'iOS- & Android App',
+    en: 'iOS & Android App',
   },
   liveEvent: {
     de: 'Live-Veranstaltung',
@@ -100,8 +100,8 @@ const wording = {
     en: 'Plans',
   },
   premium: {
-    de: 'PREMIUM',
-    en: 'PREMIUM',
+    de: 'Premium',
+    en: 'Premium',
   },
   premiumDesc: {
     de: 'Für professionelle Fotografen und Unternehmen, die sich abheben möchten.',
@@ -126,10 +126,6 @@ const wording = {
   unlimitedEvents: {
     de: 'Unbegrenzte Veranstaltungen',
     en: 'Unlimited Events',
-  },
-  unlimitedGallery: {
-    de: 'Unbegrenzte Galerie',
-    en: 'Unlimited Gallery',
   },
   videosAndReels: {
     de: 'Videos und Reels',
@@ -223,7 +219,7 @@ const wording = {
     en: 'Fotogram is more than a platform – it’s an accolade for photographers who wish to improve their business efficiency, strengthen their brand, and offer an exclusive experience to their clients. Equipped with state-of-the-art features and a premium user experience, Fotogram enables photographers to showcase their work at the highest level and sustainably increase their income. Our servers in Germany guarantee top security standards and data protection.'
   },
   customerManagementTitle: {
-    de: 'Umfassendes Kundenmanagement (CRM)',
+    de: 'Umfassendes Kundenverwaltung (CRM)',
     en: 'Comprehensive Customer Management (CRM)'
   },
   customerManagementDescription: {
@@ -317,8 +313,72 @@ const wording = {
   ctaDescription: {
     de: 'Überzeugen Sie sich selbst von den Vorteilen, die Fotogram bietet. Starten Sie jetzt Ihre 30-tägige kostenlose Testphase und erleben Sie, wie Fotogram Ihr Fotografiegeschäft auf ein neues Niveau hebt.',
     en: 'Experience the benefits Fotogram offers for yourself. Start your 30-day free trial now and see how Fotogram takes your photography business to the next level.'
-  }
-  
+  },
+
+  limitedEvents: {
+    de: 'Bis zu 5 Veransltaltungen',
+    en: 'Up to 5 Events'
+  },
+
+  limitedClients: {
+    de: 'Bis zu 3 Kunden',
+    en: 'Up to 3 Customers'
+  },
+
+  Storage1TB: {
+    de: '1TB Speicherplatz',
+    en: '1TB Storage'
+  },
+
+  Storage500GB: {
+    de: '500GB Speicherplatz',
+    en: '500GB Storage'
+  },
+
+  Storage5GB: {
+    de: '5GB Speicherplatz',
+    en: '5GB Storage'
+  },
+
+  Storage20GB: {
+    de: '20GB Speicherplatz',
+    en: '20GB Storage'
+  },
+
+  TeamMembers1: {
+    de: '1 Teammitglied',
+    en: '1 Team Member'
+  },
+
+  privateMember: {
+    de: '1 Mitglied',
+    en: '1 Member'
+  },
+
+  TeamMembers3: {
+    de: '3 Teammitglied',
+    en: '3 Team Member'
+  },
+
+  MetaSearch: {
+    de: 'Metadaten-Suche',
+    en: 'Metadata Search'
+  },
+
+  CustomBrand: {
+    de: 'Eigenes Design',
+    en: 'Custom Design'
+  },
+
+  PrivateUse: { 
+    de: 'Privat',
+    en: 'Private'
+  },
+  privateUseDesc: {
+    de: 'Für Privatpersonen, die ihre Fotos sicher speichern und jederzeit darauf zugreifen möchten',
+    en: 'For individuals who want to securely store their photos and access them anytime',
+  },
+
 };
 
 export default wording;

@@ -19,28 +19,31 @@ import translate from '../helpers/translate';
 const plans = [
   {
     title: wording.basis,
-    monthlyPrice: 20,
-    yearlyPrice: (20 * 12 * 0.84).toFixed(2),
+    monthlyPrice: 0,
+    yearlyPrice: (0 * 12 * 0.85).toFixed(2),
     description: wording.basicDesc,
     features: [
-      wording.unlimitedEvents,
-      wording.unlimitedClients,
+      wording.limitedEvents,
+      wording.limitedClients,
+      wording.Storage5GB,
+      wording.TeamMembers1,
       wording.crm,
-      wording.unlimitedGallery,
       wording.imageTagging,
       wording.downloadSelectedImages,
       wording.clientRequests,
       wording.digitalBusinessCard,
       wording.autoLogoOnImages,
-    ],
-    unavailableFeatures: [
       wording.calendarIntegration,
       wording.liveEvent,
       wording.aiFaceRecognition,
       wording.liveVideoStreaming,
       wording.digitalAlbum,
       wording.digitalContract,
+   
+    ],
+    unavailableFeatures: [
       wording.customDomain,
+      wording.CustomBrand,
       wording.iosAndroidBrandedApp,
       wording.downloadAllImages,
       wording.videosAndReels,
@@ -51,14 +54,15 @@ const plans = [
   },
   {
     title: wording.advanced,
-    monthlyPrice: 50,
-    yearlyPrice: (50 * 12 * 0.84).toFixed(2),
+    monthlyPrice: 14.99,
+    yearlyPrice: (14.99 * 12 * 0.85).toFixed(2),
     description: wording.advancedDesc,
     features: [
       wording.unlimitedEvents,
       wording.unlimitedClients,
+      wording.Storage500GB,
+      wording.TeamMembers1,
       wording.crm,
-      wording.unlimitedGallery,
       wording.imageTagging,
       wording.downloadSelectedImages,
       wording.clientRequests,
@@ -70,9 +74,10 @@ const plans = [
       wording.liveVideoStreaming,
       wording.digitalAlbum,
       wording.digitalContract,
-      wording.customDomain,
     ],
     unavailableFeatures: [
+      wording.customDomain,
+      wording.CustomBrand,
       wording.iosAndroidBrandedApp,
       wording.downloadAllImages,
       wording.videosAndReels,
@@ -83,14 +88,15 @@ const plans = [
   },
   {
     title: wording.premium,
-    monthlyPrice: 200,
-    yearlyPrice: (200 * 12 * 0.84).toFixed(2),
+    monthlyPrice: 59.99,
+    yearlyPrice: (59.99 * 12 * 0.85).toFixed(2),
     description: wording.premiumDesc,
     features: [
       wording.unlimitedEvents,
       wording.unlimitedClients,
+      wording.Storage1TB,
+      wording.TeamMembers3,
       wording.crm,
-      wording.unlimitedGallery,
       wording.imageTagging,
       wording.downloadSelectedImages,
       wording.clientRequests,
@@ -103,12 +109,36 @@ const plans = [
       wording.digitalAlbum,
       wording.digitalContract,
       wording.customDomain,
+      wording.CustomBrand,
       wording.iosAndroidBrandedApp,
       wording.downloadAllImages,
       wording.videosAndReels,
       wording.shop,
     ],
     unavailableFeatures: [],
+    buttonText: wording.freeTrial,
+  },
+
+  {
+    title: wording.PrivateUse,
+    monthlyPrice: 4.99,
+    yearlyPrice: (4.99 * 12 * 0.85).toFixed(2),
+    description: wording.privateUseDesc,
+    features: [
+      wording.unlimitedEvents,
+      wording.Storage20GB,
+      wording.privateMember,
+      wording.imageTagging,
+      wording.downloadSelectedImages,
+      wording.liveEvent,
+      wording.aiFaceRecognition,
+      wording.digitalAlbum,
+   
+    ],
+    unavailableFeatures: [
+      
+    ],
+
     buttonText: wording.freeTrial,
   },
   {
@@ -125,6 +155,7 @@ const plans = [
 const PricingTable = () => {
   const navigate = useNavigate();
   const [isYearly, setIsYearly] = useState(false);
+  const [isBusiness, setIsBusiness] = useState(true); // Neuen State für "Geschäftlich/Privat"
 
   const handleSignUp = (planTitle) => {
     navigate(`/signup?plan=${planTitle.toLowerCase()}`);
@@ -133,6 +164,10 @@ const PricingTable = () => {
   const handleContact = () => {
     navigate('/get-in-touch');
   };
+
+  const filteredPlans = isBusiness
+    ? plans.filter(plan => plan.title !== wording.PrivateUse) // Zeigt nur die Pläne ohne "PrivateUse"
+    : plans.filter(plan => plan.title === wording.PrivateUse); // Zeigt nur den PrivateUse Plan
 
   return (
     <Box
@@ -151,6 +186,37 @@ const PricingTable = () => {
         {translate(wording.plans)}
       </Typography>
 
+      {/* Neue Toggle für "Geschäftlich/Privat" */}
+      <Box
+        sx={{
+          textAlign: 'center',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: 1,
+          marginBottom: '20px',
+        }}
+      >
+        <Typography
+          
+          variant="body1"
+          sx={{ color: !isBusiness ? '#1976d2' : '#757575', fontWeight: 'bold' }}
+        >
+          Privat
+        </Typography>
+        <Switch
+          checked={isBusiness}
+          onChange={() => setIsBusiness(!isBusiness)}
+        />
+        <Typography
+          variant="body1"
+          sx={{ color: isBusiness ? '#1976d2' : '#757575', fontWeight: 'bold' }}
+        >
+          Geschäftlich
+        </Typography>
+      </Box>
+
+      {/* Toggle für Monatlich/Jährlich */}
       <Box
         sx={{
           textAlign: 'center',
@@ -175,7 +241,7 @@ const PricingTable = () => {
           variant="body1"
           sx={{ color: isYearly ? '#1976d2' : '#757575', fontWeight: 'bold' }}
         >
-          Jährlich bezahlen und <br /> 16% sparen
+          Jährlich bezahlen und <br /> 15% sparen
         </Typography>
       </Box>
 
@@ -187,7 +253,7 @@ const PricingTable = () => {
           gap: '32px',
         }}
       >
-        {plans.map((plan, index) => (
+        {filteredPlans.map((plan, index) => (
           <Box
             key={index}
             sx={{
@@ -242,7 +308,7 @@ const PricingTable = () => {
                   sx={{ fontWeight: 'bold', color: '#1976d2' }}
                 >
                   {isYearly
-                    ? `${plan.yearlyPrice}€ / Jahr`
+                    ? `${(plan.yearlyPrice / 12).toFixed(2)}€ / Monat`
                     : `${plan.monthlyPrice}€ / Monat`}
                 </Typography>
                 {isYearly && (
@@ -250,7 +316,7 @@ const PricingTable = () => {
                     variant="body2"
                     sx={{ color: '#757575', marginBottom: '10px' }}
                   >
-                    ({(plan.yearlyPrice / 12).toFixed(2)}€ / Monat)
+                    {`${plan.yearlyPrice}€ / Jahr`}
                   </Typography>
                 )}
                 <Typography
