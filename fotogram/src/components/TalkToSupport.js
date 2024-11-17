@@ -1,7 +1,9 @@
 import { Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import translate from '../helpers/translate';
+import wording from '../constants/wording';
 
-const TalkToSupport = ({buttonText}) => {
+const TalkToSupport = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -15,12 +17,13 @@ const TalkToSupport = ({buttonText}) => {
         fontWeight: 'bold',
         borderRadius: '24px',
         textTransform: 'none',
-        padding: '8px 20px',
+        padding: { xs: '8px 12px', md: '8px 20px' },
         boxShadow: 'none',
+        whiteSpace: 'nowrap',
       }}
       onClick={() => handleClick()}
     >
-      {buttonText}
+      {translate(wording.talkToSupport)}
     </Button>
   );
 };

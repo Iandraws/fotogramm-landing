@@ -2,7 +2,7 @@ import { Box, Typography } from '@mui/material';
 import React from 'react';
 import TryIt from './TryIt';
 import translate from '../helpers/translate'; // Import translate function
-import wording from '../constants/wording';   // Import wording constants
+import wording from '../constants/wording'; // Import wording constants
 
 const sections = [
   {
@@ -69,43 +69,98 @@ const sections = [
 
 const FunktionPage = () => {
   return (
-    <Box sx={{ padding: '40px', backgroundColor: '#f9f9f9', textAlign: 'center' }}>
-      <Typography variant="h3" sx={{ fontWeight: 'bold', textAlign: 'center', marginBottom: '40px' }}>
+    <Box
+      sx={{ padding: '40px', backgroundColor: '#f9f9f9', textAlign: 'center' }}
+    >
+      <Typography
+        variant="h3"
+        sx={{ fontWeight: 'bold', textAlign: 'center', marginBottom: '40px' }}
+      >
         {translate(wording.whyFotogram)}
       </Typography>
 
       {sections.map((section, index) => (
-        <Box key={index} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginBottom: '60px', textAlign: 'center', gap: '20px' }}>
+        <Box
+          key={index}
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            marginBottom: '60px',
+            textAlign: 'center',
+            gap: '20px',
+          }}
+        >
           <Box sx={{ maxWidth: '600px' }}>
-            <Typography variant="h5" sx={{ fontWeight: 'bold', marginBottom: '10px' }}>
+            <Typography
+              variant="h5"
+              sx={{ fontWeight: 'bold', marginBottom: '10px' }}
+            >
               {section.title}
             </Typography>
-            <Typography variant="body1" sx={{ color: '#555' }}>
+            <Typography
+              variant="body1"
+              sx={{ color: '#555' }}
+            >
               {section.description}
             </Typography>
           </Box>
 
-          <Box sx={{ display: 'flex', justifyContent: 'center', maxWidth: '100%' }}>
+          <Box
+            sx={{ display: 'flex', justifyContent: 'center', maxWidth: '100%' }}
+          >
             {section.image.endsWith('.mp4') ? (
-              <video src={section.image} autoPlay muted loop playsInline style={{ width: '100%', maxWidth: '500px', borderRadius: '10px' }} />
+              <video
+                src={section.image}
+                autoPlay
+                muted
+                loop
+                playsInline
+                style={{
+                  width: '100%',
+                  maxWidth: '500px',
+                  borderRadius: '10px',
+                }}
+              />
             ) : (
-              <img src={section.image} alt={section.title} style={{ width: '100%', maxWidth: '500px', borderRadius: '10px' }} />
+              <img
+                src={section.image}
+                alt={section.title}
+                style={{
+                  width: '100%',
+                  maxWidth: '500px',
+                  borderRadius: '10px',
+                }}
+              />
             )}
           </Box>
         </Box>
       ))}
 
-      {/* Final Call-to-Action Section */}
-      <Box sx={{ backgroundColor: '#f0f0f0', padding: '60px 20px', marginTop: '60px', textAlign: 'center' }}>
+      <Box
+        sx={{
+          backgroundColor: '#f0f0f0',
+          padding: '60px 20px',
+          marginTop: '60px',
+          textAlign: 'center',
+        }}
+      >
         <Box sx={{ maxWidth: '600px', margin: '0 auto' }}>
-          <Typography variant="h4" sx={{ fontWeight: 'bold', marginBottom: '20px' }}>
-            {translate(wording.tryItButton)}
+          <Typography
+            variant="h4"
+            sx={{ fontWeight: 'bold', marginBottom: '20px' }}
+          >
+            {translate(wording.tryIt)}
           </Typography>
-          <Typography variant="body1" sx={{ marginBottom: '30px', color: '#555' }}>
+          <Typography
+            variant="body1"
+            sx={{ marginBottom: '30px', color: '#555' }}
+          >
             {translate(wording.ctaDescription)}
           </Typography>
 
-          <TryIt buttonText={translate(wording.tryItButton)} />
+          <TryIt />
         </Box>
       </Box>
     </Box>

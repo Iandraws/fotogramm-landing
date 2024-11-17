@@ -14,17 +14,17 @@ const PowerfulFeaturesSection = () => {
           justifyContent: 'space-between',
           alignItems: 'center',
           backgroundColor: '#fff',
-          paddingTop: { xs: '20px', md: '200px' },
-          paddingBottom: { xs: '20px', md: '80px' },
-          paddingLeft: { xs: '20px', md: '80px', lg: '100px', xl: '200px' },
-          paddingRight: { xs: '20px', md: '40px', lg: '100px', xl: '200px' },
+          paddingTop: { xs: '16px', md: '200px' },
+          paddingBottom: { xs: '16px', md: '80px' },
+          paddingLeft: { xs: '16px', md: '80px', lg: '100px', xl: '200px' },
+          paddingRight: { xs: '16px', md: '40px', lg: '100px', xl: '200px' },
         }}
       >
         {/* Left side: Text */}
         <Box
           sx={{
             flex: 1,
-            paddingRight: { xs: '20px', md: '40px' },
+            paddingRight: { xs: '16px', md: '40px' },
             textAlign: { xs: 'center', md: 'left' },
           }}
         >
@@ -61,7 +61,7 @@ const PowerfulFeaturesSection = () => {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            padding: { xs: '20px', md: '40px' },
+            padding: { xs: '16px', md: '40px' },
           }}
         >
           <img
@@ -83,10 +83,10 @@ const PowerfulFeaturesSection = () => {
           flexDirection: { xs: 'column', md: 'row' },
           justifyContent: 'space-between',
           alignItems: 'center',
-          paddingTop: { xs: '20px', md: '80px' },
-          paddingBottom: { xs: '20px', md: '80px' },
-          paddingLeft: { xs: '20px', md: '48px', lg: '100px', xl: '200px' },
-          paddingRight: { xs: '20px', md: '56px', lg: '100px', xl: '200px' },
+          paddingTop: { xs: '16px', md: '80px' },
+          paddingBottom: { xs: '16px', md: '80px' },
+          paddingLeft: { xs: '16px', md: '48px', lg: '100px', xl: '200px' },
+          paddingRight: { xs: '16px', md: '56px', lg: '100px', xl: '200px' },
           backgroundColor: '#fff',
         }}
       >
@@ -97,7 +97,7 @@ const PowerfulFeaturesSection = () => {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            marginTop: { xs: '20px', md: '0' },
+            marginTop: { xs: '16px', md: '0' },
           }}
         >
           <img
@@ -115,7 +115,7 @@ const PowerfulFeaturesSection = () => {
         <Box
           sx={{
             flex: 1,
-            paddingLeft: { xs: '20px', md: '40px' },
+            paddingLeft: { xs: '16px', md: '40px' },
             textAlign: { xs: 'center', md: 'left' },
           }}
         >
@@ -146,10 +146,10 @@ const PowerfulFeaturesSection = () => {
           flexDirection: { xs: 'column', md: 'row' },
           justifyContent: 'space-between',
           alignItems: 'center',
-          paddingTop: { xs: '20px', md: '80px' },
-          paddingBottom: { xs: '20px', md: '200px' },
-          paddingLeft: { xs: '20px', md: '80px', lg: '100px', xl: '200px' },
-          paddingRight: { xs: '20px', md: '80px', lg: '100px', xl: '200px' },
+          paddingTop: { xs: '40px', md: '80px' },
+          paddingBottom: { xs: '40px', md: '200px' },
+          paddingLeft: { xs: '16px', md: '80px', lg: '100px', xl: '200px' },
+          paddingRight: { xs: '16px', md: '80px', lg: '100px', xl: '200px' },
           backgroundColor: '#fff',
         }}
       >
@@ -157,7 +157,7 @@ const PowerfulFeaturesSection = () => {
         <Box
           sx={{
             flex: 1,
-            paddingRight: { xs: '20px', md: '40px' },
+            paddingRight: { xs: '16px', md: '40px' },
             textAlign: { xs: 'center', md: 'left' },
           }}
         >
@@ -187,7 +187,7 @@ const PowerfulFeaturesSection = () => {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            marginTop: { xs: '20px', md: '0' },
+            marginTop: { xs: '16px', md: '0' },
           }}
         >
           <img

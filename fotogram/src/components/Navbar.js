@@ -3,6 +3,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import {
   AppBar,
   Box,
+  Button,
   Drawer,
   IconButton,
   List,
@@ -10,17 +11,18 @@ import {
   ListItemText,
   Link as MuiLink,
   Toolbar,
-  Button,
 } from '@mui/material';
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import TryIt from './TryIt';
 import translate from '../helpers/translate';
 import wording from './../constants/wording';
+import TryIt from './TryIt';
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [language, setLanguage] = useState(localStorage.getItem('lang') || 'de');
+  const [language, setLanguage] = useState(
+    localStorage.getItem('lang') || 'de'
+  );
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -51,6 +53,9 @@ const Navbar = () => {
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
+          gap: '12px',
+          paddingLeft: { xs: '0', md: '16px' },
+          paddingRight: { xs: '8px', md: '16px' },
         }}
       >
         {/* Logo Section */}
@@ -59,11 +64,12 @@ const Navbar = () => {
           to="/"
           sx={{ display: 'flex', alignItems: 'center' }}
         >
-          <img
+          <Box
+            component="img"
             src="/assets/logo.png"
             alt="Fotogram logo"
-            style={{
-              width: '100px',
+            sx={{
+              width: { xs: '60px', md: '100px' },
               height: 'auto',
             }}
           />
@@ -78,12 +84,27 @@ const Navbar = () => {
           }}
         >
           {[
-            { label: translate({ de: 'Startseite', en: 'Home' }), path: '' },
-            { label: translate({ de: 'Warum Fotogram', en: 'Why Fotogram' }), path: 'why-fotogram' },
-            { label: translate({ de: 'Preise', en: 'Pricing' }), path: 'pricing' },
-            { label: translate({ de: 'Unsere Geschichte', en: 'Our Story' }), path: 'our-story' },
-            { label: translate({ de: 'Support & FAQs', en: 'Support FAQs' }), path: 'faq' },
-            { label: translate({ de: 'Kontakt', en: 'Contact Us' }), path: 'get-in-touch' },
+            { label: wording.home, path: '' },
+            {
+              label: wording.whyFotogram,
+              path: 'why-fotogram',
+            },
+            {
+              label: wording.pricing,
+              path: 'pricing',
+            },
+            {
+              label: wording.ourStory,
+              path: 'our-story',
+            },
+            {
+              label: wording.faq,
+              path: 'faq',
+            },
+            {
+              label: wording.contactUs,
+              path: 'get-in-touch',
+            },
           ].map((route) => (
             <MuiLink
               key={route.path}
@@ -104,19 +125,21 @@ const Navbar = () => {
                 '&.active': { color: '#1976d2' },
               }}
             >
-              {route.label}
+              {translate(route.label)}
             </MuiLink>
           ))}
         </Box>
 
         {/* Language Toggle Button and Try It Button */}
         <Box sx={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
-          <IconButton onClick={handleLanguageToggle} sx={{ padding: '0' }}>
-            <span role="img" aria-label={language === 'de' ? 'German Flag' : 'English Flag'} style={{ fontSize: '24px' }}>
-              {language === 'de' ? '🇩🇪' : '🇬🇧'}
-            </span>
-          </IconButton>
-          <TryIt buttonText={translate(wording.tryItButton)} />
+          <Button
+            onClick={handleLanguageToggle}
+            style={{ width: '24px', minWidth: '24px' }}
+            sx={{ padding: '0' }}
+          >
+            {language === 'en' ? 'DE' : 'EN'}
+          </Button>
+          <TryIt />
         </Box>
 
         {/* Mobile Menu Button */}
@@ -131,7 +154,11 @@ const Navbar = () => {
       </Toolbar>
 
       {/* Drawer for Mobile Menu */}
-      <Drawer anchor="top" open={mobileOpen} onClose={handleDrawerToggle}>
+      <Drawer
+        anchor="top"
+        open={mobileOpen}
+        onClose={handleDrawerToggle}
+      >
         <Box
           sx={{
             width: '100%',
@@ -150,12 +177,27 @@ const Navbar = () => {
           </IconButton>
           <List sx={{ width: '100%', textAlign: 'center' }}>
             {[
-              { label: translate({ de: 'Startseite', en: 'Home' }), path: '' },
-              { label: translate({ de: 'Warum Fotogram', en: 'Why Fotogram' }), path: 'why-fotogram' },
-              { label: translate({ de: 'Preise', en: 'Pricing' }), path: 'pricing' },
-              { label: translate({ de: 'Unsere Geschichte', en: 'Our Story' }), path: 'our-story' },
-              { label: translate({ de: 'Support & FAQs', en: 'Support FAQs' }), path: 'faq' },
-              { label: translate({ de: 'Kontakt', en: 'Contact Us' }), path: 'get-in-touch' },
+              { label: wording.home, path: '' },
+              {
+                label: wording.whyFotogram,
+                path: 'why-fotogram',
+              },
+              {
+                label: wording.pricing,
+                path: 'pricing',
+              },
+              {
+                label: wording.ourStory,
+                path: 'our-story',
+              },
+              {
+                label: wording.faq,
+                path: 'faq',
+              },
+              {
+                label: wording.contactUs,
+                path: 'get-in-touch',
+              },
             ].map((route) => (
               <ListItem
                 component={NavLink}
@@ -173,7 +215,10 @@ const Navbar = () => {
                   },
                 }}
               >
-                <ListItemText primary={route.label} sx={{ textAlign: 'center' }} />
+                <ListItemText
+                  primary={translate(route.label)}
+                  sx={{ textAlign: 'center' }}
+                />
               </ListItem>
             ))}
           </List>

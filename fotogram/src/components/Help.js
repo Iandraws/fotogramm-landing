@@ -12,7 +12,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const Help = () => {
   return (
-    <Box sx={{ padding: { xs: '20px', md: '40px' }, textAlign: 'center' }}>
+    <Box sx={{ padding: { xs: '16px', md: '40px' }, textAlign: 'center' }}>
       {/* Header Section */}
       <Typography
         variant="h2"

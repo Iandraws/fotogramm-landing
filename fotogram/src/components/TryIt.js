@@ -1,7 +1,9 @@
 import { Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import wording from '../constants/wording';
+import translate from '../helpers/translate';
 
-const TryIt = ({buttonText}) => {
+const TryIt = () => {
   const navigate = useNavigate();
 
   const handleSignUp = () => {
@@ -17,10 +19,11 @@ const TryIt = ({buttonText}) => {
         textTransform: 'none',
         padding: '8px 20px',
         boxShadow: 'none',
+        whiteSpace: 'nowrap',
       }}
       onClick={() => handleSignUp()}
     >
-      {buttonText}
+      {translate(wording.tryIt)}
     </Button>
   );
 };

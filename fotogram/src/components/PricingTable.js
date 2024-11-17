@@ -1,24 +1,26 @@
-import React, { useState } from 'react';
-import {
-  Box,
-  Typography,
-  Button,
-  List,
-  ListItem,
-  Divider,
-  Switch,
-  Badge,
-} from '@mui/material';
 import CheckIcon from '@mui/icons-material/Check';
 import CloseIcon from '@mui/icons-material/Close';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import {
+  Badge,
+  Box,
+  Button,
+  Divider,
+  List,
+  ListItem,
+  Switch,
+  Typography,
+} from '@mui/material';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import wording from '../constants/wording';
 import translate from '../helpers/translate';
 
 const plans = [
   {
+    isBusiness: true,
     title: wording.basis,
+    package: 'basic',
     monthlyPrice: 0,
     yearlyPrice: (0 * 12 * 0.85).toFixed(2),
     description: wording.basicDesc,
@@ -39,7 +41,6 @@ const plans = [
       wording.liveVideoStreaming,
       wording.digitalAlbum,
       wording.digitalContract,
-   
     ],
     unavailableFeatures: [
       wording.customDomain,
@@ -53,6 +54,8 @@ const plans = [
     buttonText: wording.freeTrial,
   },
   {
+    isBusiness: true,
+    package: 'advanced',
     title: wording.advanced,
     monthlyPrice: 14.99,
     yearlyPrice: (14.99 * 12 * 0.85).toFixed(2),
@@ -87,6 +90,8 @@ const plans = [
     popular: true,
   },
   {
+    isBusiness: true,
+    package: 'premium',
     title: wording.premium,
     monthlyPrice: 59.99,
     yearlyPrice: (59.99 * 12 * 0.85).toFixed(2),
@@ -118,8 +123,9 @@ const plans = [
     unavailableFeatures: [],
     buttonText: wording.freeTrial,
   },
-
   {
+    package: 'private',
+    isBusiness: false,
     title: wording.PrivateUse,
     monthlyPrice: 4.99,
     yearlyPrice: (4.99 * 12 * 0.85).toFixed(2),
@@ -133,16 +139,14 @@ const plans = [
       wording.liveEvent,
       wording.aiFaceRecognition,
       wording.digitalAlbum,
-   
     ],
-    unavailableFeatures: [
-      
-    ],
+    unavailableFeatures: [],
 
     buttonText: wording.freeTrial,
   },
   {
     customized: true,
+    isBusiness: true,
     title: wording.customized,
     price: '-',
     description: wording.tailoredPlan,
@@ -157,17 +161,20 @@ const PricingTable = () => {
   const [isYearly, setIsYearly] = useState(false);
   const [isBusiness, setIsBusiness] = useState(true); // Neuen State für "Geschäftlich/Privat"
 
-  const handleSignUp = (planTitle) => {
-    navigate(`/signup?plan=${planTitle.toLowerCase()}`);
-  };
+  const handlePlanSelection = (plan) => {
+    if (plan.customized) {
+      navigate('/get-in-touch');
+      return;
+    }
 
-  const handleContact = () => {
-    navigate('/get-in-touch');
-  };
+    if (plan.isBusiness === false) {
+      navigate(`/hub-register`);
+      return;
+    }
 
-  const filteredPlans = isBusiness
-    ? plans.filter(plan => plan.title !== wording.PrivateUse) // Zeigt nur die Pläne ohne "PrivateUse"
-    : plans.filter(plan => plan.title === wording.PrivateUse); // Zeigt nur den PrivateUse Plan
+    navigate(`/signup?plan=${plan.package}`);
+    return;
+  };
 
   return (
     <Box
@@ -198,9 +205,11 @@ const PricingTable = () => {
         }}
       >
         <Typography
-          
           variant="body1"
-          sx={{ color: !isBusiness ? '#1976d2' : '#757575', fontWeight: 'bold' }}
+          sx={{
+            color: !isBusiness ? '#1976d2' : '#757575',
+            fontWeight: 'bold',
+          }}
         >
           Privat
         </Typography>
@@ -253,133 +262,141 @@ const PricingTable = () => {
           gap: '32px',
         }}
       >
-        {filteredPlans.map((plan, index) => (
-          <Box
-            key={index}
-            sx={{
-              height: 'fit-content',
-              width: { xs: '100%' },
-              maxWidth: { xs: '100%', md: '280px' },
-              minWidth: { md: '280px' },
-              padding: '24px 16px',
-              textAlign: 'center',
-              backgroundColor: '#f9f9f9',
-              borderRadius: '10px',
-              boxShadow: plan.popular
-                ? '0 4px 20px rgba(0, 0, 0, 0.2)'
-                : '0 2px 10px rgba(0, 0, 0, 0.1)',
-              border: plan.popular ? '2px solid #1976d2' : 'none',
-              position: 'relative',
-            }}
-          >
-            {plan.popular && !plan.customized && (
-              <Badge
-                overlap="circular"
-                badgeContent={
-                  <FavoriteIcon sx={{ color: '#fff', fontSize: '20px' }} />
-                }
-                sx={{
-                  position: 'absolute',
-                  top: '10px',
-                  right: '10px',
-                  '& .MuiBadge-badge': {
-                    backgroundColor: '#1976d2',
-                    borderRadius: '50%',
-                    height: '36px',
-                    width: '36px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                  },
-                }}
-              />
-            )}
-            <Typography
-              variant="h5"
-              sx={{ fontWeight: 'bold', marginBottom: '10px' }}
+        {plans
+          .filter((plan) => plan.isBusiness === isBusiness)
+          .map((plan, index) => (
+            <Box
+              key={index}
+              sx={{
+                height: 'fit-content',
+                width: { xs: '100%' },
+                maxWidth: { xs: '100%', md: '280px' },
+                minWidth: { md: '280px' },
+                padding: '24px 12px',
+                textAlign: 'center',
+                backgroundColor: '#f9f9f9',
+                borderRadius: '10px',
+                boxShadow: plan.popular
+                  ? '0 4px 20px rgba(0, 0, 0, 0.2)'
+                  : '0 2px 10px rgba(0, 0, 0, 0.1)',
+                border: plan.popular ? '2px solid #1976d2' : 'none',
+                position: 'relative',
+              }}
             >
-              {translate(plan.title)}
-            </Typography>
+              {plan.popular && !plan.customized && (
+                <Badge
+                  overlap="circular"
+                  badgeContent={
+                    <FavoriteIcon sx={{ color: '#fff', fontSize: '20px' }} />
+                  }
+                  sx={{
+                    position: 'absolute',
+                    top: '10px',
+                    right: '10px',
+                    '& .MuiBadge-badge': {
+                      backgroundColor: '#1976d2',
+                      borderRadius: '50%',
+                      height: '36px',
+                      width: '36px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    },
+                  }}
+                />
+              )}
+              <Typography
+                variant="h5"
+                sx={{ fontWeight: 'bold', marginBottom: '10px' }}
+              >
+                {translate(plan.title)}
+              </Typography>
 
-            {!plan.customized && (
-              <>
-                <Typography
-                  variant="h6"
-                  sx={{ fontWeight: 'bold', color: '#1976d2' }}
-                >
-                  {isYearly
-                    ? `${(plan.yearlyPrice / 12).toFixed(2)}€ / Monat`
-                    : `${plan.monthlyPrice}€ / Monat`}
-                </Typography>
-                {isYearly && (
+              {!plan.customized && (
+                <>
+                  <Typography
+                    variant="h6"
+                    sx={{ fontWeight: 'bold', color: '#1976d2' }}
+                  >
+                    {isYearly
+                      ? `${(plan.yearlyPrice / 12).toFixed(2)}€ / Monat`
+                      : `${plan.monthlyPrice}€ / Monat`}
+                  </Typography>
+                  {isYearly && (
+                    <Typography
+                      variant="body2"
+                      sx={{ color: '#757575', marginBottom: '10px' }}
+                    >
+                      {`${plan.yearlyPrice}€ / Jahr`}
+                    </Typography>
+                  )}
                   <Typography
                     variant="body2"
                     sx={{ color: '#757575', marginBottom: '10px' }}
                   >
-                    {`${plan.yearlyPrice}€ / Jahr`}
+                    zzgl. MwSt.
                   </Typography>
-                )}
-                <Typography
-                  variant="body2"
-                  sx={{ color: '#757575', marginBottom: '10px' }}
-                >
-                  zzgl. MwSt.
-                </Typography>
-              </>
-            )}
+                </>
+              )}
 
-            <Typography
-              variant="body2"
-              sx={{ marginBottom: '20px' }}
-            >
-              {translate(plan.description)}
-            </Typography>
+              <Typography
+                variant="body2"
+                sx={{ marginBottom: '20px' }}
+              >
+                {translate(plan.description)}
+              </Typography>
 
-            <Divider />
+              <Divider />
 
-            <List>
-              {plan.features.map((feature, index) => (
-                <ListItem
-                  key={index}
-                  style={{ display: 'flex', alignItems: 'center', gap: '16px' }}
-                >
-                  {!plan.customized && <CheckIcon sx={{ color: 'green' }} />}
-                  {translate(feature)}
-                </ListItem>
-              ))}
-              {plan.unavailableFeatures.map((unavailableFeature, index) => (
-                <ListItem
-                  key={index}
-                  style={{ display: 'flex', alignItems: 'center', gap: '16px' }}
-                >
-                  <CloseIcon sx={{ color: 'red' }} />
-                  {translate(unavailableFeature)}
-                </ListItem>
-              ))}
-            </List>
+              <List>
+                {plan.features.map((feature, index) => (
+                  <ListItem
+                    key={index}
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '16px',
+                    }}
+                  >
+                    {!plan.customized && <CheckIcon sx={{ color: 'green' }} />}
+                    {translate(feature)}
+                  </ListItem>
+                ))}
+                {plan.unavailableFeatures.map((unavailableFeature, index) => (
+                  <ListItem
+                    key={index}
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '16px',
+                    }}
+                  >
+                    <CloseIcon sx={{ color: 'red' }} />
+                    {translate(unavailableFeature)}
+                  </ListItem>
+                ))}
+              </List>
 
-            <Button
-              variant="contained"
-              onClick={() =>
-                plan.customized ? handleContact() : handleSignUp(plan.title.en)
-              }
-              sx={{
-                backgroundColor: '#1976d2',
-                color: '#fff',
-                fontWeight: 'bold',
-                padding: '8px 32px',
-                textTransform: 'none',
-                borderRadius: '24px',
-                marginTop: '20px',
-                '&:hover': {
+              <Button
+                variant="contained"
+                onClick={() => handlePlanSelection(plan)}
+                sx={{
                   backgroundColor: '#1976d2',
-                },
-              }}
-            >
-              {translate(plan.buttonText)}
-            </Button>
-          </Box>
-        ))}
+                  color: '#fff',
+                  fontWeight: 'bold',
+                  padding: '8px 32px',
+                  textTransform: 'none',
+                  borderRadius: '24px',
+                  marginTop: '20px',
+                  '&:hover': {
+                    backgroundColor: '#1976d2',
+                  },
+                }}
+              >
+                {translate(plan.buttonText)}
+              </Button>
+            </Box>
+          ))}
       </Box>
     </Box>
   );

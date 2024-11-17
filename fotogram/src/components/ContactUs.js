@@ -203,7 +203,7 @@ const ContactUs = () => {
                 sx={{
                   backgroundColor: '#1976d2',
                   color: '#fff',
-                  padding: '10px',
+                  padding: '8px',
                   fontWeight: 'bold',
                   borderRadius: '24px',
                   '&:hover': {
@@ -223,7 +223,7 @@ const ContactUs = () => {
             flex: 1,
             textAlign: 'center',
             color: '#555',
-            padding: { xs: '20px', md: '40px' },
+            padding: { xs: '16px', md: '40px' },
           }}
         >
           <Typography

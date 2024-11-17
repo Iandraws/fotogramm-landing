@@ -7,8 +7,6 @@ import {
   FormControlLabel,
   FormGroup,
   Link,
-  Radio,
-  RadioGroup,
   TextField,
   Typography,
 } from '@mui/material';
@@ -21,8 +19,7 @@ const SignUpForm = () => {
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [emailError, setEmailError] = useState(false); // New state for email validation
-  const [plan, setPlan] = useState('free');
-  const [role, setRole] = useState('self-employed');
+  const [plan, setPlan] = useState('basic');
   const [customSubdomain, setCustomSubdomain] = useState('');
   const [agreedToTerms, setAgreedToTerms] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -148,34 +145,15 @@ const SignUpForm = () => {
         sx={{ backgroundColor: '#f5f5f5', mb: 2 }}
       />
 
-      {/* Radio Buttons for Role */}
-      <RadioGroup
-        row
-        aria-label="role"
-        value={role}
-        onChange={(e) => setRole(e.target.value)}
-        sx={{ justifyContent: 'center', mb: 2 }}
-      >
-        <FormControlLabel
-          value="self-employed"
-          control={<Radio />}
-          label="I am self-employed"
-        />
-        <FormControlLabel
-          value="company"
-          control={<Radio />}
-          label="I am part of a company or team"
-        />
-      </RadioGroup>
-
       <Box
         sx={{
           display: 'flex',
           alignItems: 'center',
           backgroundColor: '#f5f5f5',
           borderRadius: '5px',
-          padding: '10px',
+          padding: '16px',
           mb: 2,
+          border: '1px solid rgba(0, 0, 0, 0.23)',
         }}
       >
         <Typography sx={{ color: '#555' }}>https://</Typography>
@@ -186,7 +164,13 @@ const SignUpForm = () => {
           value={customSubdomain}
           onChange={(e) => setCustomSubdomain(e.target.value)}
           margin="none"
-          sx={{ backgroundColor: '#f5f5f5', ml: 1 }}
+          sx={{
+            backgroundColor: '#f5f5f5',
+            ml: 1,
+            '& .MuiInputBase-input': {
+              padding: '4px', // Adjust padding as needed
+            },
+          }}
         />
         <Typography sx={{ color: '#555', ml: 1 }}>.fotogram.app</Typography>
       </Box>
@@ -221,7 +205,6 @@ const SignUpForm = () => {
           }
         />
       </FormGroup>
-
       <Button
         type="submit"
         fullWidth
@@ -235,7 +218,7 @@ const SignUpForm = () => {
         }}
         disabled={!agreedToTerms}
       >
-        Sign up for the free plan now
+        Sign up for the {plan} now
       </Button>
 
       {isSuccess && (

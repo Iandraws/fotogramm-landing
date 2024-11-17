@@ -15,7 +15,7 @@ const testimonials = [
   {
     name: 'Claudia Gödke',
     role: 'food photographer',
-    text: 'My clients love the intuitive way to select their favorites and participate remotely on my photo shoots. It\'s a game changer!',
+    text: "My clients love the intuitive way to select their favorites and participate remotely on my photo shoots. It's a game changer!",
     image: '/assets/users/22.png',
   },
   {
@@ -28,6 +28,7 @@ const testimonials = [
 
 const AutoCarousel = () => {
   const settings = {
+    arrows: false,
     dots: true,
     infinite: true,
     speed: 700, // Smoother animation speed
@@ -57,10 +58,10 @@ const AutoCarousel = () => {
   return (
     <Box
       sx={{
-        paddingTop: { xs: '20px', md: '200px' },
-        paddingBottom: { xs: '20px', md: '200px' },
-        paddingLeft: { xs: '20px', md: '80px', lg: '100px', xl: '200px' },
-        paddingRight: { xs: '20px', md: '80px', lg: '100px', xl: '200px' },
+        paddingTop: { xs: '40px', md: '200px' },
+        paddingBottom: { xs: '40px', md: '200px' },
+        paddingLeft: { xs: '16px', md: '80px', lg: '100px', xl: '200px' },
+        paddingRight: { xs: '16px', md: '80px', lg: '100px', xl: '200px' },
         backgroundColor: '#fff',
         textAlign: 'center',
       }}
@@ -76,9 +77,8 @@ const AutoCarousel = () => {
           <Box
             key={index}
             sx={{
-              padding: '24px',
+              padding: { xs: '0px', md: '24px' },
               textAlign: 'center',
-              boxShadow: '0px 4px 12px rgba(0,0,0,0.15)',
               borderRadius: '24px',
               backgroundColor: '#fefefe',
               display: 'flex',
@@ -87,10 +87,6 @@ const AutoCarousel = () => {
               alignItems: 'center',
               transition: 'transform 0.3s ease, box-shadow 0.3s ease',
               minHeight: '350px',
-              '&:hover': {
-                transform: 'scale(1.05)',
-                boxShadow: '0px 6px 20px rgba(0,0,0,0.2)',
-              },
             }}
           >
             {/* Image Container */}

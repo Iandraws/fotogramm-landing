@@ -26,18 +26,18 @@ const HeroSection = () => {
           justifyContent: 'space-between',
           alignItems: 'center',
           backgroundColor: '#fff',
-          paddingTop: { xs: '20px', md: '40px' },
-          paddingBottom: { xs: '20px', md: '120px' },
-          paddingLeft: { xs: '20px', md: '40px', lg: '160px', xl: '200px' },
-          paddingRight: { xs: '20px', md: '0px', lg: '160px', xl: '200px' },
+          paddingTop: { xs: '16px', md: '40px' },
+          paddingBottom: { xs: '16px', md: '120px' },
+          paddingLeft: { xs: '16px', md: '40px', lg: '160px', xl: '200px' },
+          paddingRight: { xs: '16px', md: '0px', lg: '160px', xl: '200px' },
         }}
       >
         {/* Left side: Text */}
         <Box
           sx={{
             flex: 1,
-            paddingLeft: { xs: '10px', md: '40px' },
-            textAlign: { xs: 'center', md: 'left' },
+            paddingLeft: { xs: '0px', md: '40px' },
+            textAlign: { xs: 'left', md: 'left' },
           }}
         >
           <Typography
@@ -63,7 +63,9 @@ const HeroSection = () => {
               <ListItemIcon>
                 <CheckIcon sx={{ color: '#1976d2' }} />
               </ListItemIcon>
-              <ListItemText primary={translate(wording.realTimeImageTransmission)} />
+              <ListItemText
+                primary={translate(wording.realTimeImageTransmission)}
+              />
             </ListItem>
             <ListItem key="feature-3">
               <ListItemIcon>
@@ -73,9 +75,23 @@ const HeroSection = () => {
             </ListItem>
           </List>
 
-          <Box style={{ display: 'flex', gap: '16px' }}>
-          <TryIt buttonText={translate(wording.tryItButton)} />
-            <TalkToSupport buttonText={translate(wording.talkToSupportButton)} />
+          <Box
+            sx={{
+              display: 'flex',
+              gap: '12px',
+              flexWrap: 'wrap', // Allow wrapping if needed
+              '& > *': {
+                flex: '0 1 200px', // Buttons take their natural width unless wrapped
+              },
+              '@media (max-width:500px)': {
+                '& > *': {
+                  flex: '1 1 100%', // If wrapped (mobile/small screens), buttons take full width
+                },
+              },
+            }}
+          >
+            <TryIt />
+            <TalkToSupport />
           </Box>
         </Box>
 
@@ -86,7 +102,7 @@ const HeroSection = () => {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            marginTop: { xs: '20px', md: '0' },
+            marginTop: { xs: '16px', md: '0' },
           }}
         >
           <img
@@ -111,8 +127,8 @@ const HeroSection = () => {
           gap: '24px',
           paddingTop: { xs: '24px', md: '120px' },
           paddingBottom: { xs: '24px', md: '120px' },
-          paddingLeft: { xs: '20px', md: '24px', lg: '100px', xl: '200px' },
-          paddingRight: { xs: '20px', md: '40px', lg: '100px', xl: '200px' },
+          paddingLeft: { xs: '16px', md: '24px', lg: '100px', xl: '200px' },
+          paddingRight: { xs: '16px', md: '40px', lg: '100px', xl: '200px' },
           backgroundColor: '#5c524c',
         }}
       >
@@ -175,7 +191,14 @@ const HeroSection = () => {
             <strong>{translate(wording.digitalShop)}</strong>
           </Typography>
 
-          <TryIt buttonText={translate(wording.tryItButton)} />
+          <Box
+            sx={{
+              display: 'flex',
+              justifyContent: { xs: 'center', md: 'start' },
+            }}
+          >
+            <TryIt />
+          </Box>
         </Box>
 
         {/* Left side: Image */}
@@ -185,7 +208,7 @@ const HeroSection = () => {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            marginTop: { xs: '20px', md: '0' },
+            marginTop: { xs: '16px', md: '0' },
             overflow: 'hidden',
           }}
         >
@@ -210,10 +233,10 @@ const HeroSection = () => {
           flexDirection: { xs: 'column', md: 'row' },
           justifyContent: 'space-between',
           alignItems: 'center',
-          paddingTop: { xs: '20px', md: '120px' },
-          paddingBottom: { xs: '20px', md: '120px' },
-          paddingLeft: { xs: '20px', md: '48px', lg: '100px', xl: '200px' },
-          paddingRight: { xs: '20px', md: '56px', lg: '100px', xl: '200px' },
+          paddingTop: { xs: '40px', md: '120px' },
+          paddingBottom: { xs: '40px', md: '120px' },
+          paddingLeft: { xs: '16px', md: '48px', lg: '100px', xl: '200px' },
+          paddingRight: { xs: '16px', md: '56px', lg: '100px', xl: '200px' },
           backgroundColor: '#5c524c',
         }}
       >
@@ -224,7 +247,7 @@ const HeroSection = () => {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            marginTop: { xs: '20px', md: '0' },
+            marginTop: { xs: '16px', md: '0' },
             overflow: 'hidden',
           }}
         >
@@ -243,7 +266,7 @@ const HeroSection = () => {
         <Box
           sx={{
             flex: 1,
-            paddingLeft: { xs: '20px', md: '40px' },
+            paddingLeft: { xs: '16px', md: '40px' },
             textAlign: { xs: 'center', md: 'left' },
             color: '#fff',
           }}
@@ -252,6 +275,7 @@ const HeroSection = () => {
             variant="h4"
             sx={{
               fontWeight: 'bold',
+              marginTop: { xs: '24px', md: '0' },
               fontSize: { xs: '1.8rem', md: '2.5rem' },
               mb: 2,
             }}
@@ -269,7 +293,7 @@ const HeroSection = () => {
             {translate(wording.fotogramMission)}
           </Typography>
 
-          <TryIt buttonText={translate(wording.tryItButton)} />
+          <TryIt />
         </Box>
       </Box>
 
