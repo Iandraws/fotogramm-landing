@@ -161,6 +161,7 @@ const SignUpForm = () => {
           fullWidth
           placeholder="your custom address"
           variant="outlined"
+          required
           value={customSubdomain}
           onChange={(e) => setCustomSubdomain(e.target.value)}
           margin="none"
