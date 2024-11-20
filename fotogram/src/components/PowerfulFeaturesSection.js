@@ -48,7 +48,7 @@ const PowerfulFeaturesSection = () => {
 
           <Typography
             variant="body1"
-            sx={{ fontSize: { xs: '1rem', md: '1.25rem' } }}
+            sx={{ fontSize: { xs: '16px', md: '16px' } }}
           >
             {translate(wording.realTimeImageDescription)}
           </Typography>
@@ -132,7 +132,7 @@ const PowerfulFeaturesSection = () => {
 
           <Typography
             variant="body1"
-            sx={{ fontSize: { xs: '1rem', md: '1.25rem' } }}
+            sx={{ fontSize: { xs: '16px', md: '16px' } }}
           >
             {translate(wording.aiFaceRecognitionDescription)}
           </Typography>
@@ -175,7 +175,7 @@ const PowerfulFeaturesSection = () => {
 
           <Typography
             variant="body1"
-            sx={{ fontSize: { xs: '1rem', md: '1.25rem' }, mb: 2 }}
+            sx={{ fontSize: { xs: '16px', md: '16px' }, mb: 2 }}
           >
             {translate(wording.watermarkFeatureDescription)}
           </Typography>

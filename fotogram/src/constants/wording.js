@@ -299,6 +299,10 @@ const wording = {
     de: 'Shop',
     en: 'Shop',
   },
+  shopHint: {
+    de: 'Shop Hint',
+    en: 'Shop Hint',
+  },
   Storage1TB: {
     de: '1TB Speicherplatz',
     en: '1TB Storage',
@@ -364,8 +368,8 @@ const wording = {
     en: 'What Fotogram offers you',
   },
   whyFotogram: {
-    de: 'Warum Fotogram?',
-    en: 'Why Fotogram?',
+    de: 'Warum Fotogram',
+    en: 'Why Fotogram',
   },
 };
 

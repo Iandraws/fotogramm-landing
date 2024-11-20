@@ -109,7 +109,7 @@ const Navbar = () => {
               color="inherit"
               underline="none"
               sx={{
-                fontSize: '1rem',
+                fontSize: '16px',
                 fontWeight: '500',
                 color: '#333',
                 '&:hover': {

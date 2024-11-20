@@ -125,7 +125,7 @@ const AutoCarousel = () => {
                 fontStyle: 'italic',
                 marginTop: '10px',
                 marginBottom: '10px',
-                fontSize: '1rem',
+                fontSize: '16px',
                 lineHeight: 1.6,
               }}
             >
@@ -136,7 +136,7 @@ const AutoCarousel = () => {
               sx={{
                 fontWeight: 'bold',
                 marginTop: '10px',
-                fontSize: '1.1rem',
+                fontSize: '16px',
               }}
             >
               {testimonial.name}

@@ -1,6 +1,7 @@
 import CheckIcon from '@mui/icons-material/Check';
 import CloseIcon from '@mui/icons-material/Close';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import InfoIcon from '@mui/icons-material/Info';
 import {
   Badge,
   Box,
@@ -13,6 +14,7 @@ import {
   ToggleButtonGroup,
   Typography,
 } from '@mui/material';
+import Tooltip from '@mui/material/Tooltip';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import wording from '../constants/wording';
@@ -52,8 +54,10 @@ const plans = [
       wording.videosAndReels,
       wording.shop,
     ],
-
     buttonText: wording.freeTrial,
+    hints: {
+      [wording.shop.en]: wording.shopHint,
+    },
   },
   {
     isBusiness: true,
@@ -89,7 +93,7 @@ const plans = [
       wording.shop,
     ],
     buttonText: wording.freeTrial,
-    popular: true,
+    hints: {},
   },
   {
     isBusiness: true,
@@ -124,6 +128,7 @@ const plans = [
     ],
     unavailableFeatures: [],
     buttonText: wording.freeTrial,
+    hints: {},
   },
   {
     package: 'private',
@@ -143,8 +148,8 @@ const plans = [
       wording.digitalAlbum,
     ],
     unavailableFeatures: [],
-
     buttonText: wording.freeTrial,
+    hints: {},
   },
   {
     customized: true,
@@ -155,13 +160,23 @@ const plans = [
     features: [wording.contactForCustomPlan],
     unavailableFeatures: [],
     buttonText: wording.contactUs,
+    hints: {},
   },
 ];
 
-const PricingTable = () => {
+const PricingTable = ({
+  showContent = true,
+  selected = 'advanced',
+  showButtons = true,
+  business = true,
+  yearly = false,
+  showCustom = true,
+  onSelect,
+}) => {
   const navigate = useNavigate();
-  const [isYearly, setIsYearly] = useState(false);
-  const [isBusiness, setIsBusiness] = useState(true); // Neuen State für "Geschäftlich/Privat"
+  const [isYearly, setIsYearly] = useState(yearly);
+  const [isBusiness, setIsBusiness] = useState(business);
+  const [selectedPackage, setSelectedPackage] = useState(selected);
 
   const handlePlanSelection = (plan) => {
     if (plan.customized) {
@@ -194,7 +209,6 @@ const PricingTable = () => {
       >
         {translate(wording.plans)}
       </Typography>
-
       {/* Neue Toggle für "Geschäftlich/Privat" */}
       <Box
         sx={{
@@ -209,7 +223,6 @@ const PricingTable = () => {
         <ToggleButtonGroup
           exclusive
           value={isBusiness}
-          strec
           aria-label="text alignment"
         >
           <ToggleButton
@@ -271,7 +284,6 @@ const PricingTable = () => {
           Jährlich bezahlen und <br /> 15% sparen
         </Typography>
       </Box>
-
       <Box
         sx={{
           display: 'flex',
@@ -281,11 +293,20 @@ const PricingTable = () => {
         }}
       >
         {plans
-          .filter((plan) => plan.isBusiness === isBusiness)
+          .filter(
+            (plan) =>
+              plan.isBusiness === isBusiness &&
+              (showCustom === false ? !plan.customized : true)
+          )
           .map((plan, index) => (
             <Box
+              onClick={() => {
+                setSelectedPackage(plan.package);
+                onSelect && onSelect(plan);
+              }}
               key={index}
               sx={{
+                ':hover': { cursor: 'pointer' },
                 height: 'fit-content',
                 width: { xs: '100%' },
                 maxWidth: { xs: '100%', md: '280px' },
@@ -294,14 +315,14 @@ const PricingTable = () => {
                 textAlign: 'center',
                 backgroundColor: '#f9f9f9',
                 borderRadius: '10px',
-                boxShadow: plan.popular
-                  ? '0 4px 20px rgba(0, 0, 0, 0.2)'
-                  : '0 2px 10px rgba(0, 0, 0, 0.1)',
-                border: plan.popular ? '2px solid #1976d2' : 'none',
+                boxShadow:
+                  plan.package === selectedPackage
+                    ? 'inset 0px 0px 6px 3px #1976d2'
+                    : '0 2px 10px rgba(0, 0, 0, 0.1)',
                 position: 'relative',
               }}
             >
-              {plan.popular && !plan.customized && (
+              {plan.package === selectedPackage && !plan.customized && (
                 <Badge
                   overlap="circular"
                   badgeContent={
@@ -366,53 +387,89 @@ const PricingTable = () => {
 
               <Divider />
 
-              <List>
-                {plan.features.map((feature, index) => (
-                  <ListItem
-                    key={index}
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '16px',
-                    }}
-                  >
-                    {!plan.customized && <CheckIcon sx={{ color: 'green' }} />}
-                    {translate(feature)}
-                  </ListItem>
-                ))}
-                {plan.unavailableFeatures.map((unavailableFeature, index) => (
-                  <ListItem
-                    key={index}
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '16px',
-                    }}
-                  >
-                    <CloseIcon sx={{ color: 'red' }} />
-                    {translate(unavailableFeature)}
-                  </ListItem>
-                ))}
-              </List>
+              {showContent && (
+                <List>
+                  {plan.features.map((feature, index) => (
+                    <ListItem
+                      key={index}
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '16px',
+                      }}
+                    >
+                      {!plan.customized && (
+                        <CheckIcon sx={{ color: 'green' }} />
+                      )}
+                      {translate(feature)}
+                      {plan.hints[feature.en] && (
+                        <Tooltip
+                          title={translate(plan.hints[feature.en])}
+                          arrow
+                          placement="top"
+                        >
+                          <InfoIcon
+                            sx={{
+                              marginLeft: 'auto',
+                              color: '#1565c0',
+                              cursor: 'pointer',
+                            }}
+                          />
+                        </Tooltip>
+                      )}
+                    </ListItem>
+                  ))}
+                  {plan.unavailableFeatures.map((unavailableFeature, index) => (
+                    <ListItem
+                      key={index}
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '16px',
+                      }}
+                    >
+                      <CloseIcon sx={{ color: 'red' }} />
+                      {translate(unavailableFeature)}
+                      {plan.hints[unavailableFeature.en] && (
+                        <Tooltip
+                          title={translate(plan.hints[unavailableFeature.en])}
+                          arrow
+                          placement="top"
+                        >
+                          <InfoIcon
+                            sx={{
+                              marginLeft: 'auto',
+                              color: '#1565c0',
+                              cursor: 'pointer',
+                            }}
+                          />
+                        </Tooltip>
+                      )}
+                    </ListItem>
+                  ))}
+                </List>
+              )}
 
-              <Button
-                variant="contained"
-                onClick={() => handlePlanSelection(plan)}
-                sx={{
-                  backgroundColor: '#1976d2',
-                  color: '#fff',
-                  fontWeight: 'bold',
-                  padding: '8px 32px',
-                  textTransform: 'none',
-                  borderRadius: '24px',
-                  marginTop: '20px',
-                  '&:hover': {
+              {showButtons && (
+                <Button
+                  variant="contained"
+                  onClick={() => handlePlanSelection(plan)}
+                  sx={{
                     backgroundColor: '#1976d2',
-                  },
-                }}
-              >
-                {translate(plan.buttonText)}
-              </Button>
+                    color: '#fff',
+                    fontWeight: 'bold',
+                    padding: '8px 32px',
+                    textTransform: 'none',
+                    borderRadius: '24px',
+                    marginTop: '20px',
+                    '&:hover': {
+                      backgroundColor: '#1976d2',
+                    },
+                  }}
+                >
+                  {translate(plan.buttonText)}
+                </Button>
+              )}
             </Box>
           ))}
       </Box>

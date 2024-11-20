@@ -11,20 +11,25 @@ import {
   Typography,
 } from '@mui/material';
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
-
+import PricingTable from './PricingTable';
 const SignUpForm = () => {
+  const location = useLocation();
+
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
-  const [emailError, setEmailError] = useState(false); // New state for email validation
-  const [plan, setPlan] = useState('basic');
+  const [emailError, setEmailError] = useState(false);
+  const [plan, setPlan] = useState(
+    new URLSearchParams(location.search).get('plan') || 'basic'
+  );
   const [customSubdomain, setCustomSubdomain] = useState('');
   const [agreedToTerms, setAgreedToTerms] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [isError, setIsError] = useState(false);
 
+  const test = (plan) => {setPlan(plan.package)}
   const formStyle = {
     backgroundColor: '#fff',
     padding: '40px',
@@ -33,13 +38,8 @@ const SignUpForm = () => {
     maxWidth: '600px',
     margin: '50px auto',
   };
-  const location = useLocation();
 
-  useEffect(() => {
-    const searchParams = new URLSearchParams(location.search);
-    const planValue = searchParams.get('plan');
-    setPlan(planValue || 'free');
-  }, [location.search]);
+  // setPlan(planValue || 'basic');
 
   // Handle email change and validation
   const handleEmailChange = (e) => {
@@ -88,175 +88,184 @@ const SignUpForm = () => {
   };
 
   return (
-    <Box
-      sx={formStyle}
-      component="form"
-      onSubmit={handleSubmit}
-    >
-      {/* Main heading */}
-      <Typography
-        variant="h4"
-        sx={{ textAlign: 'center', mb: 2, fontWeight: 'bold' }}
-      >
-        Just get started!
-      </Typography>
-
-      {/* Subtext */}
-      <Typography
-        variant="body1"
-        sx={{ textAlign: 'center', mb: 3, color: '#555' }}
-      >
-        Our one-step sign-up only takes a few seconds and is completely free.
-      </Typography>
-
-      {/* Form fields */}
-      <Box sx={{ display: 'flex', gap: '10px', mb: 2 }}>
-        <TextField
-          fullWidth
-          label="First name"
-          variant="outlined"
-          value={firstName}
-          required
-          onChange={(e) => setFirstName(e.target.value)}
-          sx={{ backgroundColor: '#f5f5f5' }}
-        />
-        <TextField
-          fullWidth
-          label="Last name"
-          variant="outlined"
-          value={lastName}
-          required
-          onChange={(e) => setLastName(e.target.value)}
-          sx={{ backgroundColor: '#f5f5f5' }}
-        />
-      </Box>
-
-      {/* Email Address with Validation */}
-      <TextField
-        fullWidth
-        label="Email address"
-        variant="outlined"
-        value={email}
-        required
-        onChange={handleEmailChange}
-        error={emailError} // Shows red border if emailError is true
-        helperText={emailError ? 'Please enter a valid email address' : ''} // Shows error message if email is invalid
-        margin="normal"
-        sx={{ backgroundColor: '#f5f5f5', mb: 2 }}
-      />
-
+    <>
       <Box
-        sx={{
-          display: 'flex',
-          alignItems: 'center',
-          backgroundColor: '#f5f5f5',
-          borderRadius: '5px',
-          padding: '16px',
-          mb: 2,
-          border: '1px solid rgba(0, 0, 0, 0.23)',
-        }}
+        sx={formStyle}
+        component="form"
+        onSubmit={handleSubmit}
       >
-        <Typography sx={{ color: '#555' }}>https://</Typography>
+        {/* Main heading */}
+        <Typography
+          variant="h4"
+          sx={{ textAlign: 'center', mb: 2, fontWeight: 'bold' }}
+        >
+          Just get started!
+        </Typography>
+
+        {/* Subtext */}
+        <Typography
+          variant="body1"
+          sx={{ textAlign: 'center', mb: 3, color: '#555' }}
+        >
+          Our one-step sign-up only takes a few seconds and is completely free.
+        </Typography>
+
+        {/* Form fields */}
+        <Box sx={{ display: 'flex', gap: '10px', mb: 2 }}>
+          <TextField
+            fullWidth
+            label="First name"
+            variant="outlined"
+            value={firstName}
+            required
+            onChange={(e) => setFirstName(e.target.value)}
+            sx={{ backgroundColor: '#f5f5f5' }}
+          />
+          <TextField
+            fullWidth
+            label="Last name"
+            variant="outlined"
+            value={lastName}
+            required
+            onChange={(e) => setLastName(e.target.value)}
+            sx={{ backgroundColor: '#f5f5f5' }}
+          />
+        </Box>
+
+        {/* Email Address with Validation */}
         <TextField
           fullWidth
-          placeholder="your custom address"
+          label="Email address"
           variant="outlined"
+          value={email}
           required
-          value={customSubdomain}
-          onChange={(e) => setCustomSubdomain(e.target.value)}
-          margin="none"
+          onChange={handleEmailChange}
+          error={emailError} // Shows red border if emailError is true
+          helperText={emailError ? 'Please enter a valid email address' : ''} // Shows error message if email is invalid
+          margin="normal"
+          sx={{ backgroundColor: '#f5f5f5', mb: 2 }}
+        />
+
+        <Box
           sx={{
+            display: 'flex',
+            alignItems: 'center',
             backgroundColor: '#f5f5f5',
-            ml: 1,
-            '& .MuiInputBase-input': {
-              padding: '4px', // Adjust padding as needed
-            },
+            borderRadius: '5px',
+            padding: '16px',
+            mb: 2,
+            border: '1px solid rgba(0, 0, 0, 0.23)',
           }}
-        />
-        <Typography sx={{ color: '#555', ml: 1 }}>.fotogram.app</Typography>
-      </Box>
+        >
+          <Typography sx={{ color: '#555' }}>https://</Typography>
+          <TextField
+            fullWidth
+            placeholder="your custom address"
+            variant="outlined"
+            required
+            value={customSubdomain}
+            onChange={(e) => setCustomSubdomain(e.target.value)}
+            margin="none"
+            sx={{
+              backgroundColor: '#f5f5f5',
+              ml: 1,
+              '& .MuiInputBase-input': {
+                padding: '4px', // Adjust padding as needed
+              },
+            }}
+          />
+          <Typography sx={{ color: '#555', ml: 1 }}>.fotogram.app</Typography>
+        </Box>
 
-      {/* Terms and Conditions Checkbox */}
-      <FormGroup sx={{ mb: 2 }}>
-        <FormControlLabel
-          control={
-            <Checkbox
-              checked={agreedToTerms}
-              onChange={(e) => setAgreedToTerms(e.target.checked)}
-            />
-          }
-          label={
-            <Typography sx={{ color: '#555' }}>
-              I agree to the{' '}
-              <Link
-                href="#"
-                underline="hover"
-              >
-                terms and conditions
-              </Link>{' '}
-              and{' '}
-              <Link
-                href="#"
-                underline="hover"
-              >
-                privacy policy
-              </Link>{' '}
-              of Fotogram.
+        {/* Terms and Conditions Checkbox */}
+        <FormGroup sx={{ mb: 2 }}>
+          <FormControlLabel
+            control={
+              <Checkbox
+                checked={agreedToTerms}
+                onChange={(e) => setAgreedToTerms(e.target.checked)}
+              />
+            }
+            label={
+              <Typography sx={{ color: '#555' }}>
+                I agree to the{' '}
+                <Link
+                  href="#"
+                  underline="hover"
+                >
+                  terms and conditions
+                </Link>{' '}
+                and{' '}
+                <Link
+                  href="#"
+                  underline="hover"
+                >
+                  privacy policy
+                </Link>{' '}
+                of Fotogram.
+              </Typography>
+            }
+          />
+        </FormGroup>
+        <Button
+          type="submit"
+          fullWidth
+          variant="contained"
+          sx={{
+            fontWeight: 'bold',
+            padding: '8px 24px',
+            textTransform: 'none',
+            borderRadius: '24px',
+            fontSize: '16px',
+          }}
+          disabled={!agreedToTerms}
+        >
+          Sign up for the {plan} now
+        </Button>
+
+        {isSuccess && (
+          <Box
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              mt: 3,
+              justifyContent: 'center',
+            }}
+          >
+            <CheckCircleIcon sx={{ color: 'green', fontSize: '2rem', mr: 1 }} />
+            <Typography sx={{ color: 'green', fontWeight: 'bold' }}>
+              You have successfully created your account. Check your email for
+              the login link. Check your spam folder if you don't see it in your
+              inbox.
             </Typography>
-          }
-        />
-      </FormGroup>
-      <Button
-        type="submit"
-        fullWidth
-        variant="contained"
-        sx={{
-          fontWeight: 'bold',
-          padding: '8px 24px',
-          textTransform: 'none',
-          borderRadius: '24px',
-          fontSize: '1.1rem',
-        }}
-        disabled={!agreedToTerms}
-      >
-        Sign up for the {plan} now
-      </Button>
+          </Box>
+        )}
 
-      {isSuccess && (
-        <Box
-          sx={{
-            display: 'flex',
-            alignItems: 'center',
-            mt: 3,
-            justifyContent: 'center',
-          }}
-        >
-          <CheckCircleIcon sx={{ color: 'green', fontSize: '2rem', mr: 1 }} />
-          <Typography sx={{ color: 'green', fontWeight: 'bold' }}>
-            You have successfully created your account. Check your email for the
-            login link. Check your spam folder if you don't see it in your
-            inbox.
-          </Typography>
-        </Box>
-      )}
-
-      {isError && (
-        <Box
-          sx={{
-            display: 'flex',
-            alignItems: 'center',
-            mt: 3,
-            justifyContent: 'center',
-          }}
-        >
-          <ErrorIcon sx={{ color: 'red', fontSize: '2rem', mr: 1 }} />
-          <Typography sx={{ color: 'red', fontWeight: 'bold' }}>
-            An error occurred while creating your account. Please contact us at
-            support@fotogram.app.
-          </Typography>
-        </Box>
-      )}
-    </Box>
+        {isError && (
+          <Box
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              mt: 3,
+              justifyContent: 'center',
+            }}
+          >
+            <ErrorIcon sx={{ color: 'red', fontSize: '2rem', mr: 1 }} />
+            <Typography sx={{ color: 'red', fontWeight: 'bold' }}>
+              An error occurred while creating your account. Please contact us
+              at support@fotogram.app.
+            </Typography>
+          </Box>
+        )}
+      </Box>
+      <PricingTable
+        showContent={false}
+        showButtons={false}
+        showCustom={false}
+        selected={plan}
+        onSelect={test}
+      ></PricingTable>
+    </>
   );
 };
 

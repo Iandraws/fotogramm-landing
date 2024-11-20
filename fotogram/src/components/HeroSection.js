@@ -44,7 +44,7 @@ const HeroSection = () => {
             variant="h2"
             sx={{
               fontWeight: 'bold',
-              fontSize: { xs: '26px', md: '3.5rem' },
+              fontSize: { xs: '26px', md: '40px' },
               mb: 3,
             }}
           >
@@ -164,41 +164,41 @@ const HeroSection = () => {
           <Typography
             variant="body1"
             sx={{
-              fontSize: { xs: '0.9rem', sm: '1rem', md: '1.25rem' },
+              fontSize: { xs: '16px', sm: '16px', md: '16px' },
               mb: 2,
             }}
           >
-            <strong>{translate(wording.allInOneCustomerManagement)}</strong>
+            {translate(wording.allInOneCustomerManagement)}
           </Typography>
 
           <Typography
             variant="body1"
             sx={{
-              fontSize: { xs: '0.9rem', sm: '1rem', md: '1.25rem' },
+              fontSize: { xs: '16px', sm: '16px', md: '16px' },
               mb: 2,
             }}
           >
-            <strong>{translate(wording.quickImageDelivery)}</strong>
+            {translate(wording.quickImageDelivery)}
           </Typography>
 
           <Typography
             variant="body1"
             sx={{
-              fontSize: { xs: '0.9rem', sm: '1rem', md: '1.25rem' },
+              fontSize: { xs: '16px', sm: '16px', md: '16px' },
               mb: 2,
             }}
           >
-            <strong>{translate(wording.streamlinedContractProcessing)}</strong>
+            {translate(wording.streamlinedContractProcessing)}
           </Typography>
 
           <Typography
             variant="body1"
             sx={{
-              fontSize: { xs: '0.9rem', sm: '1rem', md: '1.25rem' },
+              fontSize: { xs: '16px', sm: '16px', md: '16px' },
               mb: 4,
             }}
           >
-            <strong>{translate(wording.digitalShop)}</strong>
+            {translate(wording.digitalShop)}
           </Typography>
 
           <Box
@@ -296,7 +296,7 @@ const HeroSection = () => {
           <Typography
             variant="body1"
             sx={{
-              fontSize: { xs: '1rem', md: '1.25rem' },
+              fontSize: { xs: '16px', md: '16px' },
               mb: 2,
             }}
           >

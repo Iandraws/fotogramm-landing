@@ -75,13 +75,6 @@ const FunktionPage = () => {
         textAlign: 'left',
       }}
     >
-      <Typography
-        variant="h3"
-        sx={{ fontWeight: 'bold', textAlign: 'left', marginBottom: '40px' }}
-      >
-        {translate(wording.whyFotogram)}
-      </Typography>
-
       {sections.map((section, index) => (
         <Box
           key={index}
@@ -96,6 +89,18 @@ const FunktionPage = () => {
           }}
         >
           <Box sx={{ maxWidth: '600px' }}>
+            {index === 0 && (
+              <Typography
+                variant="h3"
+                sx={{
+                  fontWeight: 'bold',
+                  textAlign: 'left',
+                  marginBottom: '40px',
+                }}
+              >
+                {translate(wording.whyFotogram)}
+              </Typography>
+            )}
             <Typography
               variant="h5"
               sx={{ fontWeight: 'bold', marginBottom: '10px' }}
@@ -144,8 +149,8 @@ const FunktionPage = () => {
       <Box
         sx={{
           backgroundColor: 'rgb(27, 27, 30)',
-          borderRadius: "8px",
-          color: "white",
+          borderRadius: '8px',
+          color: 'white',
           padding: '60px 20px',
           marginTop: '60px',
           textAlign: 'left',
