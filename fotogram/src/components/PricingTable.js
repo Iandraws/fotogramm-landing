@@ -171,6 +171,7 @@ const PricingTable = ({
   business = true,
   yearly = false,
   showCustom = true,
+  choosePrivate = true,
   onSelect,
 }) => {
   const navigate = useNavigate();
@@ -209,48 +210,51 @@ const PricingTable = ({
       >
         {translate(wording.plans)}
       </Typography>
-      {/* Neue Toggle für "Geschäftlich/Privat" */}
-      <Box
-        sx={{
-          textAlign: 'center',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          gap: 1,
-          marginBottom: '20px',
-        }}
-      >
-        <ToggleButtonGroup
-          exclusive
-          value={isBusiness}
-          aria-label="text alignment"
+
+      {choosePrivate && (
+        <Box
+          sx={{
+            textAlign: 'center',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: 1,
+            marginBottom: '20px',
+          }}
         >
-          <ToggleButton
-            value="left"
-            aria-label="left aligned"
-            sx={{
-              width: '150px',
-              color: !isBusiness ? '#1976d2' : '#757575',
-              fontWeight: 'bold',
-            }}
-            onClick={() => setIsBusiness(false)}
+          <ToggleButtonGroup
+            exclusive
+            value={isBusiness}
+            aria-label="text alignment"
           >
-            Privat
-          </ToggleButton>
-          <ToggleButton
-            value="center"
-            aria-label="centered"
-            sx={{
-              width: '150px',
-              color: isBusiness ? '#1976d2' : '#757575',
-              fontWeight: 'bold',
-            }}
-            onClick={() => setIsBusiness(true)}
-          >
-            Geschäftlich
-          </ToggleButton>
-        </ToggleButtonGroup>
-      </Box>
+            <ToggleButton
+              value="left"
+              aria-label="left aligned"
+              sx={{
+                width: '150px',
+                color: !isBusiness ? '#1976d2' : '#757575',
+                fontWeight: 'bold',
+              }}
+              onClick={() => setIsBusiness(false)}
+            >
+              Privat
+            </ToggleButton>
+            <ToggleButton
+              value="center"
+              aria-label="centered"
+              sx={{
+                width: '150px',
+                color: isBusiness ? '#1976d2' : '#757575',
+                fontWeight: 'bold',
+              }}
+              onClick={() => setIsBusiness(true)}
+            >
+              Geschäftlich
+            </ToggleButton>
+          </ToggleButtonGroup>
+        </Box>
+      )}
+
       {/* Toggle für Monatlich/Jährlich */}
       <Box
         sx={{

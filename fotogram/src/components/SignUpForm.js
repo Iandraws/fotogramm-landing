@@ -21,15 +21,19 @@ const SignUpForm = () => {
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [emailError, setEmailError] = useState(false);
+
+  const urlPlan = new URLSearchParams(location.search).get('plan');
   const [plan, setPlan] = useState(
-    new URLSearchParams(location.search).get('plan') || 'basic'
+    ['basic', 'advanced', 'premium'].includes(urlPlan) ? urlPlan : 'basic'
   );
   const [customSubdomain, setCustomSubdomain] = useState('');
   const [agreedToTerms, setAgreedToTerms] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [isError, setIsError] = useState(false);
 
-  const test = (plan) => {setPlan(plan.package)}
+  const test = (plan) => {
+    setPlan(plan.package);
+  };
   const formStyle = {
     backgroundColor: '#fff',
     padding: '40px',
@@ -259,6 +263,7 @@ const SignUpForm = () => {
         )}
       </Box>
       <PricingTable
+        choosePrivate={false}
         showContent={false}
         showButtons={false}
         showCustom={false}
