@@ -31,7 +31,7 @@ const SignUpForm = () => {
   const [isSuccess, setIsSuccess] = useState(false);
   const [isError, setIsError] = useState(false);
 
-  const test = (plan) => {
+  const onPlanSelection = (plan) => {
     setPlan(plan.package);
   };
   const formStyle = {
@@ -115,7 +115,7 @@ const SignUpForm = () => {
         </Typography>
 
         {/* Form fields */}
-        <Box sx={{ display: 'flex', gap: '10px', mb: 2 }}>
+        <Box sx={{ display: 'flex', gap: '10px' }}>
           <TextField
             fullWidth
             label="First name"
@@ -268,7 +268,7 @@ const SignUpForm = () => {
         showButtons={false}
         showCustom={false}
         selected={plan}
-        onSelect={test}
+        onSelect={onPlanSelection}
       ></PricingTable>
     </>
   );
