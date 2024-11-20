@@ -41,21 +41,20 @@ const Navbar = () => {
       sx={{
         backgroundColor: '#fff',
         boxShadow: 'none',
-        borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
-        paddingTop: { xs: '0px', md: '0px' },
-        paddingBottom: { xs: '0px', md: '0px' },
-        paddingLeft: { xs: '16px', md: '16px' },
-        paddingRight: { xs: '16px', md: '16px' },
+        paddingTop: { xs: '24px', md: '16px' },
+        paddingBottom: { xs: '16px', md: '0px' },
+        paddingLeft: { xs: '16px', md: '16px', lg: '32px' },
+        paddingRight: { xs: '32px', md: '24px' },
       }}
     >
       <Toolbar
         sx={{
           display: 'flex',
           justifyContent: 'space-between',
-          alignItems: 'center',
+          alignItems: { xs: 'flex-start', md: 'center' },
           gap: '12px',
           paddingLeft: { xs: '0', md: '16px' },
-          paddingRight: { xs: '8px', md: '16px' },
+          paddingRight: { xs: '8px', md: '24px' },
         }}
       >
         {/* Logo Section */}
@@ -69,8 +68,9 @@ const Navbar = () => {
             src="/assets/logo.png"
             alt="Fotogram logo"
             sx={{
-              width: { xs: '100px', md: '100px' },
+              width: { xs: '116px', md: '116px' },
               height: 'auto',
+              paddingTop: { lg: '17px' },
             }}
           />
         </MuiLink>
@@ -79,8 +79,8 @@ const Navbar = () => {
         <Box
           sx={{
             display: { xs: 'none', md: 'flex' },
+            height: '100%',
             gap: '20px',
-            alignItems: 'center',
           }}
         >
           {[
@@ -100,10 +100,6 @@ const Navbar = () => {
             {
               label: wording.faq,
               path: 'faq',
-            },
-            {
-              label: wording.contactUs,
-              path: 'get-in-touch',
             },
           ].map((route) => (
             <MuiLink
@@ -132,7 +128,7 @@ const Navbar = () => {
         {/* Language Toggle Button and Try It Button */}
         <Box
           sx={{
-            display: { lg: 'flex' },
+            display: { xs: 'none', md: 'flex' },
             gap: '16px',
             alignItems: 'center',
           }}
@@ -159,10 +155,15 @@ const Navbar = () => {
         <IconButton
           edge="end"
           aria-label="menu"
+          size="large"
           onClick={handleDrawerToggle}
-          sx={{ display: { xs: 'flex', md: 'none' } }}
+          sx={{
+            display: { xs: 'flex', md: 'none' },
+            padding: 0,
+            color: 'rgb(27, 27, 30)',
+          }}
         >
-          <MenuIcon />
+          <MenuIcon fontSize="large" />
         </IconButton>
       </Toolbar>
 
@@ -176,7 +177,7 @@ const Navbar = () => {
           sx={{
             width: '100%',
             backgroundColor: '#f8f9fa',
-            padding: '8px 0 24px 0',
+            padding: '24px 0 24px 0',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',

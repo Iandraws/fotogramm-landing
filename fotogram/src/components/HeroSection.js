@@ -26,10 +26,10 @@ const HeroSection = () => {
           justifyContent: 'space-between',
           alignItems: 'center',
           backgroundColor: '#fff',
-          paddingTop: { xs: '16px', md: '40px' },
+          paddingTop: { xs: '24px', md: '40px' },
           paddingBottom: { xs: '16px', md: '120px' },
-          paddingLeft: { xs: '24px', md: '40px', lg: '160px', xl: '200px' },
-          paddingRight: { xs: '24px', md: '0px', lg: '160px', xl: '200px' },
+          paddingLeft: { xs: '32px', md: '40px', lg: '160px', xl: '200px' },
+          paddingRight: { xs: '32px', md: '0px', lg: '160px', xl: '200px' },
         }}
       >
         {/* Left side: Text */}
@@ -53,13 +53,19 @@ const HeroSection = () => {
 
           {/* Feature List */}
           <List>
-            <ListItem key="feature-1">
+            <ListItem
+              key="feature-1"
+              sx={{ paddingLeft: 0 }}
+            >
               <ListItemIcon>
                 <CheckIcon sx={{ color: '#1976d2' }} />
               </ListItemIcon>
               <ListItemText primary={translate(wording.automateWorkflow)} />
             </ListItem>
-            <ListItem key="feature-2">
+            <ListItem
+              key="feature-2"
+              sx={{ paddingLeft: 0 }}
+            >
               <ListItemIcon>
                 <CheckIcon sx={{ color: '#1976d2' }} />
               </ListItemIcon>
@@ -67,7 +73,10 @@ const HeroSection = () => {
                 primary={translate(wording.realTimeImageTransmission)}
               />
             </ListItem>
-            <ListItem key="feature-3">
+            <ListItem
+              key="feature-3"
+              sx={{ paddingLeft: 0 }}
+            >
               <ListItemIcon>
                 <CheckIcon sx={{ color: '#1976d2' }} />
               </ListItemIcon>
@@ -79,7 +88,7 @@ const HeroSection = () => {
             sx={{
               marginTop: { xs: '32px', md: '8px' },
               display: 'flex',
-              gap: '12px',
+              gap: '16px',
               flexWrap: 'wrap', // Allow wrapping if needed
               '& > *': {
                 flex: 'unset', // Buttons take their natural width unless wrapped
@@ -126,10 +135,10 @@ const HeroSection = () => {
           justifyContent: 'space-between',
           alignItems: 'center',
           gap: '24px',
-          paddingTop: { xs: '24px', md: '120px' },
-          paddingBottom: { xs: '40px', md: '120px' },
-          paddingLeft: { xs: '24px', md: '24px', lg: '100px', xl: '200px' },
-          paddingRight: { xs: '24px', md: '40px', lg: '100px', xl: '200px' },
+          paddingTop: { xs: '56px', md: '120px' },
+          paddingBottom: { xs: '56px', md: '120px' },
+          paddingLeft: { xs: '32px', md: '32px', lg: '100px', xl: '200px' },
+          paddingRight: { xs: '32px', md: '48px', lg: '100px', xl: '200px' },
           backgroundColor: 'rgb(27, 27, 30);',
         }}
       >
@@ -234,10 +243,10 @@ const HeroSection = () => {
           flexDirection: { xs: 'column', md: 'row' },
           justifyContent: 'space-between',
           alignItems: 'center',
-          paddingTop: { xs: '40px', md: '120px' },
-          paddingBottom: { xs: '40px', md: '120px' },
-          paddingLeft: { xs: '24px', md: '48px', lg: '100px', xl: '200px' },
-          paddingRight: { xs: '24px', md: '56px', lg: '100px', xl: '200px' },
+          paddingTop: { xs: '56px', md: '120px' },
+          paddingBottom: { xs: '56px', md: '120px' },
+          paddingLeft: { xs: '32px', md: '48px', lg: '100px', xl: '200px' },
+          paddingRight: { xs: '32px', md: '56px', lg: '100px', xl: '200px' },
           backgroundColor: 'rgb(27, 27, 30);',
         }}
       >
@@ -268,7 +277,7 @@ const HeroSection = () => {
           sx={{
             flex: 1,
             paddingLeft: { md: '40px' },
-            textAlign: { xs: 'center', md: 'left' },
+            textAlign: { xs: 'left', md: 'left' },
             color: '#fff',
           }}
         >
@@ -294,7 +303,13 @@ const HeroSection = () => {
             {translate(wording.fotogramMission)}
           </Typography>
 
-          <TryIt />
+          <Box
+            sx={{
+              marginTop: { xs: '32px', md: '0' },
+            }}
+          >
+            <TryIt />
+          </Box>
         </Box>
       </Box>
 

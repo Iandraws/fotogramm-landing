@@ -70,11 +70,14 @@ const sections = [
 const FunktionPage = () => {
   return (
     <Box
-      sx={{ padding: '40px', backgroundColor: '#f9f9f9', textAlign: 'center' }}
+      sx={{
+        padding: { xs: '32px', md: '40px' },
+        textAlign: 'left',
+      }}
     >
       <Typography
         variant="h3"
-        sx={{ fontWeight: 'bold', textAlign: 'center', marginBottom: '40px' }}
+        sx={{ fontWeight: 'bold', textAlign: 'left', marginBottom: '40px' }}
       >
         {translate(wording.whyFotogram)}
       </Typography>
@@ -88,7 +91,7 @@ const FunktionPage = () => {
             alignItems: 'center',
             justifyContent: 'center',
             marginBottom: '60px',
-            textAlign: 'center',
+            textAlign: 'left',
             gap: '20px',
           }}
         >
@@ -140,10 +143,12 @@ const FunktionPage = () => {
 
       <Box
         sx={{
-          backgroundColor: '#f0f0f0',
+          backgroundColor: 'rgb(27, 27, 30)',
+          borderRadius: "8px",
+          color: "white",
           padding: '60px 20px',
           marginTop: '60px',
-          textAlign: 'center',
+          textAlign: 'left',
         }}
       >
         <Box sx={{ maxWidth: '600px', margin: '0 auto' }}>
@@ -155,7 +160,7 @@ const FunktionPage = () => {
           </Typography>
           <Typography
             variant="body1"
-            sx={{ marginBottom: '30px', color: '#555' }}
+            sx={{ marginBottom: '30px' }}
           >
             {translate(wording.ctaDescription)}
           </Typography>

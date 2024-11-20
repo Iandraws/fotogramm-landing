@@ -325,7 +325,7 @@ const wording = {
   },
   talkToSupport: {
     de: 'Support kontaktieren',
-    en: 'Talk to Support',
+    en: 'Talk to Sales',
   },
   TeamMembers1: {
     de: '1 Teammitglied',
@@ -336,7 +336,7 @@ const wording = {
     en: '3 Team Member',
   },
   tryIt: {
-    de: 'Teste jetzt 30 Tage kostenlos',
+    de: 'Jetzt 30 Tage kostenlos testen',
     en: 'Start your free 30 Days trial',
   },
   unlimitedClients: {

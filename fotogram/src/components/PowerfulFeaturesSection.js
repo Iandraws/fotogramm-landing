@@ -14,25 +14,25 @@ const PowerfulFeaturesSection = () => {
           justifyContent: 'space-between',
           alignItems: 'center',
           backgroundColor: '#fff',
-          paddingTop: { xs: '16px', md: '200px' },
-          paddingBottom: { xs: '16px', md: '80px' },
-          paddingLeft: { xs: '24px', md: '80px', lg: '100px', xl: '200px' },
-          paddingRight: { xs: '24px', md: '40px', lg: '100px', xl: '200px' },
+          paddingTop: { xs: '40px', md: '200px' },
+          paddingBottom: { xs: '40px', md: '80px' },
+          paddingLeft: { xs: '32px', md: '80px', lg: '100px', xl: '200px' },
+          paddingRight: { xs: '32px', md: '40px', lg: '100px', xl: '200px' },
         }}
       >
         {/* Left side: Text */}
         <Box
           sx={{
             flex: 1,
-            paddingRight: { xs: '16px', md: '40px' },
-            textAlign: { xs: 'center', md: 'left' },
+            paddingRight: { xs: '0', md: '40px' },
+            textAlign: { xs: 'left', md: 'left' },
           }}
         >
           <Typography
             variant="h4"
             sx={{
               fontWeight: 'bold',
-              fontSize: { xs: '2rem', md: '2.5rem' },
+              fontSize: { xs: '28px', md: '40px' },
               mb: 3,
             }}
           >
@@ -84,9 +84,9 @@ const PowerfulFeaturesSection = () => {
           justifyContent: 'space-between',
           alignItems: 'center',
           paddingTop: { xs: '16px', md: '80px' },
-          paddingBottom: { xs: '16px', md: '80px' },
-          paddingLeft: { xs: '24px', md: '48px', lg: '100px', xl: '200px' },
-          paddingRight: { xs: '24px', md: '56px', lg: '100px', xl: '200px' },
+          paddingBottom: { xs: '40px', md: '80px' },
+          paddingLeft: { xs: '32px', md: '48px', lg: '100px', xl: '200px' },
+          paddingRight: { xs: '32px', md: '56px', lg: '100px', xl: '200px' },
           backgroundColor: '#fff',
         }}
       >
@@ -115,15 +115,15 @@ const PowerfulFeaturesSection = () => {
         <Box
           sx={{
             flex: 1,
-            paddingLeft: { xs: '16px', md: '40px' },
-            textAlign: { xs: 'center', md: 'left' },
+            paddingLeft: { xs: '0', md: '40px' },
+            textAlign: { xs: 'left', md: 'left' },
           }}
         >
           <Typography
             variant="h4"
             sx={{
               fontWeight: 'bold',
-              fontSize: { xs: '2rem', md: '2.5rem' },
+              fontSize: { xs: '28px', md: '40px' },
               mb: 3,
             }}
           >
@@ -143,13 +143,14 @@ const PowerfulFeaturesSection = () => {
       <Box
         sx={{
           display: 'flex',
+          gap: "16px",
           flexDirection: { xs: 'column', md: 'row' },
           justifyContent: 'space-between',
           alignItems: 'center',
           paddingTop: { xs: '40px', md: '80px' },
           paddingBottom: { xs: '40px', md: '200px' },
-          paddingLeft: { xs: '24px', md: '80px', lg: '100px', xl: '200px' },
-          paddingRight: { xs: '24px', md: '80px', lg: '100px', xl: '200px' },
+          paddingLeft: { xs: '32px', md: '80px', lg: '100px', xl: '200px' },
+          paddingRight: { xs: '32px', md: '80px', lg: '100px', xl: '200px' },
           backgroundColor: '#fff',
         }}
       >
@@ -158,14 +159,14 @@ const PowerfulFeaturesSection = () => {
           sx={{
             flex: 1,
             paddingRight: { xs: '16px', md: '40px' },
-            textAlign: { xs: 'center', md: 'left' },
+            textAlign: { xs: 'left', md: 'left' },
           }}
         >
           <Typography
             variant="h4"
             sx={{
               fontWeight: 'bold',
-              fontSize: { xs: '2rem', md: '2.5rem' },
+              fontSize: { xs: '28px', md: '40px' },
               mb: 3,
             }}
           >

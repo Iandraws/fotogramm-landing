@@ -9,6 +9,8 @@ import {
   List,
   ListItem,
   Switch,
+  ToggleButton,
+  ToggleButtonGroup,
   Typography,
 } from '@mui/material';
 import React, { useState } from 'react';
@@ -204,27 +206,38 @@ const PricingTable = () => {
           marginBottom: '20px',
         }}
       >
-        <Typography
-          variant="body1"
-          sx={{
-            color: !isBusiness ? '#1976d2' : '#757575',
-            fontWeight: 'bold',
-          }}
+        <ToggleButtonGroup
+          exclusive
+          value={isBusiness}
+          strec
+          aria-label="text alignment"
         >
-          Privat
-        </Typography>
-        <Switch
-          checked={isBusiness}
-          onChange={() => setIsBusiness(!isBusiness)}
-        />
-        <Typography
-          variant="body1"
-          sx={{ color: isBusiness ? '#1976d2' : '#757575', fontWeight: 'bold' }}
-        >
-          Geschäftlich
-        </Typography>
+          <ToggleButton
+            value="left"
+            aria-label="left aligned"
+            sx={{
+              width: '150px',
+              color: !isBusiness ? '#1976d2' : '#757575',
+              fontWeight: 'bold',
+            }}
+            onClick={() => setIsBusiness(false)}
+          >
+            Privat
+          </ToggleButton>
+          <ToggleButton
+            value="center"
+            aria-label="centered"
+            sx={{
+              width: '150px',
+              color: isBusiness ? '#1976d2' : '#757575',
+              fontWeight: 'bold',
+            }}
+            onClick={() => setIsBusiness(true)}
+          >
+            Geschäftlich
+          </ToggleButton>
+        </ToggleButtonGroup>
       </Box>
-
       {/* Toggle für Monatlich/Jährlich */}
       <Box
         sx={{
@@ -238,7 +251,12 @@ const PricingTable = () => {
       >
         <Typography
           variant="body1"
-          sx={{ color: isYearly ? '#757575' : '#1976d2', fontWeight: 'bold' }}
+          sx={{
+            minWidth: { xs: '123px', md: 'fit-content' },
+
+            color: isYearly ? '#757575' : '#1976d2',
+            fontWeight: 'bold',
+          }}
         >
           Monatlich bezahlen und <br /> flexibel bleiben
         </Typography>
