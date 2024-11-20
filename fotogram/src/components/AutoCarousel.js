@@ -60,8 +60,8 @@ const AutoCarousel = () => {
       sx={{
         paddingTop: { xs: '40px', md: '200px' },
         paddingBottom: { xs: '40px', md: '200px' },
-        paddingLeft: { xs: '16px', md: '80px', lg: '100px', xl: '200px' },
-        paddingRight: { xs: '16px', md: '80px', lg: '100px', xl: '200px' },
+        paddingLeft: { xs: '24px', md: '80px', lg: '100px', xl: '200px' },
+        paddingRight: { xs: '24px', md: '80px', lg: '100px', xl: '200px' },
         backgroundColor: '#fff',
         textAlign: 'center',
       }}

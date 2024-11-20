@@ -17,6 +17,7 @@ const TalkToSupport = () => {
         fontWeight: 'bold',
         borderRadius: '24px',
         textTransform: 'none',
+        width: { xs: 'fit-content', lg: '200px' },
         padding: { xs: '8px 12px', md: '8px 20px' },
         boxShadow: 'none',
         whiteSpace: 'nowrap',

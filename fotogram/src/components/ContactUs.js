@@ -206,6 +206,7 @@ const ContactUs = () => {
                   padding: '8px',
                   fontWeight: 'bold',
                   borderRadius: '24px',
+                  textTransform: 'none',
                   '&:hover': {
                     backgroundColor: '#115293',
                   },

@@ -18,6 +18,8 @@ const TryIt = () => {
         borderRadius: '24px',
         textTransform: 'none',
         padding: '8px 20px',
+        flex: '1 !important',
+        width: { xs: '100%', md: 'auto' },
         boxShadow: 'none',
         whiteSpace: 'nowrap',
       }}

@@ -28,8 +28,8 @@ const HeroSection = () => {
           backgroundColor: '#fff',
           paddingTop: { xs: '16px', md: '40px' },
           paddingBottom: { xs: '16px', md: '120px' },
-          paddingLeft: { xs: '16px', md: '40px', lg: '160px', xl: '200px' },
-          paddingRight: { xs: '16px', md: '0px', lg: '160px', xl: '200px' },
+          paddingLeft: { xs: '24px', md: '40px', lg: '160px', xl: '200px' },
+          paddingRight: { xs: '24px', md: '0px', lg: '160px', xl: '200px' },
         }}
       >
         {/* Left side: Text */}
@@ -44,7 +44,7 @@ const HeroSection = () => {
             variant="h2"
             sx={{
               fontWeight: 'bold',
-              fontSize: { xs: '2rem', sm: '2.5rem', md: '3.5rem' },
+              fontSize: { xs: '26px', md: '3.5rem' },
               mb: 3,
             }}
           >
@@ -77,11 +77,12 @@ const HeroSection = () => {
 
           <Box
             sx={{
+              marginTop: { xs: '32px', md: '8px' },
               display: 'flex',
               gap: '12px',
               flexWrap: 'wrap', // Allow wrapping if needed
               '& > *': {
-                flex: '0 1 200px', // Buttons take their natural width unless wrapped
+                flex: 'unset', // Buttons take their natural width unless wrapped
               },
               '@media (max-width:500px)': {
                 '& > *': {
@@ -126,10 +127,10 @@ const HeroSection = () => {
           alignItems: 'center',
           gap: '24px',
           paddingTop: { xs: '24px', md: '120px' },
-          paddingBottom: { xs: '24px', md: '120px' },
-          paddingLeft: { xs: '16px', md: '24px', lg: '100px', xl: '200px' },
-          paddingRight: { xs: '16px', md: '40px', lg: '100px', xl: '200px' },
-          backgroundColor: '#5c524c',
+          paddingBottom: { xs: '40px', md: '120px' },
+          paddingLeft: { xs: '24px', md: '24px', lg: '100px', xl: '200px' },
+          paddingRight: { xs: '24px', md: '40px', lg: '100px', xl: '200px' },
+          backgroundColor: 'rgb(27, 27, 30);',
         }}
       >
         {/* Right side: Text */}
@@ -235,9 +236,9 @@ const HeroSection = () => {
           alignItems: 'center',
           paddingTop: { xs: '40px', md: '120px' },
           paddingBottom: { xs: '40px', md: '120px' },
-          paddingLeft: { xs: '16px', md: '48px', lg: '100px', xl: '200px' },
-          paddingRight: { xs: '16px', md: '56px', lg: '100px', xl: '200px' },
-          backgroundColor: '#5c524c',
+          paddingLeft: { xs: '24px', md: '48px', lg: '100px', xl: '200px' },
+          paddingRight: { xs: '24px', md: '56px', lg: '100px', xl: '200px' },
+          backgroundColor: 'rgb(27, 27, 30);',
         }}
       >
         {/* Left side: Image */}
@@ -266,7 +267,7 @@ const HeroSection = () => {
         <Box
           sx={{
             flex: 1,
-            paddingLeft: { xs: '16px', md: '40px' },
+            paddingLeft: { md: '40px' },
             textAlign: { xs: 'center', md: 'left' },
             color: '#fff',
           }}

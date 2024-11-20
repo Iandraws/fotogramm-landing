@@ -16,8 +16,8 @@ const PowerfulFeaturesSection = () => {
           backgroundColor: '#fff',
           paddingTop: { xs: '16px', md: '200px' },
           paddingBottom: { xs: '16px', md: '80px' },
-          paddingLeft: { xs: '16px', md: '80px', lg: '100px', xl: '200px' },
-          paddingRight: { xs: '16px', md: '40px', lg: '100px', xl: '200px' },
+          paddingLeft: { xs: '24px', md: '80px', lg: '100px', xl: '200px' },
+          paddingRight: { xs: '24px', md: '40px', lg: '100px', xl: '200px' },
         }}
       >
         {/* Left side: Text */}
@@ -85,8 +85,8 @@ const PowerfulFeaturesSection = () => {
           alignItems: 'center',
           paddingTop: { xs: '16px', md: '80px' },
           paddingBottom: { xs: '16px', md: '80px' },
-          paddingLeft: { xs: '16px', md: '48px', lg: '100px', xl: '200px' },
-          paddingRight: { xs: '16px', md: '56px', lg: '100px', xl: '200px' },
+          paddingLeft: { xs: '24px', md: '48px', lg: '100px', xl: '200px' },
+          paddingRight: { xs: '24px', md: '56px', lg: '100px', xl: '200px' },
           backgroundColor: '#fff',
         }}
       >
@@ -97,7 +97,7 @@ const PowerfulFeaturesSection = () => {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            marginTop: { xs: '16px', md: '0' },
+            padding: '16px',
           }}
         >
           <img
@@ -148,8 +148,8 @@ const PowerfulFeaturesSection = () => {
           alignItems: 'center',
           paddingTop: { xs: '40px', md: '80px' },
           paddingBottom: { xs: '40px', md: '200px' },
-          paddingLeft: { xs: '16px', md: '80px', lg: '100px', xl: '200px' },
-          paddingRight: { xs: '16px', md: '80px', lg: '100px', xl: '200px' },
+          paddingLeft: { xs: '24px', md: '80px', lg: '100px', xl: '200px' },
+          paddingRight: { xs: '24px', md: '80px', lg: '100px', xl: '200px' },
           backgroundColor: '#fff',
         }}
       >
@@ -187,7 +187,7 @@ const PowerfulFeaturesSection = () => {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            marginTop: { xs: '16px', md: '0' },
+            padding: '16px',
           }}
         >
           <img

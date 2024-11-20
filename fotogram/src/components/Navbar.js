@@ -44,8 +44,8 @@ const Navbar = () => {
         borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
         paddingTop: { xs: '0px', md: '0px' },
         paddingBottom: { xs: '0px', md: '0px' },
-        paddingLeft: { xs: '8px', md: '16px' },
-        paddingRight: { xs: '8px', md: '16px' },
+        paddingLeft: { xs: '16px', md: '16px' },
+        paddingRight: { xs: '16px', md: '16px' },
       }}
     >
       <Toolbar
@@ -69,7 +69,7 @@ const Navbar = () => {
             src="/assets/logo.png"
             alt="Fotogram logo"
             sx={{
-              width: { xs: '60px', md: '100px' },
+              width: { xs: '100px', md: '100px' },
               height: 'auto',
             }}
           />
@@ -129,9 +129,14 @@ const Navbar = () => {
             </MuiLink>
           ))}
         </Box>
-
         {/* Language Toggle Button and Try It Button */}
-        <Box sx={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
+        <Box
+          sx={{
+            display: { lg: 'flex' },
+            gap: '16px',
+            alignItems: 'center',
+          }}
+        >
           <Button
             onClick={handleLanguageToggle}
             style={{ width: '24px', minWidth: '24px' }}
@@ -139,7 +144,15 @@ const Navbar = () => {
           >
             {language === 'en' ? 'DE' : 'EN'}
           </Button>
-          <TryIt />
+          <Box
+            sx={{
+              display: { xs: 'none', lg: 'flex' },
+              gap: '16px',
+              alignItems: 'center',
+            }}
+          >
+            <TryIt />
+          </Box>
         </Box>
 
         {/* Mobile Menu Button */}
@@ -163,7 +176,7 @@ const Navbar = () => {
           sx={{
             width: '100%',
             backgroundColor: '#f8f9fa',
-            padding: '24px 0',
+            padding: '8px 0 24px 0',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
@@ -171,7 +184,7 @@ const Navbar = () => {
         >
           <IconButton
             onClick={handleDrawerToggle}
-            sx={{ alignSelf: 'flex-end', marginRight: '10px', color: '#333' }}
+            sx={{ alignSelf: 'flex-end', marginRight: '12px', color: '#333' }}
           >
             <CloseIcon />
           </IconButton>
@@ -222,6 +235,21 @@ const Navbar = () => {
               </ListItem>
             ))}
           </List>
+
+          <Box
+            sx={{
+              gap: '16px',
+              alignItems: 'center',
+            }}
+          >
+            <Button
+              onClick={handleLanguageToggle}
+              style={{ width: '24px', minWidth: '24px' }}
+              sx={{ padding: '0' }}
+            >
+              {language === 'en' ? 'DE' : 'EN'}
+            </Button>
+          </Box>
         </Box>
       </Drawer>
     </AppBar>
