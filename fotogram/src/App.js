@@ -3,8 +3,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
-import PricingTable from './components/PricingTable';  // Pricing page component
-import SignUpForm from './components/SignUpForm';  // Renamed for clarity
+import PricingTable from './components/PricingTable';
+import SignUpForm from './components/SignUpForm';
 import Footer from './components/Footer';
 import Help from './components/Help';
 import ScrollToTop from './components/ScrollToTop';
@@ -15,17 +15,37 @@ import ContactUs from './components/ContactUs';
 function App() {
   return (
     <Router>
-      <ScrollToTop /> {/* Add ScrollToTop to the top of your Router */}
+      <ScrollToTop />
       <Navbar />
       <Routes>
-        <Route path="/" element={<HeroSection />} />
-        <Route path="/pricing" element={<PricingTable />} /> {/* Pricing Route */}
-        <Route path="/signup" element={<SignUpForm />} /> {/* Sign-Up Form Route */}
-        <Route path="/faq" element={<Help />} /> 
-        <Route path="/why-fotogram" element={<HowItWorks />} /> 
-        <Route path="/our-story" element={<WhoWeAre />} /> 
-        <Route path="/get-in-touch" element={<ContactUs />} /> 
-        
+        <Route
+          path="/"
+          element={<HeroSection />}
+        />
+        <Route
+          path="/pricing"
+          element={<PricingTable />}
+        />
+        <Route
+          path="/signup"
+          element={<SignUpForm />}
+        />
+        <Route
+          path="/faq"
+          element={<Help />}
+        />
+        <Route
+          path="/why-fotogram"
+          element={<HowItWorks />}
+        />
+        <Route
+          path="/our-story"
+          element={<WhoWeAre />}
+        />
+        <Route
+          path="/get-in-touch"
+          element={<ContactUs />}
+        />
       </Routes>
       <Footer />
     </Router>

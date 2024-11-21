@@ -157,7 +157,7 @@ const plans = [
   },
   {
     customized: true,
-    isBusiness: true, 
+    isBusiness: true,
     title: wording.customized,
     price: '-',
     description: wording.tailoredPlan,
@@ -317,8 +317,8 @@ const PricingTable = ({
                 ':hover': { cursor: 'pointer' },
                 height: 'fit-content',
                 width: { xs: '100%' },
-                maxWidth: { xs: '100%', md: '280px' },
-                minWidth: { md: '280px' },
+                maxWidth: { xs: '100%', md: '300px' },
+                minWidth: { md: '300px' },
                 padding: '24px 12px',
                 textAlign: 'center',
                 backgroundColor: '#f9f9f9',
@@ -359,11 +359,15 @@ const PricingTable = ({
                 {translate(plan.title)}
               </Typography>
 
-              {!plan.customized && (
+              {
                 <>
                   <Typography
                     variant="h6"
-                    sx={{ fontWeight: 'bold', color: '#1976d2' }}
+                    sx={{
+                      visibility: plan.customized ? 'hidden' : 'visible',
+                      fontWeight: 'bold',
+                      color: '#1976d2',
+                    }}
                   >
                     {isYearly
                       ? `${(plan.yearlyPrice / 12).toFixed(2)}€ / Monat`
@@ -372,19 +376,27 @@ const PricingTable = ({
                   {isYearly && (
                     <Typography
                       variant="body2"
-                      sx={{ color: '#757575', marginBottom: '10px' }}
+                      sx={{
+                        visibility: plan.customized ? 'hidden' : 'visible',
+                        color: '#757575',
+                        marginBottom: '10px',
+                      }}
                     >
                       {`${plan.yearlyPrice}€ / Jahr`}
                     </Typography>
                   )}
                   <Typography
                     variant="body2"
-                    sx={{ color: '#757575', marginBottom: '10px' }}
+                    sx={{
+                      visibility: plan.customized ? 'hidden' : 'visible',
+                      color: '#757575',
+                      marginBottom: '10px',
+                    }}
                   >
                     zzgl. MwSt.
                   </Typography>
                 </>
-              )}
+              }
 
               <Typography
                 variant="body2"
@@ -393,8 +405,7 @@ const PricingTable = ({
                 {translate(plan.description)}
               </Typography>
 
-              <Divider />
-
+              {showContent && <Divider />}
               {showContent && (
                 <List>
                   {plan.features.map((feature, index) => (
