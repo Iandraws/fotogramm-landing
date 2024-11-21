@@ -400,14 +400,65 @@ const wording = {
     en: 'Comprehensive Dashboard',
   },
 
-  comprehensiveDashboardHint: {
-    de: 'Warum Fotogram',
-    en: 'Why Fotogram',
+  photographerDescription: {
+    de: 'Fotografie und Produktion',
+    en: 'Photography and Production',
   },
 
-  whyFotogram: {
-    de: 'Warum Fotogram',
-    en: 'Why Fotogram',
+  photographerPrintDescription: {
+    de: 'Fotografie, Produktion und Druck',
+    en: 'Photography, Production and Printing',
+  },
+
+  feedbackNH: {
+    de: 'Die Geschwindigkeit und Effizienz bei der Lieferung der Fotos sind entscheidend für die Kontinuität der Fotografie',
+    en: 'Speed and productivity in delivering photos are crucial for maintaining continuity in photography',
+  },
+  feedbackEssam: {
+    de: 'Die Kunden sind sehr zufrieden mit der schnellen Lieferung der Fotos',
+    en: 'Customers are very happy with the fast photo delivery',
+  },
+
+  feedbackAweeha: {
+    de: 'Die App hat uns geholfen, unsere Markenidentität zu stärken und unser Einkommen zu steigern',
+    en: 'The app has helped us strengthen our brand identity and increase our income',
+  },
+
+  feedbackAH: {
+    de: 'Ein Fotograf ohne App ist wie ein Fotograf ohne Kamera. Technologischer Fortschritt ist in der Fotografie unverzichtbar',
+    en: 'A photographer without an app is like a photographer without a camera. Technological advancement is essential in photography',
+  },
+
+
+  feedbackRotana: {
+    de: 'Die App ist anwenderfreundlich. Alles, was Fotografen und Kunden brauchen, ist vorhanden',
+    en: 'The app is user friendly. Everything photographers and customers need is available',
+  },
+
+
+  feedbackBBB: {
+    de: 'Die App ist die beste Investition, die wir in unser Projekt getätigt haben',
+    en: 'The app is the best investment we made for our business',
+  },
+
+  feedbackHamdan: {
+    de: 'Die Auswahl, Lieferung und das Herunterladen von Fotos sind einfacher und schneller geworden',
+    en: 'Selecting, delivering, and downloading photos has become easier and faster',
+  },
+
+  feedbackElfan: {
+    de: 'Endlich eine schnelle, fortschrittliche und moderne Methode, um Fotos direkt vom Event mit den Gästen über die App zu teilen',
+    en: 'Finally, a fast, advanced, and modern way to share photos live with guests directly from the event using the app',
+  },
+
+  feedbackShady: {
+    de: 'Heutzutage ist die App für Fotografen unverzichtbar geworden',
+    en: 'Nowadays, the app has become essential for photographers',
+  },
+
+  testimonialsTitle: {
+    de: 'Das sagen unsere Kunden',
+    en: 'Trusted by Photographers Around the Globe',
   }
 
 };

@@ -5,25 +5,72 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { Box, Typography } from '@mui/material';
 
+import wording from '../constants/wording';
+import translate from '../helpers/translate';
+
 const testimonials = [
   {
-    name: 'Bryan Adams',
-    role: 'photographer/singer',
-    text: "Fotogram manages to take the simple idea of sharing images to a new level, I can't believe someone didn't think of this sooner.",
+    name: 'Nabel Hakim Productions',
+    role: wording.photographerDescription,
+    text: wording.feedbackNH,
     image: '/assets/users/11.png', // Replace with actual image path
   },
   {
-    name: 'Claudia Gödke',
-    role: 'food photographer',
-    text: "My clients love the intuitive way to select their favorites and participate remotely on my photo shoots. It's a game changer!",
+    name: 'Essam Sakran Productions',
+    role: wording.photographerDescription,
+    text: wording.feedbackEssam,
     image: '/assets/users/22.png',
   },
   {
-    name: 'David Daub',
-    role: 'ad photographer',
-    text: 'Intuitive, super fast uploads and downloads and my clients love the easy handling. Did anyone say game-changer, yet?',
+    name: 'Aweeha Group',
+    role: wording.photographerDescription,
+    text: wording.feedbackAweeha,
     image: '/assets/users/33.png',
   },
+
+  {
+    name: 'AH Production',
+    role: wording.photographerDescription,
+    text: wording.feedbackAH,
+    image: '/assets/users/33.png',
+  },
+
+  {
+    name: 'Studio Rotana',
+    role: wording.photographerDescription,
+    text: wording.feedbackRotana,
+    image: '/assets/users/33.png',
+  },
+
+  {
+    name: 'BBB Group',
+    role: wording.photographerPrintDescription,
+    text: wording.feedbackBBB,
+    image: '/assets/users/33.png',
+  },
+
+  {
+    name: 'Hamdan Group',
+    role: wording.photographerDescription,
+    text: wording.feedbackHamdan,
+    image: '/assets/users/33.png',
+  },
+  {
+    name: 'Studio El Fan',
+    role: wording.photographerDescription,
+    text: wording.feedbackElfan,
+    image: '/assets/users/33.png',
+  },
+  {
+    name: 'Shady Far Photography',
+    role: wording.photographerDescription,
+    text: wording.feedbackShady,
+    image: '/assets/users/33.png',
+  },
+
+
+
+
 ];
 
 const AutoCarousel = () => {
@@ -70,7 +117,8 @@ const AutoCarousel = () => {
         variant="h4"
         sx={{ fontWeight: 'bold', marginBottom: '30px' }}
       >
-        Loved by over 150K photographers around the world:
+        {translate(wording.testimonialsTitle)}
+
       </Typography>
       <Slider {...settings}>
         {testimonials.map((testimonial, index) => (
@@ -129,7 +177,7 @@ const AutoCarousel = () => {
                 lineHeight: 1.6,
               }}
             >
-              "{testimonial.text}"
+              "{translate(testimonial.text)}"
             </Typography>
             <Typography
               variant="h6"
@@ -148,7 +196,7 @@ const AutoCarousel = () => {
                 fontSize: '0.9rem',
               }}
             >
-              {testimonial.role}
+              {translate(testimonial.role)}
             </Typography>
           </Box>
         ))}
