@@ -67,10 +67,6 @@ const testimonials = [
     text: wording.feedbackShady,
     image: '/assets/users/33.png',
   },
-
-
-
-
 ];
 
 const AutoCarousel = () => {
@@ -118,14 +114,12 @@ const AutoCarousel = () => {
         sx={{ fontWeight: 'bold', marginBottom: '30px' }}
       >
         {translate(wording.testimonialsTitle)}
-
       </Typography>
       <Slider {...settings}>
         {testimonials.map((testimonial, index) => (
           <Box
             key={index}
             sx={{
-              padding: { xs: '0px', md: '24px' },
               textAlign: 'center',
               borderRadius: '24px',
               backgroundColor: '#fefefe',
@@ -171,8 +165,7 @@ const AutoCarousel = () => {
               variant="body1"
               sx={{
                 fontStyle: 'italic',
-                marginTop: '10px',
-                marginBottom: '10px',
+                margin: '16px',
                 fontSize: '16px',
                 lineHeight: 1.6,
               }}
@@ -183,7 +176,7 @@ const AutoCarousel = () => {
               variant="h6"
               sx={{
                 fontWeight: 'bold',
-                marginTop: '10px',
+                marginTop: '24px',
                 fontSize: '16px',
               }}
             >
