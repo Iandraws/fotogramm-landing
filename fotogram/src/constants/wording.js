@@ -319,6 +319,12 @@ const wording = {
     de: '500GB Speicherplatz',
     en: '500GB Storage',
   },
+
+  storageHint: {
+    de: '500GB Speicherplatz',
+    en: '500GB Storage',
+  },
+
   streamlinedContractProcessing: {
     de: 'Vereinfachte Vertragsabwicklung: Erstellen, teilen und unterschreiben Sie Verträge digital – effizient und papierlos.',
     en: 'Streamlined Contract Processing: Create, share, and sign contracts digitally, efficiently, and paperlessly.',
@@ -371,6 +377,22 @@ const wording = {
     de: 'Warum Fotogram',
     en: 'Why Fotogram',
   },
+
+  comprehensiveDashboard: {
+    de: 'Umfassendes Dashboard',
+    en: 'Comprehensive Dashboard',
+  },
+
+  comprehensiveDashboardHint: {
+    de: 'Warum Fotogram',
+    en: 'Why Fotogram',
+  },
+
+  whyFotogram: {
+    de: 'Warum Fotogram',
+    en: 'Why Fotogram',
+  }
+
 };
 
 export default wording;

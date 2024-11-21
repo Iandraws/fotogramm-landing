@@ -29,6 +29,7 @@ const plans = [
     yearlyPrice: (0 * 12 * 0.85).toFixed(2),
     description: wording.basicDesc,
     features: [
+      wording.comprehensiveDashboard,
       wording.limitedEvents,
       wording.limitedClients,
       wording.Storage5GB,
@@ -67,6 +68,7 @@ const plans = [
     yearlyPrice: (14.99 * 12 * 0.85).toFixed(2),
     description: wording.advancedDesc,
     features: [
+      wording.comprehensiveDashboard,
       wording.unlimitedEvents,
       wording.unlimitedClients,
       wording.Storage500GB,
@@ -103,6 +105,7 @@ const plans = [
     yearlyPrice: (59.99 * 12 * 0.85).toFixed(2),
     description: wording.premiumDesc,
     features: [
+      wording.comprehensiveDashboard,
       wording.unlimitedEvents,
       wording.unlimitedClients,
       wording.Storage1TB,
@@ -138,6 +141,7 @@ const plans = [
     yearlyPrice: (4.99 * 12 * 0.85).toFixed(2),
     description: wording.privateUseDesc,
     features: [
+      wording.comprehensiveDashboard,
       wording.unlimitedEvents,
       wording.Storage20GB,
       wording.privateMember,
@@ -153,7 +157,7 @@ const plans = [
   },
   {
     customized: true,
-    isBusiness: true,
+    isBusiness: true, 
     title: wording.customized,
     price: '-',
     description: wording.tailoredPlan,
