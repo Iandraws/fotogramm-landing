@@ -25,8 +25,8 @@ const plans = [
     isBusiness: true,
     title: wording.basis,
     package: 'basic',
-    monthlyPrice: 0,
-    yearlyPrice: (0 * 12 * 0.85).toFixed(2),
+    monthlyPrice: (0).toFixed(2),
+    yearlyPrice: (0 * 12 * 0.85).toFixed(2), 
     description: wording.basicDesc,
     features: [
       wording.comprehensiveDashboard,
@@ -46,18 +46,18 @@ const plans = [
       wording.liveVideoStreaming,
       wording.digitalAlbum,
       wording.digitalContract,
+      wording.iosAndroidBrandedApp,
     ],
     unavailableFeatures: [
       wording.customDomain,
       wording.CustomBrand,
-      wording.iosAndroidBrandedApp,
       wording.downloadAllImages,
       wording.videosAndReels,
       wording.shop,
     ],
     buttonText: wording.freeTrial,
     hints: {
-      [wording.shop.en]: wording.shopHint,
+
     },
   },
   {
@@ -85,17 +85,21 @@ const plans = [
       wording.liveVideoStreaming,
       wording.digitalAlbum,
       wording.digitalContract,
+      wording.iosAndroidBrandedApp,
     ],
     unavailableFeatures: [
       wording.customDomain,
       wording.CustomBrand,
-      wording.iosAndroidBrandedApp,
       wording.downloadAllImages,
       wording.videosAndReels,
       wording.shop,
     ],
     buttonText: wording.freeTrial,
-    hints: {},
+    hints: {
+      [wording.Storage500GB.en]: wording.storage500GBBHint,
+
+
+    },
   },
   {
     isBusiness: true,
@@ -122,16 +126,21 @@ const plans = [
       wording.liveVideoStreaming,
       wording.digitalAlbum,
       wording.digitalContract,
+      wording.iosAndroidBrandedApp,
       wording.customDomain,
       wording.CustomBrand,
-      wording.iosAndroidBrandedApp,
       wording.downloadAllImages,
       wording.videosAndReels,
       wording.shop,
     ],
     unavailableFeatures: [],
     buttonText: wording.freeTrial,
-    hints: {},
+    hints: {
+      
+      [wording.Storage1TB.en]: wording.storage1TBHint,
+      [wording.TeamMembers3.en]: wording.TeamMembers3Hint,
+      [wording.videosAndReels.en]: wording.videosAndReelsHint,
+    },
   },
   {
     package: 'private',
@@ -370,8 +379,8 @@ const PricingTable = ({
                     }}
                   >
                     {isYearly
-                      ? `${(plan.yearlyPrice / 12).toFixed(2)}€ / Monat`
-                      : `${plan.monthlyPrice}€ / Monat`}
+                      ? `${(plan.yearlyPrice / 12).toFixed(2)} € / Monat`
+                      : `${plan.monthlyPrice} € / Monat`}
                   </Typography>
                   {isYearly && (
                     <Typography
@@ -382,7 +391,7 @@ const PricingTable = ({
                         marginBottom: '10px',
                       }}
                     >
-                      {`${plan.yearlyPrice}€ / Jahr`}
+                      {`${plan.yearlyPrice} € / Jahr`}
                     </Typography>
                   )}
                   <Typography

@@ -12,8 +12,8 @@ const wording = {
     en: 'AI Face Recognition',
   },
   aiFaceRecognitionDescription: {
-    de: 'Unsere innovative Gesichtserkennungstechnologie macht es Kunden leicht, ihre Bilder zu finden. Ein Selfie genügt, und die passenden Bilder werden schnell angezeigt – für ein optimiertes und personalisiertes Kundenerlebnis.',
-    en: 'Our innovative face recognition technology makes it easy for clients to find their photos. A selfie is all it takes to quickly display matching images – providing an optimized and personalized customer experience.',
+    de: 'Unsere innovative Gesichtserkennungstechnologie macht es Kunden leicht, ihre Bilder zu finden. Ein Selfie genügt, und die passenden Bilder werden schnell angezeigt - für ein optimiertes und personalisiertes Kundenerlebnis.',
+    en: 'Our innovative face recognition technology makes it easy for clients to find their photos. A selfie is all it takes to quickly display matching images - providing an optimized and personalized customer experience.',
   },
   aiFaceRecognitionTitle: {
     de: 'KI-gestützte Gesichtserkennung',
@@ -48,8 +48,8 @@ const wording = {
     en: 'Basic',
   },
   brandingAndWatermarkDescription: {
-    de: 'Schützen Sie Ihre Bildrechte und stärken Sie Ihre Marke mit automatisch platzierten Wasserzeichen auf allen Bildern – ohne externe Software. So bleibt Ihr Logo stets präsent und Ihre Arbeit professionell gebrandet.',
-    en: 'Protect your image rights and strengthen your brand with automatically placed watermarks on all images – no external software needed. Your logo remains visible, ensuring your work is consistently branded professionally.',
+    de: 'Schützen Sie Ihre Bildrechte und stärken Sie Ihre Marke mit automatisch platzierten Wasserzeichen auf allen Bildern - ohne externe Software. So bleibt Ihr Logo stets präsent und Ihre Arbeit professionell gebrandet.',
+    en: 'Protect your image rights and strengthen your brand with automatically placed watermarks on all images - no external software needed. Your logo remains visible, ensuring your work is consistently branded professionally.',
   },
   brandingAndWatermarkTitle: {
     de: 'Individuelles Branding und automatisches Wasserzeichen',
@@ -88,8 +88,8 @@ const wording = {
     en: 'Contact Us',
   },
   contractManagementDescription: {
-    de: 'Erstellen, teilen und unterschreiben Sie Verträge elektronisch – einfach und papierlos. So integrieren Sie den gesamten Vertragsprozess nahtlos in Ihren Workflow.',
-    en: 'Create, share, and sign contracts electronically – simple and paperless. Seamlessly integrate the entire contract process into your workflow.',
+    de: 'Erstellen, teilen und unterschreiben Sie Verträge elektronisch - einfach und papierlos. So integrieren Sie den gesamten Vertragsprozess nahtlos in Ihren Workflow.',
+    en: 'Create, share, and sign contracts electronically - simple and paperless. Seamlessly integrate the entire contract process into your workflow.',
   },
   contractManagementTitle: {
     de: 'Digitale Vertragsverwaltung',
@@ -104,8 +104,8 @@ const wording = {
     en: 'Experience the benefits Fotogram offers for yourself. Start your 30-day free trial now and see how Fotogram takes your photography business to the next level.',
   },
   CustomBrand: {
-    de: 'Eigenes Design',
-    en: 'Custom Design',
+    de: 'Eigenes Design und Branding',
+    en: 'Custom Design and Branding',
   },
   customDomain: {
     de: 'Eigene Domain',
@@ -176,7 +176,7 @@ const wording = {
     en: 'Support FAQs',
   },
   flexiblePricingDescription: {
-    de: 'Wählen Sie aus verschiedenen Preismodellen – von Basic bis Premium – die für Sie passende Lösung. Maßgeschneiderte Optionen unterstützen Fotografen in jeder Entwicklungsphase ihres Geschäfts.',
+    de: 'Wählen Sie aus verschiedenen Preismodellen - von Basic bis Premium - die für Sie passende Lösung. Maßgeschneiderte Optionen unterstützen Fotografen in jeder Entwicklungsphase ihres Geschäfts.',
     en: 'Choose from a variety of pricing models, from Basic to Premium, that best suit your needs. Tailored options support photographers at every stage of their business development.',
   },
   flexiblePricingTitle: {
@@ -240,8 +240,8 @@ const wording = {
     en: 'Our Story',
   },
   ourVisionDescription: {
-    de: 'Fotogram ist mehr als eine Plattform – es ist eine Auszeichnung für Fotografen, die ihr Geschäft effizienter gestalten, ihre Marke stärken und ihren Kunden ein exklusives Erlebnis bieten möchten. Mit modernsten Funktionen und einer luxuriösen Nutzererfahrung ermöglicht Fotogram Fotografen, ihre Arbeit auf höchstem Niveau zu präsentieren und ihr Einkommen nachhaltig zu steigern. Unsere Server in Deutschland gewährleisten dabei höchste Sicherheitsstandards und Datenschutz.',
-    en: 'Fotogram is more than a platform – it’s an accolade for photographers who wish to improve their business efficiency, strengthen their brand, and offer an exclusive experience to their clients. Equipped with state-of-the-art features and a premium user experience, Fotogram enables photographers to showcase their work at the highest level and sustainably increase their income. Our servers in Germany guarantee top security standards and data protection.',
+    de: 'Fotogram ist mehr als eine Plattform - es ist eine Auszeichnung für Fotografen, die ihr Geschäft effizienter gestalten, ihre Marke stärken und ihren Kunden ein exklusives Erlebnis bieten möchten. Mit modernsten Funktionen und einer luxuriösen Nutzererfahrung ermöglicht Fotogram Fotografen, ihre Arbeit auf höchstem Niveau zu präsentieren und ihr Einkommen nachhaltig zu steigern. Unsere Server in Deutschland gewährleisten dabei höchste Sicherheitsstandards und Datenschutz.',
+    en: 'Fotogram is more than a platform - it’s an accolade for photographers who wish to improve their business efficiency, strengthen their brand, and offer an exclusive experience to their clients. Equipped with state-of-the-art features and a premium user experience, Fotogram enables photographers to showcase their work at the highest level and sustainably increase their income. Our servers in Germany guarantee top security standards and data protection.',
   },
   ourVisionTitle: {
     de: 'Unsere Vision und Kernfunktionen im Blick',
@@ -320,13 +320,18 @@ const wording = {
     en: '500GB Storage',
   },
 
-  storageHint: {
-    de: '500GB Speicherplatz',
-    en: '500GB Storage',
+  storage1TBHint: {
+    de: 'Falls du mehr brauchst, kostet jeder 1 TB nur 34,99 € monatlich',
+    en: 'Need more? Each additional 1 TB is only € 34,99 per month',
+  },
+
+  storage500GBBHint: {
+    de: 'Falls du mehr brauchst, kannst du deinen aktuellen Plan weiter nutzen und nur den Speicherplatz erweitern. Jeder 1 TB kostet nur 34,99 € monatlich. Alternativ kannst du jederzeit auf den Premium-Plan wechseln.',
+    en: 'Need more? You can keep your current plan and just expand your storage. Each additional 1 TB is only € 34,99 per month. Alternatively, you can switch to the Premium plan at any time.',
   },
 
   streamlinedContractProcessing: {
-    de: 'Vereinfachte Vertragsabwicklung: Erstellen, teilen und unterschreiben Sie Verträge digital – effizient und papierlos.',
+    de: 'Vereinfachte Vertragsabwicklung: Erstellen, teilen und unterschreiben Sie Verträge digital - effizient und papierlos.',
     en: 'Streamlined Contract Processing: Create, share, and sign contracts digitally, efficiently, and paperlessly.',
   },
   tailoredPlan: {
@@ -345,6 +350,12 @@ const wording = {
     de: '3 Teammitglied',
     en: '3 Team Member',
   },
+
+  TeamMembers3Hint: {
+    de: 'Falls das Team größer ist, kostet jedes zusätzliche Mitglied nur 14,99 € monatlich',
+    en: 'If the team is larger, each additional member costs only € 14,99 per month',
+
+  },
   tryIt: {
     de: 'Jetzt 30 Tage kostenlos testen',
     en: 'Start your free 30 Days trial',
@@ -361,12 +372,18 @@ const wording = {
     de: 'Videos und Reels',
     en: 'Videos and Reels',
   },
+
+  videosAndReelsHint: {
+    de: 'Begrenzt auf 50 MB pro Video für unbegrenzte Anzahl an Videos. Du kannst noch unbegrenzt 3rd Party Links für Videos einbinden, wie z. B. Google Drive, Dropbox, Vimeo, YouTube, Mega usw.',
+    en: 'Limited to 50MB per video for an unlimited number of videos. You can add also unlimited third-party video links in the app, such as Google Drive, Dropbox, Vimeo, YouTube, Mega, etc.',
+  },
+
   watermarkFeature: {
     de: 'Personalisierte Wasserzeichen',
     en: 'Personalized Watermarks',
   },
   watermarkFeatureDescription: {
-    de: 'Mit Fotogram bleibt Ihre Marke stets präsent. Das Logo des Fotografen wird automatisch auf allen hochgeladenen Bildern als Wasserzeichen platziert – ohne die Notwendigkeit externer Software. Diese Funktion schützt Ihre Bildrechte, stärkt Ihr Branding und spart Ihnen Zeit bei der Nachbearbeitung. So präsentieren Sie Ihre Arbeit professionell und einheitlich, während Sie gleichzeitig sicherstellen, dass Ihr Logo immer mit Ihren Bildern verbunden ist.',
+    de: 'Mit Fotogram bleibt Ihre Marke stets präsent. Das Logo des Fotografen wird automatisch auf allen hochgeladenen Bildern als Wasserzeichen platziert - ohne die Notwendigkeit externer Software. Diese Funktion schützt Ihre Bildrechte, stärkt Ihr Branding und spart Ihnen Zeit bei der Nachbearbeitung. So präsentieren Sie Ihre Arbeit professionell und einheitlich, während Sie gleichzeitig sicherstellen, dass Ihr Logo immer mit Ihren Bildern verbunden ist.',
     en: "With Fotogram, your brand remains visible. The photographer's logo is automatically watermarked on all uploaded images, eliminating the need for external software. This feature protects your image rights, reinforces your branding, and saves you time in post-processing. Present your work professionally and consistently while ensuring your logo is always linked with your images.",
   },
   whatFotogramOffers: {
