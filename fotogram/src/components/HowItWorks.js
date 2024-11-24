@@ -5,41 +5,49 @@ import translate from '../helpers/translate'; // Import translate function
 import wording from '../constants/wording'; // Import wording constants
 
 const sections = [
+  
   {
     title: translate(wording.ourVisionTitle),
     description: translate(wording.ourVisionDescription),
-    image: '',
+    image: '/assets/funk/DatenSchutz_Secured.png',
   },
-  {
+  /*{
     title: translate(wording.customerManagementTitle),
     description: translate(wording.customerManagementDescription),
-    image: '/assets/funk/shareGalleryImage.mp4',
+    image: '/assets/funk/CRM_icon4.png',
   },
   {
     title: translate(wording.calendarAndRemindersTitle),
     description: translate(wording.calendarAndRemindersDescription),
-    image: '/assets/funk/shareGalleryImage.mp4',
+    image: '/assets/funk/Calender.png',
+  },*/
+  
+  {
+    title: translate(wording.analyticsDashboardTitle),
+    description: translate(wording.analyticsDashboardDescription),
+    image: '/assets/Dashboard_Fotogram1.png',
   },
+  
   {
     title: translate(wording.liveImageStreamingTitle),
     description: translate(wording.liveImageStreamingDescription),
-    image: '/assets/funk/shareGalleryImage.mp4',
+    image: '/assets/funk/LiveEventGif.mp4',
   },
   {
     title: translate(wording.aiFaceRecognitionTitle),
     description: translate(wording.aiFaceRecognitionDescription),
-    image: '/assets/funk/shareGalleryImage.mp4',
+    image: '/assets/FaceRecognition.png',
   },
   {
     title: translate(wording.brandingAndWatermarkTitle),
     description: translate(wording.brandingAndWatermarkDescription),
-    image: '/assets/funk/simplicityImage.jpg',
+    image: '/assets/funk/Individual_Branding.png',
   },
-  {
+  /*{
     title: translate(wording.flexiblePricingTitle),
     description: translate(wording.flexiblePricingDescription),
-    image: '/assets/funk/presentationModeImage.png',
-  },
+    image: '/assets/Packages_Fotogram.png',
+  },*/
   {
     title: translate(wording.digitalShopTitle),
     description: translate(wording.digitalShopDescription),
@@ -48,23 +56,19 @@ const sections = [
   {
     title: translate(wording.digitalAlbumsTitle),
     description: translate(wording.digitalAlbumsDescription),
-    image: '/assets/funk/votingImage.mp4',
+    image: '/assets/Digital_Album1.png',
   },
   {
     title: translate(wording.contractManagementTitle),
     description: translate(wording.contractManagementDescription),
-    image: '/assets/funk/colorMarkersImage.mp4',
+    image: '/assets/Contract3.png',
   },
-  {
+  /*{
     title: translate(wording.digitalBusinessCardTitle),
     description: translate(wording.digitalBusinessCardDescription),
     image: '/assets/funk/votingImage.mp4',
-  },
-  {
-    title: translate(wording.analyticsDashboardTitle),
-    description: translate(wording.analyticsDashboardDescription),
-    image: '/assets/funk/votingImage.mp4',
-  },
+  },*/
+  
 ];
 
 const FunktionPage = () => {

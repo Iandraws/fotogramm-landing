@@ -13,59 +13,59 @@ const testimonials = [
     name: 'Nabel Hakim Productions',
     role: wording.photographerDescription,
     text: wording.feedbackNH,
-    image: '/assets/users/11.png', // Replace with actual image path
+    image: '/assets/users/NH_Production.png', // Replace with actual image path
   },
   {
     name: 'Essam Sakran Productions',
     role: wording.photographerDescription,
     text: wording.feedbackEssam,
-    image: '/assets/users/22.png',
+    image: '/assets/users/EssamSakranProduction.png',
   },
   {
     name: 'Aweeha Group',
     role: wording.photographerDescription,
     text: wording.feedbackAweeha,
-    image: '/assets/users/33.png',
+    image: '/assets/users/AweehaGroup.png',
   },
 
   {
     name: 'AH Production',
     role: wording.photographerDescription,
     text: wording.feedbackAH,
-    image: '/assets/users/33.png',
+    image: '/assets/users/AH_Production.png',
   },
 
   {
     name: 'Studio Rotana',
     role: wording.photographerDescription,
     text: wording.feedbackRotana,
-    image: '/assets/users/33.png',
+    image: '/assets/users/RotanaEyad.png',
   },
 
   {
     name: 'BBB Group',
     role: wording.photographerPrintDescription,
     text: wording.feedbackBBB,
-    image: '/assets/users/33.png',
+    image: '/assets/users/BBB_Group.png',
   },
 
   {
     name: 'Hamdan Group',
     role: wording.photographerDescription,
     text: wording.feedbackHamdan,
-    image: '/assets/users/33.png',
+    image: '/assets/users/Hamdan_Group.png',
   },
   {
     name: 'Studio El Fan',
     role: wording.photographerDescription,
     text: wording.feedbackElfan,
-    image: '/assets/users/33.png',
+    image: '/assets/users/Studio_El_Fan.png',
   },
   {
     name: 'Shady Far Photography',
     role: wording.photographerDescription,
     text: wording.feedbackShady,
-    image: '/assets/users/33.png',
+    image: '/assets/users/Shady_Far_Photography.png',
   },
 ];
 

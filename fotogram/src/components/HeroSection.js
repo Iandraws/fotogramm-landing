@@ -116,7 +116,7 @@ const HeroSection = () => {
           }}
         >
           <img
-            src="/assets/1.webp"
+            src="/assets/HeroStart1.png"
             alt="Hero placeholder"
             style={{
               width: '100%',

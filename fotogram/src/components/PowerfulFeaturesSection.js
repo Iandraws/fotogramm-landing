@@ -101,7 +101,7 @@ const PowerfulFeaturesSection = () => {
           }}
         >
           <img
-            src="/assets/5.png"
+            src="/assets/FaceRecognition.png"
             alt="Beautiful presentation mode"
             style={{
               width: '100%',
@@ -192,7 +192,7 @@ const PowerfulFeaturesSection = () => {
           }}
         >
           <img
-            src="/assets/6.png"
+            src="/assets/Fotogram_Logo_Blue.png"
             alt="Massive time saver"
             style={{
               width: '100%',
