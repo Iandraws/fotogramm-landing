@@ -56,7 +56,7 @@ const sections = [
   {
     title: translate(wording.digitalAlbumsTitle),
     description: translate(wording.digitalAlbumsDescription),
-    image: '/assets/Digital_Album1.png',
+    image: '/assets/Digital_Album2.png',
   },
   {
     title: translate(wording.contractManagementTitle),
