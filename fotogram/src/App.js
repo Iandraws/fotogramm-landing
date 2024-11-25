@@ -1,26 +1,28 @@
+import LogRocket from 'logrocket';
 import React from 'react';
+import { HelmetProvider } from 'react-helmet-async';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import ContactUs from './components/ContactUs';
 import Footer from './components/Footer';
 import Help from './components/Help';
 import HeroSection from './components/HeroSection';
 import HowItWorks from './components/HowItWorks';
+import ImprintDe from './components/ImprintDe';
+import ImprintEn from './components/ImprintEn';
 import Navbar from './components/Navbar';
 import PricingTable from './components/PricingTable';
+import PrivacyPolicyDe from './components/PrivacyPolicyDe';
+import PrivacyPolicyEn from './components/PrivacyPolicyEn';
 import ScrollToTop from './components/ScrollToTop';
 import SignUpForm from './components/SignUpForm';
 import TermsAndConditionsDe from './components/TermsAndConditionsDe';
 import TermsAndConditionsEn from './components/TermsAndConditionsEn';
 import WhoWeAre from './components/WhoWeAre';
-import ImprintDe from './components/ImprintDe';
-import ImprintEn from './components/ImprintEn';
-import PrivacyPolicyDe from './components/PrivacyPolicyDe';
-import PrivacyPolicyEn from './components/PrivacyPolicyEn';
-import { HelmetProvider } from 'react-helmet-async';
-import LogRocket from 'logrocket';
 
 // Initialize LogRocket for monitoring
-LogRocket.init('edvm0h/fotogram-landing-page');
+if (window.location.hostname !== 'localhost') {
+  LogRocket.init('edvm0h/fotogram-landing-page');
+}
 
 function App() {
   const titles = {
