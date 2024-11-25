@@ -172,8 +172,8 @@ const wording = {
     en: 'Download Selected Images',
   },
   faq: {
-    de: 'Support & FAQs',
-    en: 'Support FAQs',
+    de: 'FAQs',
+    en: 'FAQs',
   },
   flexiblePricingDescription: {
     de: 'Wählen Sie aus verschiedenen Preismodellen - von Basic bis Premium - die für Sie passende Lösung. Maßgeschneiderte Optionen unterstützen Fotografen in jeder Entwicklungsphase ihres Geschäfts.',

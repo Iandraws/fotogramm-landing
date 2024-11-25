@@ -92,30 +92,27 @@ const PowerfulFeaturesSection = () => {
       >
         {/* Left side: Image */}
         <Box
+          component="img"
+          src="/assets/FaceRecognition2.png"
+          alt="Fotogram logo"
           sx={{
             flex: 1,
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
             padding: '16px',
+            width: '100%',
+            maxWidth: { md: '320px', lg: '400px' },
+            paddingLeft: { xs: '0', md: '48px' },
+            borderRadius: '10px',
           }}
-        >
-          <img
-            src="/assets/FaceRecognition.png"
-            alt="Beautiful presentation mode"
-            style={{
-              width: '100%',
-              maxWidth: '500px',
-              borderRadius: '10px',
-            }}
-          />
-        </Box>
+        />
 
         {/* Right side: Text */}
         <Box
           sx={{
             flex: 1,
-            paddingLeft: { xs: '0', md: '40px' },
+            paddingLeft: { xs: '0', md: '140px' },
             textAlign: { xs: 'left', md: 'left' },
           }}
         >
@@ -143,7 +140,7 @@ const PowerfulFeaturesSection = () => {
       <Box
         sx={{
           display: 'flex',
-          gap: "16px",
+          gap: '16px',
           flexDirection: { xs: 'column', md: 'row' },
           justifyContent: 'space-between',
           alignItems: 'center',

@@ -41,9 +41,9 @@ const Navbar = () => {
       sx={{
         backgroundColor: '#fff',
         boxShadow: 'none',
-        paddingTop: { xs: '24px', md: '16px' },
+        paddingTop: { xs: '24px', md: '16px', lg: '0px' },
         paddingBottom: { xs: '16px', md: '0px' },
-        paddingLeft: { xs: '16px', md: '16px', lg: '32px' },
+        paddingLeft: { xs: '32px', md: '40px', lg: '160px', xl: '200px' },
         paddingRight: { xs: '32px', md: '24px' },
       }}
     >
@@ -65,11 +65,12 @@ const Navbar = () => {
         >
           <Box
             component="img"
-            src="/assets/logo.png"
+            src="/assets/Fotogram_Logo_Blue.png"
             alt="Fotogram logo"
             sx={{
-              width: { xs: '116px', md: '116px' },
+              width: { xs: '116px', md: '160px', lg: '200px' },
               height: 'auto',
+              paddingBottom: { xs: '8px' },
               paddingTop: { lg: '17px' },
             }}
           />
@@ -80,7 +81,7 @@ const Navbar = () => {
           sx={{
             display: { xs: 'none', md: 'flex' },
             height: '100%',
-            gap: '20px',
+            gap: '32px',
           }}
         >
           {[

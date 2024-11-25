@@ -1,7 +1,7 @@
 // src/components/Footer.js
 import React from 'react';
 import { Box, Typography, IconButton } from '@mui/material';
-import { Facebook, Instagram, YouTube } from '@mui/icons-material';
+import { Facebook, Instagram } from '@mui/icons-material';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -15,9 +15,11 @@ const Footer = () => {
         borderTop: '1px solid #e0e0e0',
       }}
     >
-      <Box sx={{ display: 'flex', justifyContent: 'center', gap: '16px', mb: 2 }}>
+      <Box
+        sx={{ display: 'flex', justifyContent: 'center', gap: '16px', mb: 2 }}
+      >
         <IconButton
-          href="https://www.facebook.com/profile.php?id=100084358785835"
+          href="https://www.facebook.com/share/hnDPdikuQtG1oopQ/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Facebook"
@@ -26,7 +28,7 @@ const Footer = () => {
           <Facebook />
         </IconButton>
         <IconButton
-          href="https://www.instagram.com/fotogram.tech/"
+          href="https://www.instagram.com/fotogram.de/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram"
@@ -34,7 +36,7 @@ const Footer = () => {
         >
           <Instagram />
         </IconButton>
-        <IconButton
+        {/* <IconButton
           href="https://www.youtube.com/channel/UCCP9CubPqHVdHNpwsqQh3EA"
           target="_blank"
           rel="noopener noreferrer"
@@ -42,9 +44,12 @@ const Footer = () => {
           sx={{ color: '#FF0000' }}
         >
           <YouTube />
-        </IconButton>
+        </IconButton> */}
       </Box>
-      <Typography variant="body2" sx={{ fontSize: '14px', color: '#6c757d' }}>
+      <Typography
+        variant="body2"
+        sx={{ fontSize: '14px', color: '#6c757d' }}
+      >
         &copy; {currentYear} fotogram. All rights reserved.
       </Typography>
     </Box>

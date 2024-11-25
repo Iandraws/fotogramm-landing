@@ -86,16 +86,16 @@ const HeroSection = () => {
 
           <Box
             sx={{
-              marginTop: { xs: '32px', md: '8px' },
+              marginTop: { xs: '32px', md: '56px' },
               display: 'flex',
               gap: '16px',
-              flexWrap: 'wrap', // Allow wrapping if needed
+              flexWrap: 'wrap',
               '& > *': {
-                flex: 'unset', // Buttons take their natural width unless wrapped
+                flex: 'unset',
               },
               '@media (max-width:500px)': {
                 '& > *': {
-                  flex: '1 1 100%', // If wrapped (mobile/small screens), buttons take full width
+                  flex: '1 1 100%',
                 },
               },
             }}

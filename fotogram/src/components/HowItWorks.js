@@ -5,11 +5,10 @@ import translate from '../helpers/translate'; // Import translate function
 import wording from '../constants/wording'; // Import wording constants
 
 const sections = [
-  
   {
     title: translate(wording.ourVisionTitle),
     description: translate(wording.ourVisionDescription),
-    image: '/assets/funk/DatenSchutz_Secured.png',
+    image: '/assets/Schield_RBG.png',
   },
   /*{
     title: translate(wording.customerManagementTitle),
@@ -21,22 +20,24 @@ const sections = [
     description: translate(wording.calendarAndRemindersDescription),
     image: '/assets/funk/Calender.png',
   },*/
-  
+
   {
     title: translate(wording.analyticsDashboardTitle),
     description: translate(wording.analyticsDashboardDescription),
     image: '/assets/Dashboard_Fotogram1.png',
   },
-  
+
   {
     title: translate(wording.liveImageStreamingTitle),
     description: translate(wording.liveImageStreamingDescription),
     image: '/assets/funk/LiveEventGif.mp4',
+    style: { maxWidth: '350px' },
   },
   {
     title: translate(wording.aiFaceRecognitionTitle),
     description: translate(wording.aiFaceRecognitionDescription),
-    image: '/assets/FaceRecognition.png',
+    image: '/assets/FaceRecognition2.png',
+    style: { maxWidth: '380px' },
   },
   {
     title: translate(wording.brandingAndWatermarkTitle),
@@ -52,11 +53,15 @@ const sections = [
     title: translate(wording.digitalShopTitle),
     description: translate(wording.digitalShopDescription),
     image: '/assets/funk/Digital_Shop_Brand.mp4',
+    style: { height: '600px' },
   },
   {
     title: translate(wording.digitalAlbumsTitle),
     description: translate(wording.digitalAlbumsDescription),
     image: '/assets/Digital_Album2.png',
+    style: { transform: 'scale(1.6)' ,
+      
+    },
   },
   {
     title: translate(wording.contractManagementTitle),
@@ -68,14 +73,13 @@ const sections = [
     description: translate(wording.digitalBusinessCardDescription),
     image: '/assets/funk/votingImage.mp4',
   },*/
-  
 ];
 
 const FunktionPage = () => {
   return (
     <Box
       sx={{
-        padding: { xs: '32px', md: '40px' },
+        padding: { xs: '32px', md: '80px' },
         textAlign: 'left',
       }}
     >
@@ -84,15 +88,15 @@ const FunktionPage = () => {
           key={index}
           sx={{
             display: 'flex',
-            flexDirection: 'column',
+            flexDirection: { xs: 'column', md: 'row' },
             alignItems: 'center',
             justifyContent: 'center',
-            marginBottom: '60px',
+            marginBottom: { xs: '120px', md: '150px' },
             textAlign: 'left',
-            gap: '20px',
+            gap: { xs: '48px', lg: '248px' },
           }}
         >
-          <Box sx={{ maxWidth: '600px' }}>
+          <Box sx={{ maxWidth: '500px' }}>
             {index === 0 && (
               <Typography
                 variant="h3"
@@ -120,7 +124,12 @@ const FunktionPage = () => {
           </Box>
 
           <Box
-            sx={{ display: 'flex', justifyContent: 'center', maxWidth: '100%' }}
+            sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              width: '500px',
+              maxWidth: '100%',
+            }}
           >
             {section.image.endsWith('.mp4') ? (
               <video
@@ -133,6 +142,7 @@ const FunktionPage = () => {
                   width: '100%',
                   maxWidth: '500px',
                   borderRadius: '10px',
+                  ...section.style,
                 }}
               />
             ) : (
@@ -143,6 +153,7 @@ const FunktionPage = () => {
                   width: '100%',
                   maxWidth: '500px',
                   borderRadius: '10px',
+                  ...section.style,
                 }}
               />
             )}

@@ -142,19 +142,16 @@ const AutoCarousel = () => {
                 justifyContent: 'center',
                 alignItems: 'center',
                 transition: 'transform 0.3s ease',
-                '&:hover': {
-                  transform: 'scale(1.1)',
-                },
               }}
             >
               <img
                 src={testimonial.image}
                 alt={testimonial.name}
                 style={{
-                  width: '100px',
+                  width: '200px',
                   boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
-                  height: '100px',
-                  borderRadius: '50%',
+                  height: '200px',
+                  borderRadius: '32px',
                   objectFit: 'cover',
                 }}
               />
