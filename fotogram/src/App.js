@@ -19,6 +19,9 @@ import ImprintEn from './components/ImprintEn';
 import PrivacyPolicyDe from './components/PrivacyPolicyDe';
 import PrivacyPolicyEn from './components/PrivacyPolicyEn';
 
+import LogRocket from 'logrocket';
+LogRocket.init('edvm0h/fotogram-landing-page');
+
 function App() {
   const titles = {
     '/': {
