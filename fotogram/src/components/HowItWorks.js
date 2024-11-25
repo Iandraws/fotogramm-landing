@@ -51,7 +51,7 @@ const sections = [
   {
     title: translate(wording.digitalShopTitle),
     description: translate(wording.digitalShopDescription),
-    image: '/assets/funk/editModeImage.jpg',
+    image: '/assets/funk/Digital_Shop_Brand.mp4',
   },
   {
     title: translate(wording.digitalAlbumsTitle),
