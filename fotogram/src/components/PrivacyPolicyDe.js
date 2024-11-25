@@ -2,7 +2,7 @@ import React from "react";
 
 const PrivacyPolicyDe = () => {
   return (
-    <div style={{ padding: "20px", lineHeight: "1.6", fontFamily: "Arial, sans-serif" }}>
+    <div style={{ padding: "48px", lineHeight: "1.6", fontFamily: "Arial, sans-serif" }}>
       <h1>Datenschutzerklärung für Fotogram Technology</h1>
       <p><strong>Stand:</strong> 22.11.2024</p>
 
