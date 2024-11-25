@@ -141,7 +141,7 @@ const PowerfulFeaturesSection = () => {
         sx={{
           display: 'flex',
           gap: '16px',
-          flexDirection: { xs: 'column', md: 'row' },
+          flexDirection: { xs: 'column-reverse', md: 'row' },
           justifyContent: 'space-between',
           alignItems: 'center',
           paddingTop: { xs: '40px', md: '80px' },

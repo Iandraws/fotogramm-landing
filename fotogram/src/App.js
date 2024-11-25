@@ -1,21 +1,83 @@
 // src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import HeroSection from './components/HeroSection';
-import PricingTable from './components/PricingTable';
-import SignUpForm from './components/SignUpForm';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import ContactUs from './components/ContactUs';
 import Footer from './components/Footer';
 import Help from './components/Help';
-import ScrollToTop from './components/ScrollToTop';
+import HeroSection from './components/HeroSection';
 import HowItWorks from './components/HowItWorks';
+import Navbar from './components/Navbar';
+import PricingTable from './components/PricingTable';
+import ScrollToTop from './components/ScrollToTop';
+import SignUpForm from './components/SignUpForm';
+import TermsAndConditionsDe from './components/TermsAndConditionsDe';
+import TermsAndConditionsEn from './components/TermsAndConditionsEn';
 import WhoWeAre from './components/WhoWeAre';
-import ContactUs from './components/ContactUs';
+
+import ImprintDe from './components/ImprintDe';
+import ImprintEn from './components/ImprintEn';
+import PrivacyPolicyDe from './components/PrivacyPolicyDe';
+import PrivacyPolicyEn from './components/PrivacyPolicyEn';
 
 function App() {
+  const titles = {
+    '/': {
+      en: 'Home - Fotogram Technology',
+      de: 'Startseite - Fotogram Technology',
+    },
+    '/pricing': {
+      en: 'Pricing - Fotogram Technology',
+      de: 'Preise - Fotogram Technology',
+    },
+    '/signup': {
+      en: 'Sign Up - Fotogram Technology',
+      de: 'Registrieren - Fotogram Technology',
+    },
+    '/faq': {
+      en: 'FAQ - Fotogram Technology',
+      de: 'Häufige Fragen - Fotogram Technology',
+    },
+    '/why-fotogram': {
+      en: 'Why Fotogram - Fotogram Technology',
+      de: 'Warum Fotogram - Fotogram Technology',
+    },
+    '/our-story': {
+      en: 'Our Story - Fotogram Technology',
+      de: 'Unsere Geschichte - Fotogram Technology',
+    },
+    '/get-in-touch': {
+      en: 'Contact Us - Fotogram Technology',
+      de: 'Kontakt - Fotogram Technology',
+    },
+    '/en/terms-and-conditions': {
+      en: 'Terms and Conditions - Fotogram Technology',
+      de: 'AGB - Fotogram Technology',
+    },
+    '/de/terms-and-conditions': {
+      en: 'Terms and Conditions - Fotogram Technology',
+      de: 'AGB - Fotogram Technology',
+    },
+    '/en/imprint': {
+      en: 'Imprint - Fotogram Technology',
+      de: 'Impressum - Fotogram Technology',
+    },
+    '/de/imprint': {
+      en: 'Imprint - Fotogram Technology',
+      de: 'Impressum - Fotogram Technology',
+    },
+    '/en/privacy-policy': {
+      en: 'Privacy Policy - Fotogram Technology',
+      de: 'Datenschutzerklärung - Fotogram Technology',
+    },
+    '/de/privacy-policy': {
+      en: 'Privacy Policy - Fotogram Technology',
+      de: 'Datenschutzerklärung - Fotogram Technology',
+    },
+  };
+
   return (
     <Router>
-      <ScrollToTop />
+      <ScrollToTop titles={titles} />
       <Navbar />
       <Routes>
         <Route
@@ -45,6 +107,31 @@ function App() {
         <Route
           path="/get-in-touch"
           element={<ContactUs />}
+        />
+        <Route
+          path="/en/terms-and-conditions"
+          element={<TermsAndConditionsEn />}
+        />
+        <Route
+          path="/de/terms-and-conditions"
+          element={<TermsAndConditionsDe />}
+        />
+        <Route
+          path="/en/imprint"
+          element={<ImprintEn />}
+        />
+        <Route
+          path="/de/imprint"
+          element={<ImprintDe />}
+        />
+
+        <Route
+          path="/en/privacy-policy"
+          element={<PrivacyPolicyEn />}
+        />
+        <Route
+          path="/de/privacy-policy"
+          element={<PrivacyPolicyDe />}
         />
       </Routes>
       <Footer />

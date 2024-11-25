@@ -7,6 +7,10 @@ const wording = {
     de: 'Für Fotografen, die ihre Qualität steigern und große Projekte organisieren wollen',
     en: 'For photographers who want to increase their quality and organize large projects',
   },
+  agb: {
+    de: 'AGB',
+    en: 'Terms and Conditions',
+  },
   aiFaceRecognition: {
     de: 'KI-Gesichtserkennung',
     en: 'AI Face Recognition',
@@ -79,6 +83,10 @@ const wording = {
     de: 'Kundenanfragen',
     en: 'Client Requests',
   },
+  comprehensiveDashboard: {
+    de: 'Umfassendes Dashboard',
+    en: 'Comprehensive Dashboard',
+  },
   contactForCustomPlan: {
     de: 'Kontaktieren Sie uns für einen maßgeschneiderten Plan, der zu Ihnen passt!',
     en: 'Contact us for a tailored plan!',
@@ -103,7 +111,7 @@ const wording = {
     de: 'Überzeugen Sie sich selbst von den Vorteilen, die Fotogram bietet. Starten Sie jetzt Ihre 30-tägige kostenlose Testphase und erleben Sie, wie Fotogram Ihr Fotografiegeschäft auf ein neues Niveau hebt.',
     en: 'Experience the benefits Fotogram offers for yourself. Start your 30-day free trial now and see how Fotogram takes your photography business to the next level.',
   },
-  CustomBrand: {
+  customBrand: {
     de: 'Eigenes Design und Branding',
     en: 'Custom Design and Branding',
   },
@@ -175,6 +183,42 @@ const wording = {
     de: 'FAQs',
     en: 'FAQs',
   },
+  feedbackAH: {
+    de: 'Ein Fotograf ohne App ist wie ein Fotograf ohne Kamera. Technologischer Fortschritt ist in der Fotografie unverzichtbar',
+    en: 'A photographer without an app is like a photographer without a camera. Technological advancement is essential in photography',
+  },
+  feedbackAweeha: {
+    de: 'Die App hat uns geholfen, unsere Markenidentität zu stärken und unser Einkommen zu steigern',
+    en: 'The app has helped us strengthen our brand identity and increase our income',
+  },
+  feedbackBBB: {
+    de: 'Die App ist die beste Investition, die wir in unser Projekt getätigt haben',
+    en: 'The app is the best investment we made for our business',
+  },
+  feedbackElfan: {
+    de: 'Endlich eine schnelle, fortschrittliche und moderne Methode, um Fotos direkt vom Event mit den Gästen über die App zu teilen',
+    en: 'Finally, a fast, advanced, and modern way to share photos live with guests directly from the event using the app',
+  },
+  feedbackEssam: {
+    de: 'Die Kunden sind sehr zufrieden mit der schnellen Lieferung der Fotos',
+    en: 'Customers are very happy with the fast photo delivery',
+  },
+  feedbackHamdan: {
+    de: 'Die Auswahl, Lieferung und das Herunterladen von Fotos sind einfacher und schneller geworden',
+    en: 'Selecting, delivering, and downloading photos has become easier and faster',
+  },
+  feedbackNH: {
+    de: 'Die Geschwindigkeit und Effizienz bei der Lieferung der Fotos sind entscheidend für die Kontinuität der Fotografie',
+    en: 'Speed and productivity in delivering photos are crucial for maintaining continuity in photography',
+  },
+  feedbackRotana: {
+    de: 'Die App ist anwenderfreundlich. Alles, was Fotografen und Kunden brauchen, ist vorhanden',
+    en: 'The app is user friendly. Everything photographers and customers need is available',
+  },
+  feedbackShady: {
+    de: 'Heutzutage ist die App für Fotografen unverzichtbar geworden',
+    en: 'Nowadays, the app has become essential for photographers',
+  },
   flexiblePricingDescription: {
     de: 'Wählen Sie aus verschiedenen Preismodellen - von Basic bis Premium - die für Sie passende Lösung. Maßgeschneiderte Optionen unterstützen Fotografen in jeder Entwicklungsphase ihres Geschäfts.',
     en: 'Choose from a variety of pricing models, from Basic to Premium, that best suit your needs. Tailored options support photographers at every stage of their business development.',
@@ -202,6 +246,10 @@ const wording = {
   imageTagging: {
     de: 'Bild Markierung',
     en: 'Image Tagging',
+  },
+  imprint: {
+    de: 'Impressum',
+    en: 'Imprint',
   },
   iosAndroidBrandedApp: {
     de: 'iOS- & Android App',
@@ -231,10 +279,6 @@ const wording = {
     de: 'Live-Video-Streaming',
     en: 'Live Video Streaming',
   },
-  MetaSearch: {
-    de: 'Metadaten-Suche',
-    en: 'Metadata Search',
-  },
   ourStory: {
     de: 'Unsere Geschichte',
     en: 'Our Story',
@@ -246,6 +290,14 @@ const wording = {
   ourVisionTitle: {
     de: 'Unsere Vision und Kernfunktionen im Blick',
     en: 'Our Vision and Core Features in Focus',
+  },
+  photographerDescription: {
+    de: 'Fotografie und Produktion',
+    en: 'Photography and Production',
+  },
+  photographerPrintDescription: {
+    de: 'Fotografie, Produktion und Druck',
+    en: 'Photography, Production and Printing',
   },
   plans: {
     de: 'Preispläne',
@@ -263,11 +315,15 @@ const wording = {
     de: 'Preise',
     en: 'Pricing',
   },
+  privacyPolicy: {
+    de: 'Datenschutz',
+    en: 'Privacy Policy',
+  },
   privateMember: {
     de: '1 Mitglied',
     en: '1 Member',
   },
-  PrivateUse: {
+  privateUse: {
     de: 'Privat',
     en: 'Private',
   },
@@ -303,33 +359,30 @@ const wording = {
     de: 'Shop Hint',
     en: 'Shop Hint',
   },
-  Storage1TB: {
+  storage1TB: {
     de: '1TB Speicherplatz',
     en: '1TB Storage',
   },
-  Storage5GB: {
-    de: '5GB Speicherplatz',
-    en: '5GB Storage',
-  },
-  Storage20GB: {
-    de: '20GB Speicherplatz',
-    en: '20GB Storage',
-  },
-  Storage500GB: {
-    de: '500GB Speicherplatz',
-    en: '500GB Storage',
-  },
-
   storage1TBHint: {
     de: 'Falls du mehr brauchst, kostet jeder 1 TB nur 34,99 € monatlich',
     en: 'Need more? Each additional 1 TB is only € 34,99 per month',
   },
-
+  storage5GB: {
+    de: '5GB Speicherplatz',
+    en: '5GB Storage',
+  },
+  storage20GB: {
+    de: '20GB Speicherplatz',
+    en: '20GB Storage',
+  },
+  storage500GB: {
+    de: '500GB Speicherplatz',
+    en: '500GB Storage',
+  },
   storage500GBBHint: {
     de: 'Falls du mehr brauchst, kannst du deinen aktuellen Plan weiter nutzen und nur den Speicherplatz erweitern. Jeder 1 TB kostet nur 34,99 € monatlich. Alternativ kannst du jederzeit auf den Premium-Plan wechseln.',
     en: 'Need more? You can keep your current plan and just expand your storage. Each additional 1 TB is only € 34,99 per month. Alternatively, you can switch to the Premium plan at any time.',
   },
-
   streamlinedContractProcessing: {
     de: 'Vereinfachte Vertragsabwicklung: Erstellen, teilen und unterschreiben Sie Verträge digital - effizient und papierlos.',
     en: 'Streamlined Contract Processing: Create, share, and sign contracts digitally, efficiently, and paperlessly.',
@@ -342,19 +395,21 @@ const wording = {
     de: 'Support kontaktieren',
     en: 'Talk to Sales',
   },
-  TeamMembers1: {
+  teamMembers1: {
     de: '1 Teammitglied',
     en: '1 Team Member',
   },
-  TeamMembers3: {
+  teamMembers3: {
     de: '3 Teammitglied',
     en: '3 Team Member',
   },
-
-  TeamMembers3Hint: {
+  teamMembers3Hint: {
     de: 'Falls das Team größer ist, kostet jedes zusätzliche Mitglied nur 14,99 € monatlich',
     en: 'If the team is larger, each additional member costs only € 14,99 per month',
-
+  },
+  testimonialsTitle: {
+    de: 'Das sagen unsere Kunden',
+    en: 'Trusted by Photographers Around the Globe',
   },
   tryIt: {
     de: 'Jetzt 30 Tage kostenlos testen',
@@ -372,12 +427,10 @@ const wording = {
     de: 'Videos und Reels',
     en: 'Videos and Reels',
   },
-
   videosAndReelsHint: {
     de: 'Begrenzt auf 50 MB pro Video für unbegrenzte Anzahl an Videos. Du kannst noch unbegrenzt 3rd Party Links für Videos einbinden, wie z. B. Google Drive, Dropbox, Vimeo, YouTube, Mega usw.',
     en: 'Limited to 50MB per video for an unlimited number of videos. You can add also unlimited third-party video links in the app, such as Google Drive, Dropbox, Vimeo, YouTube, Mega, etc.',
   },
-
   watermarkFeature: {
     de: 'Personalisierte Wasserzeichen',
     en: 'Personalized Watermarks',
@@ -394,73 +447,6 @@ const wording = {
     de: 'Warum Fotogram',
     en: 'Why Fotogram',
   },
-
-  comprehensiveDashboard: {
-    de: 'Umfassendes Dashboard',
-    en: 'Comprehensive Dashboard',
-  },
-
-  photographerDescription: {
-    de: 'Fotografie und Produktion',
-    en: 'Photography and Production',
-  },
-
-  photographerPrintDescription: {
-    de: 'Fotografie, Produktion und Druck',
-    en: 'Photography, Production and Printing',
-  },
-
-  feedbackNH: {
-    de: 'Die Geschwindigkeit und Effizienz bei der Lieferung der Fotos sind entscheidend für die Kontinuität der Fotografie',
-    en: 'Speed and productivity in delivering photos are crucial for maintaining continuity in photography',
-  },
-  feedbackEssam: {
-    de: 'Die Kunden sind sehr zufrieden mit der schnellen Lieferung der Fotos',
-    en: 'Customers are very happy with the fast photo delivery',
-  },
-
-  feedbackAweeha: {
-    de: 'Die App hat uns geholfen, unsere Markenidentität zu stärken und unser Einkommen zu steigern',
-    en: 'The app has helped us strengthen our brand identity and increase our income',
-  },
-
-  feedbackAH: {
-    de: 'Ein Fotograf ohne App ist wie ein Fotograf ohne Kamera. Technologischer Fortschritt ist in der Fotografie unverzichtbar',
-    en: 'A photographer without an app is like a photographer without a camera. Technological advancement is essential in photography',
-  },
-
-
-  feedbackRotana: {
-    de: 'Die App ist anwenderfreundlich. Alles, was Fotografen und Kunden brauchen, ist vorhanden',
-    en: 'The app is user friendly. Everything photographers and customers need is available',
-  },
-
-
-  feedbackBBB: {
-    de: 'Die App ist die beste Investition, die wir in unser Projekt getätigt haben',
-    en: 'The app is the best investment we made for our business',
-  },
-
-  feedbackHamdan: {
-    de: 'Die Auswahl, Lieferung und das Herunterladen von Fotos sind einfacher und schneller geworden',
-    en: 'Selecting, delivering, and downloading photos has become easier and faster',
-  },
-
-  feedbackElfan: {
-    de: 'Endlich eine schnelle, fortschrittliche und moderne Methode, um Fotos direkt vom Event mit den Gästen über die App zu teilen',
-    en: 'Finally, a fast, advanced, and modern way to share photos live with guests directly from the event using the app',
-  },
-
-  feedbackShady: {
-    de: 'Heutzutage ist die App für Fotografen unverzichtbar geworden',
-    en: 'Nowadays, the app has become essential for photographers',
-  },
-
-  testimonialsTitle: {
-    de: 'Das sagen unsere Kunden',
-    en: 'Trusted by Photographers Around the Globe',
-  }
-
 };
 
 export default wording;

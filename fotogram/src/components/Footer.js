@@ -1,10 +1,15 @@
 // src/components/Footer.js
 import React from 'react';
-import { Box, Typography, IconButton } from '@mui/material';
+import { Box, Typography, IconButton, Link } from '@mui/material';
 import { Facebook, Instagram } from '@mui/icons-material';
+import translate from '../helpers/translate';
+import wording from '../constants/wording';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const lang =
+    localStorage.getItem('lang') ||
+    (navigator.language.startsWith('de') ? 'de' : 'en');
 
   return (
     <Box
@@ -15,6 +20,28 @@ const Footer = () => {
         borderTop: '1px solid #e0e0e0',
       }}
     >
+      <Box
+        sx={{ display: 'flex', justifyContent: 'center', gap: '16px', mb: 2 }}
+      >
+        <Link
+          href={'/' + lang + '/imprint'}
+          sx={{ textDecoration: 'none', color: 'inherit' }}
+        >
+          {translate(wording.imprint)}
+        </Link>
+        <Link
+          href={'/' + lang + '/privacy-policy'}
+          sx={{ textDecoration: 'none', color: 'inherit' }}
+        >
+          {translate(wording.privacyPolicy)}
+        </Link>
+        <Link
+          href={'/' + lang + '/terms-and-conditions'}
+          sx={{ textDecoration: 'none', color: 'inherit' }}
+        >
+          {translate(wording.agb)}
+        </Link>
+      </Box>
       <Box
         sx={{ display: 'flex', justifyContent: 'center', gap: '16px', mb: 2 }}
       >
