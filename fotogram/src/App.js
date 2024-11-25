@@ -127,9 +127,12 @@ function App() {
           path="/de/imprint"
           element={<ImprintDe />}
         />
-
         <Route
           path="/en/privacy-policy"
+          element={<PrivacyPolicyEn />}
+        />
+         <Route
+          path="/privacypolicy"
           element={<PrivacyPolicyEn />}
         />
         <Route
