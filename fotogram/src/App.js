@@ -198,6 +198,10 @@ function App() {
             path="/de/privacy-policy"
             element={<PrivacyPolicyDe />}
           />
+          <Route
+            path="/privacypolicy"
+            element={<PrivacyPolicyEn />}
+          />
         </Routes>
         <Footer />
       </Router>
