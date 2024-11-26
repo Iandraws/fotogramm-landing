@@ -110,7 +110,7 @@ const AutoCarousel = () => {
     >
       <Typography
         variant="h4"
-        sx={{ fontWeight: 'bold', marginBottom: '30px' }}
+        sx={{ fontWeight: 'bold', marginBottom: '72px' }}
       >
         {translate(wording.testimonialsTitle)}
       </Typography>
@@ -127,7 +127,7 @@ const AutoCarousel = () => {
               justifyContent: 'center',
               alignItems: 'center',
               transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-              minHeight: '350px',
+              minHeight: '400px',
             }}
           >
             {/* Image Container */}

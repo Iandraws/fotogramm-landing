@@ -33,7 +33,7 @@ const PowerfulFeaturesSection = () => {
             sx={{
               fontWeight: 'bold',
               fontSize: { xs: '28px', md: '40px' },
-              mb: 3,
+              mb: 5,
             }}
           >
             {translate(wording.realTimeImageSharing)}
@@ -56,24 +56,15 @@ const PowerfulFeaturesSection = () => {
 
         {/* Right side: Image */}
         <Box
+          component="img"
+          src="/assets/4.png"
+          alt="Powerful features"
           sx={{
-            flex: 1,
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            padding: { xs: '16px', md: '40px' },
+            width: '100%',
+            maxWidth: { xs: '232px', md: '500px' },
+            padding: { xs: '24px', md: '40px' },
           }}
-        >
-          <img
-            src="/assets/4.png"
-            alt="Powerful features"
-            style={{
-              width: '100%',
-              maxWidth: '500px',
-              borderRadius: '10px',
-            }}
-          />
-        </Box>
+        ></Box>
       </Box>
 
       {/* Beautiful Presentation Mode Section */}
@@ -96,13 +87,9 @@ const PowerfulFeaturesSection = () => {
           src="/assets/FaceRecognition2.png"
           alt="Fotogram logo"
           sx={{
-            flex: 1,
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
             padding: '16px',
             width: '100%',
-            maxWidth: { md: '320px', lg: '400px' },
+            maxWidth: { xs: '164px', md: '320px', lg: '400px' },
             paddingLeft: { xs: '0', md: '48px' },
             borderRadius: '10px',
           }}
@@ -121,7 +108,7 @@ const PowerfulFeaturesSection = () => {
             sx={{
               fontWeight: 'bold',
               fontSize: { xs: '28px', md: '40px' },
-              mb: 3,
+              mb: 5,
             }}
           >
             {translate(wording.aiFaceRecognition)}
@@ -164,7 +151,7 @@ const PowerfulFeaturesSection = () => {
             sx={{
               fontWeight: 'bold',
               fontSize: { xs: '28px', md: '40px' },
-              mb: 3,
+              mb: 5,
             }}
           >
             {translate(wording.watermarkFeature)}
@@ -180,24 +167,15 @@ const PowerfulFeaturesSection = () => {
 
         {/* Right side: Image */}
         <Box
+          component="img"
+          src="/assets/Fotogram_Logo_Blue.png"
+          alt="Massive time saver"
           sx={{
-            flex: 1,
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
             padding: '16px',
+            width: '100%',
+            maxWidth: { xs: '208px', md: '500px' },
           }}
-        >
-          <img
-            src="/assets/Fotogram_Logo_Blue.png"
-            alt="Massive time saver"
-            style={{
-              width: '100%',
-              maxWidth: '500px',
-              borderRadius: '10px',
-            }}
-          />
-        </Box>
+        ></Box>
       </Box>
     </>
   );

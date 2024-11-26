@@ -9,11 +9,14 @@ const sections = [
     title: translate(wording.ourVisionTitle),
     description: translate(wording.ourVisionDescription),
     image: '/assets/Schield_RBG.png',
+    style: { maxWidth: { xs: '220px', md: '500px' } },
+
   },
   {
     title: translate(wording.analyticsDashboardTitle),
     description: translate(wording.analyticsDashboardDescription),
     image: '/assets/Dashboard_Fotogram.png',
+    style: { maxWidth: { xs: '320px', md: '500px' } },
   },
 
   {
@@ -26,12 +29,14 @@ const sections = [
     title: translate(wording.aiFaceRecognitionTitle),
     description: translate(wording.aiFaceRecognitionDescription),
     image: '/assets/FaceRecognition2.png',
-    style: { maxWidth: '380px' },
+    style: { maxWidth: { xs: '220px', md: '300px' } },
+
   },
   {
     title: translate(wording.brandingAndWatermarkTitle),
     description: translate(wording.brandingAndWatermarkDescription),
     image: '/assets/funk/Individual_Branding.png',
+    style: { maxWidth: { xs: '350px', md: '500px' } },
   },
   {
     title: translate(wording.digitalShopTitle),
@@ -43,12 +48,14 @@ const sections = [
     title: translate(wording.digitalAlbumsTitle),
     description: translate(wording.digitalAlbumsDescription),
     image: '/assets/Digital_Album.png',
-    style: { maxWidth: '400px' },
+    style: { maxWidth: { xs: '280px', md: '500px' } },
   },
   {
     title: translate(wording.contractManagementTitle),
     description: translate(wording.contractManagementDescription),
     image: '/assets/Contract3.png',
+    style: { maxWidth: { xs: '220px', md: '500px' } },
+
   },
 ];
 
@@ -68,7 +75,7 @@ const FunktionPage = () => {
             flexDirection: { xs: 'column', md: 'row' },
             alignItems: 'center',
             justifyContent: 'center',
-            marginBottom: { xs: '120px', md: '150px' },
+            marginBottom: { xs: '100px', md: '150px' },
             textAlign: 'left',
             gap: { xs: '48px', lg: '248px' },
           }}
@@ -123,16 +130,17 @@ const FunktionPage = () => {
                 }}
               />
             ) : (
-              <img
+              <Box
+                component="img"
                 src={section.image}
                 alt={section.title}
-                style={{
+                sx={{
                   width: '100%',
-                  maxWidth: '500px',
+                  maxWidth: { xs: '280px', md: '500px' },
                   borderRadius: '10px',
                   ...section.style,
                 }}
-              />
+              ></Box>
             )}
           </Box>
         </Box>

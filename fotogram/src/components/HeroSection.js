@@ -22,12 +22,12 @@ const HeroSection = () => {
         variant="contained"
         sx={{
           display: 'flex',
-          flexDirection: { xs: 'column', md: 'row' },
+          flexDirection: { xs: 'column-reverse', md: 'row' },
           justifyContent: 'space-between',
           alignItems: 'center',
           backgroundColor: '#fff',
-          paddingTop: { xs: '24px', md: '40px' },
-          paddingBottom: { xs: '16px', md: '120px' },
+          paddingTop: { xs: '0px', md: '40px' },
+          paddingBottom: { xs: '64px', md: '120px' },
           paddingLeft: { xs: '32px', md: '40px', lg: '160px', xl: '200px' },
           paddingRight: { xs: '32px', md: '0px', lg: '160px', xl: '200px' },
         }}
@@ -107,31 +107,22 @@ const HeroSection = () => {
 
         {/* Right side: Image */}
         <Box
+          component="img"
+          src="/assets/HeroStart1.png"
           sx={{
-            flex: 1,
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
+            width: '100%',
+            maxWidth: { xs: '184px', md: '600px' },
+            borderRadius: '24px',
             marginTop: { xs: '16px', md: '0' },
           }}
-        >
-          <img
-            src="/assets/HeroStart1.png"
-            alt="Hero placeholder"
-            style={{
-              width: '100%',
-              maxWidth: '700px',
-              borderRadius: '24px',
-            }}
-          />
-        </Box>
+        ></Box>
       </Box>
 
       {/* Second Section: What Fotogram Offers */}
       <Box
         sx={{
           display: 'flex',
-          flexDirection: { xs: 'column', md: 'row' },
+          flexDirection: { xs: 'column-reverse', md: 'row' },
           justifyContent: 'space-between',
           alignItems: 'center',
           gap: '24px',
@@ -154,8 +145,8 @@ const HeroSection = () => {
             variant="h4"
             sx={{
               fontWeight: 'bold',
-              fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem' },
-              mb: 2,
+              fontSize: { xs: '26px', md: '40px' },
+              mb: 5,
             }}
           >
             {translate(wording.whatFotogramOffers)}
@@ -195,7 +186,7 @@ const HeroSection = () => {
             variant="body1"
             sx={{
               fontSize: { xs: '16px', sm: '16px', md: '16px' },
-              mb: 4,
+              mb: 7,
             }}
           >
             {translate(wording.digitalShop)}
@@ -211,27 +202,14 @@ const HeroSection = () => {
           </Box>
         </Box>
 
-        {/* Left side: Image */}
         <Box
+          component="img"
+          src="/assets/dashboard.png"
           sx={{
-            flex: 1,
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            marginTop: { xs: '16px', md: '0' },
-            overflow: 'hidden',
+            width: '100%',
+            maxWidth: { xs: '164px', md: '500px' },
           }}
-        >
-          <img
-            src="/assets/dashboard.png"
-            alt="Placeholder"
-            style={{
-              width: '100%',
-              maxWidth: '500px',
-              borderRadius: '10px',
-            }}
-          />
-        </Box>
+        ></Box>
       </Box>
 
       <PowerfulFeaturesSection />
@@ -243,7 +221,7 @@ const HeroSection = () => {
           flexDirection: { xs: 'column', md: 'row' },
           justifyContent: 'space-between',
           alignItems: 'center',
-          paddingTop: { xs: '56px', md: '120px' },
+          paddingTop: { xs: '16px', md: '120px' },
           paddingBottom: { xs: '56px', md: '120px' },
           paddingLeft: { xs: '32px', md: '48px', lg: '100px', xl: '200px' },
           paddingRight: { xs: '32px', md: '56px', lg: '100px', xl: '200px' },
@@ -286,8 +264,8 @@ const HeroSection = () => {
             sx={{
               fontWeight: 'bold',
               marginTop: { xs: '24px', md: '0' },
-              fontSize: { xs: '1.8rem', md: '2.5rem' },
-              mb: 2,
+              fontSize: { xs: '26px', md: '40px' },
+              mb: 5,
             }}
           >
             {translate(wording.builtByCreatives)}
@@ -297,7 +275,7 @@ const HeroSection = () => {
             variant="body1"
             sx={{
               fontSize: { xs: '16px', md: '16px' },
-              mb: 2,
+              mb: 7,
             }}
           >
             {translate(wording.fotogramMission)}
