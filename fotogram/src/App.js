@@ -19,7 +19,6 @@ import TermsAndConditionsDe from './components/TermsAndConditionsDe';
 import TermsAndConditionsEn from './components/TermsAndConditionsEn';
 import WhoWeAre from './components/WhoWeAre';
 
-// Initialize LogRocket for monitoring
 if (window.location.hostname !== 'localhost') {
   LogRocket.init('edvm0h/fotogram-landing-page');
 }

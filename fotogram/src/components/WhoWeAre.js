@@ -1,4 +1,3 @@
-// src/components/WhoWeAre.js
 import React from 'react';
 import { Box, Typography, List, ListItem, ListItemText } from '@mui/material';
 
@@ -15,9 +14,12 @@ const WhoWeAre = () => {
         variant="body1"
         sx={{ maxWidth: '800px', margin: '0 auto', mb: 4, textAlign: 'left' }}
       >
-        Fotogram für Softwarelösungen ist ein Team aus Experten mit vielfältiger Erfahrung in den Bereichen Fotografie, 
-        Medienproduktion und Technologie. Gemeinsam entwickeln wir maßgeschneiderte Lösungen, die speziell für die Bedürfnisse von Fotografen und 
-        Studios ausgelegt sind. Unser Team ist spezialisiert auf Programmierung, Web- und App-Design, digitales Marketing und das Management von Softwareprodukten.
+        Fotogram für Softwarelösungen ist ein Team aus Experten mit vielfältiger
+        Erfahrung in den Bereichen Fotografie, Medienproduktion und Technologie.
+        Gemeinsam entwickeln wir maßgeschneiderte Lösungen, die speziell für die
+        Bedürfnisse von Fotografen und Studios ausgelegt sind. Unser Team ist
+        spezialisiert auf Programmierung, Web- und App-Design, digitales
+        Marketing und das Management von Softwareprodukten.
       </Typography>
 
       <Typography
@@ -45,9 +47,11 @@ const WhoWeAre = () => {
         variant="body1"
         sx={{ maxWidth: '800px', margin: '0 auto', mt: 4, textAlign: 'left' }}
       >
-        Wir arbeiten daran, mit den neuesten technologischen Innovationen Schritt zu halten und sind überzeugt, 
-        dass unsere Anwendungen und Funktionen für Fotografen und Studios ein entscheidender Faktor für den Erfolg sind. Sie helfen, 
-        sich von der Konkurrenz abzuheben und den eigenen Stil eindrucksvoll zu präsentieren.
+        Wir arbeiten daran, mit den neuesten technologischen Innovationen
+        Schritt zu halten und sind überzeugt, dass unsere Anwendungen und
+        Funktionen für Fotografen und Studios ein entscheidender Faktor für den
+        Erfolg sind. Sie helfen, sich von der Konkurrenz abzuheben und den
+        eigenen Stil eindrucksvoll zu präsentieren.
       </Typography>
     </Box>
   );

@@ -1,4 +1,3 @@
-// src/components/Footer.js
 import React from 'react';
 import { Box, Typography, IconButton, Link } from '@mui/material';
 import { Facebook, Instagram } from '@mui/icons-material';

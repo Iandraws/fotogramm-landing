@@ -1,4 +1,3 @@
-// src/components/AutoCarousel.js
 import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -13,7 +12,7 @@ const testimonials = [
     name: 'Nabel Hakim Productions',
     role: wording.photographerDescription,
     text: wording.feedbackNH,
-    image: '/assets/users/NH_Production.png', // Replace with actual image path
+    image: '/assets/users/NH_Production.png',
   },
   {
     name: 'Essam Sakran Productions',
@@ -74,22 +73,22 @@ const AutoCarousel = () => {
     arrows: false,
     dots: true,
     infinite: true,
-    speed: 700, // Smoother animation speed
-    slidesToShow: 3, // Number of cards to show at a time
+    speed: 700,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 4000, // Slower autoplay for better readability
-    pauseOnHover: true, // Pause the carousel when hovering over the slide
+    autoplaySpeed: 4000,
+    pauseOnHover: true,
     responsive: [
       {
-        breakpoint: 1024, // For tablet/laptop screens
+        breakpoint: 1024,
         settings: {
-          slidesToShow: 2, // Show fewer cards on smaller screens
+          slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 600, // For mobile screens
+        breakpoint: 600,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -157,7 +156,6 @@ const AutoCarousel = () => {
               />
             </Box>
 
-            {/* Testimonial Content */}
             <Typography
               variant="body1"
               sx={{

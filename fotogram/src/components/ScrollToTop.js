@@ -1,4 +1,3 @@
-// src/components/ScrollToTop.js
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import translate from '../helpers/translate';
@@ -35,7 +34,6 @@ const ScrollToTop = ({
   useEffect(() => {
     document.getElementById('root').scrollTo(0, 0);
 
-    // Translate titles and descriptions
     const titleData = titles[pathname];
     const descriptionData = metaDescriptions[pathname];
     const newTitle = titleData ? translate(titleData) : defaultTitle;
@@ -61,7 +59,6 @@ const ScrollToTop = ({
     }
     canonicalTag.href = `${window.location.origin}${pathname}`;
 
-    // Update Open Graph tags
     updateOpenGraphTags(
       newTitle,
       newDescription,

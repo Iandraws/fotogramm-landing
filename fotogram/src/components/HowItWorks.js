@@ -1,8 +1,8 @@
 import { Box, Typography } from '@mui/material';
 import React from 'react';
 import TryIt from './TryIt';
-import translate from '../helpers/translate'; // Import translate function
-import wording from '../constants/wording'; // Import wording constants
+import translate from '../helpers/translate';
+import wording from '../constants/wording';
 
 const sections = [
   {
@@ -10,17 +10,6 @@ const sections = [
     description: translate(wording.ourVisionDescription),
     image: '/assets/Schield_RBG.png',
   },
-  /*{
-    title: translate(wording.customerManagementTitle),
-    description: translate(wording.customerManagementDescription),
-    image: '/assets/funk/CRM_icon4.png',
-  },
-  {
-    title: translate(wording.calendarAndRemindersTitle),
-    description: translate(wording.calendarAndRemindersDescription),
-    image: '/assets/funk/Calender.png',
-  },*/
-
   {
     title: translate(wording.analyticsDashboardTitle),
     description: translate(wording.analyticsDashboardDescription),
@@ -54,18 +43,13 @@ const sections = [
     title: translate(wording.digitalAlbumsTitle),
     description: translate(wording.digitalAlbumsDescription),
     image: '/assets/Digital_Album.png',
-    style: { maxWidth: '400px' } ,
+    style: { maxWidth: '400px' },
   },
   {
     title: translate(wording.contractManagementTitle),
     description: translate(wording.contractManagementDescription),
     image: '/assets/Contract3.png',
   },
-  /*{
-    title: translate(wording.digitalBusinessCardTitle),
-    description: translate(wording.digitalBusinessCardDescription),
-    image: '/assets/funk/votingImage.mp4',
-  },*/
 ];
 
 const FunktionPage = () => {

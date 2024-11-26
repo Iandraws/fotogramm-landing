@@ -32,7 +32,7 @@ const Navbar = () => {
     const newLanguage = language === 'de' ? 'en' : 'de';
     localStorage.setItem('lang', newLanguage);
     setLanguage(newLanguage);
-    window.location.reload(); // Refresh to apply translations
+    window.location.reload();
   };
 
   return (

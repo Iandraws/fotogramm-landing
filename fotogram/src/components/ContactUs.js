@@ -1,4 +1,3 @@
-// src/components/ContactUs.js
 import { Box, Button, Grid, TextField, Typography } from '@mui/material';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import ErrorIcon from '@mui/icons-material/Error';
@@ -17,7 +16,6 @@ const ContactUs = () => {
     const emailValue = e.target.value;
     setEmail(emailValue);
 
-    // Basic email validation regex pattern
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     setEmailError(!emailPattern.test(emailValue));
   };
@@ -30,7 +28,6 @@ const ContactUs = () => {
       return;
     }
 
-    // Reset success and error messages
     setIsError(false);
     setSuccessMessage('');
 
@@ -84,7 +81,6 @@ const ContactUs = () => {
           margin: { md: '24px' },
         }}
       >
-        {/* Contact Form */}
         <Box
           component="form"
           onSubmit={handleSubmit}
@@ -223,7 +219,6 @@ const ContactUs = () => {
           </Grid>
         </Box>
 
-        {/* Contact Information */}
         <Box
           sx={{
             flex: 1,

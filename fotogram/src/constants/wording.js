@@ -451,9 +451,6 @@ const wording = {
     de: 'Warum Fotogram',
     en: 'Why Fotogram',
   },
-
-  //FAQs Questions
-
   question1: {
     de: 'Wie erstelle ich eine neue Veranstaltung und lade Bilder hoch?',
     en: 'How do I create a new event and upload images?',
@@ -485,9 +482,6 @@ const wording = {
     de: 'Was soll ich tun, wenn ich auf technische Probleme stoße?',
     en: 'What should I do if I encounter technical issues?',
   },
-
-  // FAQs Answers
-
   answer1: {
     de: 'Im Hauptmenü haben Sie als Fotograf Admin-Rechte. Sie können eine Veranstaltung erstellen und anschließend im Uploadbereich die zugehörigen Bilder hochladen.',
     en: 'In the main menu, you have admin rights as a photographer. You can create an event and then upload the associated images in the upload section.',

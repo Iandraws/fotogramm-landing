@@ -1,4 +1,3 @@
-// src/components/Help.js
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import {
   Accordion,

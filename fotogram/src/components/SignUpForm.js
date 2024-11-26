@@ -43,21 +43,20 @@ const SignUpForm = () => {
     margin: '50px auto',
   };
 
-  // setPlan(planValue || 'basic');
-
-  // Handle email change and validation
   const handleEmailChange = (e) => {
     const emailValue = e.target.value;
     setEmail(emailValue);
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    setEmailError(!emailPattern.test(emailValue)); // Set error if email is invalid
+    setEmailError(!emailPattern.test(emailValue));
   };
 
   // Handle form submission
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    if (emailError) return; // Prevent form submission if email is invalid
+    if (emailError) {
+      return;
+    }
 
     const requestBody = {
       company: customSubdomain,
@@ -98,7 +97,6 @@ const SignUpForm = () => {
         component="form"
         onSubmit={handleSubmit}
       >
-        {/* Main heading */}
         <Typography
           variant="h4"
           sx={{ textAlign: 'center', mb: 2, fontWeight: 'bold' }}
@@ -106,7 +104,6 @@ const SignUpForm = () => {
           Just get started!
         </Typography>
 
-        {/* Subtext */}
         <Typography
           variant="body1"
           sx={{ textAlign: 'center', mb: 3, color: '#555' }}
@@ -114,7 +111,6 @@ const SignUpForm = () => {
           Our one-step sign-up only takes a few seconds and is completely free.
         </Typography>
 
-        {/* Form fields */}
         <Box sx={{ display: 'flex', gap: '10px' }}>
           <TextField
             fullWidth
@@ -136,7 +132,6 @@ const SignUpForm = () => {
           />
         </Box>
 
-        {/* Email Address with Validation */}
         <TextField
           fullWidth
           label="Email address"
@@ -144,8 +139,8 @@ const SignUpForm = () => {
           value={email}
           required
           onChange={handleEmailChange}
-          error={emailError} // Shows red border if emailError is true
-          helperText={emailError ? 'Please enter a valid email address' : ''} // Shows error message if email is invalid
+          error={emailError}
+          helperText={emailError ? 'Please enter a valid email address' : ''}
           margin="normal"
           sx={{ backgroundColor: '#f5f5f5', mb: 2 }}
         />
@@ -174,14 +169,13 @@ const SignUpForm = () => {
               backgroundColor: '#f5f5f5',
               ml: 1,
               '& .MuiInputBase-input': {
-                padding: '4px', // Adjust padding as needed
+                padding: '4px',
               },
             }}
           />
           <Typography sx={{ color: '#555', ml: 1 }}>.fotogram.app</Typography>
         </Box>
 
-        {/* Terms and Conditions Checkbox */}
         <FormGroup sx={{ mb: 2 }}>
           <FormControlLabel
             control={
