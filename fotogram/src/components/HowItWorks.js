@@ -24,7 +24,7 @@ const sections = [
   {
     title: translate(wording.analyticsDashboardTitle),
     description: translate(wording.analyticsDashboardDescription),
-    image: '/assets/Dashboard_Fotogram1.png',
+    image: '/assets/Dashboard_Fotogram.png',
   },
 
   {
@@ -44,11 +44,6 @@ const sections = [
     description: translate(wording.brandingAndWatermarkDescription),
     image: '/assets/funk/Individual_Branding.png',
   },
-  /*{
-    title: translate(wording.flexiblePricingTitle),
-    description: translate(wording.flexiblePricingDescription),
-    image: '/assets/Packages_Fotogram.png',
-  },*/
   {
     title: translate(wording.digitalShopTitle),
     description: translate(wording.digitalShopDescription),
@@ -58,10 +53,8 @@ const sections = [
   {
     title: translate(wording.digitalAlbumsTitle),
     description: translate(wording.digitalAlbumsDescription),
-    image: '/assets/Digital_Album5.png',
-    style: { transform: 'scale(1.6)' ,
-      
-    },
+    image: '/assets/Digital_Album.png',
+    style: { maxWidth: '400px' } ,
   },
   {
     title: translate(wording.contractManagementTitle),

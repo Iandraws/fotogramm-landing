@@ -49,7 +49,7 @@ const ContactUs = () => {
       });
 
       if (response.ok) {
-        setSuccessMessage('Formular erfolgreich abgeschickt'); 
+        setSuccessMessage('Formular erfolgreich abgeschickt');
         setName('');
         setEmail('');
         setPhone('');
@@ -79,8 +79,9 @@ const ContactUs = () => {
           maxWidth: '1000px',
           backgroundColor: '#fff',
           borderRadius: '8px',
-          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+          boxShadow: { md: '0 4px 12px rgba(0, 0, 0, 0.1)' },
           padding: { xs: '8px', md: '40px' },
+          margin: { md: '24px' },
         }}
       >
         {/* Contact Form */}
@@ -125,7 +126,9 @@ const ContactUs = () => {
               }}
             >
               <ErrorIcon sx={{ mr: 1 }} />
-              <Typography>Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.</Typography>
+              <Typography>
+                Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.
+              </Typography>
             </Box>
           )}
           <Grid
@@ -156,7 +159,9 @@ const ContactUs = () => {
                 onChange={handleEmailChange}
                 error={emailError}
                 helperText={
-                  emailError ? 'Bitte geben Sie eine gültige E-Mail-Adresse ein' : ''
+                  emailError
+                    ? 'Bitte geben Sie eine gültige E-Mail-Adresse ein'
+                    : ''
                 }
                 required
                 sx={{ backgroundColor: '#f5f5f5' }}
@@ -251,7 +256,7 @@ const ContactUs = () => {
             Fotogram Technology <br />
             CEO Eilon Mario Netzer <br />
             Bachstr. 145 <br />
-            22083 Hamburg <br /> 
+            22083 Hamburg <br />
             Deutschland
           </Typography>
         </Box>

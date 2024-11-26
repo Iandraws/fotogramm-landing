@@ -8,7 +8,7 @@ const wording = {
     en: 'For photographers who want to increase their quality and organize large projects',
   },
   agb: {
-    de: 'AGB',
+    de: 'Unsere AGB',
     en: 'Terms and Conditions',
   },
   aiFaceRecognition: {
@@ -94,6 +94,10 @@ const wording = {
   contactUs: {
     de: 'Kontaktieren Sie uns',
     en: 'Contact Us',
+  },
+  contact: {
+    de: 'Kontakt',
+    en: 'Contact',
   },
   contractManagementDescription: {
     de: 'Erstellen, teilen und unterschreiben Sie Verträge elektronisch - einfach und papierlos. So integrieren Sie den gesamten Vertragsprozess nahtlos in Ihren Workflow.',
