@@ -447,6 +447,118 @@ const wording = {
     de: 'Warum Fotogram',
     en: 'Why Fotogram',
   },
+
+  //FAQs Questions
+
+  qrestion1: {
+    de: 'Wie erstelle ich eine neue Veranstaltung und lade Bilder hoch?',
+    en: 'How do I create a new event and upload images?',
+  },
+  
+  question2: {
+    de: 'Können meine Kunden Bilder herunterladen oder für den Druck auswählen?',
+    en: 'Can my clients download images or select them for printing?',
+  },
+  
+  question3: {
+    de: 'Wie schützt Fotogram meine Daten und die meiner Kunden?',
+    en: 'How does Fotogram protect my data and my clients data?',
+  },
+  
+  question4: {
+    de: 'Welche Abonnementpläne bietet Fotogram an und wie kann ich mein Abo ändern oder kündigen?',
+    en: 'What subscription plans does Fotogram offer, and how can I change or cancel my subscription?',
+  },
+  
+  
+  question5: {
+    de: 'Kann ich mein Logo und individuelle Designs auf der Plattform verwenden?',
+    en: 'Can I use my logo and custom designs on the platform?',
+  },
+  
+  
+  question6: {
+    de: 'Wie funktioniert die Echtzeit-Bildübertragung auf Veranstaltungen?',
+    en: 'How does real-time photo sharing work for events?',
+  },
+  
+  
+  question7: {
+    de: 'Was soll ich tun, wenn ich auf technische Probleme stoße?',
+    en: 'What should I do if I encounter technical issues?',
+  },
+
+// FAQs Answers
+
+answer1: {
+  de: 'Im Hauptmenü haben Sie als Fotograf Admin-Rechte. Sie können eine Veranstaltung erstellen und anschließend im Uploadbereich die zugehörigen Bilder hochladen.',
+  en: 'In the main menu, you have admin rights as a photographer. You can create an event and then upload the associated images in the upload section.',
+},
+
+answer2: {
+  de: 'Ja, Ihre Kunden können sowohl Bilder herunterladen als auch markieren. Sie als Fotograf sehen sofort, welche Bilder markiert wurden. Sie können im Voraus definieren, wie viele Bilder für die Markierung erwartet werden. Sobald der Kunde alle Bilder ausgewählt hat, erhalten Sie eine automatische Benachrichtigung über die App.',
+  en: 'Yes, your clients can both download images and mark their favorites. As a photographer, you can immediately see which images have been marked. You can define in advance how many images the client is expected to mark. Once the client has selected all the images, you will receive an automated app notification.',
+},
+
+answer3: {
+  de: 'Unsere Server für das Speichern und Verarbeiten der Bilder befinden sich ausschließlich in Deutschland.',
+  en: 'Our servers for storing and processing images are located exclusively in Germany.',
+},
+/*
+answer4: {
+  de: 'Sie können unsere Plattform 30 Tage kostenlos testen und danach entscheiden, ob Sie weitermachen möchten. Anschließend können Sie aus unseren verschiedenen Paketen wählen:'
+
+        'Basis: Perfekt für Fotografen, die ihre Reise beginnen und erweitern möchten.'
+        'Fortgeschritten: Für Fotografen, die ihre Qualität steigern und große Projekte organisieren wollen.'
+        'Premium: Für professionelle Fotografen und Unternehmen, die sich abheben möchten.
+        'Individuell: Ein maßgeschneiderter Plan, der auf Ihre Bedürfnisse zugeschnitten ist.'
+        'Kontaktieren Sie uns für einen maßgeschneiderten Plan, der zu Ihnen passt!',
+
+
+  en: 'You can try our platform free for 30 days and decide if you want to continue. After that, you can choose from our different plans:
+
+        Basic: Perfect for photographers starting their journey and looking to grow.
+        Advanced: For photographers aiming to enhance quality and manage larger projects.
+        Premium: For professional photographers and businesses wanting to stand out.
+        Customized: A tailored plan designed to fit your needs.
+        Contact us for a customized plan that suits you best!',
+},*/
+
+answer5: {
+  de: 'Nachdem Sie das passende Abonnement abgeschlossen haben, schicken Sie uns Ihr Design und Logo per E-Mail. Innerhalb weniger Stunden sehen Sie Ihr Design auf der Plattform, und Ihr Logo wird automatisch auf alle hochgeladenen Bilder unten links oder in einer anderen gewünschten Ecke angezeigt. Bitte teilen Sie uns per E-Mail mit, wo das Logo erscheinen soll.',
+  en: 'After choosing the right subscription, send us your design and logo via email. Within a few hours, you will see your design on the platform, and your logo will automatically appear on all uploaded images in the bottom left or another corner of your choice. Please let us know via email where you would like the logo to appear.',
+},
+
+answer6: {
+  de: 'Nachdem Sie eine Veranstaltung in der Plattform erstellt haben, gehen Sie auf "QR Code erstellen" und aktivieren Sie ihn. Den QR-Code können Sie herunterladen und für die geplante Veranstaltung ausdrucken. Während der Live-Veranstaltung laden Sie wie gewohnt Bilder in Ihrem Admin-Bereich hoch. Diese erscheinen sofort für die Kunden oder Gäste in der App, nachdem sie den QR-Code gescannt haben. Optional können Sie die KI-Gesichtserkennung aktivieren, sodass die Gäste nur ihre eigenen Bilder sehen, nachdem sie ein Selfie nach dem QR-Scan gemacht haben.',
+  en: 'After creating an event on the platform, go to "Generate QR Code" and activate it. You can download the QR code and print it for the planned event. During the live event, upload images as usual in your admin area. These images will instantly appear for clients or guests in the app after scanning the QR code. Optionally, you can activate AI facial recognition, allowing guests to see only their own photos after taking a selfie following the QR scan.',
+},
+
+answer7: {
+  de: 'Schicken Sie uns eine E-Mail oder rufen Sie uns unter der angegebenen Telefonnummer an. Wir stehen Ihnen jederzeit zur Verfügung!',
+  en: 'Send us an email or call us at the provided phone number. We are here to assist you anytime!',
+},
+
+faqsTitel: {
+  de: 'Wir sind für Sie da!',
+  en: 'We are here for you!',
+},
+/*
+faqsDescription: {
+  de: 'Haben Sie Fragen zu Fotogram? Kein Problem!'
+       'Unser Support-Team steht Ihnen gerne unter support@fotogram.app zur Verfügung.'
+       'Bitte schauen Sie, wenn möglich, zuerst in unsere FAQs, bevor Sie uns kontaktieren.' 
+       'Wenn Sie uns von der E-Mail-Adresse schreiben, mit der Sie sich registriert haben, können wir Ihnen noch schneller helfen. Wir freuen uns darauf, Ihnen zu helfen!',
+  en: 'Got questions about Fotogram? No problem!'
+      'Our support team is happy to assist you at support@fotogram.app.'
+      'If possible, please check our FAQs before reaching out. Writing from the email address you used to sign up helps us assist you even faster. We look forward to helping you!',
+}, */
+
+faqsPreQuestions: {
+  de: 'Häufig gestellte Fragen',
+  en: 'Most Asked Questions',
+},
+
 };
 
 export default wording;

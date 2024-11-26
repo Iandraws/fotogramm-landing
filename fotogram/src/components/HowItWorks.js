@@ -58,7 +58,7 @@ const sections = [
   {
     title: translate(wording.digitalAlbumsTitle),
     description: translate(wording.digitalAlbumsDescription),
-    image: '/assets/Digital_Album2.png',
+    image: '/assets/Digital_Album5.png',
     style: { transform: 'scale(1.6)' ,
       
     },
