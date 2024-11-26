@@ -450,7 +450,7 @@ const wording = {
 
   //FAQs Questions
 
-  qrestion1: {
+  question1: {
     de: 'Wie erstelle ich eine neue Veranstaltung und lade Bilder hoch?',
     en: 'How do I create a new event and upload images?',
   },
@@ -498,26 +498,23 @@ const wording = {
     de: 'Unsere Server für das Speichern und Verarbeiten der Bilder befinden sich ausschließlich in Deutschland.',
     en: 'Our servers for storing and processing images are located exclusively in Germany.',
   },
-  /*
-answer4: {
-  de: 'Sie können unsere Plattform 30 Tage kostenlos testen und danach entscheiden, ob Sie weitermachen möchten. Anschließend können Sie aus unseren verschiedenen Paketen wählen:'
+  answer4: {
+    de: `Sie können unsere Plattform 30 Tage kostenlos testen und danach entscheiden, ob Sie weitermachen möchten.<br />
+        Anschließend können Sie aus unseren verschiedenen Paketen wählen:<br /><br/>
+        <strong>Basis</strong>: Perfekt für Fotografen, die ihre Reise beginnen und erweitern möchten.<br />
+        <strong>Fortgeschritten</strong>: Für Fotografen, die ihre Qualität steigern und große Projekte organisieren wollen.<br />
+        <strong>Premium:</strong> Für professionelle Fotografen und Unternehmen, die sich abheben möchten.<br />
+        <strong>Individuell</strong>: Ein maßgeschneiderter Plan, der auf Ihre Bedürfnisse zugeschnitten ist.<br /></br>
+        Kontaktieren Sie uns für einen maßgeschneiderten Plan, der zu Ihnen passt!`,
 
-        'Basis: Perfekt für Fotografen, die ihre Reise beginnen und erweitern möchten.'
-        'Fortgeschritten: Für Fotografen, die ihre Qualität steigern und große Projekte organisieren wollen.'
-        'Premium: Für professionelle Fotografen und Unternehmen, die sich abheben möchten.
-        'Individuell: Ein maßgeschneiderter Plan, der auf Ihre Bedürfnisse zugeschnitten ist.'
-        'Kontaktieren Sie uns für einen maßgeschneiderten Plan, der zu Ihnen passt!',
+    en: `You can try our platform free for 30 days and decide if you want to continue. After that, you can choose from our different plans:<br />
 
-
-  en: 'You can try our platform free for 30 days and decide if you want to continue. After that, you can choose from our different plans:
-
-        Basic: Perfect for photographers starting their journey and looking to grow.
-        Advanced: For photographers aiming to enhance quality and manage larger projects.
-        Premium: For professional photographers and businesses wanting to stand out.
-        Customized: A tailored plan designed to fit your needs.
-        Contact us for a customized plan that suits you best!',
-},*/
-
+        Basic: Perfect for photographers starting their journey and looking to grow.<br />
+        Advanced: For photographers aiming to enhance quality and manage larger projects.<br />
+        Premium: For professional photographers and businesses wanting to stand out.<br />
+        Customized: A tailored plan designed to fit your needs.<br />
+        Contact us for a customized plan that suits you best!`,
+  },
   answer5: {
     de: 'Nachdem Sie das passende Abonnement abgeschlossen haben, schicken Sie uns Ihr Design und Logo per E-Mail. Innerhalb weniger Stunden sehen Sie Ihr Design auf der Plattform, und Ihr Logo wird automatisch auf alle hochgeladenen Bilder unten links oder in einer anderen gewünschten Ecke angezeigt. Bitte teilen Sie uns per E-Mail mit, wo das Logo erscheinen soll.',
     en: 'After choosing the right subscription, send us your design and logo via email. Within a few hours, you will see your design on the platform, and your logo will automatically appear on all uploaded images in the bottom left or another corner of your choice. Please let us know via email where you would like the logo to appear.',
@@ -538,13 +535,14 @@ answer4: {
     en: 'We are here for you!',
   },
   faqsDescription: {
-    de: `Haben Sie Fragen zu Fotogram? Kein Problem!
-       Unser Support-Team steht Ihnen gerne unter support@fotogram.app zur Verfügung.<br />
+    de: `Haben Sie Fragen zu Fotogram? Kein Problem!<br /><br />
+      Unser Support-Team steht Ihnen gerne unter <strong>support@fotogram.app</strong> zur Verfügung.<br /><br />
        Bitte schauen Sie, wenn möglich, zuerst in unsere FAQs, bevor Sie uns kontaktieren.<br />
-       Wenn Sie uns von der E-Mail-Adresse schreiben, mit der Sie sich registriert haben, können wir Ihnen noch schneller helfen. Wir freuen uns darauf, Ihnen zu helfen!`,
-    en: `Got questions about Fotogram? No problem!<br />
-       Our support team is happy to assist you at support@fotogram.app.<br />
-       If possible, please check our FAQs before reaching out. Writing from the email address you used to sign up helps us assist you even faster. We look forward to helping you!`,
+       Wenn Sie uns von der E-Mail-Adresse schreiben, mit der Sie sich registriert haben, können wir Ihnen noch schneller helfen.<br /><br />
+       Wir freuen uns darauf, Ihnen zu helfen!`,
+    en: `Got questions about Fotogram? No problem!<br /><br />
+       Our support team is happy to assist you at <strong>support@fotogram.app</strong>.<br />
+       If possible, please check our FAQs before reaching out. Writing from the email address you used to sign up helps us assist you even faster.<br /><br /> We look forward to helping you!`,
   },
 
   faqsPreQuestions: {
