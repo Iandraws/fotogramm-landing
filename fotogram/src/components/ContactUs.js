@@ -233,27 +233,6 @@ const ContactUs = () => {
           >
             📧 support@fotogram.app
           </Typography>
-          <Typography
-            variant="body2"
-            sx={{ mb: 2 }}
-          >
-            Fotogram Technology <br />
-            VAT registered business No. 203588199 <br />
-            1004 Street Building No. 18 <br />
-            POB: 50255 <br />
-            1616102 Nazareth <br />
-            Israel
-          </Typography>
-          <Typography
-            variant="body2"
-            sx={{ mb: 2 }}
-          >
-            Fotogram Technology <br />
-            CEO Eilon Mario Netzer <br />
-            Bachstr. 145 <br />
-            22083 Hamburg <br />
-            Deutschland
-          </Typography>
         </Box>
       </Box>
     </Box>
