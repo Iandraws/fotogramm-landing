@@ -240,7 +240,7 @@ const HeroSection = () => {
           }}
         >
           <img
-            src="/assets/7.jpeg"
+            src="/assets/7.png"
             alt="Entwickelt von Profis für Profis"
             style={{
               width: '100%',
