@@ -199,7 +199,7 @@ const PricingTable = ({
     }
 
     if (plan.isBusiness === false) {
-      navigate(`/hub-register`);
+      navigate(`/join-hub`);
       return;
     }
 

@@ -18,6 +18,7 @@ import SignUpForm from './components/SignUpForm';
 import TermsAndConditionsDe from './components/TermsAndConditionsDe';
 import TermsAndConditionsEn from './components/TermsAndConditionsEn';
 import WhoWeAre from './components/WhoWeAre';
+import JoinHub from './components/JoinHub';
 
 if (window.location.hostname !== 'localhost') {
   LogRocket.init('edvm0h/fotogram-landing-page');
@@ -156,6 +157,10 @@ function App() {
           <Route
             path="/signup"
             element={<SignUpForm />}
+          />
+            <Route
+            path="/join-hub"
+            element={<JoinHub />}
           />
           <Route
             path="/faq"

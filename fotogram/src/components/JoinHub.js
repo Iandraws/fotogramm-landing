@@ -12,34 +12,28 @@ import {
 } from '@mui/material';
 import axios from 'axios';
 import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
-import PricingTable from './PricingTable';
-import translate from '../helpers/translate';
 import wording from '../constants/wording';
-const SignUpForm = () => {
+import translate from '../helpers/translate';
+import parse from 'html-react-parser';
+
+const JoinHub = () => {
   const lang =
     localStorage.getItem('lang') ||
     (navigator.language.startsWith('de') ? 'de' : 'en');
 
-  const location = useLocation();
-
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
+  const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
-  const [emailError, setEmailError] = useState(false);
-
-  const urlPlan = new URLSearchParams(location.search).get('plan');
-  const [plan, setPlan] = useState(
-    ['basic', 'advanced', 'premium'].includes(urlPlan) ? urlPlan : 'basic'
-  );
-  const [customSubdomain, setCustomSubdomain] = useState('');
+  const [password, setPassword] = useState('');
   const [agreedToTerms, setAgreedToTerms] = useState(false);
+
+  const [usernameError, setUsernameError] = useState(false);
+  const [emailError, setEmailError] = useState(false);
+  const [passwordError, setPasswordError] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [isError, setIsError] = useState(false);
 
-  const onPlanSelection = (plan) => {
-    setPlan(plan.package);
-  };
   const formStyle = {
     backgroundColor: '#fff',
     padding: '40px',
@@ -49,44 +43,71 @@ const SignUpForm = () => {
     margin: '50px auto',
   };
 
-  const handleEmailChange = (e) => {
-    const emailValue = e.target.value;
-    setEmail(emailValue);
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    setEmailError(!emailPattern.test(emailValue));
+  const validateUsername = (value) => {
+    const usernamePattern = /^[a-zA-Z0-9.]+$/; // Allows letters, numbers, and dots only
+    return usernamePattern.test(value);
   };
 
-  // Handle form submission
+  const validatePassword = (value) => {
+    const passwordPattern =
+      /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+    return passwordPattern.test(value);
+  };
+
+  const validateEmail = (value) => {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(value);
+  };
+
+  const handleUsernameChange = (e) => {
+    const value = e.target.value;
+    setUsername(value);
+    setUsernameError(!validateUsername(value));
+  };
+
+  const handleEmailChange = (e) => {
+    const value = e.target.value;
+    setEmail(value);
+    setEmailError(!validateEmail(value));
+  };
+
+  const handlePasswordChange = (e) => {
+    const value = e.target.value;
+    setPassword(value);
+    setPasswordError(!validatePassword(value));
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    if (emailError) {
+    if (usernameError || emailError || passwordError) {
       return;
     }
 
     const requestBody = {
-      company: customSubdomain,
-      email: email,
+      email,
+      username,
       displayName: `${firstName} ${lastName}`,
-      users: true,
-      media: true,
-      plan: plan,
+      password,
     };
 
     try {
       setIsSuccess(false);
       setIsError(false);
       const response = await axios.post(
-        'https://demo.parklolo.com/api/register-company',
+        'https://hub.parklolo.com/api/register',
         requestBody
       );
       if (response.status === 200) {
         setIsError(false);
         setIsSuccess(true);
+
         setFirstName('');
         setLastName('');
+        setUsername('');
         setEmail('');
-        setCustomSubdomain('');
+        setPassword('');
         setAgreedToTerms(false);
       } else {
         setIsError(true);
@@ -105,16 +126,16 @@ const SignUpForm = () => {
       >
         <Typography
           variant="h4"
-          sx={{ textAlign: 'center', mb: 2, fontWeight: 'bold' }}
+          sx={{ textAlign: 'center', mb: 2, fontWeight: 'bold', color: '#333' }}
         >
-          {translate(wording.justGetStarted)}
+          {translate(wording.join5000)}
         </Typography>
 
         <Typography
           variant="body1"
-          sx={{ textAlign: 'center', mb: 3, color: '#555' }}
+          sx={{ textAlign: 'center', mb: 3, color: '#666', lineHeight: 1.5 }}
         >
-          {translate(wording.oneStep)}{' '}
+          {parse(translate(wording.joinExperience))}
         </Typography>
 
         <Box sx={{ display: 'flex', gap: '10px' }}>
@@ -140,6 +161,19 @@ const SignUpForm = () => {
 
         <TextField
           fullWidth
+          label={translate(wording.username)}
+          variant="outlined"
+          value={username}
+          required
+          onChange={handleUsernameChange}
+          error={usernameError}
+          helperText={usernameError ? translate(wording.usernameError) : ''}
+          margin="normal"
+          sx={{ backgroundColor: '#f5f5f5' }}
+        />
+
+        <TextField
+          fullWidth
           label={translate(wording.email)}
           variant="outlined"
           value={email}
@@ -148,39 +182,21 @@ const SignUpForm = () => {
           error={emailError}
           helperText={emailError ? translate(wording.emailError) : ''}
           margin="normal"
-          sx={{ backgroundColor: '#f5f5f5', mb: 2 }}
+          sx={{ backgroundColor: '#f5f5f5' }}
         />
 
-        <Box
-          sx={{
-            display: 'flex',
-            alignItems: 'center',
-            backgroundColor: '#f5f5f5',
-            borderRadius: '5px',
-            padding: '16px',
-            mb: 2,
-            border: '1px solid rgba(0, 0, 0, 0.23)',
-          }}
-        >
-          <Typography sx={{ color: '#555' }}>https://</Typography>
-          <TextField
-            fullWidth
-            placeholder="your custom address"
-            variant="outlined"
-            required
-            value={customSubdomain}
-            onChange={(e) => setCustomSubdomain(e.target.value)}
-            margin="none"
-            sx={{
-              backgroundColor: '#f5f5f5',
-              ml: 1,
-              '& .MuiInputBase-input': {
-                padding: '4px',
-              },
-            }}
-          />
-          <Typography sx={{ color: '#555', ml: 1 }}>.fotogram.app</Typography>
-        </Box>
+        <TextField
+          fullWidth
+          label={translate(wording.password)}
+          variant="outlined"
+          value={password}
+          required
+          onChange={handlePasswordChange}
+          error={passwordError}
+          helperText={passwordError ? translate(wording.passwordError) : ''}
+          margin="normal"
+          sx={{ backgroundColor: '#f5f5f5', mb: 2 }}
+        />
 
         <FormGroup sx={{ mb: 2 }}>
           <FormControlLabel
@@ -237,14 +253,16 @@ const SignUpForm = () => {
           variant="contained"
           sx={{
             fontWeight: 'bold',
-            padding: '8px 24px',
+            padding: '12px 24px',
             textTransform: 'none',
             borderRadius: '24px',
             fontSize: '16px',
+            backgroundColor: '#0073e6',
+            ':hover': { backgroundColor: '#005bb5' },
           }}
           disabled={!agreedToTerms}
         >
-          Sign up for the {plan} now
+          {translate(wording.privateSignup)}
         </Button>
 
         {isSuccess && (
@@ -258,7 +276,7 @@ const SignUpForm = () => {
           >
             <CheckCircleIcon sx={{ color: 'green', fontSize: '2rem', mr: 1 }} />
             <Typography sx={{ color: 'green', fontWeight: 'bold' }}>
-              {translate(wording.createdSuccesfully)}
+              {translate(wording.privateWelcome)}
             </Typography>
           </Box>
         )}
@@ -274,21 +292,13 @@ const SignUpForm = () => {
           >
             <ErrorIcon sx={{ color: 'red', fontSize: '2rem', mr: 1 }} />
             <Typography sx={{ color: 'red', fontWeight: 'bold' }}>
-            {translate(wording.errorOccured)}
+              {translate(wording.errorOccured)}
             </Typography>
           </Box>
         )}
       </Box>
-      <PricingTable
-        choosePrivate={false}
-        showContent={false}
-        showButtons={false}
-        showCustom={false}
-        selected={plan}
-        onSelect={onPlanSelection}
-      ></PricingTable>
     </>
   );
 };
 
-export default SignUpForm;
+export default JoinHub;

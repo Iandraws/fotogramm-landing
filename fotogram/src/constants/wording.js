@@ -419,6 +419,70 @@ const wording = {
     de: 'Jetzt 30 Tage kostenlos testen',
     en: 'Start your free 30 Days trial',
   },
+  usernameError: {
+    en: 'Username can only contain letters, numbers, and dots',
+    de: 'Der Benutzername darf nur Buchstaben, Zahlen und Punkte enthalten',
+  },
+  username: {
+    en: 'Username',
+    de: 'Benutzername',
+  },
+  emailError: {
+    en: 'Please enter a valid email address',
+    de: 'Bitte geben Sie eine gültige E-Mail-Adresse ein',
+  },
+  firstName: {
+    en: 'First Name',
+    de: 'Vorname',
+  },
+  lastName: {
+    en: 'Last Name',
+    de: 'Nachname',
+  },
+  email: {
+    en: 'Email',
+    de: 'E-Mail',
+  },
+  createdSuccesfully: {
+    en: "You have successfully created your account. Check your email for the login link. Check your spam folder if you don't see it in your inbox.",
+    de: 'Sie haben Ihr Konto erfolgreich erstellt. Überprüfen Sie Ihre E-Mails auf den Anmeldelink. Schauen Sie in Ihrem Spam-Ordner nach, wenn Sie ihn nicht im Posteingang sehen.',
+  },
+  errorOccured: {
+    en: 'An error occurred while creating your account. Please contact us at support@fotogram.app.',
+    de: 'Beim Erstellen Ihres Kontos ist ein Fehler aufgetreten. Bitte kontaktieren Sie uns unter support@fotogram.app.',
+  },
+  oneStep: {
+    en: 'Our one-step sign-up only takes a few seconds and is completely free',
+    de: 'Unser Ein-Schritt-Anmeldeprozess dauert nur wenige Sekunden und ist komplett kostenlos',
+  },
+  justGetStarted: {
+    en: 'Just get started',
+    de: 'Einfach loslegen',
+  },
+  password: {
+    en: 'Password',
+    de: 'Passwort',
+  },
+  passwordError: {
+    en: 'Password must be at least 8 characters long, include an uppercase letter, a number, and a special character',
+    de: 'Das Passwort muss mindestens 8 Zeichen lang sein, einen Großbuchstaben, eine Zahl und ein Sonderzeichen enthalten',
+  },
+  privateWelcome: {
+    en: 'Welcome to the Hub! Check your email to confirm your registration',
+    de: 'Willkommen im Hub! Überprüfen Sie Ihre E-Mails, um Ihre Registrierung zu bestätigen',
+  },
+  privateSignup: {
+    en: 'Sign up for Private Package now',
+    de: 'Jetzt für das Private-Paket anmelden',
+  },
+  join5000: {
+    en: 'Join 5000+ Happy Hubbers!',
+    de: 'Schließen Sie sich über 5000+ glücklichen Hubbern an!',
+  },
+  joinExperience: {
+    en: 'Experience the ultimate photography journey with our <strong>Private Use</strong> package. Sign up today and unlock exclusive tools, stunning templates, and a vibrant community of creatives just like you',
+    de: 'Erleben Sie die ultimative Fotografie-Reise mit unserem Private Use Paket. Melden Sie sich noch heute an und entdecken Sie exklusive Tools, atemberaubende Vorlagen und eine lebendige Community von Kreativen wie Ihnen.',
+  },
   unlimitedClients: {
     de: 'Unbegrenzte Kunden',
     en: 'Unlimited Clients',
