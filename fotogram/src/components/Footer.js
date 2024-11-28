@@ -79,7 +79,7 @@ const Footer = () => {
               <Facebook fontSize="32px" />
             </IconButton>
             <IconButton
-              href="https://www.instagram.com/fotogram.de/"
+              href="https://www.instagram.com/fotogram_de/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
