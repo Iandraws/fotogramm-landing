@@ -467,9 +467,9 @@ const wording = {
     en: 'Password must be at least 8 characters long, include an uppercase letter, a number, and a special character',
     de: 'Das Passwort muss mindestens 8 Zeichen lang sein, einen Großbuchstaben, eine Zahl und ein Sonderzeichen enthalten',
   },
-  privateWelcome: {
-    en: 'Welcome to the Hub! Check your email to confirm your registration',
-    de: 'Willkommen im Hub! Überprüfen Sie Ihre E-Mails, um Ihre Registrierung zu bestätigen',
+  hubWelcome: {
+    en: 'Welcome to the Hub! Check your email for your password and further details.',
+    de: 'Willkommen im Hub! Überprüfen Sie Ihre E-Mails, um Ihr Passwort und weitere Details zu erhalten.',
   },
   privateSignup: {
     en: 'Sign up for Private Package now',
@@ -480,9 +480,15 @@ const wording = {
     de: 'Schließen Sie sich über 5000+ glücklichen Hubbern an!',
   },
   joinExperience: {
-    en: 'Experience the ultimate photography journey with our <strong>Private Use</strong> package. Sign up today and unlock exclusive tools, stunning templates, and a vibrant community of creatives just like you',
-    de: 'Erleben Sie die ultimative Fotografie-Reise mit unserem Private Use Paket. Melden Sie sich noch heute an und entdecken Sie exklusive Tools, atemberaubende Vorlagen und eine lebendige Community von Kreativen wie Ihnen.',
+    en: 'Experience the ultimate photography journey with our attractive package.',
+    de: 'Erleben Sie die ultimative Fotografie-Reise mit unserem attraktiven Paket',
   },
+
+  afterJoin: {
+    de: 'Nach der Anmeldung erhalten Sie eine E-Mail mit Ihrem Passwort und weiteren Details',
+    en: 'After signing up, you will receive an email with your password and further details',
+  },
+
   unlimitedClients: {
     de: 'Unbegrenzte Kunden',
     en: 'Unlimited Clients',

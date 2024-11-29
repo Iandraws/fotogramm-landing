@@ -25,12 +25,10 @@ const JoinHub = () => {
   const [lastName, setLastName] = useState('');
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
   const [agreedToTerms, setAgreedToTerms] = useState(false);
 
   const [usernameError, setUsernameError] = useState(false);
   const [emailError, setEmailError] = useState(false);
-  const [passwordError, setPasswordError] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [isError, setIsError] = useState(false);
 
@@ -46,13 +44,6 @@ const JoinHub = () => {
   const validateUsername = (value) => {
     const usernamePattern = /^[a-zA-Z0-9.]+$/; // Allows letters, numbers, and dots only
     return usernamePattern.test(value);
-  };
-
-  const validatePassword = (value) => {
-    const passwordPattern =
-      /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-
-    return passwordPattern.test(value);
   };
 
   const validateEmail = (value) => {
@@ -72,16 +63,10 @@ const JoinHub = () => {
     setEmailError(!validateEmail(value));
   };
 
-  const handlePasswordChange = (e) => {
-    const value = e.target.value;
-    setPassword(value);
-    setPasswordError(!validatePassword(value));
-  };
-
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    if (usernameError || emailError || passwordError) {
+    if (usernameError || emailError) {
       return;
     }
 
@@ -89,17 +74,16 @@ const JoinHub = () => {
       email,
       username,
       displayName: `${firstName} ${lastName}`,
-      password,
     };
 
     try {
       setIsSuccess(false);
       setIsError(false);
       const response = await axios.post(
-        'https://hub.parklolo.com/api/register',
+        'https://hub.parklolo.com/api/v1/register',
         requestBody
       );
-      if (response.status === 200) {
+      if (response.status === 204) {
         setIsError(false);
         setIsSuccess(true);
 
@@ -107,7 +91,6 @@ const JoinHub = () => {
         setLastName('');
         setUsername('');
         setEmail('');
-        setPassword('');
         setAgreedToTerms(false);
       } else {
         setIsError(true);
@@ -161,6 +144,19 @@ const JoinHub = () => {
 
         <TextField
           fullWidth
+          label={translate(wording.email)}
+          variant="outlined"
+          value={email}
+          required
+          onChange={handleEmailChange}
+          error={emailError}
+          helperText={emailError ? translate(wording.emailError) : ''}
+          margin="normal"
+          sx={{ backgroundColor: '#f5f5f5', mb: 0 }}
+        />
+
+        <TextField
+          fullWidth
           label={translate(wording.username)}
           variant="outlined"
           value={username}
@@ -170,32 +166,6 @@ const JoinHub = () => {
           helperText={usernameError ? translate(wording.usernameError) : ''}
           margin="normal"
           sx={{ backgroundColor: '#f5f5f5' }}
-        />
-
-        <TextField
-          fullWidth
-          label={translate(wording.email)}
-          variant="outlined"
-          value={email}
-          required
-          onChange={handleEmailChange}
-          error={emailError}
-          helperText={emailError ? translate(wording.emailError) : ''}
-          margin="normal"
-          sx={{ backgroundColor: '#f5f5f5' }}
-        />
-
-        <TextField
-          fullWidth
-          label={translate(wording.password)}
-          variant="outlined"
-          value={password}
-          required
-          onChange={handlePasswordChange}
-          error={passwordError}
-          helperText={passwordError ? translate(wording.passwordError) : ''}
-          margin="normal"
-          sx={{ backgroundColor: '#f5f5f5', mb: 2 }}
         />
 
         <FormGroup sx={{ mb: 2 }}>
@@ -211,15 +181,19 @@ const JoinHub = () => {
                 <Typography sx={{ color: '#555' }}>
                   I agree to the{' '}
                   <Link
-                    href="#"
+                    href={'/' + lang + '/terms-and-conditions'}
                     underline="hover"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     Terms & Conditions
                   </Link>{' '}
                   and{' '}
                   <Link
-                    href="#"
+                    href={'/' + lang + '/privacy-policy'}
                     underline="hover"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     Privacy Policy
                   </Link>{' '}
@@ -229,15 +203,19 @@ const JoinHub = () => {
                 <Typography sx={{ color: '#555' }}>
                   Ich stimme den{' '}
                   <Link
-                    href="#"
+                    href={'/' + lang + '/terms-and-conditions'}
                     underline="hover"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     Allgemeinen Geschäftsbedingungen
                   </Link>{' '}
                   und{' '}
                   <Link
-                    href="#"
+                    href={'/' + lang + '/privacy-policy'}
                     underline="hover"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     Datenschutzbestimmungen
                   </Link>{' '}
@@ -265,6 +243,22 @@ const JoinHub = () => {
           {translate(wording.privateSignup)}
         </Button>
 
+        {!isSuccess && (
+          <Typography
+            variant="body1"
+            sx={{
+              textAlign: 'left',
+              mt: 3,
+              lineHeight: 1.5,
+              fontWeight: 700,
+              fontSize: '12px',
+              mb: 0,
+            }}
+          >
+            {translate(wording.afterJoin)}
+          </Typography>
+        )}
+
         {isSuccess && (
           <Box
             sx={{
@@ -276,7 +270,7 @@ const JoinHub = () => {
           >
             <CheckCircleIcon sx={{ color: 'green', fontSize: '2rem', mr: 1 }} />
             <Typography sx={{ color: 'green', fontWeight: 'bold' }}>
-              {translate(wording.privateWelcome)}
+              {translate(wording.hubWelcome)}
             </Typography>
           </Box>
         )}

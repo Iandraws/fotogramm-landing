@@ -124,17 +124,23 @@ const Footer = () => {
           <Link
             href={'/' + lang + '/privacy-policy'}
             sx={{ textDecoration: 'none', color: '#6c757d', textAlign: 'left' }}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             {translate(wording.privacyPolicy)}
           </Link>
           <Link
             href={'/' + lang + '/terms-and-conditions'}
             sx={{ textDecoration: 'none', color: '#6c757d', textAlign: 'left' }}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             {translate(wording.agb)}
           </Link>
           <Link
             href={'/' + lang + '/imprint'}
+            target="_blank"
+            rel="noopener noreferrer"
             sx={{ textDecoration: 'none', color: '#6c757d', textAlign: 'left' }}
           >
             {translate(wording.imprint)}

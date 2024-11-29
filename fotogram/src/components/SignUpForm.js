@@ -195,14 +195,18 @@ const SignUpForm = () => {
                 <Typography sx={{ color: '#555' }}>
                   I agree to the{' '}
                   <Link
-                    href="#"
+                    href={'/' + lang + '/terms-and-conditions'}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     underline="hover"
                   >
                     Terms & Conditions
                   </Link>{' '}
                   and{' '}
                   <Link
-                    href="#"
+                    href={'/' + lang + '/privacy-policy'}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     underline="hover"
                   >
                     Privacy Policy
@@ -213,14 +217,18 @@ const SignUpForm = () => {
                 <Typography sx={{ color: '#555' }}>
                   Ich stimme den{' '}
                   <Link
-                    href="#"
+                    href={'/' + lang + '/terms-and-conditions'}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     underline="hover"
                   >
                     Allgemeinen Geschäftsbedingungen
                   </Link>{' '}
                   und{' '}
                   <Link
-                    href="#"
+                    href={'/' + lang + '/privacy-policy'}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     underline="hover"
                   >
                     Datenschutzbestimmungen
@@ -274,7 +282,7 @@ const SignUpForm = () => {
           >
             <ErrorIcon sx={{ color: 'red', fontSize: '2rem', mr: 1 }} />
             <Typography sx={{ color: 'red', fontWeight: 'bold' }}>
-            {translate(wording.errorOccured)}
+              {translate(wording.errorOccured)}
             </Typography>
           </Box>
         )}
