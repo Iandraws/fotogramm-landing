@@ -449,10 +449,12 @@ const wording = {
     en: 'Email',
     de: 'E-Mail',
   },
+  
   createdSuccesfully: {
-    en: "You have successfully created your account. Check your email for the login link. Check your spam folder if you don't see it in your inbox.",
-    de: 'Sie haben Ihr Konto erfolgreich erstellt. Überprüfen Sie Ihre E-Mails auf den Anmeldelink. Schauen Sie in Ihrem Spam-Ordner nach, wenn Sie ihn nicht im Posteingang sehen.',
+    en: "Your account has been successfully created. Check your inbox for the login link.",
+    de: "Dein Konto wurde erfolgreich erstellt. Prüfe deinen Posteingang für den Anmeldelink.",
   },
+
   errorOccured: {
     en: 'An error occurred while creating your account. Please contact us at support@fotogram.app.',
     de: 'Beim Erstellen Ihres Kontos ist ein Fehler aufgetreten. Bitte kontaktieren Sie uns unter support@fotogram.app.',
