@@ -26,7 +26,7 @@ const plans = [
     title: wording.basis,
     package: 'basic',
     monthlyPrice: (0).toFixed(2),
-    yearlyPrice: (0 * 12 * 0.85).toFixed(2), 
+    yearlyPrice: (0 * 12 * 0.85).toFixed(2),
     description: wording.basicDesc,
     features: [
       wording.comprehensiveDashboard,
@@ -57,7 +57,7 @@ const plans = [
     ],
     buttonText: wording.freeTrial,
     hints: {
-      [wording.watermarkFeature.en]: wording.watermarkHint, 
+      [wording.autoLogoOnImages.en]: wording.watermarkHint,
     },
   },
   {
@@ -97,7 +97,7 @@ const plans = [
     buttonText: wording.freeTrial,
     hints: {
       [wording.storage500GB.en]: wording.storage500GBBHint,
-      [wording.watermarkFeature.en]: wording.watermarkHint,
+      [wording.autoLogoOnImages.en]: wording.watermarkHint,
     },
   },
   {
@@ -135,11 +135,10 @@ const plans = [
     unavailableFeatures: [],
     buttonText: wording.freeTrial,
     hints: {
-      
       [wording.storage1TB.en]: wording.storage1TBHint,
       [wording.teamMembers3.en]: wording.teamMembers3Hint,
       [wording.videosAndReels.en]: wording.videosAndReelsHint,
-      [wording.watermarkFeature.en]: wording.watermarkHint,
+      [wording.autoLogoOnImages.en]: wording.watermarkHint,
     },
   },
   {
