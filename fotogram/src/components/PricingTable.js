@@ -57,7 +57,7 @@ const plans = [
     ],
     buttonText: wording.freeTrial,
     hints: {
-      [wording.autoLogoOnImages.en]: wording.watermarkHint,
+      [wording.autoLogoOnImages.en]: wording.autoLogokHint,
     },
   },
   {
@@ -97,7 +97,7 @@ const plans = [
     buttonText: wording.freeTrial,
     hints: {
       [wording.storage500GB.en]: wording.storage500GBBHint,
-      [wording.autoLogoOnImages.en]: wording.watermarkHint,
+      [wording.autoLogoOnImages.en]: wording.autoLogokHint,
     },
   },
   {
@@ -138,7 +138,7 @@ const plans = [
       [wording.storage1TB.en]: wording.storage1TBHint,
       [wording.teamMembers3.en]: wording.teamMembers3Hint,
       [wording.videosAndReels.en]: wording.videosAndReelsHint,
-      [wording.autoLogoOnImages.en]: wording.watermarkHint,
+      [wording.autoLogoOnImages.en]: wording.autoLogokHint,
     },
   },
   {

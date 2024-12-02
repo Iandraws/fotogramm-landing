@@ -39,6 +39,12 @@ const wording = {
     de: 'Wasserzeichenschutz',
     en: 'Watermark Protection',
   },
+
+  autoLogokHint: { 
+    de: 'Schick uns dein Logo per E-Mail, und wir platzieren es in deinem Bereich.',
+    en: 'Send us your logo via email, and we will place it.',
+    },
+
   automateWorkflow: {
     de: 'Automatisieren Sie Workflows und sparen Sie Zeit',
     en: 'Automate workflows and save time',
@@ -505,16 +511,11 @@ const wording = {
     de: 'Begrenzt auf 50 MB pro Video für unbegrenzte Anzahl an Videos. Du kannst noch unbegrenzt 3rd Party Links für Videos einbinden, wie z. B. Google Drive, Dropbox, Vimeo, YouTube, Mega usw.',
     en: 'Limited to 50MB per video for an unlimited number of videos. You can add also unlimited third-party video links in the app, such as Google Drive, Dropbox, Vimeo, YouTube, Mega, etc.',
   },
-  
+
   watermarkFeature: {
     de: 'Personalisierte Wasserzeichen',
     en: 'Personalized Watermarks',
   },
-
-  watermarkHint: {
-    de: 'Senden Sie uns Ihr Logo per E-Mail zu, und wir platzieren es in Ihrem Bereich.',
-    en: 'Send us your logo via email, and we will place it.',
-    },
 
   watermarkFeatureDescription: {
     de: 'Mit Fotogram bleibt Ihre Marke stets präsent. Das Logo des Fotografen wird automatisch auf allen hochgeladenen Bildern als Wasserzeichen platziert - ohne die Notwendigkeit externer Software. Diese Funktion schützt Ihre Bildrechte, stärkt Ihr Branding und spart Ihnen Zeit bei der Nachbearbeitung. So präsentieren Sie Ihre Arbeit professionell und einheitlich, während Sie gleichzeitig sicherstellen, dass Ihr Logo immer mit Ihren Bildern verbunden ist.',
