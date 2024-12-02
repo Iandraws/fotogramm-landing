@@ -32,7 +32,7 @@ const ContactUs = () => {
     setSuccessMessage('');
 
     try {
-      const response = await fetch('https://demo.fotogram.app/api/message', {
+      const response = await fetch('https://demo.parklolo.app/api/message', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
