@@ -57,7 +57,7 @@ const plans = [
     ],
     buttonText: wording.freeTrial,
     hints: {
-
+      [wording.watermarkFeature.en]: wording.watermarkHint, 
     },
   },
   {
@@ -97,8 +97,7 @@ const plans = [
     buttonText: wording.freeTrial,
     hints: {
       [wording.storage500GB.en]: wording.storage500GBBHint,
-
-
+      [wording.watermarkFeature.en]: wording.watermarkHint,
     },
   },
   {
@@ -140,6 +139,7 @@ const plans = [
       [wording.storage1TB.en]: wording.storage1TBHint,
       [wording.teamMembers3.en]: wording.teamMembers3Hint,
       [wording.videosAndReels.en]: wording.videosAndReelsHint,
+      [wording.watermarkFeature.en]: wording.watermarkHint,
     },
   },
   {
