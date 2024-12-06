@@ -189,6 +189,12 @@ const wording = {
     de: 'Ausgewählte Bilder herunterladen',
     en: 'Download Selected Images',
   },
+
+  month: {
+    de: 'Monat',
+    en: 'Month',
+  },
+
   faq: {
     de: 'FAQs',
     en: 'FAQs',
@@ -376,14 +382,24 @@ const wording = {
   storage1TBHint: {
     de: 'Falls du mehr brauchst, kostet jeder 1 TB nur 34,99 € monatlich',
     en: 'Need more? Each additional 1 TB is only € 34,99 per month',
+
   },
+  storage2TB: {
+    de: '2TB Speicherplatz',
+    en: '2TB Storage',
+  },
+  storage2TBHint: {
+    de: 'Falls du mehr brauchst, kannst du deinen aktuellen Plan weiter nutzen und nur den Speicherplatz erweitern. Jeder 1 TB kostet nur 34,99 € monatlich. Alternativ kannst du jederzeit auf den Premium-Plan wechseln.',
+    en: 'Need more? You can keep your current plan and just expand your storage. Each additional 1 TB is only € 34,99 per month. Alternatively, you can switch to the Premium plan at any time.',
+  },
+
   storage5GB: {
     de: '5GB Speicherplatz',
     en: '5GB Storage',
   },
   storage20GB: {
-    de: '20GB Speicherplatz',
-    en: '20GB Storage',
+    de: '50GB Speicherplatz',
+    en: '50GB Storage',
   },
   storage500GB: {
     de: '500GB Speicherplatz',

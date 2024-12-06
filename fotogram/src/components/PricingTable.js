@@ -111,7 +111,7 @@ const plans = [
       wording.comprehensiveDashboard,
       wording.unlimitedEvents,
       wording.unlimitedClients,
-      wording.storage1TB,
+      wording.storage2TB,
       wording.teamMembers3,
       wording.crm,
       wording.imageTagging,
@@ -135,7 +135,7 @@ const plans = [
     unavailableFeatures: [],
     buttonText: wording.freeTrial,
     hints: {
-      [wording.storage1TB.en]: wording.storage1TBHint,
+      [wording.storage2TB.en]: wording.storage2TBHint,
       [wording.teamMembers3.en]: wording.teamMembers3Hint,
       [wording.videosAndReels.en]: wording.videosAndReelsHint,
       [wording.autoLogoOnImages.en]: wording.autoLogokHint,
