@@ -232,6 +232,16 @@ const ContactUs = () => {
             sx={{ mb: 2, fontWeight: 'bold' }}
           >
             📧 support@fotogram.app
+
+            Whatsapp  +49 (0) 157 3428 3827
+            
+            Support +49 (0) 157 3428 3829 
+
+            Sales +49 (0) 40 4666 5481
+
+            CEO +49 (0) 40 4666 5552
+
+          
           </Typography>
         </Box>
       </Box>
