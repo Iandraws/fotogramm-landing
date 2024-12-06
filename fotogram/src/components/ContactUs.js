@@ -222,7 +222,7 @@ const ContactUs = () => {
         <Box
           sx={{
             flex: 1,
-            textAlign: 'center',
+            textAlign: 'left',
             color: '#555',
             padding: { xs: '16px', md: '40px' },
           }}
@@ -231,17 +231,31 @@ const ContactUs = () => {
             variant="body1"
             sx={{ mb: 2, fontWeight: 'bold' }}
           >
-            📧 support@fotogram.app
-
-            Whatsapp  +49 (0) 157 3428 3827
-            
-            Support +49 (0) 157 3428 3829 
-
+            E-Mail support@fotogram.app
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{ mb: 2, fontWeight: 'bold' }}
+          >
+            WhatsApp &nbsp;&nbsp;&nbsp; +49 (0) 157 3428 3827
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{ mb: 2, fontWeight: 'bold' }}
+          >
+            Support +49 (0) 157 3428 3829
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{ mb: 2, fontWeight: 'bold' }}
+          >
             Sales +49 (0) 40 4666 5481
-
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{ mb: 2, fontWeight: 'bold' }}
+          >
             CEO +49 (0) 40 4666 5552
-
-          
           </Typography>
         </Box>
       </Box>

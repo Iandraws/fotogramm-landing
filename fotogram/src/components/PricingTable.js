@@ -19,6 +19,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import wording from '../constants/wording';
 import translate from '../helpers/translate';
+import parse from 'html-react-parser';
 
 const plans = [
   {
@@ -57,7 +58,7 @@ const plans = [
     ],
     buttonText: wording.freeTrial,
     hints: {
-      [wording.autoLogoOnImages.en]: wording.autoLogokHint,
+      [wording.autoLogoOnImages.en]: wording.autoLogoHint,
     },
   },
   {
@@ -97,7 +98,7 @@ const plans = [
     buttonText: wording.freeTrial,
     hints: {
       [wording.storage500GB.en]: wording.storage500GBBHint,
-      [wording.autoLogoOnImages.en]: wording.autoLogokHint,
+      [wording.autoLogoOnImages.en]: wording.autoLogoHint,
     },
   },
   {
@@ -138,7 +139,7 @@ const plans = [
       [wording.storage2TB.en]: wording.storage2TBHint,
       [wording.teamMembers3.en]: wording.teamMembers3Hint,
       [wording.videosAndReels.en]: wording.videosAndReelsHint,
-      [wording.autoLogoOnImages.en]: wording.autoLogokHint,
+      [wording.autoLogoOnImages.en]: wording.autoLogoHint,
     },
   },
   {
@@ -297,7 +298,7 @@ const PricingTable = ({
           variant="body1"
           sx={{ color: isYearly ? '#1976d2' : '#757575', fontWeight: 'bold' }}
         >
-          Jährlich bezahlen und <br /> 15% sparen
+         {} Jährlich bezahlen und <br /> 15% sparen
         </Typography>
       </Box>
       <Box
@@ -378,8 +379,9 @@ const PricingTable = ({
                     }}
                   >
                     {isYearly
-                      ? `${(plan.yearlyPrice / 12).toFixed(2)} € / Monat`
-                      : `${plan.monthlyPrice} € / Monat`}
+                      ? `${(plan.yearlyPrice / 12).toFixed(2)} €`
+                      : `${plan.monthlyPrice} € /`}{' '}
+                    {translate(wording.month)}
                   </Typography>
                   {isYearly && (
                     <Typography

@@ -40,7 +40,7 @@ const wording = {
     en: 'Watermark Protection',
   },
 
-  autoLogokHint: { 
+  autoLogoHint: { 
     de: 'Schick uns dein Logo per E-Mail, und wir platzieren es in deinem Bereich.',
     en: 'Send us your logo via email, and we will place it.',
     },
