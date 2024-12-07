@@ -195,6 +195,37 @@ const wording = {
     en: 'Month',
   },
 
+  year: {
+    de: 'Jahr',
+    en: 'Year',
+  },
+
+  vat: {
+    de: 'zzgl. MwSt.',
+    en: 'plus VAT',
+  },
+
+  private:{
+    de: 'Privat',
+    en: 'Personal',
+  },
+
+  business:{
+    de: 'Geschäftlich',
+    en: 'Business',
+  },
+
+  monthlyPayment:{
+    de: 'Monatlich bezahlen und <br /> flexibel bleiben ',
+    en: 'Pay Monthly and <br /> Stay Flexible',
+  },
+
+  yearlyPayment:{
+    de: 'Jährlich bezahlen und <br /> 15% sparen',
+    en: 'Pay Annually and <br /> Save 15%',
+  },
+
+
   faq: {
     de: 'FAQs',
     en: 'FAQs',

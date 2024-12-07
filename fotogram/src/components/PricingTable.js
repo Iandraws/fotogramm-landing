@@ -250,7 +250,8 @@ const PricingTable = ({
               }}
               onClick={() => setIsBusiness(false)}
             >
-              Privat
+              {' '}
+              {translate(wording.private)}
             </ToggleButton>
             <ToggleButton
               value="center"
@@ -262,7 +263,8 @@ const PricingTable = ({
               }}
               onClick={() => setIsBusiness(true)}
             >
-              Geschäftlich
+              {' '}
+              {translate(wording.business)}
             </ToggleButton>
           </ToggleButtonGroup>
         </Box>
@@ -288,7 +290,12 @@ const PricingTable = ({
             fontWeight: 'bold',
           }}
         >
-          Monatlich bezahlen und <br /> flexibel bleiben
+          
+              {' '}
+
+              {parse(translate(wording.monthlyPayment))}
+
+
         </Typography>
         <Switch
           checked={isYearly}
@@ -298,7 +305,11 @@ const PricingTable = ({
           variant="body1"
           sx={{ color: isYearly ? '#1976d2' : '#757575', fontWeight: 'bold' }}
         >
-         {} Jährlich bezahlen und <br /> 15% sparen
+
+              {' '}
+
+              {parse(translate(wording.yearlyPayment))}
+
         </Typography>
       </Box>
       <Box
@@ -392,7 +403,8 @@ const PricingTable = ({
                         marginBottom: '10px',
                       }}
                     >
-                      {`${plan.yearlyPrice} € / Jahr`}
+                      {`${plan.yearlyPrice} € /`} {' '}
+                      {translate(wording.year)}
                     </Typography>
                   )}
                   <Typography
@@ -403,7 +415,8 @@ const PricingTable = ({
                       marginBottom: '10px',
                     }}
                   >
-                    zzgl. MwSt.
+                    {' '}
+                    {translate(wording.vat)}
                   </Typography>
                 </>
               }
