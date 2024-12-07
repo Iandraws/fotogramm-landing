@@ -243,19 +243,7 @@ const ContactUs = () => {
             variant="body1"
             sx={{ mb: 2, fontWeight: 'bold' }}
           >
-            Support: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +49 (0) 157 3428 3829
-          </Typography>
-          <Typography
-            variant="body1"
-            sx={{ mb: 2, fontWeight: 'bold' }}
-          >
-            Sales: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +49 (0) 40 4666 5481
-          </Typography>
-          <Typography
-            variant="body1"
-            sx={{ mb: 2, fontWeight: 'bold' }}
-          >
-            CEO: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +49 (0) 40 4666 5552
+            Support: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +49 (0) 40 4666 5552
           </Typography>
         </Box>
       </Box>
