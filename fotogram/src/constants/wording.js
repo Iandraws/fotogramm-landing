@@ -40,10 +40,10 @@ const wording = {
     en: 'Watermark Protection',
   },
 
-  autoLogoHint: { 
+  autoLogoHint: {
     de: 'Schick uns dein Logo per E-Mail, und wir platzieren es in deinem Bereich.',
     en: 'Send us your logo via email, and we will place it.',
-    },
+  },
 
   automateWorkflow: {
     de: 'Automatisieren Sie Workflows und sparen Sie Zeit',
@@ -205,26 +205,25 @@ const wording = {
     en: 'plus VAT',
   },
 
-  private:{
+  private: {
     de: 'Privat',
     en: 'Personal',
   },
 
-  business:{
+  business: {
     de: 'Geschäftlich',
     en: 'Business',
   },
 
-  monthlyPayment:{
+  monthlyPayment: {
     de: 'Monatlich bezahlen und <br /> flexibel bleiben ',
     en: 'Pay Monthly and <br /> Stay Flexible',
   },
 
-  yearlyPayment:{
+  yearlyPayment: {
     de: 'Jährlich bezahlen und <br /> 15% sparen',
     en: 'Pay Annually and <br /> Save 15%',
   },
-
 
   faq: {
     de: 'FAQs',
@@ -413,7 +412,6 @@ const wording = {
   storage1TBHint: {
     de: 'Falls du mehr brauchst, kostet jeder 1 TB nur 34,99 € monatlich',
     en: 'Need more? Each additional 1 TB is only € 34,99 per month',
-
   },
   storage2TB: {
     de: '2TB Speicherplatz',
@@ -496,10 +494,10 @@ const wording = {
     en: 'Email',
     de: 'E-Mail',
   },
-  
+
   createdSuccesfully: {
-    en: "Your account has been successfully created. Check your inbox for the login link.",
-    de: "Dein Konto wurde erfolgreich erstellt. Prüfe deinen Posteingang für den Anmeldelink.",
+    en: 'Your account has been successfully created. Check your inbox for the login link.',
+    de: 'Dein Konto wurde erfolgreich erstellt. Prüfe deinen Posteingang für den Anmeldelink.',
   },
 
   errorOccured: {
@@ -691,7 +689,6 @@ const wording = {
     en: 'Our Vision',
   },
 
-
   whoAreWeContent: {
     de: `Fotogram für Softwarelösungen ist nicht nur ein Produkt – es ist die Vision eines Teams von <br /><br />
          Experten, die sich der Weiterentwicklung der Fotografiebranche verschrieben haben. <br /><br />
@@ -706,7 +703,6 @@ const wording = {
        needs of photographers and studios. Our expertise includes programming, web and app design, <br />
        digital marketing, and the management of innovative software products. `,
   },
-
 
   ourGoalsContent: {
     de: `1. Innovation in der Fotografie- und Medienbranche: Wir treiben die Digitalisierung und <br />
@@ -725,7 +721,6 @@ const wording = {
          connections and strengthen business success.<br /><br />
          4. Customized Solutions: Our platform is professional, flexible, and adaptable to the specific <br />workflows of every photographer or studio.`,
   },
-
 
   ourVisionContent: {
     de: `Wir glauben, dass Technologie und Kreativität Hand in Hand gehen. Unsere Mission ist es, <br />
@@ -748,7 +743,7 @@ const wording = {
   teamLeadQuote: {
     de: `<q>Fotografie ist nicht nur Kunst, sondern eine Form, Geschichten zu erzählen. Mit Fotogram <br /> 
     möchten wir jedem Fotografen die Werkzeuge bieten, diese Geschichten auf innovative Weise zu präsentieren.</q>`,
-    en: `<q>Photography is not just art; it’s a way of telling stories. With Fotogram, we aim to provide every <br /> 
+    en: `<q>Photography is not just art; it\'s a way of telling stories. With Fotogram, we aim to provide every <br /> 
     photographer with the tools to present these stories in innovative ways.</q>`,
   },
 
@@ -764,8 +759,6 @@ const wording = {
     en: `Fotogram is constantly evolving. We are always working on new features and remain open to the <br /> 
     ideas and needs of our clients. Have a specific requirement or a new challenge? We’re ready to tackle it with you.`,
   },
-
-  
 };
 
 export default wording;

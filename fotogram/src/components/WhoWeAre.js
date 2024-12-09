@@ -34,7 +34,7 @@ const WhoWeAre = () => {
           alt="Fotogram Mario Netzer"
           sx={{
             height: { xs: '300px', md: '300px', lg: '300px' },
-            borderRadius: '32px',
+            borderRadius: '24px',
           }}
         />
         <Box>
