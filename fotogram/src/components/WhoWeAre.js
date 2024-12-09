@@ -21,7 +21,7 @@ const WhoWeAre = () => {
         spezialisiert auf Programmierung, Web- und App-Design, digitales
         Marketing und das Management von Softwareprodukten.
       </Typography>
-
+      
       <Typography
         variant="h5"
         sx={{ fontWeight: 'bold', mb: 2 }}
