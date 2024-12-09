@@ -1,5 +1,8 @@
 import React from 'react';
 import { Box, Typography, List, ListItem, ListItemText } from '@mui/material';
+import wording from '../constants/wording';
+import translate from '../helpers/translate';
+import parse from 'html-react-parser';
 
 const WhoWeAre = () => {
   return (
@@ -8,50 +11,104 @@ const WhoWeAre = () => {
         variant="h4"
         sx={{ fontWeight: 'bold', mb: 4 }}
       >
-        Wer wir sind?
+        {translate(wording.whoAreWeTitel)}
       </Typography>
       <Typography
         variant="body1"
         sx={{ maxWidth: '800px', margin: '0 auto', mb: 4, textAlign: 'left' }}
       >
-        Fotogram für Softwarelösungen ist ein Team aus Experten mit vielfältiger
-        Erfahrung in den Bereichen Fotografie, Medienproduktion und Technologie.
-        Gemeinsam entwickeln wir maßgeschneiderte Lösungen, die speziell für die
-        Bedürfnisse von Fotografen und Studios ausgelegt sind. Unser Team ist
-        spezialisiert auf Programmierung, Web- und App-Design, digitales
-        Marketing und das Management von Softwareprodukten.
+        {parse(translate(wording.whoAreWeContent))}
       </Typography>
-      
+
+      <Box
+        sx={{
+          display: 'flex',
+          gap: '24px',
+          maxWidth: '800px',
+          margin: '0 auto',
+        }}
+      >
+        <Box
+          component="img"
+          src="/assets/Mario Netzer - Fotogram.png"
+          alt="Fotogram Mario Netzer"
+          sx={{
+            height: { xs: '300px', md: '300px', lg: '300px' },
+            borderRadius: '32px',
+          }}
+        />
+        <Box>
+          <Typography
+            sx={{
+              mb: 4,
+              textAlign: 'left',
+            }}
+          >
+            {parse(translate(wording.imageTitelTeamLead))}
+          </Typography>
+          <Typography
+            sx={{
+              mb: 4,
+              textAlign: 'left',
+              fontStyle: 'italic',
+            }}
+          >
+            {parse(translate(wording.teamLeadQuote))}
+          </Typography>
+        </Box>
+      </Box>
       <Typography
         variant="h5"
-        sx={{ fontWeight: 'bold', mb: 2 }}
+        sx={{ fontWeight: 'bold', mt: 4, mb: 2 }}
       >
-        Unsere Ziele:
+        {translate(wording.ourGoalsTitel)}
       </Typography>
-      <List sx={{ maxWidth: '800px', margin: '0 auto', textAlign: 'left' }}>
-        <ListItem>
-          <ListItemText primary="1. Die Weiterentwicklung und Verbesserung der Arbeit in der Fotografie- und Medienbranche." />
-        </ListItem>
-        <ListItem>
-          <ListItemText primary="2. Erleichterung der Arbeitsprozesse und Steigerung der Produktivität für Fotografen und Studioinhaber durch Zeit- und Kostenersparnis." />
-        </ListItem>
-        <ListItem>
-          <ListItemText primary="3. Stärkung der Geschäftsbeziehungen von Fotografen durch positive Kundenerfahrungen und Eindrücke." />
-        </ListItem>
-        <ListItem>
-          <ListItemText primary="4. Bereitstellung einer professionellen und organisierten Plattform zur Verwaltung von Workflows und Kundendetails, individuell angepasst an die Bedürfnisse jedes Fotografen oder Studios." />
-        </ListItem>
-      </List>
+
+      <Typography
+        variant="body1"
+        sx={{
+          maxWidth: '800px',
+          margin: '0 auto',
+          mt: 4,
+          mb: 4,
+          textAlign: 'left',
+        }}
+      >
+        {parse(translate(wording.ourGoalsContent))}
+      </Typography>
+
+      <Typography
+        variant="h5"
+        sx={{ fontWeight: 'bold', mb: 4 }}
+      >
+        {translate(wording.ourVisionTitel)}
+      </Typography>
+
+      <Typography
+        variant="body1"
+        sx={{
+          maxWidth: '800px',
+          margin: '0 auto',
+          mt: 4,
+          mb: 4,
+          textAlign: 'left',
+        }}
+      >
+        {parse(translate(wording.ourVisionContent))}
+      </Typography>
+
+      <Typography
+        variant="h5"
+        sx={{ fontWeight: 'bold', mb: 4 }}
+      >
+        {translate(wording.newIdeasTitel)}
+      </Typography>
 
       <Typography
         variant="body1"
         sx={{ maxWidth: '800px', margin: '0 auto', mt: 4, textAlign: 'left' }}
       >
-        Wir arbeiten daran, mit den neuesten technologischen Innovationen
-        Schritt zu halten und sind überzeugt, dass unsere Anwendungen und
-        Funktionen für Fotografen und Studios ein entscheidender Faktor für den
-        Erfolg sind. Sie helfen, sich von der Konkurrenz abzuheben und den
-        eigenen Stil eindrucksvoll zu präsentieren.
+        {parse(translate(wording.newIdeasContent))}
       </Typography>
     </Box>
   );

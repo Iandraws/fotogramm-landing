@@ -710,21 +710,20 @@ const wording = {
 
   ourGoalsContent: {
     de: `1. Innovation in der Fotografie- und Medienbranche: Wir treiben die Digitalisierung und <br />
-         Optimierung von Arbeitsabläufen aktiv voran. <br />
+         Optimierung von Arbeitsabläufen aktiv voran. <br /><br />
          2. Effizienz für Fotografen: Mit Fotogram können Fotografen Zeit und Kosten sparen, während sie <br />
-         gleichzeitig ihre Produktivität steigern. <br />
-         3. Stärkung von Kundenbeziehungen: Positive Kundenerfahrungen schaffen nachhaltige Bindungen und stärken den geschäftlichen Erfolg. <br />
+         gleichzeitig ihre Produktivität steigern. <br /><br />
+         3. Stärkung von Kundenbeziehungen: Positive Kundenerfahrungen schaffen nachhaltige Bindungen und stärken den geschäftlichen Erfolg. <br /><br />
          4. Individuelle Anpassung: Unsere Plattform ist professionell, flexibel und an die spezifischen <br />
-         Workflows jedes Fotografen oder Studios anpassbar. `,
+         Workflows jedes Fotografen oder Studios anpassbar.`,
 
     en: `1. Innovation in Photography and Media: We actively drive digital transformation and optimize <br />
-         workflows in the photography industry. <br />
+         workflows in the photography industry. <br /><br />
          2. Efficiency for Photographers: Fotogram helps photographers save time and costs while <br />
-         enhancing their productivity. <br />
+         enhancing their productivity. <br /><br />
          3. Strengthening Customer Relationships: Positive client experiences foster long-term <br />
-         connections and strengthen business success.<br />
-         4. Customized Solutions: Our platform is professional, flexible, and adaptable to the specific <br />
-         workflows of every photographer or studio. `,
+         connections and strengthen business success.<br /><br />
+         4. Customized Solutions: Our platform is professional, flexible, and adaptable to the specific <br />workflows of every photographer or studio.`,
   },
 
 
@@ -733,24 +732,24 @@ const wording = {
         Fotografen dabei zu unterstützen, ihre Arbeit auf höchstem Niveau zu präsentieren und dabei <br />
         innovativ und flexibel zu bleiben. Wir sind offen für neue Herausforderungen und freuen uns darauf, <br />
         gemeinsam mit unseren Kunden einzigartige Funktionen und Lösungen zu entwickeln, die perfekt <br />
-        auf ihre Bedürfnisse abgestimmt sind. `,
+        auf ihre Bedürfnisse abgestimmt sind.`,
 
     en: `We believe that technology and creativity go hand in hand. Our mission is to empower <br />
         photographers to showcase their work at the highest level while staying innovative and flexible.  <br />
        We are open to new challenges and excited to collaborate with our clients to develop unique features <br />
-       and solutions tailored to their needs. `,
+       and solutions tailored to their needs.`,
   },
 
   imageTitelTeamLead: {
-    de: 'Eilon Mario Netzer, Teamleiter bei Fotogram – die Vision hinter der Plattform.',
-    en: 'Eilon Mario Netzer, Team Leader at Fotogram – the vision behind the platform.',
+    de: 'Eilon Mario Netzer, Teamleiter bei Fotogram<br />- die Vision hinter der Plattform.',
+    en: 'Eilon Mario Netzer, Team Lead at Fotogram<br />- the vision behind the platform.',
   },
 
   teamLeadQuote: {
-    de: `Fotografie ist nicht nur Kunst, sondern eine Form, Geschichten zu erzählen. Mit Fotogram <br /> 
-    möchten wir jedem Fotografen die Werkzeuge bieten, diese Geschichten auf innovative Weise zu präsentieren. `,
-    en: `Photography is not just art; it’s a way of telling stories. With Fotogram, we aim to provide every <br /> 
-    photographer with the tools to present these stories in innovative ways. `,
+    de: `<q>Fotografie ist nicht nur Kunst, sondern eine Form, Geschichten zu erzählen. Mit Fotogram <br /> 
+    möchten wir jedem Fotografen die Werkzeuge bieten, diese Geschichten auf innovative Weise zu präsentieren.</q>`,
+    en: `<q>Photography is not just art; it’s a way of telling stories. With Fotogram, we aim to provide every <br /> 
+    photographer with the tools to present these stories in innovative ways.</q>`,
   },
 
   newIdeasTitel: {
