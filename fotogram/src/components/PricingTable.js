@@ -26,8 +26,9 @@ const plans = [
     isBusiness: true,
     title: wording.basis,
     package: 'basic',
-    monthlyPrice: (0).toFixed(2),
+    monthlyPrice: 0,
     yearlyPrice: (0 * 12 * 0.85).toFixed(2),
+    oldMonthlyPrice: null,
     description: wording.basicDesc,
     features: [
       wording.comprehensiveDashboard,
@@ -65,8 +66,9 @@ const plans = [
     isBusiness: true,
     package: 'advanced',
     title: wording.advanced,
-    monthlyPrice: 14.99,
-    yearlyPrice: (14.99 * 12 * 0.85).toFixed(2),
+    monthlyPrice: 19.99,
+    yearlyPrice: (19.99 * 12 * 0.85).toFixed(2),
+    oldMonthlyPrice: 24.99,
     description: wording.advancedDesc,
     features: [
       wording.comprehensiveDashboard,
@@ -107,6 +109,7 @@ const plans = [
     title: wording.premium,
     monthlyPrice: 59.99,
     yearlyPrice: (59.99 * 12 * 0.85).toFixed(2),
+    oldMonthlyPrice: null,
     description: wording.premiumDesc,
     features: [
       wording.comprehensiveDashboard,
@@ -290,12 +293,7 @@ const PricingTable = ({
             fontWeight: 'bold',
           }}
         >
-          
-              {' '}
-
-              {parse(translate(wording.monthlyPayment))}
-
-
+          {parse(translate(wording.monthlyPayment))}
         </Typography>
         <Switch
           checked={isYearly}
@@ -305,11 +303,8 @@ const PricingTable = ({
           variant="body1"
           sx={{ color: isYearly ? '#1976d2' : '#757575', fontWeight: 'bold' }}
         >
-
-              {' '}
-
-              {parse(translate(wording.yearlyPayment))}
-
+          {' '}
+          {parse(translate(wording.yearlyPayment))}
         </Typography>
       </Box>
       <Box
@@ -384,11 +379,27 @@ const PricingTable = ({
                   <Typography
                     variant="h6"
                     sx={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: '8px',
                       visibility: plan.customized ? 'hidden' : 'visible',
                       fontWeight: 'bold',
                       color: '#1976d2',
                     }}
                   >
+                    {plan.oldMonthlyPrice != null && (
+                      <Typography
+                        sx={{
+                          fontWeight: 500,
+                          fontSize: '20px',
+                          color: '#cc0c39',
+                          textDecoration: 'line-through',
+                        }}
+                      >
+                        {(plan.oldMonthlyPrice ?? 1).toFixed(2)} €
+                      </Typography>
+                    )}
                     {isYearly
                       ? `${(plan.yearlyPrice / 12).toFixed(2)} €`
                       : `${plan.monthlyPrice} € /`}{' '}
@@ -403,8 +414,7 @@ const PricingTable = ({
                         marginBottom: '10px',
                       }}
                     >
-                      {`${plan.yearlyPrice} € /`} {' '}
-                      {translate(wording.year)}
+                      {`${plan.yearlyPrice} € /`} {translate(wording.year)}
                     </Typography>
                   )}
                   <Typography

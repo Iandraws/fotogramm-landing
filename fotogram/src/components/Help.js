@@ -13,10 +13,16 @@ import translate from '../helpers/translate';
 
 const Help = () => {
   return (
-    <Box sx={{ padding: { xs: '16px', md: '40px' }, textAlign: 'center' }}>
+    <Box
+      sx={{
+        padding: { xs: '16px', md: '40px' },
+        textAlign: 'center',
+        marginBottom: 'auto',
+      }}
+    >
       {/* Header Section */}
       <Typography
-        variant="h2"
+        variant="h4"
         sx={{ fontWeight: 'bold', mb: 2 }}
       >
         {translate(wording.faqsTitel)}

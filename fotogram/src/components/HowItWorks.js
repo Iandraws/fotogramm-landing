@@ -8,15 +8,15 @@ const sections = [
   {
     title: translate(wording.ourVisionTitle),
     description: translate(wording.ourVisionDescription),
-    image: '/assets/Schield_RBG.png',
+    image: '/assets/Shield2.png',
     style: { maxWidth: { xs: '220px', md: '500px' } },
 
   },
   {
     title: translate(wording.analyticsDashboardTitle),
     description: translate(wording.analyticsDashboardDescription),
-    image: '/assets/Dashboard_Fotogram.png',
-    style: { maxWidth: { xs: '320px', md: '500px' } },
+    image: '/assets/Dashboard Web.png',
+    style: { maxWidth: { xs: '320px', md: '410px' } },
   },
 
   {
@@ -53,7 +53,7 @@ const sections = [
   {
     title: translate(wording.contractManagementTitle),
     description: translate(wording.contractManagementDescription),
-    image: '/assets/Contract3.png',
+    image: '/assets/Digitale Vertrag Web.png',
     style: { maxWidth: { xs: '220px', md: '500px' } },
 
   },

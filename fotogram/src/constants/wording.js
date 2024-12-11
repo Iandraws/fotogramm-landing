@@ -406,16 +406,16 @@ const wording = {
     en: 'Shop Hint',
   },
   storage1TB: {
-    de: '1TB Speicherplatz',
-    en: '1TB Storage',
+    de: '1 TB Speicherplatz',
+    en: '1 TB Storage',
   },
   storage1TBHint: {
     de: 'Falls du mehr brauchst, kostet jeder 1 TB nur 34,99 € monatlich',
     en: 'Need more? Each additional 1 TB is only € 34,99 per month',
   },
   storage2TB: {
-    de: '2TB Speicherplatz',
-    en: '2TB Storage',
+    de: '2 TB Speicherplatz',
+    en: '2 TB Storage',
   },
   storage2TBHint: {
     de: 'Falls du mehr brauchst, kannst du deinen aktuellen Plan weiter nutzen und nur den Speicherplatz erweitern. Jeder 1 TB kostet nur 34,99 € monatlich. Alternativ kannst du jederzeit auf den Premium-Plan wechseln.',
@@ -423,16 +423,16 @@ const wording = {
   },
 
   storage5GB: {
-    de: '5GB Speicherplatz',
-    en: '5GB Storage',
+    de: '5 GB Speicherplatz',
+    en: '5 GB Storage',
   },
   storage20GB: {
-    de: '50GB Speicherplatz',
-    en: '50GB Storage',
+    de: '50 GB Speicherplatz',
+    en: '50 GB Storage',
   },
   storage500GB: {
-    de: '500GB Speicherplatz',
-    en: '500GB Storage',
+    de: '500 GB Speicherplatz',
+    en: '500 GB Storage',
   },
   storage500GBBHint: {
     de: 'Falls du mehr brauchst, kannst du deinen aktuellen Plan weiter nutzen und nur den Speicherplatz erweitern. Jeder 1 TB kostet nur 34,99 € monatlich. Alternativ kannst du jederzeit auf den Premium-Plan wechseln.',
