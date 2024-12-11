@@ -10,7 +10,6 @@ const sections = [
     description: translate(wording.ourVisionDescription),
     image: '/assets/Shield2.png',
     style: { maxWidth: { xs: '220px', md: '500px' } },
-
   },
   {
     title: translate(wording.analyticsDashboardTitle),
@@ -30,7 +29,6 @@ const sections = [
     description: translate(wording.aiFaceRecognitionDescription),
     image: '/assets/FaceRecognition2.png',
     style: { maxWidth: { xs: '220px', md: '300px' } },
-
   },
   {
     title: translate(wording.brandingAndWatermarkTitle),
@@ -55,7 +53,6 @@ const sections = [
     description: translate(wording.contractManagementDescription),
     image: '/assets/Digitale Vertrag Web.png',
     style: { maxWidth: { xs: '220px', md: '500px' } },
-
   },
 ];
 

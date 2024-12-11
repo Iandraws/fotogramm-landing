@@ -109,7 +109,7 @@ const plans = [
     title: wording.premium,
     monthlyPrice: 59.99,
     yearlyPrice: (59.99 * 12 * 0.85).toFixed(2),
-    oldMonthlyPrice: null,
+    oldMonthlyPrice: 89.99,
     description: wording.premiumDesc,
     features: [
       wording.comprehensiveDashboard,
