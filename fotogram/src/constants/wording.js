@@ -690,48 +690,47 @@ const wording = {
   },
 
   whoAreWeContent: {
-    de: `Fotogram für Softwarelösungen ist nicht nur ein Produkt – es ist die Vision eines Teams von <br /><br />
-         Experten, die sich der Weiterentwicklung der Fotografiebranche verschrieben haben. <br /><br />
-         Mit unserer vielfältigen Erfahrung in Fotografie, Medienproduktion und Technologie gestalten wir <br />
-         maßgeschneiderte Lösungen, die speziell auf die Bedürfnisse von Fotografen und Studios.<br /><br />
-        zugeschnitten sind. Unsere Schwerpunkte liegen auf Programmierung, Web- und App-Design, <br /><br />
-        digitalem Marketing und dem Management innovativer Softwareprodukte. `,
+    de: `Fotogram für Softwarelösungen ist nicht nur ein Produkt – es ist die Vision eines Teams von Experten, die 
+           sich der Weiterentwicklung der Fotografiebranche verschrieben haben. <br /> <br /> 
+           Mit unserer vielfältigen Erfahrung in Fotografie, Medienproduktion und Technologie gestalten wir maßgeschneiderte Lösungen, die speziell auf
+           die Bedürfnisse von Fotografen und Studios zugeschnitten sind. <br /> <br /> 
+           Unsere Schwerpunkte liegen auf Programmierung, Web- und App-Design, digitalem Marketing und dem Management innovativer Softwareprodukte. <br /><br />  `,
 
-    en: `Fotogram for Software Solutions is more than just a product – it’s the vision of a team of experts <br /><br />
-       dedicated to revolutionizing the photography industry. With our diverse experience in photography, <br />
-       media production, and technology, we create tailored solutions specifically designed to meet the <br />
-       needs of photographers and studios. Our expertise includes programming, web and app design, <br />
-       digital marketing, and the management of innovative software products. `,
+    en: `Fotogram for Software Solutions is more than just a product – it’s the vision of a team of experts
+       dedicated to revolutionizing the photography industry. <br /><br />
+       With our diverse experience in photography, media production, and technology, we create tailored solutions specifically designed to meet the 
+       needs of photographers and studios. <br /> <br />
+       Our expertise includes programming, web and app design, digital marketing, and the management of innovative software products. <br />  <br /> `,
   },
 
   ourGoalsContent: {
-    de: `1. Innovation in der Fotografie- und Medienbranche: Wir treiben die Digitalisierung und <br />
-         Optimierung von Arbeitsabläufen aktiv voran. <br /><br />
-         2. Effizienz für Fotografen: Mit Fotogram können Fotografen Zeit und Kosten sparen, während sie <br />
+    de: `1. Innovation in der Fotografie- und Medienbranche: Wir treiben die Digitalisierung und Optimierung von
+          Arbeitsabläufen aktiv voran. <br /><br />
+         2. Effizienz für Fotografen: Mit Fotogram können Fotografen Zeit und Kosten sparen, während sie
          gleichzeitig ihre Produktivität steigern. <br /><br />
          3. Stärkung von Kundenbeziehungen: Positive Kundenerfahrungen schaffen nachhaltige Bindungen und stärken den geschäftlichen Erfolg. <br /><br />
-         4. Individuelle Anpassung: Unsere Plattform ist professionell, flexibel und an die spezifischen <br />
-         Workflows jedes Fotografen oder Studios anpassbar.`,
+         4. Individuelle Anpassung: Unsere Plattform ist professionell, flexibel und an die spezifischen Workflows
+          jedes Fotografen oder Studios anpassbar.`,
 
-    en: `1. Innovation in Photography and Media: We actively drive digital transformation and optimize <br />
-         workflows in the photography industry. <br /><br />
-         2. Efficiency for Photographers: Fotogram helps photographers save time and costs while <br />
-         enhancing their productivity. <br /><br />
-         3. Strengthening Customer Relationships: Positive client experiences foster long-term <br />
-         connections and strengthen business success.<br /><br />
-         4. Customized Solutions: Our platform is professional, flexible, and adaptable to the specific <br />workflows of every photographer or studio.`,
+    en: `1. Innovation in Photography and Media: We actively drive digital transformation and optimize workflows<br />
+          in the photography industry. <br /><br />
+         2. Efficiency for Photographers: Fotogram helps photographers save time and costs while enhancing
+          their productivity. <br /><br />
+         3. Strengthening Customer Relationships: Positive client experiences foster long-term connections 
+          and strengthen business success.<br /><br />
+         4. Customized Solutions: Our platform is professional, flexible, and adaptable to the specific workflows of every photographer or studio.`,
   },
 
   ourVisionContent: {
-    de: `Wir glauben, dass Technologie und Kreativität Hand in Hand gehen. Unsere Mission ist es, <br />
-        Fotografen dabei zu unterstützen, ihre Arbeit auf höchstem Niveau zu präsentieren und dabei <br />
-        innovativ und flexibel zu bleiben. Wir sind offen für neue Herausforderungen und freuen uns darauf, <br />
-        gemeinsam mit unseren Kunden einzigartige Funktionen und Lösungen zu entwickeln, die perfekt <br />
+    de: `Wir glauben, dass Technologie und Kreativität Hand in Hand gehen. Unsere Mission ist es, 
+        Fotografen dabei zu unterstützen, ihre Arbeit auf höchstem Niveau zu präsentieren und dabei
+        innovativ und flexibel zu bleiben. Wir sind offen für neue Herausforderungen und freuen uns darauf,
+        gemeinsam mit unseren Kunden einzigartige Funktionen und Lösungen zu entwickeln, die perfekt 
         auf ihre Bedürfnisse abgestimmt sind.`,
 
-    en: `We believe that technology and creativity go hand in hand. Our mission is to empower <br />
-        photographers to showcase their work at the highest level while staying innovative and flexible.  <br />
-       We are open to new challenges and excited to collaborate with our clients to develop unique features <br />
+    en: `We believe that technology and creativity go hand in hand. Our mission is to empower 
+        photographers to showcase their work at the highest level while staying innovative and flexible.  
+       We are open to new challenges and excited to collaborate with our clients to develop unique features 
        and solutions tailored to their needs.`,
   },
 
@@ -741,9 +740,9 @@ const wording = {
   },
 
   teamLeadQuote: {
-    de: `<q>Fotografie ist nicht nur Kunst, sondern eine Form, Geschichten zu erzählen. Mit Fotogram <br /> 
+    de: `<br /><br /><q>Fotografie ist nicht nur Kunst, sondern eine Form, Geschichten zu erzählen. Mit Fotogram 
     möchten wir jedem Fotografen die Werkzeuge bieten, diese Geschichten auf innovative Weise zu präsentieren.</q>`,
-    en: `<q>Photography is not just art; it\'s a way of telling stories. With Fotogram, we aim to provide every <br /> 
+    en: `<q>Photography is not just art; it\'s a way of telling stories. With Fotogram, we aim to provide every
     photographer with the tools to present these stories in innovative ways.</q>`,
   },
 
@@ -753,11 +752,11 @@ const wording = {
   },
 
   newIdeasContent: {
-    de: `Fotogram steht nicht still. Wir arbeiten ständig an neuen Funktionen und sind immer offen für die <br /> 
+    de: `Fotogram steht nicht still. Wir arbeiten ständig an neuen Funktionen und sind immer offen für die
     Ideen und Wünsche unserer Kunden. Sie haben eine spezifische Anforderung oder eine neue Herausforderung?  <br />
-    Wir sind bereit, sie mit Ihnen anzugehen.`,
-    en: `Fotogram is constantly evolving. We are always working on new features and remain open to the <br /> 
-    ideas and needs of our clients. Have a specific requirement or a new challenge? We’re ready to tackle it with you.`,
+    Wir sind bereit, sie mit Ihnen anzugehen.<br /><br />`,
+    en: `Fotogram is constantly evolving. We are always working on new features and remain open to the
+    ideas and needs of our clients. Have a specific requirement or a new challenge? We’re ready to tackle it with you.<br /><br />`,
   },
 };
 

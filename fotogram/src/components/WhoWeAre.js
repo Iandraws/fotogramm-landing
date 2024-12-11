@@ -38,15 +38,7 @@ const WhoWeAre = () => {
           }}
         />
         <Box>
-          <Typography
-            sx={{
-              mb: 4,
-              textAlign: 'left',
-            }}
-          >
-            {parse(translate(wording.imageTitelTeamLead))}
-          </Typography>
-          <Typography
+           <Typography
             sx={{
               mb: 4,
               textAlign: 'left',
@@ -55,6 +47,17 @@ const WhoWeAre = () => {
           >
             {parse(translate(wording.teamLeadQuote))}
           </Typography>
+       
+          <Typography
+            sx={{
+              mb: 4,
+              textAlign: 'left',
+            }}
+          >
+            {parse(translate(wording.imageTitelTeamLead))}
+          </Typography>
+
+
         </Box>
       </Box>
       <Typography
