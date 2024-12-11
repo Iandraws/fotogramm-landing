@@ -26,7 +26,7 @@ const plans = [
     isBusiness: true,
     title: wording.basis,
     package: 'basic',
-    monthlyPrice: 0,
+    monthlyPrice: (0).toFixed(2),
     yearlyPrice: (0 * 12 * 0.85).toFixed(2),
     oldMonthlyPrice: null,
     description: wording.basicDesc,
@@ -425,7 +425,6 @@ const PricingTable = ({
                       marginBottom: '10px',
                     }}
                   >
-                    {' '}
                     {translate(wording.vat)}
                   </Typography>
                 </>
