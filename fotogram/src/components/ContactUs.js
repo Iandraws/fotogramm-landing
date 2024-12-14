@@ -2,6 +2,8 @@ import { Box, Button, Grid, TextField, Typography } from '@mui/material';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import ErrorIcon from '@mui/icons-material/Error';
 import React, { useState } from 'react';
+import wording from '../constants/wording';
+import translate from '../helpers/translate';
 
 const ContactUs = () => {
   const [name, setName] = useState('');
@@ -32,7 +34,7 @@ const ContactUs = () => {
     setSuccessMessage('');
 
     try {
-      const response = await fetch('https://demo.parklolo.app/api/message', {
+      const response = await fetch('https://demo.parklolo.com/api/message', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -93,9 +95,9 @@ const ContactUs = () => {
         >
           <Typography
             variant="h4"
-            sx={{ mb: 2, fontWeight: 'bold', textAlign: 'center' }}
+            sx={{ mb: 4, fontWeight: 'bold', textAlign: 'center' }}
           >
-            Kontaktieren Sie uns
+            {translate(wording.contactUs)}
           </Typography>
           {successMessage && (
             <Box
@@ -122,9 +124,7 @@ const ContactUs = () => {
               }}
             >
               <ErrorIcon sx={{ mr: 1 }} />
-              <Typography>
-                Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.
-              </Typography>
+              <Typography>{translate(wording.contactUsError)}</Typography>
             </Box>
           )}
           <Grid
@@ -208,12 +208,13 @@ const ContactUs = () => {
                   fontWeight: 'bold',
                   borderRadius: '24px',
                   textTransform: 'none',
+                  marginTop: '16px',
                   '&:hover': {
                     backgroundColor: '#115293',
                   },
                 }}
               >
-                Nachricht senden
+                {translate(wording.sendMessage)}
               </Button>
             </Grid>
           </Grid>
@@ -231,7 +232,8 @@ const ContactUs = () => {
             variant="body1"
             sx={{ mb: 2, fontWeight: 'bold' }}
           >
-            E-Mail: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; support@fotogram.app
+            E-Mail: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            support@fotogram.app
           </Typography>
           <Typography
             variant="body1"

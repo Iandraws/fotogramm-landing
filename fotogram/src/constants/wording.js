@@ -770,6 +770,14 @@ const wording = {
     en: `Fotogram is constantly evolving. We are always working on new features and remain open to the
     ideas and needs of our clients. Have a specific requirement or a new challenge? We’re ready to tackle it with you.<br /><br />`,
   },
+  sendMessage: {
+    de: 'Nachricht senden',
+    en: 'Send Message',
+  },
+  contactUsError: {
+    de: 'Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.',
+    en: 'An error occurred. Please try again.',
+  },
 };
 
 export default wording;
