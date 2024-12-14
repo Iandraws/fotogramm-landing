@@ -1,8 +1,8 @@
+import { Box, Typography } from '@mui/material';
+import parse from 'html-react-parser';
 import React from 'react';
-import { Box, Typography, List, ListItem, ListItemText } from '@mui/material';
 import wording from '../constants/wording';
 import translate from '../helpers/translate';
-import parse from 'html-react-parser';
 
 const WhoWeAre = () => {
   return (
@@ -23,9 +23,10 @@ const WhoWeAre = () => {
       <Box
         sx={{
           display: 'flex',
-          gap: '24px',
+          gap: { xs: 0, md: '24px' },
           maxWidth: '800px',
           margin: '0 auto',
+          flexDirection: { xs: 'column', md: 'row' },
         }}
       >
         <Box
@@ -35,10 +36,12 @@ const WhoWeAre = () => {
           sx={{
             height: { xs: '300px', md: '300px', lg: '300px' },
             borderRadius: '24px',
+            width: 'fit-content',
+            margin: '0 auto',
           }}
         />
         <Box>
-           <Typography
+          <Typography
             sx={{
               mb: 4,
               textAlign: 'left',
@@ -47,7 +50,7 @@ const WhoWeAre = () => {
           >
             {parse(translate(wording.teamLeadQuote))}
           </Typography>
-       
+
           <Typography
             sx={{
               mb: 4,
@@ -56,8 +59,6 @@ const WhoWeAre = () => {
           >
             {parse(translate(wording.imageTitelTeamLead))}
           </Typography>
-
-
         </Box>
       </Box>
       <Typography

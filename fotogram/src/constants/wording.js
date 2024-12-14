@@ -528,6 +528,18 @@ const wording = {
     en: 'Sign up for Private Package now',
     de: 'Jetzt für das Private-Paket anmelden',
   },
+  advancedSignup: {
+    en: 'Sign up for Advanced Package now',
+    de: 'Jetzt für das Advanced-Paket anmelden',
+  },
+  premiumSignup: {
+    en: 'Sign up for Premium Package now',
+    de: 'Jetzt für das Premium-Paket anmelden',
+  },
+  basicSignup: {
+    en: 'Sign up for Basic Package now',
+    de: 'Jetzt für das Basis-Paket anmelden',
+  },
   join5000: {
     en: 'Join 5000+ Happy Hubbers!',
     de: 'Schließen Sie sich über 5000+ glücklichen Hubbern an!',
@@ -742,7 +754,7 @@ const wording = {
   teamLeadQuote: {
     de: `<br /><br /><q>Fotografie ist nicht nur Kunst, sondern eine Form, Geschichten zu erzählen. Mit Fotogram 
     möchten wir jedem Fotografen die Werkzeuge bieten, diese Geschichten auf innovative Weise zu präsentieren.</q>`,
-    en: `<q>Photography is not just art; it\'s a way of telling stories. With Fotogram, we aim to provide every
+    en: `<q>Photography is not just art; it's a way of telling stories. With Fotogram, we aim to provide every
     photographer with the tools to present these stories in innovative ways.</q>`,
   },
 

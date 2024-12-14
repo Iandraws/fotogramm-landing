@@ -4,6 +4,7 @@ import {
   Box,
   Button,
   Checkbox,
+  CircularProgress,
   FormControlLabel,
   FormGroup,
   Link,
@@ -25,8 +26,8 @@ const JoinHub = () => {
   const [lastName, setLastName] = useState('');
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   const [agreedToTerms, setAgreedToTerms] = useState(false);
-
   const [usernameError, setUsernameError] = useState(false);
   const [emailError, setEmailError] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -66,7 +67,7 @@ const JoinHub = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    if (usernameError || emailError) {
+    if (usernameError || emailError || isLoading) {
       return;
     }
 
@@ -77,6 +78,7 @@ const JoinHub = () => {
     };
 
     try {
+      setIsLoading(true);
       setIsSuccess(false);
       setIsError(false);
       const response = await axios.post(
@@ -92,11 +94,14 @@ const JoinHub = () => {
         setUsername('');
         setEmail('');
         setAgreedToTerms(false);
+        setIsLoading(false);
       } else {
         setIsError(true);
+        setIsLoading(false);
       }
     } catch (error) {
       setIsError(true);
+      setIsLoading(false);
     }
   };
 
@@ -236,10 +241,20 @@ const JoinHub = () => {
             borderRadius: '24px',
             fontSize: '16px',
             backgroundColor: '#0073e6',
+            display: 'flex',
+            gap: '16px',
+            alignItems: 'center',
+
             ':hover': { backgroundColor: '#005bb5' },
           }}
           disabled={!agreedToTerms}
         >
+          {isLoading && (
+            <CircularProgress
+              size={24}
+              sx={{ color: 'white' }}
+            />
+          )}
           {translate(wording.privateSignup)}
         </Button>
 

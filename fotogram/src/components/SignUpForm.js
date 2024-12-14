@@ -4,6 +4,7 @@ import {
   Box,
   Button,
   Checkbox,
+  CircularProgress,
   FormControlLabel,
   FormGroup,
   Link,
@@ -33,6 +34,7 @@ const SignUpForm = () => {
     ['basic', 'advanced', 'premium'].includes(urlPlan) ? urlPlan : 'basic'
   );
   const [customSubdomain, setCustomSubdomain] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   const [agreedToTerms, setAgreedToTerms] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [isError, setIsError] = useState(false);
@@ -60,7 +62,7 @@ const SignUpForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    if (emailError) {
+    if (emailError || isLoading) {
       return;
     }
 
@@ -74,6 +76,7 @@ const SignUpForm = () => {
     };
 
     try {
+      setIsLoading(true);
       setIsSuccess(false);
       setIsError(false);
       const response = await axios.post(
@@ -88,11 +91,14 @@ const SignUpForm = () => {
         setEmail('');
         setCustomSubdomain('');
         setAgreedToTerms(false);
+        setIsLoading(false);
       } else {
         setIsError(true);
+        setIsLoading(false);
       }
     } catch (error) {
       setIsError(true);
+      setIsLoading(false);
     }
   };
 
@@ -242,17 +248,31 @@ const SignUpForm = () => {
         <Button
           type="submit"
           fullWidth
+          disabled={!agreedToTerms}
           variant="contained"
           sx={{
             fontWeight: 'bold',
-            padding: '8px 24px',
+            padding: '12px 24px',
             textTransform: 'none',
             borderRadius: '24px',
             fontSize: '16px',
+            backgroundColor: '#0073e6',
+            display: 'flex',
+            gap: '16px',
+            alignItems: 'center',
+
+            ':hover': { backgroundColor: '#005bb5' },
           }}
-          disabled={!agreedToTerms}
         >
-          Sign up for the {plan} now
+          {isLoading && (
+            <CircularProgress
+              size={24}
+              sx={{ color: 'white' }}
+            />
+          )}
+          {plan === 'basic' && translate(wording.basicSignup)}
+          {plan === 'advanced' && translate(wording.advancedSignup)}
+          {plan === 'premium' && translate(wording.premiumSignup)}
         </Button>
 
         {isSuccess && (
