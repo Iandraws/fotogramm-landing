@@ -1,4 +1,11 @@
-import { Box, Button, Grid, TextField, Typography } from '@mui/material';
+import {
+  Box,
+  Button,
+  CircularProgress,
+  Grid,
+  TextField,
+  Typography,
+} from '@mui/material';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import ErrorIcon from '@mui/icons-material/Error';
 import React, { useState } from 'react';
@@ -13,6 +20,7 @@ const ContactUs = () => {
   const [emailError, setEmailError] = useState(false);
   const [successMessage, setSuccessMessage] = useState('');
   const [isError, setIsError] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleEmailChange = (e) => {
     const emailValue = e.target.value;
@@ -24,16 +32,22 @@ const ContactUs = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (isLoading) {
+      return;
+    }
+
     if (emailError || !name || !message) {
       setIsError(true);
       setSuccessMessage('');
       return;
     }
 
-    setIsError(false);
-    setSuccessMessage('');
-
     try {
+      setIsLoading(true);
+      setIsError(false);
+      setSuccessMessage('');
+
       const response = await fetch('https://demo.parklolo.com/api/message', {
         method: 'POST',
         headers: {
@@ -48,16 +62,19 @@ const ContactUs = () => {
       });
 
       if (response.ok) {
-        setSuccessMessage('Formular erfolgreich abgeschickt');
+        setSuccessMessage(translate(wording.contactUsSuccess));
         setName('');
         setEmail('');
         setPhone('');
         setMessage('');
+        setIsLoading(false);
       } else {
         setIsError(true);
+        setIsLoading(false);
       }
     } catch (error) {
       setIsError(true);
+      setIsLoading(false);
     }
   };
 
@@ -137,7 +154,7 @@ const ContactUs = () => {
             >
               <TextField
                 fullWidth
-                label="Name"
+                label={translate(wording.name)}
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
@@ -150,15 +167,11 @@ const ContactUs = () => {
             >
               <TextField
                 fullWidth
-                label="Geschäftliche E-Mail"
+                label={translate(wording.email)}
                 value={email}
                 onChange={handleEmailChange}
                 error={emailError}
-                helperText={
-                  emailError
-                    ? 'Bitte geben Sie eine gültige E-Mail-Adresse ein'
-                    : ''
-                }
+                helperText={emailError ? translate(wording.emailError) : ''}
                 required
                 sx={{ backgroundColor: '#f5f5f5' }}
               />
@@ -169,7 +182,7 @@ const ContactUs = () => {
             >
               <TextField
                 fullWidth
-                label="Telefon"
+                label={translate(wording.telefonNumber)}
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 required
@@ -182,10 +195,10 @@ const ContactUs = () => {
             >
               <TextField
                 fullWidth
-                label="Nachricht "
+                label={translate(wording.message)}
                 multiline
                 rows={4}
-                placeholder="Bitte geben Sie hier Ihre Nachricht ein"
+                placeholder={translate(wording.contactUsMessagePlaceholder)}
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 required
@@ -202,18 +215,26 @@ const ContactUs = () => {
                 color="primary"
                 fullWidth
                 sx={{
-                  backgroundColor: '#1976d2',
-                  color: '#fff',
-                  padding: '8px',
                   fontWeight: 'bold',
-                  borderRadius: '24px',
+                  padding: '12px 24px',
                   textTransform: 'none',
+                  borderRadius: '24px',
+                  fontSize: '16px',
+                  backgroundColor: '#0073e6',
+                  display: 'flex',
+                  gap: '16px',
+                  alignItems: 'center',
                   marginTop: '16px',
-                  '&:hover': {
-                    backgroundColor: '#115293',
-                  },
+
+                  ':hover': { backgroundColor: '#005bb5' },
                 }}
               >
+                {isLoading && (
+                  <CircularProgress
+                    size={24}
+                    sx={{ color: 'white' }}
+                  />
+                )}
                 {translate(wording.sendMessage)}
               </Button>
             </Grid>
@@ -245,7 +266,8 @@ const ContactUs = () => {
             variant="body1"
             sx={{ mb: 2, fontWeight: 'bold' }}
           >
-            Support: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +49 (0) 40 4666 5552
+            Support: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +49 (0) 40 4666
+            5552
           </Typography>
         </Box>
       </Box>

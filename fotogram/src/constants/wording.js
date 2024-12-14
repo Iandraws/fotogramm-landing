@@ -3,6 +3,10 @@ const wording = {
     de: 'Fortgeschritten',
     en: 'Advanced',
   },
+  message: {
+    de: 'Nachricht',
+    en: 'Message',
+  },
   advancedDesc: {
     de: 'Für Fotografen, die ihre Qualität steigern und große Projekte organisieren wollen',
     en: 'For photographers who want to increase their quality and organize large projects',
@@ -10,6 +14,14 @@ const wording = {
   agb: {
     de: 'Unsere AGB',
     en: 'Terms and Conditions',
+  },
+  contactUsSuccess: {
+    en: 'Your message has been sent successfully. We will get back to you soon.',
+    de: 'Ihre Nachricht wurde erfolgreich gesendet. Wir werden uns bald bei Ihnen melden.',
+  },
+  contactUsMessagePlaceholder: {
+    de: 'itte geben Sie hier Ihre Nachricht ein...',
+    en: 'Please enter your message here...',
   },
   aiFaceRecognition: {
     de: 'KI-Gesichtserkennung',
@@ -39,7 +51,10 @@ const wording = {
     de: 'Wasserzeichenschutz',
     en: 'Watermark Protection',
   },
-
+  telefonNumber: {
+    de: 'Telefonnummer',
+    en: 'Phone Number',
+  },
   autoLogoHint: {
     de: 'Schick uns dein Logo per E-Mail, und wir platzieren es in deinem Bereich.',
     en: 'Send us your logo via email, and we will place it.',
@@ -489,6 +504,10 @@ const wording = {
   lastName: {
     en: 'Last Name',
     de: 'Nachname',
+  },
+  name: {
+    en: 'Name',
+    de: 'Name',
   },
   email: {
     en: 'Email',
