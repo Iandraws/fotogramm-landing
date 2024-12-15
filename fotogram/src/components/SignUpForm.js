@@ -171,7 +171,7 @@ const SignUpForm = () => {
           <Typography sx={{ color: '#555' }}>https://</Typography>
           <TextField
             fullWidth
-            placeholder="custom address"
+            placeholder="subdomain"
             variant="outlined"
             required
             value={customSubdomain}
