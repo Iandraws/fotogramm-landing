@@ -104,7 +104,7 @@ const HeroSection = () => {
               sx={{
                 display: 'flex',
                 width: '100%',
-                maxWidth: '400px',
+                maxWidth: '344px',
               }}
             >
               <TryIt />
@@ -210,7 +210,7 @@ const HeroSection = () => {
               sx={{
                 display: 'flex',
                 width: '100%',
-                maxWidth: '400px',
+                maxWidth: '344px',
               }}
             >
               <TryIt />
@@ -306,7 +306,7 @@ const HeroSection = () => {
               sx={{
                 display: 'flex',
                 width: '100%',
-                maxWidth: '400px',
+                maxWidth: '344px',
               }}
             >
               <TryIt />
