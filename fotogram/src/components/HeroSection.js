@@ -100,7 +100,15 @@ const HeroSection = () => {
               },
             }}
           >
-            <TryIt />
+            <Box
+              sx={{
+                display: 'flex',
+                width: '100%',
+                maxWidth: '400px',
+              }}
+            >
+              <TryIt />
+            </Box>
             <TalkToSupport />
           </Box>
         </Box>
@@ -111,9 +119,9 @@ const HeroSection = () => {
           src="/assets/HeroStart1.png"
           sx={{
             width: '100%',
-            maxWidth: { xs: '184px', md: '600px' },
+            maxWidth: { xs: '210px', md: '400px', lg: '500px' },
             borderRadius: '24px',
-            marginTop: { xs: '16px', md: '0' },
+            marginTop: { xs: '0' },
           }}
         ></Box>
       </Box>
@@ -198,7 +206,15 @@ const HeroSection = () => {
               justifyContent: { xs: 'center', md: 'start' },
             }}
           >
-            <TryIt />
+            <Box
+              sx={{
+                display: 'flex',
+                width: '100%',
+                maxWidth: '400px',
+              }}
+            >
+              <TryIt />
+            </Box>
           </Box>
         </Box>
 
@@ -286,7 +302,15 @@ const HeroSection = () => {
               marginTop: { xs: '32px', md: '0' },
             }}
           >
-            <TryIt />
+            <Box
+              sx={{
+                display: 'flex',
+                width: '100%',
+                maxWidth: '400px',
+              }}
+            >
+              <TryIt />
+            </Box>
           </Box>
         </Box>
       </Box>
