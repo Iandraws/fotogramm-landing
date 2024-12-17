@@ -60,10 +60,16 @@ const wording = {
     en: 'Send us your logo via email, and we will place it.',
   },
 
-  automateWorkflow: {
+  automateWorkflow0: {
     de: 'Automatisieren Sie Workflows und sparen Sie Zeit',
     en: 'Automate workflows and save time',
   },
+
+  automateWorkflow: {
+    de: 'Zeit sparen durch automatisierte Workflows',
+    en: 'Save time with automated workflows',
+  },
+
   basicDesc: {
     de: 'Perfekt für Fotografen, die ihre Reise beginnen und erweitern möchten.',
     en: 'Perfect for photographers who are starting their journey and want to expand.',
@@ -80,10 +86,16 @@ const wording = {
     de: 'Individuelles Branding und automatisches Wasserzeichen',
     en: 'Custom Branding and Automatic Watermarking',
   },
-  brandWithWatermark: {
+  brandWithWatermark0: {
     de: 'Präsentieren Sie Ihre Marke mit personalisierten Wasserzeichen und Alben',
     en: 'Showcase your brand with personalized watermarks and albums',
   },
+
+  brandWithWatermark: {
+    de: 'Ihre Marke im Fokus mit personalisierten Wasserzeichen',
+    en: 'Put your brand in focus with personalized watermarks', 
+  },
+
   builtByCreatives: {
     de: 'Entwickelt von Profis für Profis',
     en: 'Built by creatives for creatives',
@@ -296,10 +308,16 @@ const wording = {
     de: '30 Tage kostenlos testen',
     en: 'Try Free for 30 Days',
   },
-  heroTitle: {
+  heroTitle0: {
     de: 'Premium Plattform für Effizienz, Branding und Kundenerlebnis',
     en: 'Premium platform for efficiency, branding, and customer experience',
   },
+
+  heroTitle: {
+    de: 'Effizienz, Branding, Kundenerlebnis – neu definiert für Fotografen', 
+    en: 'Efficiency, branding, and client experience – redefined for photographers', 
+  },
+
   home: {
     de: 'Startseite',
     en: 'Home',
@@ -404,10 +422,17 @@ const wording = {
     de: 'Echtzeit-Bildübertragung und Live-Event-Sharing',
     en: 'Real-Time Image Sharing and Live Event Coverage',
   },
-  realTimeImageTransmission: {
+  
+  realTimeImageTransmission0: {
     de: 'Bieten Sie Echtzeit Bildübertragung und KI-Gesichtserkennung',
     en: 'Offer real-time image transmission and AI face recognition',
   },
+
+  realTimeImageTransmission: {
+    de: 'Live-Momente teilen mit Echtzeit Bildübertragung und intelligente Gesichtserkennung',
+    en: 'Share live moments with real-time image transfer and intelligent facial recognition',
+  },
+
   shareMoment: {
     de: 'Teilen Sie den Moment ohne Verzögerung',
     en: 'Share the Moment Without Delay',
