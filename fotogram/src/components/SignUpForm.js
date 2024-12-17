@@ -73,6 +73,7 @@ const SignUpForm = () => {
       users: true,
       media: true,
       plan: plan,
+      language: lang,
     };
 
     try {

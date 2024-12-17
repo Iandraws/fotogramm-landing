@@ -75,6 +75,7 @@ const JoinHub = () => {
       email,
       username,
       displayName: `${firstName} ${lastName}`,
+      language: lang,
     };
 
     try {
