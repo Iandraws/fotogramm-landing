@@ -85,22 +85,30 @@ const Navbar = () => {
           }}
         >
           {[
-            { label: wording.home, path: '' },
+            {
+              label: wording.home,
+              path: '',
+              anchorText: 'Home - Fotogram Technology',
+            },
             {
               label: wording.whyFotogram,
               path: 'why-fotogram',
+              anchorText: 'Why Fotogram - Fotogram Technology',
             },
             {
               label: wording.pricing,
               path: 'pricing',
+              anchorText: 'Pricing - Fotogram Technology',
             },
             {
               label: wording.ourStory,
               path: 'our-story',
+              anchorText: 'Our Story - Fotogram Technology',
             },
             {
               label: wording.faq,
               path: 'faq',
+              anchorText: 'FAQ - Fotogram Technology',
             },
           ].map((route) => (
             <MuiLink
@@ -121,6 +129,7 @@ const Navbar = () => {
                 alignItems: 'center',
                 '&.active': { color: '#1976d2' },
               }}
+              title={route.anchorText}
             >
               {translate(route.label)}
             </MuiLink>
@@ -192,7 +201,11 @@ const Navbar = () => {
           </IconButton>
           <List sx={{ width: '100%', textAlign: 'center' }}>
             {[
-              { label: wording.home, path: '' },
+              {
+                label: wording.home,
+                path: '',
+                anchorText: 'Home - Fotogram Technology',
+              },
               {
                 label: wording.whyFotogram,
                 path: 'why-fotogram',
@@ -212,6 +225,7 @@ const Navbar = () => {
               {
                 label: wording.contactUs,
                 path: 'get-in-touch',
+                anchorText: 'Contact Us - Fotogram Technology',
               },
             ].map((route) => (
               <ListItem

@@ -78,6 +78,10 @@ function App() {
       en: 'Privacy Policy - Fotogram Technology',
       de: 'Datenschutzerklärung - Fotogram Technology',
     },
+    '/join-hub': {
+      en: 'Join Hub - Fotogram Technology',
+      de: 'Join Hub - Fotogram Technology',
+    },
   };
 
   const metaDescriptions = {
@@ -132,6 +136,10 @@ function App() {
     '/de/privacy-policy': {
       en: "Learn about Fotogram Technology's privacy practices.",
       de: 'Erfahren Sie mehr über die Datenschutzpraktiken von Fotogram Technology.',
+    },
+    '/join-hub': {
+      en: 'Join the Fotogram Technology hub and connect with other creatives.',
+      de: 'Treten Sie dem Fotogram Technology Hub bei und vernetzen Sie sich mit anderen Kreativen.',
     },
   };
 
