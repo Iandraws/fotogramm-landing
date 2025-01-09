@@ -168,7 +168,7 @@ const PowerfulFeaturesSection = () => {
         {/* Right side: Image */}
         <Box
           component="img"
-          src="/assets/Fotogram_Logo_Blue.png"
+          src="/assets/logo.png"
           alt="Massive time saver"
           sx={{
             padding: '16px',

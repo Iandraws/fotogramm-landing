@@ -65,7 +65,7 @@ const Navbar = () => {
         >
           <Box
             component="img"
-            src="/assets/Fotogram_Logo_Blue.png"
+            src="/assets/logo.png"
             alt="Fotogram logo"
             sx={{
               width: { xs: '116px', md: '160px', lg: '200px' },
