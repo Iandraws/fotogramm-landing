@@ -86,6 +86,7 @@ const JoinHub = () => {
         'https://hub.parklolo.com/api/v1/register',
         requestBody
       );
+
       if (response.status === 204) {
         setIsError(false);
         setIsSuccess(true);

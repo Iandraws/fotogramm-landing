@@ -28,6 +28,7 @@ const SignUpForm = () => {
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [emailError, setEmailError] = useState(false);
+  const [phoneNumber, setPhoneNumber] = useState('');
 
   const urlPlan = new URLSearchParams(location.search).get('plan');
   const [plan, setPlan] = useState(
@@ -74,6 +75,7 @@ const SignUpForm = () => {
       media: true,
       plan: plan,
       language: lang,
+      phoneNumber: phoneNumber,
     };
 
     try {
@@ -154,6 +156,18 @@ const SignUpForm = () => {
           onChange={handleEmailChange}
           error={emailError}
           helperText={emailError ? translate(wording.emailError) : ''}
+          margin="normal"
+          sx={{ backgroundColor: '#f5f5f5', mb: 0 }}
+        />
+
+        <TextField
+          fullWidth
+          label={translate(wording.phoneNumber)}
+          variant="outlined"
+          value={phoneNumber}
+          onChange={(e) => setPhoneNumber(e.target.value)}
+          placeholder={translate(wording.phoneNumberPlaceholder)}
+          helperText={translate(wording.phoneNumberHint)}
           margin="normal"
           sx={{ backgroundColor: '#f5f5f5', mb: 2 }}
         />

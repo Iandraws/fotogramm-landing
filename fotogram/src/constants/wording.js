@@ -822,6 +822,18 @@ const wording = {
     de: 'Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.',
     en: 'An error occurred. Please try again.',
   },
+  phoneNumber: {
+    en: 'Phone Number (Optional)',
+    de: 'Telefonnummer (Optional)',
+  },
+  phoneNumberPlaceholder: {
+    en: 'Enter your phone number',
+    de: 'Geben Sie Ihre Telefonnummer ein',
+  },
+  phoneNumberHint: {
+    en: 'Enter your number for possible inquiries',
+    de: 'Geben Sie Ihre Nummer für mögliche Rückfragen ein',
+  },
 };
 
 export default wording;
