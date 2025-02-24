@@ -24,7 +24,7 @@ const PrivacyPolicyDe = () => {
         <p>
           <strong>Datenschutzbeauftragter:</strong>
           <br />
-          E-Mail: <a href="mailto:datenschutz@fotogram.app">datenschutz[at]fotogram.app</a>
+          E-Mail: <a href="mailto:info@fotogram.app">info[at]fotogram.app</a>
         </p>
       </section>
 
@@ -154,7 +154,7 @@ const PrivacyPolicyDe = () => {
         <p>
           <strong>Fotogram Technology</strong>
           <br />
-          E-Mail: <a href="mailto:datenschutz@fotogram.app">datenschutz[at]fotogram.app</a>
+          E-Mail: <a href="mailto:info@fotogram.app">info[at]fotogram.app</a>
         </p>
       </section>
     </div>

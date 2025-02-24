@@ -24,7 +24,7 @@ const PrivacyPolicyEn = () => {
         <p>
           <strong>Data Protection Officer:</strong>
           <br />
-          Email: <a href="mailto:datenschutz@fotogram.app">datenschutz[at]fotogram.app</a>
+          Email: <a href="mailto:info@fotogram.app">info[at]fotogram.app</a>
         </p>
       </section>
 
