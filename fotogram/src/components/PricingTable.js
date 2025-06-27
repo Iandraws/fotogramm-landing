@@ -15,11 +15,11 @@ import {
   Typography,
 } from '@mui/material';
 import Tooltip from '@mui/material/Tooltip';
-import React, { useState } from 'react';
+import parse from 'html-react-parser';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import wording from '../constants/wording';
 import translate from '../helpers/translate';
-import parse from 'html-react-parser';
 
 const plans = [
   {
@@ -27,39 +27,35 @@ const plans = [
     title: wording.basis,
     package: 'basic',
     monthlyPrice: (0).toFixed(2),
-    yearlyPrice: (0 * 12 * 0.85).toFixed(2),
+    yearlyPrice: (0 * 12 * 0.8).toFixed(2),
     oldMonthlyPrice: null,
     description: wording.basicDesc,
+    prefix: wording.basicIncludes,
     features: [
-      wording.comprehensiveDashboard,
       wording.limitedEvents,
       wording.limitedClients,
-      wording.storage5GB,
+      wording.storage10GB,
       wording.teamMembers1,
-      wording.ftp,
-      wording.iptc,
+      wording.comprehensiveDashboard,
       wording.crm,
       wording.imageTagging,
       wording.downloadSelectedImages,
       wording.clientRequests,
       wording.digitalBusinessCard,
-      wording.autoLogoOnImages,
       wording.calendarIntegration,
       wording.liveEvent,
-      wording.registerform,
       wording.aiFaceRecognition,
       wording.screenshot,
       wording.liveVideoStreaming,
       wording.digitalAlbum,
       wording.digitalContract,
-      wording.iosAndroidBrandedApp,
     ],
     unavailableFeatures: [
-      wording.customDomain,
-      wording.customBrand,
-      wording.downloadAllImages,
-      wording.videosAndReels,
-      wording.shop,
+      // wording.customDomain,
+      // wording.customBrand,
+      // wording.downloadAllImages,
+      // wording.videosAndReels,
+      // wording.shop,
     ],
     buttonText: wording.freeTrial,
     hints: {
@@ -71,39 +67,29 @@ const plans = [
     package: 'pro',
     title: wording.pro,
     monthlyPrice: 19.99,
-    yearlyPrice: (19.99 * 12 * 0.85).toFixed(2),
-    oldMonthlyPrice: 24.99,
+    yearlyPrice: (19.99 * 12 * 0.8).toFixed(2),
+    // oldMonthlyPrice: 24.99,
+    oldMonthlyPrice: null,
     description: wording.advancedDesc,
     features: [
-      wording.comprehensiveDashboard,
       wording.unlimitedEvents,
       wording.unlimitedClients,
       wording.storage500GB,
-      wording.teamMembers1,
+      wording.downloadAllImages,
+      wording.autoLogoOnImages,
       wording.ftp,
       wording.iptc,
-      wording.crm,
-      wording.imageTagging,
-      wording.downloadSelectedImages,
-      wording.clientRequests,
-      wording.digitalBusinessCard,
-      wording.autoLogoOnImages,
-      wording.calendarIntegration,
-      wording.liveEvent,
       wording.registerform,
-      wording.aiFaceRecognition,
-      wording.screenshot,
-      wording.liveVideoStreaming,
-      wording.digitalAlbum,
-      wording.digitalContract,
       wording.iosAndroidBrandedApp,
-    ],
-    unavailableFeatures: [
-      wording.customDomain,
-      wording.customBrand,
-      wording.downloadAllImages,
       wording.videosAndReels,
-      wording.shop,
+    ],
+    prefix: wording.allFromBasic,
+    unavailableFeatures: [
+      // wording.customDomain,
+      // wording.customBrand,
+      // wording.downloadAllImages,
+      // wording.videosAndReels,
+      // wording.shop,
     ],
     buttonText: wording.freeTrial,
     hints: {
@@ -115,37 +101,18 @@ const plans = [
     isBusiness: true,
     package: 'business',
     title: wording.business,
-    monthlyPrice: 59.99,
-    yearlyPrice: (59.99 * 12 * 0.85).toFixed(2),
-    oldMonthlyPrice: 89.99,
-    description: wording.premiumDesc,
+    monthlyPrice: 99.99,
+    yearlyPrice: (99.99 * 12 * 0.8).toFixed(2),
+    // oldMonthlyPrice: 89.99,
+    oldMonthlyPrice: null,
+
+    description: wording.businessDesc,
+    prefix: wording.allFromPro,
     features: [
-      wording.comprehensiveDashboard,
-      wording.unlimitedEvents,
-      wording.unlimitedClients,
       wording.storage2TB,
       wording.teamMembers3,
-      wording.ftp,
-      wording.iptc,
-      wording.crm,
-      wording.imageTagging,
-      wording.downloadSelectedImages,
-      wording.clientRequests,
-      wording.digitalBusinessCard,
-      wording.autoLogoOnImages,
-      wording.calendarIntegration,
-      wording.liveEvent,
-      wording.registerform,
-      wording.aiFaceRecognition,
-      wording.screenshot,
-      wording.liveVideoStreaming,
-      wording.digitalAlbum,
-      wording.digitalContract,
-      wording.iosAndroidBrandedApp,
       wording.customDomain,
       wording.customBrand,
-      wording.downloadAllImages,
-      wording.videosAndReels,
       wording.shop,
     ],
     unavailableFeatures: [],
@@ -154,7 +121,6 @@ const plans = [
       [wording.storage2TB.en]: wording.storage500GBHint,
       [wording.teamMembers3.en]: wording.teamMembers3Hint,
       [wording.videosAndReels.en]: wording.videosAndReelsHint,
-      [wording.autoLogoOnImages.en]: wording.autoLogoHint,
     },
   },
   {
@@ -162,7 +128,7 @@ const plans = [
     isBusiness: false,
     title: wording.privateUse,
     monthlyPrice: 4.99,
-    yearlyPrice: (4.99 * 12 * 0.85).toFixed(2),
+    yearlyPrice: (4.99 * 12 * 0.8).toFixed(2),
     description: wording.privateUseDesc,
     features: [
       wording.comprehensiveDashboard,
@@ -197,9 +163,9 @@ const PricingTable = ({
   selected = 'advanced',
   showButtons = true,
   business = true,
-  yearly = false,
+  yearly = true,
   showCustom = true,
-  choosePrivate = true,
+  choosePrivate = false,
   onSelect,
 }) => {
   const navigate = useNavigate();
@@ -218,7 +184,7 @@ const PricingTable = ({
       return;
     }
 
-    navigate(`/signup?plan=${plan.package}`);
+    navigate(`/signup?plan=${plan.package}&yearly=${isYearly}`);
     return;
   };
 
@@ -234,7 +200,7 @@ const PricingTable = ({
     >
       <Typography
         variant="h4"
-        sx={{ textAlign: 'center', fontWeight: 'bold', marginBottom: '20px' }}
+        sx={{ textAlign: 'center', fontWeight: 'bold', marginBottom: '48px' }}
       >
         {translate(wording.plans)}
       </Typography>
@@ -293,7 +259,7 @@ const PricingTable = ({
           alignItems: 'center',
           justifyContent: 'center',
           gap: 1,
-          marginBottom: '20px',
+          marginBottom: '48px',
         }}
       >
         <Typography
@@ -307,10 +273,7 @@ const PricingTable = ({
         >
           {parse(translate(wording.monthlyPayment))}
         </Typography>
-        <Switch
-          checked={isYearly}
-          onChange={() => setIsYearly(!isYearly)}
-        />
+        <Switch checked={isYearly} onChange={() => setIsYearly(!isYearly)} />
         <Typography
           variant="body1"
           sx={{ color: isYearly ? '#1976d2' : '#757575', fontWeight: 'bold' }}
@@ -442,14 +405,25 @@ const PricingTable = ({
                 </>
               }
 
-              <Typography
-                variant="body2"
-                sx={{ marginBottom: '20px' }}
-              >
+              <Typography variant="body2" sx={{ marginBottom: '48px' }}>
                 {translate(plan.description)}
               </Typography>
-
               {showContent && <Divider />}
+              {showContent && plan.prefix && (
+                <Typography
+                  variant="body2"
+                  sx={{
+                    visibility: plan.customized ? 'hidden' : 'visible',
+                    color: '#757575',
+                    marginTop: '24px',
+                    marginBottom: '8px',
+                    paddingLeft: '16px',
+                    textAlign: 'left',
+                  }}
+                >
+                  {translate(plan.prefix)}
+                </Typography>
+              )}
               {showContent && (
                 <List>
                   {plan.features.map((feature, index) => (

@@ -32,8 +32,13 @@ const SignUpForm = () => {
 
   const urlPlan = new URLSearchParams(location.search).get('plan');
   const [plan, setPlan] = useState(
-    ['basic', 'advanced', 'premium'].includes(urlPlan) ? urlPlan : 'basic'
+    ['basic', 'pro', 'business'].includes(urlPlan) ? urlPlan : 'basic'
   );
+
+  const urlYearly = new URLSearchParams(location.search).get('yearly');
+
+  const [yearly] = useState(urlYearly === 'true');
+
   const [customSubdomain, setCustomSubdomain] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [agreedToTerms, setAgreedToTerms] = useState(false);
@@ -107,11 +112,7 @@ const SignUpForm = () => {
 
   return (
     <>
-      <Box
-        sx={formStyle}
-        component="form"
-        onSubmit={handleSubmit}
-      >
+      <Box sx={formStyle} component="form" onSubmit={handleSubmit}>
         <Typography
           variant="h4"
           sx={{ textAlign: 'center', mb: 2, fontWeight: 'bold' }}
@@ -279,15 +280,10 @@ const SignUpForm = () => {
             ':hover': { backgroundColor: '#005bb5' },
           }}
         >
-          {isLoading && (
-            <CircularProgress
-              size={24}
-              sx={{ color: 'white' }}
-            />
-          )}
+          {isLoading && <CircularProgress size={24} sx={{ color: 'white' }} />}
           {plan === 'basic' && translate(wording.basicSignup)}
-          {plan === 'advanced' && translate(wording.advancedSignup)}
-          {plan === 'premium' && translate(wording.premiumSignup)}
+          {plan === 'pro' && translate(wording.advancedSignup)}
+          {plan === 'business' && translate(wording.premiumSignup)}
         </Button>
 
         {isSuccess && (
@@ -327,6 +323,7 @@ const SignUpForm = () => {
         showContent={false}
         showButtons={false}
         showCustom={false}
+        yearly={yearly}
         selected={plan}
         onSelect={onPlanSelection}
       ></PricingTable>

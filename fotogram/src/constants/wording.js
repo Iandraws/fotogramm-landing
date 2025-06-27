@@ -99,7 +99,7 @@ const wording = {
 
   brandWithWatermark: {
     de: 'Ihre Marke im Fokus mit personalisierten Wasserzeichen',
-    en: 'Put your brand in focus with personalized watermarks', 
+    en: 'Put your brand in focus with personalized watermarks',
   },
 
   builtByCreatives: {
@@ -125,6 +125,18 @@ const wording = {
   comprehensiveDashboard: {
     de: 'Umfassendes Dashboard',
     en: 'Comprehensive Dashboard',
+  },
+  basicIncludes: {
+    en: 'Basic includes:',
+    de: 'Im Basistarif enthalten:',
+  },
+  allFromBasic: {
+    de: 'Alles aus dem Basistarif sowie',
+    en: 'Everything in basic plan, and',
+  },
+  allFromPro: {
+    de: 'Alles aus dem Protarif sowie',
+    en: 'Everything in pro plan, and',
   },
   contactForCustomPlan: {
     de: 'Kontaktieren Sie uns für einen maßgeschneiderten Plan, der zu Ihnen passt!',
@@ -254,8 +266,8 @@ const wording = {
   },
 
   yearlyPayment: {
-    de: 'Jährlich bezahlen und <br /> 15% sparen',
-    en: 'Pay Annually and <br /> Save 15%',
+    de: 'Jährlich bezahlen und <br /> 20% sparen',
+    en: 'Pay Annually and <br /> Save 20%',
   },
 
   faq: {
@@ -320,8 +332,8 @@ const wording = {
   },
 
   heroTitle: {
-    de: 'Effizienz, Branding, Kundenerlebnis – neu definiert für Fotografen', 
-    en: 'Efficiency, branding, and client experience – redefined for photographers', 
+    de: 'Effizienz, Branding, Kundenerlebnis – neu definiert für Fotografen',
+    en: 'Efficiency, branding, and client experience – redefined for photographers',
   },
 
   home: {
@@ -349,7 +361,7 @@ const wording = {
     en: 'Up to 5 Events',
   },
   liveEvent: {
-    de: 'Live-Veranstaltung',
+    de: 'Live-Event',
     en: 'Live Event',
   },
   liveImageStreamingDescription: {
@@ -388,11 +400,7 @@ const wording = {
     de: 'Preispläne',
     en: 'Plans',
   },
-  premium: {
-    de: 'Premium',
-    en: 'Premium',
-  },
-  premiumDesc: {
+  businessDesc: {
     de: 'Für professionelle Fotografen und Unternehmen, die sich abheben möchten.',
     en: 'For professional photographers and businesses who want to stand out.',
   },
@@ -428,7 +436,7 @@ const wording = {
     de: 'Echtzeit-Bildübertragung und Live-Event-Sharing',
     en: 'Real-Time Image Sharing and Live Event Coverage',
   },
-  
+
   realTimeImageTransmission0: {
     de: 'Bieten Sie Echtzeit Bildübertragung und KI-Gesichtserkennung',
     en: 'Offer real-time image transmission and AI face recognition',
@@ -474,9 +482,9 @@ const wording = {
     en: 'Need more? You can keep your current plan and just expand your storage. Each additional 1 TB is only € 34,99 per month. Alternatively, you can switch to the Premium plan at any time.',
   },
 
-  storage5GB: {
-    de: '5 GB Speicherplatz',
-    en: '5 GB Storage',
+  storage10GB: {
+    de: '10 GB Speicherplatz',
+    en: '10 GB Storage',
   },
   storage20GB: {
     de: '50 GB Speicherplatz',
@@ -506,9 +514,13 @@ const wording = {
     de: '1 Teammitglied',
     en: '1 Team Member',
   },
+  teamMembers2: {
+    de: '2 Teammitglieder',
+    en: '2 Team Members',
+  },
   teamMembers3: {
-    de: '3 Teammitglied',
-    en: '3 Team Member',
+    de: '3 Teammitglieder',
+    en: '3 Team Members',
   },
   teamMembers3Hint: {
     de: 'Falls das Team größer ist, kostet jedes zusätzliche Mitglied nur 14,99 € monatlich',
@@ -567,8 +579,8 @@ const wording = {
   },
 
   registerform: {
-    en: 'Collect Name and Email at Live Events',
-    de: 'Name und E-Mail bei Live-Veranstaltung erfassen',
+    en: 'Name and Email at Live Event',
+    de: 'Name und E-Mail bei Live-Event',
   },
 
   createdSuccesfully: {
@@ -604,13 +616,13 @@ const wording = {
     en: 'Sign up for Private Package now',
     de: 'Jetzt für das Private-Paket anmelden',
   },
-  advancedSignup: {
-    en: 'Sign up for Advanced Package now',
-    de: 'Jetzt für das Advanced-Paket anmelden',
+  proSignup: {
+    en: 'Sign up for Pro Package now',
+    de: 'Jetzt für das Pro-Paket anmelden',
   },
-  premiumSignup: {
-    en: 'Sign up for Premium Package now',
-    de: 'Jetzt für das Premium-Paket anmelden',
+  businessSignup: {
+    en: 'Sign up for Business Package now',
+    de: 'Jetzt für das Business-Paket anmelden',
   },
   basicSignup: {
     en: 'Sign up for Basic Package now',
@@ -733,7 +745,7 @@ const wording = {
   },
 
   answer6: {
-    de: 'Nachdem Sie eine Veranstaltung in der Plattform erstellt haben, gehen Sie auf "QR Code erstellen" und aktivieren Sie ihn. Den QR-Code können Sie herunterladen und für die geplante Veranstaltung ausdrucken. Während der Live-Veranstaltung laden Sie wie gewohnt Bilder in Ihrem Admin-Bereich hoch. Diese erscheinen sofort für die Kunden oder Gäste in der App, nachdem sie den QR-Code gescannt haben. Optional können Sie die KI-Gesichtserkennung aktivieren, sodass die Gäste nur ihre eigenen Bilder sehen, nachdem sie ein Selfie nach dem QR-Scan gemacht haben.',
+    de: 'Nachdem Sie eine Veranstaltung in der Plattform erstellt haben, gehen Sie auf "QR Code erstellen" und aktivieren Sie ihn. Den QR-Code können Sie herunterladen und für die geplante Veranstaltung ausdrucken. Während der Live-Event laden Sie wie gewohnt Bilder in Ihrem Admin-Bereich hoch. Diese erscheinen sofort für die Kunden oder Gäste in der App, nachdem sie den QR-Code gescannt haben. Optional können Sie die KI-Gesichtserkennung aktivieren, sodass die Gäste nur ihre eigenen Bilder sehen, nachdem sie ein Selfie nach dem QR-Scan gemacht haben.',
     en: 'After creating an event on the platform, go to "Generate QR Code" and activate it. You can download the QR code and print it for the planned event. During the live event, upload images as usual in your admin area. These images will instantly appear for clients or guests in the app after scanning the QR code. Optionally, you can activate AI facial recognition, allowing guests to see only their own photos after taking a selfie following the QR scan.',
   },
 
