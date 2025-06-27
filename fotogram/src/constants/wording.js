@@ -1,9 +1,4 @@
 const wording = {
-  advanced: {
-    de: 'Fortgeschritten',
-    en: 'Advanced',
-  },
-
   pro: {
     de: 'Pro',
     en: 'Pro',
@@ -13,7 +8,7 @@ const wording = {
     de: 'Nachricht',
     en: 'Message',
   },
-  advancedDesc: {
+  proDesc: {
     de: 'Für Fotografen, die ihre Qualität steigern und große Projekte organisieren wollen',
     en: 'For photographers who want to increase their quality and organize large projects',
   },
@@ -76,13 +71,13 @@ const wording = {
     en: 'Save time with automated workflows',
   },
 
-  basicDesc: {
+  liteDesc: {
     de: 'Perfekt für Fotografen, die ihre Reise beginnen und erweitern möchten.',
     en: 'Perfect for photographers who are starting their journey and want to expand.',
   },
-  basis: {
-    de: 'Basic',
-    en: 'Basic',
+  lite: {
+    de: 'Lite',
+    en: 'Lite',
   },
   brandingAndWatermarkDescription: {
     de: 'Schützen Sie Ihre Bildrechte und stärken Sie Ihre Marke mit automatisch platzierten Wasserzeichen auf allen Bildern - ohne externe Software. So bleibt Ihr Logo stets präsent und Ihre Arbeit professionell gebrandet.',
@@ -126,17 +121,17 @@ const wording = {
     de: 'Umfassendes Dashboard',
     en: 'Comprehensive Dashboard',
   },
-  basicIncludes: {
-    en: 'Basic includes:',
-    de: 'Im Basistarif enthalten:',
+  liteIncludes: {
+    en: '<strong>Lite</strong> includes:',
+    de: 'Im <strong>Lite Tarif</strong> enthalten:',
   },
-  allFromBasic: {
-    de: 'Alles aus dem Basistarif sowie',
-    en: 'Everything in basic plan, and',
+  allFromLite: {
+    de: 'Alles aus dem <strong>Lite Tarif</strong> sowie',
+    en: 'Everything in <strong>Lite plan</strong>, and',
   },
   allFromPro: {
-    de: 'Alles aus dem Protarif sowie',
-    en: 'Everything in pro plan, and',
+    de: 'Alles aus dem <strong>Pro Tarif</strong> sowie',
+    en: 'Everything in <strong>Pro plan</strong>, and',
   },
   contactForCustomPlan: {
     de: 'Kontaktieren Sie uns für einen maßgeschneiderten Plan, der zu Ihnen passt!',
@@ -311,8 +306,8 @@ const wording = {
     en: 'Nowadays, the app has become essential for photographers',
   },
   flexiblePricingDescription: {
-    de: 'Wählen Sie aus verschiedenen Preismodellen - von Basic bis Premium - die für Sie passende Lösung. Maßgeschneiderte Optionen unterstützen Fotografen in jeder Entwicklungsphase ihres Geschäfts.',
-    en: 'Choose from a variety of pricing models, from Basic to Premium, that best suit your needs. Tailored options support photographers at every stage of their business development.',
+    de: 'Wählen Sie aus verschiedenen Preismodellen - von Lite bis Business - die für Sie passende Lösung. Maßgeschneiderte Optionen unterstützen Fotografen in jeder Entwicklungsphase ihres Geschäfts.',
+    en: 'Choose from a variety of pricing models, from Lite to Business, that best suit your needs. Tailored options support photographers at every stage of their business development.',
   },
   flexiblePricingTitle: {
     de: 'Flexibles Preis- und Abonnementmodell',
@@ -478,8 +473,8 @@ const wording = {
     en: '2 TB Storage',
   },
   storage2TBHint: {
-    de: 'Falls du mehr brauchst, kannst du deinen aktuellen Plan weiter nutzen und nur den Speicherplatz erweitern. Jeder 1 TB kostet nur 34,99 € monatlich. Alternativ kannst du jederzeit auf den Premium-Plan wechseln.',
-    en: 'Need more? You can keep your current plan and just expand your storage. Each additional 1 TB is only € 34,99 per month. Alternatively, you can switch to the Premium plan at any time.',
+    de: 'Falls du mehr brauchst, kannst du deinen aktuellen Plan weiter nutzen und nur den Speicherplatz erweitern. Jeder 1 TB kostet nur 34,99 € monatlich. Alternativ kannst du jederzeit auf den Business-Plan wechseln.',
+    en: 'Need more? You can keep your current plan and just expand your storage. Each additional 1 TB is only € 34,99 per month. Alternatively, you can switch to the Business plan at any time.',
   },
 
   storage10GB: {
@@ -495,8 +490,8 @@ const wording = {
     en: '500 GB Storage',
   },
   storage500GBBHint: {
-    de: 'Falls du mehr brauchst, kannst du deinen aktuellen Plan weiter nutzen und nur den Speicherplatz erweitern. Jeder 1 TB kostet nur 34,99 € monatlich. Alternativ kannst du jederzeit auf den Premium-Plan wechseln.',
-    en: 'Need more? You can keep your current plan and just expand your storage. Each additional 1 TB is only € 34,99 per month. Alternatively, you can switch to the Premium plan at any time.',
+    de: 'Falls du mehr brauchst, kannst du deinen aktuellen Plan weiter nutzen und nur den Speicherplatz erweitern. Jeder 1 TB kostet nur 34,99 € monatlich. Alternativ kannst du jederzeit auf den Business-Plan wechseln.',
+    en: 'Need more? You can keep your current plan and just expand your storage. Each additional 1 TB is only € 34,99 per month. Alternatively, you can switch to the Business plan at any time.',
   },
   streamlinedContractProcessing: {
     de: 'Vereinfachte Vertragsabwicklung: Erstellen, teilen und unterschreiben Sie Verträge digital - effizient und papierlos.',
@@ -624,9 +619,9 @@ const wording = {
     en: 'Sign up for Business Package now',
     de: 'Jetzt für das Business-Paket anmelden',
   },
-  basicSignup: {
-    en: 'Sign up for Basic Package now',
-    de: 'Jetzt für das Basis-Paket anmelden',
+  liteSignup: {
+    en: 'Sign up for Lite Package now',
+    de: 'Jetzt für das Lite-Paket anmelden',
   },
   join5000: {
     en: 'Join 5000+ Happy Hubbers!',
@@ -725,17 +720,17 @@ const wording = {
   answer4: {
     de: `Sie können unsere Plattform 30 Tage kostenlos testen und danach entscheiden, ob Sie weitermachen möchten.<br />
         Anschließend können Sie aus unseren verschiedenen Paketen wählen:<br /><br/>
-        <strong>Basis</strong>: Perfekt für Fotografen, die ihre Reise beginnen und erweitern möchten.<br />
-        <strong>Fortgeschritten</strong>: Für Fotografen, die ihre Qualität steigern und große Projekte organisieren wollen.<br />
-        <strong>Premium:</strong> Für professionelle Fotografen und Unternehmen, die sich abheben möchten.<br />
+        <strong>Lite</strong>: Perfekt für Fotografen, die ihre Reise beginnen und erweitern möchten.<br />
+        <strong>Pro</strong>: Für Fotografen, die ihre Qualität steigern und große Projekte organisieren wollen.<br />
+        <strong>Business:</strong> Für professionelle Fotografen und Unternehmen, die sich abheben möchten.<br />
         <strong>Individuell</strong>: Ein maßgeschneiderter Plan, der auf Ihre Bedürfnisse zugeschnitten ist.<br /></br>
         Kontaktieren Sie uns für einen maßgeschneiderten Plan, der zu Ihnen passt!`,
 
     en: `You can try our platform free for 30 days and decide if you want to continue. After that, you can choose from our different plans:<br />
 
-        Basic: Perfect for photographers starting their journey and looking to grow.<br />
-        Advanced: For photographers aiming to enhance quality and manage larger projects.<br />
-        Premium: For professional photographers and businesses wanting to stand out.<br />
+        Lite: Perfect for photographers starting their journey and looking to grow.<br />
+        Pro: For photographers aiming to enhance quality and manage larger projects.<br />
+        Business: For professional photographers and businesses wanting to stand out.<br />
         Customized: A tailored plan designed to fit your needs.<br />
         Contact us for a customized plan that suits you best!`,
   },

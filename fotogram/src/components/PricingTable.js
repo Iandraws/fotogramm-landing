@@ -24,13 +24,13 @@ import translate from '../helpers/translate';
 const plans = [
   {
     isBusiness: true,
-    title: wording.basis,
-    package: 'basic',
+    title: wording.lite,
+    package: 'lite',
     monthlyPrice: (0).toFixed(2),
     yearlyPrice: (0 * 12 * 0.8).toFixed(2),
     oldMonthlyPrice: null,
-    description: wording.basicDesc,
-    prefix: wording.basicIncludes,
+    description: wording.liteDesc,
+    prefix: wording.liteIncludes,
     features: [
       wording.limitedEvents,
       wording.limitedClients,
@@ -70,7 +70,7 @@ const plans = [
     yearlyPrice: (19.99 * 12 * 0.8).toFixed(2),
     // oldMonthlyPrice: 24.99,
     oldMonthlyPrice: null,
-    description: wording.advancedDesc,
+    description: wording.proDesc,
     features: [
       wording.unlimitedEvents,
       wording.unlimitedClients,
@@ -83,7 +83,7 @@ const plans = [
       wording.iosAndroidBrandedApp,
       wording.videosAndReels,
     ],
-    prefix: wording.allFromBasic,
+    prefix: wording.allFromLite,
     unavailableFeatures: [
       // wording.customDomain,
       // wording.customBrand,
@@ -377,8 +377,8 @@ const PricingTable = ({
                     )}
                     {isYearly
                       ? `${(plan.yearlyPrice / 12).toFixed(2)} €`
-                      : `${plan.monthlyPrice} € /`}{' '}
-                    {translate(wording.month)}
+                      : `${plan.monthlyPrice} €`}
+                    {' / '} {translate(wording.month)}
                   </Typography>
                   {isYearly && (
                     <Typography
@@ -421,7 +421,7 @@ const PricingTable = ({
                     textAlign: 'left',
                   }}
                 >
-                  {translate(plan.prefix)}
+                  {parse(translate(plan.prefix))}
                 </Typography>
               )}
               {showContent && (

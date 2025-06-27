@@ -32,7 +32,7 @@ const SignUpForm = () => {
 
   const urlPlan = new URLSearchParams(location.search).get('plan');
   const [plan, setPlan] = useState(
-    ['basic', 'pro', 'business'].includes(urlPlan) ? urlPlan : 'basic'
+    ['lite', 'pro', 'business'].includes(urlPlan) ? urlPlan : 'lite'
   );
 
   const urlYearly = new URLSearchParams(location.search).get('yearly');
@@ -281,7 +281,7 @@ const SignUpForm = () => {
           }}
         >
           {isLoading && <CircularProgress size={24} sx={{ color: 'white' }} />}
-          {plan === 'basic' && translate(wording.basicSignup)}
+          {plan === 'lite' && translate(wording.liteSignup)}
           {plan === 'pro' && translate(wording.advancedSignup)}
           {plan === 'business' && translate(wording.premiumSignup)}
         </Button>
