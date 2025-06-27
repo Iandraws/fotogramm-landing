@@ -113,6 +113,7 @@ const plans = [
       wording.teamMembers3,
       wording.customDomain,
       wording.customBrand,
+      wording.smarttag,
       wording.shop,
     ],
     unavailableFeatures: [],

@@ -225,6 +225,11 @@ const wording = {
     de: 'Alle Bilder herunterladen',
     en: 'Download All Images',
   },
+  smarttag: {
+    de: 'Intelligentes Personen-Tagging',
+    en: 'Smart Person Tagging in Images',
+  },
+
   downloadSelectedImages: {
     de: 'Ausgewählte Bilder herunterladen',
     en: 'Download Selected Images',
