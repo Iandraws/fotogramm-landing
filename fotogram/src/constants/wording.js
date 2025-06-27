@@ -3,6 +3,12 @@ const wording = {
     de: 'Fortgeschritten',
     en: 'Advanced',
   },
+
+  pro: {
+    de: 'Pro',
+    en: 'Pro',
+  },
+
   message: {
     de: 'Nachricht',
     en: 'Message',
@@ -75,7 +81,7 @@ const wording = {
     en: 'Perfect for photographers who are starting their journey and want to expand.',
   },
   basis: {
-    de: 'Basis',
+    de: 'Basic',
     en: 'Basic',
   },
   brandingAndWatermarkDescription: {
@@ -238,7 +244,7 @@ const wording = {
   },
 
   business: {
-    de: 'Geschäftlich',
+    de: 'Business',
     en: 'Business',
   },
 
@@ -453,6 +459,12 @@ const wording = {
     de: 'Falls du mehr brauchst, kostet jeder 1 TB nur 34,99 € monatlich',
     en: 'Need more? Each additional 1 TB is only € 34,99 per month',
   },
+
+  storage500GBHint: {
+    de: 'Zusätzliche 250 GB gibt’s für nur 6,99 €/Monat oder 500 GB für nur 9,99 €/Monat.',
+    en: 'Get an extra 250 GB for just €6.99/month or 500 GB for only €9.99/month.',
+  },
+
   storage2TB: {
     de: '2 TB Speicherplatz',
     en: '2 TB Storage',
@@ -537,6 +549,26 @@ const wording = {
   email: {
     en: 'Email',
     de: 'E-Mail',
+  },
+
+  ftp: {
+    en: 'FTP Access',
+    de: 'FTP Zugang',
+  },
+
+  screenshot: {
+    en: 'Disable Screenshots for Events',
+    de: 'Bildschirmaufnahme deaktivieren',
+  },
+
+  iptc: {
+    en: 'IPTC Search',
+    de: 'IPTC-Suche',
+  },
+
+  registerform: {
+    en: 'Collect Name and Email at Live Events',
+    de: 'Name und E-Mail bei Live-Veranstaltung erfassen',
   },
 
   createdSuccesfully: {
