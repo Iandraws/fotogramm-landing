@@ -282,8 +282,8 @@ const SignUpForm = () => {
         >
           {isLoading && <CircularProgress size={24} sx={{ color: 'white' }} />}
           {plan === 'lite' && translate(wording.liteSignup)}
-          {plan === 'pro' && translate(wording.advancedSignup)}
-          {plan === 'business' && translate(wording.premiumSignup)}
+          {plan === 'pro' && translate(wording.proSignup)}
+          {plan === 'business' && translate(wording.businessSignup)}
         </Button>
 
         {isSuccess && (
