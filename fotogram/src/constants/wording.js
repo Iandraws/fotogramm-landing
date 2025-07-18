@@ -266,8 +266,10 @@ const wording = {
   },
 
   yearlyPayment: {
-    de: 'Jährlich bezahlen und <br /> 20% sparen',
-    en: 'Pay Annually and <br /> Save 20%',
+    de: 'Saison-Modus Aktiv <br /> Ruhe im Winter',
+    en: 'Season Mode Active <br /> Rest in Winter',
+
+    //alt Jährlich bezahlen und <br /> 20% sparen - Pay Annually and <br /> Save 20%
   },
 
   faq: {
