@@ -264,14 +264,10 @@ const wording = {
     de: 'Monatlich bezahlen und <br /> flexibel bleiben ',
     en: 'Pay Monthly and <br /> Stay Flexible',
   },
-
   yearlyPayment: {
-    de: 'Saison-Modus Aktiv <br /> Ruhe im Winter',
-    en: 'Season Mode Active <br /> Rest in Winter',
-
-    //alt Jährlich bezahlen und <br /> 20% sparen - Pay Annually and <br /> Save 20%
+    de: 'Saison-Modus <br /> Ruhe im Winter',
+    en: 'Season Mode <br /> Rest in Winter',
   },
-
   faq: {
     de: 'FAQs',
     en: 'FAQs',

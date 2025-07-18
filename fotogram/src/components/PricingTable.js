@@ -66,8 +66,8 @@ const plans = [
     isBusiness: true,
     package: 'pro',
     title: wording.pro,
-    monthlyPrice: 29.99,
-    yearlyPrice: (19.99 * 6).toFixed(2),
+    monthlyPrice: 24.99,
+    yearlyPrice: (19.99 * 6 + 9.99 * 6).toFixed(2),
     // oldMonthlyPrice1: 24.99,
     // oldMonthlyPrice2: 19.99,
     oldMonthlyPrice: null,
@@ -102,8 +102,8 @@ const plans = [
     isBusiness: true,
     package: 'business',
     title: wording.business,
-    monthlyPrice: 129.99,
-    yearlyPrice: (99.99 * 6).toFixed(2),
+    monthlyPrice: 99.99,
+    yearlyPrice: (99.99 * 6 + 49.99 * 6).toFixed(2),
     // oldMonthlyPrice1: 89.99,
     // oldMonthlyPrice2: 99.99,
     oldMonthlyPrice: null,
@@ -125,28 +125,6 @@ const plans = [
       [wording.teamMembers3.en]: wording.teamMembers3Hint,
       [wording.videosAndReels.en]: wording.videosAndReelsHint,
     },
-  },
-  {
-    package: 'private',
-    isBusiness: false,
-    title: wording.privateUse,
-    monthlyPrice: 4.99,
-    yearlyPrice: (4.99 * 12 * 0.8).toFixed(2),
-    description: wording.privateUseDesc,
-    features: [
-      wording.comprehensiveDashboard,
-      wording.unlimitedEvents,
-      wording.storage20GB,
-      wording.privateMember,
-      wording.imageTagging,
-      wording.downloadSelectedImages,
-      wording.liveEvent,
-      wording.aiFaceRecognition,
-      wording.digitalAlbum,
-    ],
-    unavailableFeatures: [],
-    buttonText: wording.freeTrial,
-    hints: {},
   },
   {
     customized: true,
@@ -203,7 +181,11 @@ const PricingTable = ({
     >
       <Typography
         variant="h4"
-        sx={{ textAlign: 'center', fontWeight: 'bold', marginBottom: '48px' }}
+        sx={{
+          textAlign: 'center',
+          fontWeight: 'bold',
+          marginBottom: '48px',
+        }}
       >
         {translate(wording.plans)}
       </Typography>
@@ -279,7 +261,10 @@ const PricingTable = ({
         <Switch checked={isYearly} onChange={() => setIsYearly(!isYearly)} />
         <Typography
           variant="body1"
-          sx={{ color: isYearly ? '#1976d2' : '#757575', fontWeight: 'bold' }}
+          sx={{
+            color: isYearly ? '#1976d2' : '#757575',
+            fontWeight: 'bold',
+          }}
         >
           {' '}
           {parse(translate(wording.yearlyPayment))}
@@ -327,7 +312,12 @@ const PricingTable = ({
                 <Badge
                   overlap="circular"
                   badgeContent={
-                    <FavoriteIcon sx={{ color: '#fff', fontSize: '20px' }} />
+                    <FavoriteIcon
+                      sx={{
+                        color: '#fff',
+                        fontSize: '20px',
+                      }}
+                    />
                   }
                   sx={{
                     position: 'absolute',
@@ -347,7 +337,10 @@ const PricingTable = ({
               )}
               <Typography
                 variant="h5"
-                sx={{ fontWeight: 'bold', marginBottom: '10px' }}
+                sx={{
+                  fontWeight: 'bold',
+                  marginBottom: '10px',
+                }}
               >
                 {translate(plan.title)}
               </Typography>
