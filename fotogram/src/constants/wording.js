@@ -893,8 +893,8 @@ const wording = {
     de: 'Code',
   },
   voucherActivateTitle: {
-    en: 'Activate Your Bundle Access',
-    de: 'Bundle-Zugang aktivieren',
+    en: 'Complete Bundle Registration',
+    de: 'Bundle-Registrierung abschließen',
   },
   voucherActivateDescription: {
     en: 'Complete your registration to unlock premium Fotogram features included with your camera bundle',
