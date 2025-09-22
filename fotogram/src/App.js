@@ -17,6 +17,7 @@ import ScrollToTop from './components/ScrollToTop';
 import SignUpForm from './components/SignUpForm';
 import TermsAndConditionsDe from './components/TermsAndConditionsDe';
 import TermsAndConditionsEn from './components/TermsAndConditionsEn';
+import VoucherSignUpForm from './components/VoucherSignUpForm';
 import WhoWeAre from './components/WhoWeAre';
 import JoinHub from './components/JoinHub';
 
@@ -82,6 +83,10 @@ function App() {
       en: 'Join Hub - Fotogram Technology',
       de: 'Join Hub - Fotogram Technology',
     },
+    '/:promoter/:code': {
+      en: 'Voucher Signup - Fotogram Technology',
+      de: 'Gutschein Anmeldung - Fotogram Technology',
+    },
   };
 
   const metaDescriptions = {
@@ -141,6 +146,10 @@ function App() {
       en: 'Join the Fotogram Technology hub and connect with other creatives.',
       de: 'Treten Sie dem Fotogram Technology Hub bei und vernetzen Sie sich mit anderen Kreativen.',
     },
+    '/:promoter/:code': {
+      en: 'Activate your camera bundle voucher and unlock premium Fotogram features.',
+      de: 'Aktivieren Sie Ihren Kamera-Bundle-Gutschein und schalten Sie Premium-Fotogram-Funktionen frei.',
+    },
   };
 
   return (
@@ -165,6 +174,10 @@ function App() {
           <Route
             path="/signup"
             element={<SignUpForm />}
+          />
+          <Route
+            path="/:promoter/:code"
+            element={<VoucherSignUpForm />}
           />
             <Route
             path="/join-hub"

@@ -576,9 +576,9 @@ const wording = {
     de: 'IPTC-Suche',
   },
 
-  registerform: {
-    en: 'Name and Email at Live Event',
-    de: 'Name und E-Mail bei Live-Event',
+  contactDetails: {
+    en: 'Contact details at Live Event',
+    de: 'Kontaktdaten bei Live-Event',
   },
 
   createdSuccesfully: {
@@ -875,6 +875,70 @@ const wording = {
   phoneNumberHint: {
     en: 'Enter your number for possible inquiries',
     de: 'Geben Sie Ihre Nummer für mögliche Rückfragen ein',
+  },
+  voucherBundleTitle: {
+    en: 'Special Bundle Voucher!',
+    de: 'Spezial Bundle Gutschein!',
+  },
+  voucherExclusiveAccess: {
+    en: 'Exclusive access through',
+    de: 'Exklusiver Zugang über',
+  },
+  voucherPromoterLabel: {
+    en: 'Promoter',
+    de: 'Partner',
+  },
+  voucherCodeLabel: {
+    en: 'Code',
+    de: 'Code',
+  },
+  voucherActivateTitle: {
+    en: 'Activate Your Bundle Access',
+    de: 'Bundle-Zugang aktivieren',
+  },
+  voucherActivateDescription: {
+    en: 'Complete your registration to unlock premium Fotogram features included with your camera bundle',
+    de: 'Vervollständigen Sie Ihre Registrierung, um Premium-Fotogram-Funktionen freizuschalten, die in Ihrem Kamera-Bundle enthalten sind',
+  },
+  voucherActivateButton: {
+    en: 'Activate Bundle Access',
+    de: 'Bundle-Zugang aktivieren',
+  },
+  voucherSuccessMessage: {
+    en: 'Bundle access activated successfully! Check your email for login details.',
+    de: 'Bundle-Zugang erfolgreich aktiviert! Überprüfen Sie Ihre E-Mail für Login-Details.',
+  },
+  voucherBundleIncludes: {
+    en: 'Your Bundle Includes:',
+    de: 'Ihr Bundle enthält:',
+  },
+  voucherUnlimitedEvents: {
+    en: 'Unlimited Events',
+    de: 'Unbegrenzte Veranstaltungen',
+  },
+  voucherUnlimitedClients: {
+    en: 'Unlimited Clients', 
+    de: 'Unbegrenzte Kunden',
+  },
+  voucher500GBStorage: {
+    en: '500 GB Storage',
+    de: '500 GB Speicherplatz',
+  },
+  voucherDownloadAllImages: {
+    en: 'Download All Images',
+    de: 'Alle Bilder herunterladen',
+  },
+  errorInvalidVoucherCode: {
+    en: 'Invalid voucher code. Please check your code and try again.',
+    de: 'Ungültiger Gutscheincode. Bitte überprüfen Sie Ihren Code und versuchen Sie es erneut.',
+  },
+  errorCompanyExistsAlready: {
+    en: 'This subdomain is already taken. Please choose a different one.',
+    de: 'Diese Subdomain ist bereits vergeben. Bitte wählen Sie eine andere.',
+  },
+  errorVoucherGeneric: {
+    en: 'An error occurred while activating your bundle access. Please contact support@fotogram.app',
+    de: 'Ein Fehler ist beim Aktivieren Ihres Bundle-Zugangs aufgetreten. Bitte kontaktieren Sie support@fotogram.app',
   },
 };
 

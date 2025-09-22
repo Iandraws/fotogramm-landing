@@ -80,7 +80,7 @@ const plans = [
       wording.autoLogoOnImages,
       wording.ftp,
       wording.iptc,
-      wording.registerform,
+      wording.contactDetails,
       wording.iosAndroidBrandedApp,
       wording.videosAndReels,
     ],
