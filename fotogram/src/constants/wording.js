@@ -892,17 +892,13 @@ const wording = {
     en: 'Code',
     de: 'Code',
   },
-  voucherActivateTitle: {
+  voucherActivateButton: {
     en: 'Complete Bundle Registration',
     de: 'Bundle-Registrierung abschließen',
   },
   voucherActivateDescription: {
     en: 'Complete your registration to unlock premium Fotogram features included with your camera bundle',
     de: 'Vervollständigen Sie Ihre Registrierung, um Premium-Fotogram-Funktionen freizuschalten, die in Ihrem Kamera-Bundle enthalten sind',
-  },
-  voucherActivateButton: {
-    en: 'Activate Bundle Access',
-    de: 'Bundle-Zugang aktivieren',
   },
   voucherSuccessMessage: {
     en: 'Bundle access activated successfully! Check your email for login details.',

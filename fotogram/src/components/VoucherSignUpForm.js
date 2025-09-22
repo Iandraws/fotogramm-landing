@@ -201,18 +201,6 @@ const VoucherSignUpForm = () => {
         </Paper>
 
         <Typography
-          variant="h4"
-          sx={{
-            textAlign: 'center',
-            mb: 2,
-            fontWeight: 'bold',
-            color: 'white',
-          }}
-        >
-          {translate(wording.voucherActivateTitle)}
-        </Typography>
-
-        <Typography
           variant="body1"
           sx={{ textAlign: 'center', mb: 3, color: '#718096' }}
         >
