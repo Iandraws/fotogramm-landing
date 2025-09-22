@@ -137,7 +137,11 @@ const VoucherSignUpForm = () => {
   };
 
   return (
-    <Box sx={{ minHeight: '100vh', backgroundColor: '#f8fafc', py: 4 }}>
+    <Box
+      sx={{
+        py: 4,
+      }}
+    >
       <Box sx={formStyle} component="form" onSubmit={handleSubmit}>
         {/* Voucher Banner */}
         <Paper sx={voucherBannerStyle} elevation={0}>
