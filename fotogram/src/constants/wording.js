@@ -14,7 +14,7 @@ const wording = {
   },
   agb: {
     de: 'Unsere AGB',
-    en: 'Terms and Conditions',
+    en: 'Terms of Use',
   },
   contactUsSuccess: {
     en: 'Your message has been sent successfully. We will get back to you soon.',
