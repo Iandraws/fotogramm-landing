@@ -41,11 +41,11 @@ const VoucherSignUpForm = () => {
 
   const formStyle = {
     backgroundColor: '#fff',
-    padding: '40px',
+    padding: '8px 40px',
     borderRadius: '15px',
     boxShadow: { xs: 'none', md: '0px 8px 32px rgba(0, 0, 0, 0.12)' },
     maxWidth: '650px',
-    margin: '50px auto',
+    margin: '16px auto',
     border: '2px solid #f0f7ff',
   };
 

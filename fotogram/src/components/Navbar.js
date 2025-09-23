@@ -68,7 +68,7 @@ const Navbar = () => {
             src="/assets/logo.png"
             alt="Fotogram logo"
             sx={{
-              width: { xs: '116px', md: '160px', lg: '200px' },
+              width: { xs: '160px', md: '160px', lg: '200px' },
               height: 'auto',
               paddingBottom: { xs: '8px' },
               paddingTop: { lg: '17px' },
