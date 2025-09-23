@@ -21,11 +21,6 @@ const PrivacyPolicyDe = () => {
           <br />
           Website: <a href="https://fotogram.technology" target="_blank" rel="noopener noreferrer">fotogram.technology</a>
         </p>
-        <p>
-          <strong>Datenschutzbeauftragter:</strong>
-          <br />
-          E-Mail: <a href="mailto:info@fotogram.app">info[at]fotogram.app</a>
-        </p>
       </section>
 
       <section>
@@ -36,7 +31,9 @@ const PrivacyPolicyDe = () => {
         </p>
         <h3>2.2 Kein Datentransfer ins Ausland</h3>
         <p>
-          Obwohl Fotogram Technology seinen Sitz in Israel hat, findet keine Übertragung personenbezogener Daten außerhalb der EU oder des EWR statt.
+          Israel wurde von der Europäischen Kommission als Drittland mit angemessenem Datenschutzniveau anerkannt (Art. 45 DSGVO). 
+          Dennoch findet bei Fotogram Technology keine Übertragung personenbezogener Daten nach Israel statt, 
+          da sämtliche Datenverarbeitung ausschließlich auf Servern in Deutschland erfolgt.
         </p>
       </section>
 
@@ -141,11 +138,6 @@ const PrivacyPolicyDe = () => {
           <li>
             <strong>Hosting-Anbieter:</strong> Unsere Server in Deutschland werden von zertifizierten Hosting-Anbietern betrieben, die DSGVO-konform arbeiten.
           </li>
-          <li>
-            <strong>Analyse-Tools:</strong> Google Analytics zur Analyse der Website-Nutzung. IP-Adressen werden anonymisiert.
-            <br />
-            <strong>Opt-Out:</strong> Google Analytics Opt-Out Tool.
-          </li>
         </ul>
       </section>
 
@@ -157,6 +149,22 @@ const PrivacyPolicyDe = () => {
           E-Mail: <a href="mailto:info@fotogram.app">info[at]fotogram.app</a>
         </p>
       </section>
+      
+      <section>
+        <h2>9. Rechte der betroffenen Personen</h2>
+        <p>Als betroffene Person haben Sie folgende Rechte:</p>
+        <ul>
+          <li>Auskunft über Ihre bei uns gespeicherten Daten (Art. 15 DSGVO)</li>
+          <li>Berichtigung unrichtiger Daten (Art. 16 DSGVO)</li>
+          <li>Löschung („Recht auf Vergessenwerden“) Ihrer Daten (Art. 17 DSGVO)</li>
+          <li>Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+          <li>Datenübertragbarkeit (Art. 20 DSGVO)</li>
+          <li>Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)</li>
+          <li>Widerruf einer Einwilligung jederzeit mit Wirkung für die Zukunft (Art. 7 Abs. 3 DSGVO)</li>
+          <li>Beschwerde bei einer Aufsichtsbehörde (Art. 77 DSGVO)</li>
+        </ul>
+      </section>
+
     </div>
   );
 };

@@ -21,11 +21,6 @@ const PrivacyPolicyEn = () => {
           <br />
           Website: <a href="https://fotogram.technology" target="_blank" rel="noopener noreferrer">fotogram.technology</a>
         </p>
-        <p>
-          <strong>Data Protection Officer:</strong>
-          <br />
-          Email: <a href="mailto:info@fotogram.app">info[at]fotogram.app</a>
-        </p>
       </section>
 
       <section>
@@ -120,11 +115,6 @@ const PrivacyPolicyEn = () => {
         <ul>
           <li>
             <strong>Hosting Providers:</strong> Our German-based hosting providers ensure compliance with GDPR standards.
-          </li>
-          <li>
-            <strong>Analytics Tools:</strong> Google Analytics collects anonymized usage data for performance monitoring.
-            <br />
-            <strong>Opt-Out:</strong> Google Analytics Opt-Out Tool.
           </li>
         </ul>
       </section>

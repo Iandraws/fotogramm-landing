@@ -44,6 +44,10 @@ const TermsAndConditionsDe = () => {
           2.3 Mit der Registrierung und Nutzung der Plattform erkennen die
           Nutzer die AGB in ihrer jeweils aktuellen Fassung an.
         </p>
+        <p>
+          2.4 Diese Plattform richtet sich ausschließlich an Unternehmer im Sinne des §14 BGB. 
+          Eine Nutzung durch Verbraucher ist ausgeschlossen.
+        </p>
       </section>
 
       <section>
@@ -143,6 +147,11 @@ const TermsAndConditionsDe = () => {
       <section>
         <h2>6. Widerrufsrecht für Verbraucher</h2>
         <p>
+          Dieses Widerrufsrecht gilt ausschließlich für Verbraucher im Sinne des §13 BGB. 
+          Da Fotogram Technology ausschließlich Unternehmer gemäß §14 BGB als Kunden akzeptiert, 
+          ist ein Widerrufsrecht ausgeschlossen.
+        <p></p>
+
           6.1 Verbraucher haben das Recht, innerhalb von 14 Tagen ohne Angabe
           von Gründen den Vertrag zu widerrufen.
         </p>
@@ -164,8 +173,9 @@ const TermsAndConditionsDe = () => {
           zuzüglich Mehrwertsteuer oder anderer anwendbarer Steuern.
         </p>
         <p>
-          7.2 Nutzer aus der EU sind verpflichtet, die steuerlichen Vorgaben
-          ihres jeweiligen Landes einzuhalten (z. B. Reverse-Charge-Verfahren).
+          7.2 Nutzer aus der EU sind verpflichtet, die steuerlichen Vorgaben ihres Landes einzuhalten. 
+          Bei umsatzsteuerpflichtigen Leistungen an Unternehmen innerhalb der EU findet das Reverse-Charge-Verfahren gemäß 
+          Art. 196 MwStSystRL Anwendung.
         </p>
         <p>
           7.3 Fotogram Technology behält sich das Recht vor, Preise für
@@ -175,7 +185,7 @@ const TermsAndConditionsDe = () => {
       </section>
 
       <section>
-        <h2>8. Haftung</h2>
+        <h2>8. Haftung und Gewährleistung</h2>
         <p>
           8.1 Fotogram Technology haftet nur für Schäden, die durch
           vorsätzliches oder grob fahrlässiges Verhalten verursacht wurden.
@@ -205,8 +215,9 @@ const TermsAndConditionsDe = () => {
         </p>
         <p>
           9.2 Alle Daten werden ausschließlich auf Servern in Deutschland
-          gespeichert. Details zur Verarbeitung personenbezogener Daten finden
-          Sie in der Datenschutzerklärung.
+          gespeichert. Die Datenverarbeitung erfolgt ausschließlich auf Servern in Deutschland, 
+          die den Anforderungen der DSGVO und höchsten Sicherheitsstandards entsprechen. 
+          Details zur Verarbeitung personenbezogener Daten finden Sie in der Datenschutzerklärung.
         </p>
         <p>
           9.3 Der Nutzer bleibt Eigentümer der von ihm hochgeladenen Inhalte.
